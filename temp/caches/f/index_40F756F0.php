@@ -10,8 +10,8 @@
 <meta name="Keywords" content="加拿大 美容 多伦多 整形 整容 医美 爱美 美丽 瘦身" />
 <meta name="Description" content="美丽帮" />
 <title>美丽帮</title>
-<link rel="shortcut icon" href="favicon.ico" />
-<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link rel="shortcut icon" href="favicon.png" />
+<link rel="icon" href="favicon.png" type="image/gif" />
 <link rel="alternate" type="application/rss+xml" title="RSS|美丽帮" href="feed.php" />
 <link rel="stylesheet" href="themes/68ecshopcom_360buy/css/index.css" />
 <link rel="stylesheet" type="text/css" href="themes/68ecshopcom_360buy/css/68ecshop_commin.css" />

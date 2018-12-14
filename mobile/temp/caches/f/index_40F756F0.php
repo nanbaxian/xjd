@@ -1,12 +1,12 @@
-<?php exit;?>a:3:{s:8:"template";a:12:{i:0;s:64:"D:/webroot/demo/mobile/themesmobile/68ecshopcom_mobile/index.dwt";i:1;s:78:"D:/webroot/demo/mobile/themesmobile/68ecshopcom_mobile/library/page_header.lbi";i:2;s:75:"D:/webroot/demo/mobile/themesmobile/68ecshopcom_mobile/library/index_ad.lbi";i:3;s:77:"D:/webroot/demo/mobile/themesmobile/68ecshopcom_mobile/library/index_icon.lbi";i:4;s:78:"D:/webroot/demo/mobile/themesmobile/68ecshopcom_mobile/library/ad_position.lbi";i:5;s:86:"D:/webroot/demo/mobile/themesmobile/68ecshopcom_mobile/library/recommend_promotion.lbi";i:6;s:81:"D:/webroot/demo/mobile/themesmobile/68ecshopcom_mobile/library/recommend_best.lbi";i:7;s:80:"D:/webroot/demo/mobile/themesmobile/68ecshopcom_mobile/library/recommend_new.lbi";i:8;s:80:"D:/webroot/demo/mobile/themesmobile/68ecshopcom_mobile/library/recommend_hot.lbi";i:9;s:76:"D:/webroot/demo/mobile/themesmobile/68ecshopcom_mobile/library/cat_goods.lbi";i:10;s:78:"D:/webroot/demo/mobile/themesmobile/68ecshopcom_mobile/library/page_footer.lbi";i:11;s:77:"D:/webroot/demo/mobile/themesmobile/68ecshopcom_mobile/library/footer_nav.lbi";}s:7:"expires";i:1487146592;s:8:"maketime";i:1487142992;}<!DOCTYPE html >
+<?php exit;?>a:3:{s:8:"template";a:12:{i:0;s:80:"C:/phpStudy/PHPTutorial/WWW/xjd/mobile/themesmobile/68ecshopcom_mobile/index.dwt";i:1;s:94:"C:/phpStudy/PHPTutorial/WWW/xjd/mobile/themesmobile/68ecshopcom_mobile/library/page_header.lbi";i:2;s:91:"C:/phpStudy/PHPTutorial/WWW/xjd/mobile/themesmobile/68ecshopcom_mobile/library/index_ad.lbi";i:3;s:93:"C:/phpStudy/PHPTutorial/WWW/xjd/mobile/themesmobile/68ecshopcom_mobile/library/index_icon.lbi";i:4;s:94:"C:/phpStudy/PHPTutorial/WWW/xjd/mobile/themesmobile/68ecshopcom_mobile/library/ad_position.lbi";i:5;s:102:"C:/phpStudy/PHPTutorial/WWW/xjd/mobile/themesmobile/68ecshopcom_mobile/library/recommend_promotion.lbi";i:6;s:97:"C:/phpStudy/PHPTutorial/WWW/xjd/mobile/themesmobile/68ecshopcom_mobile/library/recommend_best.lbi";i:7;s:96:"C:/phpStudy/PHPTutorial/WWW/xjd/mobile/themesmobile/68ecshopcom_mobile/library/recommend_new.lbi";i:8;s:96:"C:/phpStudy/PHPTutorial/WWW/xjd/mobile/themesmobile/68ecshopcom_mobile/library/recommend_hot.lbi";i:9;s:92:"C:/phpStudy/PHPTutorial/WWW/xjd/mobile/themesmobile/68ecshopcom_mobile/library/cat_goods.lbi";i:10;s:94:"C:/phpStudy/PHPTutorial/WWW/xjd/mobile/themesmobile/68ecshopcom_mobile/library/page_footer.lbi";i:11;s:93:"C:/phpStudy/PHPTutorial/WWW/xjd/mobile/themesmobile/68ecshopcom_mobile/library/footer_nav.lbi";}s:7:"expires";i:1544768329;s:8:"maketime";i:1544764729;}<!DOCTYPE html >
 <html>
 <head>
 <meta name="Generator" content="ECSHOP v2.7.3" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<title>手机版  </title>
-<meta name="Keywords" content="手机版" />
-<meta name="Description" content="手机版" />
+<title>美丽帮  </title>
+<meta name="Keywords" content="美丽帮" />
+<meta name="Description" content="美丽帮" />
 <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
 <link rel="stylesheet" type="text/css" href="themesmobile/68ecshopcom_mobile/css/public.css"/>
 <link rel="stylesheet" type="text/css" href="themesmobile/68ecshopcom_mobile/css/index.css"/>
@@ -17,24 +17,29 @@
 	<script type="text/javascript" src="js/common.js"></script></head>
 <body>
 <div id="page" class="showpage">
-<div>
+<!-- <div>
 <header id="header"> <script type="text/javascript">
 var process_request = "正在处理您的请求...";
 </script>
 <script language="javascript"> 
-<!--
+
 /*屏蔽所有的js错误*/
 function killerrors() { 
 return true; 
 } 
 window.onerror = killerrors; 
-//-->
+//
 </script>
 <a href="catalog.php" class="top_bt"></a>
 <a href="flow.php" class='user_btn'></a>
-<span href="javascript:void(0)" class="logo">手机版</span>
- </header>
- 
+<span href="javascript:void(0)" class="logo">美丽帮</span>
+ </header> -->
+ <div id="fake-search" class="index_search">
+  <div class="index_search_mid">
+  <span><img src="themesmobile/68ecshopcom_mobile/images/xin/icosousuo.png"></span>
+    <input  type="text" id="search_text" class="search_text" value="瘦脸针"/>
+  </div>
+</div> 
 <style>
 	.scrollimg{position:relative; overflow:hidden; margin:0px auto; /* 设置焦点图最大宽度 */}
 	.scrollimg .hd{ position: absolute;
@@ -87,61 +92,56 @@ box-shadow: 0 0 2px #ccc; }
 				});
 			</script>
  
-<div id="fake-search" class="index_search">
-  <div class="index_search_mid">
-  <span><img src="themesmobile/68ecshopcom_mobile/images/xin/icosousuo.png"></span>
-    <input  type="text" id="search_text" class="search_text" value="请输入您所搜索的商品"/>
-  </div>
-</div>
+
 <div class="entry-list clearfix">
 	<nav>
 		<ul>
 						<li>
 				<a href="catalog.php">
-					<img alt="全部商品" src="images/201508/1440437165699930301.png" />
-					<span>全部商品</span>
+					<img alt="医学美肤" src="images/201508/bai.jpg" />
+					<span>医学美肤</span>
 				</a>
 			</li>
 						<li>
 				<a href="stores.php">
-					<img alt="店铺街" src="images/201508/1440439257667525408.png" />
-					<span>店铺街</span>
+					<img alt="玻尿酸" src="images/201508/1440439257667525408.png" />
+					<span>玻尿酸</span>
 				</a>
 			</li>
 						<li>
 				<a href="brand.php">
-					<img alt="品牌街" src="images/201508/1440439281976779943.png" />
-					<span>品牌街</span>
+					<img alt="肉毒素" src="images/201508/1440439281976779943.png" />
+					<span>肉毒素</span>
 				</a>
 			</li>
 						<li>
 				<a href="activity.php">
-					<img alt="优惠活动" src="images/201508/1440439952487090605.png" />
-					<span>优惠活动</span>
+					<img alt="眼部" src="images/201508/1440439952487090605.png" />
+					<span>眼部</span>
 				</a>
 			</li>
 						<li>
 				<a href="pro_search.php">
-					<img alt="团购" src="images/201508/1440439318451279676.png" />
-					<span>团购</span>
+					<img alt="鼻部" src="images/201508/1440439318451279676.png" />
+					<span>鼻部</span>
 				</a>
 			</li>
 						<li>
 				<a href="exchange.php">
-					<img alt="积分商城" src="images/201508/1440439335793850371.png" />
-					<span>积分商城</span>
+					<img alt="脂肪填充" src="images/201508/1440439335793850371.png" />
+					<span>脂肪填充</span>
 				</a>
 			</li>
 						<li>
 				<a href="flow.php">
-					<img alt="购物车" src="images/201508/1440439353048484531.png" />
-					<span>购物车</span>
+					<img alt="胸部" src="images/201508/1440439353048484531.png" />
+					<span>胸部</span>
 				</a>
 			</li>
 						<li>
 				<a href="user.php">
-					<img alt="个人中心" src="images/201508/1440439367001464442.png" />
-					<span>个人中心</span>
+					<img alt="生活美容" src="images/201508/1440439367001464442.png" />
+					<span>生活美容</span>
 				</a>
 			</li>
 					</ul>
@@ -190,16 +190,16 @@ box-shadow: 0 0 2px #ccc; }
       <div class="bd">
         <ul>
                     <li >
-            <a href="goods.php?id=29" title="意大利费列罗巧克力食品进口零食礼盒576粒整箱装结婚喜糖">
+            <a href="goods.php?id=140" title="雅鹿全棉四件套纯棉套件床上用品 回忆蓝 1.8米床">
              <div class="index_pro"> 
               <div class="products_kuang">
-                <img src="../images/201507/thumb_img/29_thumb_G_1437506331258.jpg"></div>
-              <div class="goods_name">意大利费列罗巧克力食品进口零食礼盒576粒整箱装结婚喜糖</div>
+                <img src="../images/201507/thumb_img/140_thumb_G_1437528915082.jpg"></div>
+              <div class="goods_name">雅鹿全棉四件套纯棉套件床上用品 回忆蓝 1.8米床</div>
               <div class="price">
-                         <a href="javascript:addToCart(29)" class="btns">
+                         <a href="javascript:addToCart(140)" class="btns">
                     <img src="themesmobile/68ecshopcom_mobile/images/index_flow.png">
                 </a>
-              <span href="goods.php?id=29" class="price_pro"> ￥380.00元</span>
+              <span href="goods.php?id=140" class="price_pro"> ￥333.00元</span>
       
       
               </div>
@@ -207,16 +207,16 @@ box-shadow: 0 0 2px #ccc; }
             </a>
           </li>
                     <li >
-            <a href="goods.php?id=120" title="柏年好禾 家具 欧式床 真皮实木床 法式田园公主床">
+            <a href="goods.php?id=3" title="美国西北车厘子 1斤装 进口水果新鲜樱桃水果">
              <div class="index_pro"> 
               <div class="products_kuang">
-                <img src="../images/201507/thumb_img/120_thumb_G_1437525234301.jpg"></div>
-              <div class="goods_name">柏年好禾 家具 欧式床 真皮实木床 法式田园公主床</div>
+                <img src="../images/201507/thumb_img/3_thumb_G_1437501601556.jpg"></div>
+              <div class="goods_name">美国西北车厘子 1斤装 进口水果新鲜樱桃水果</div>
               <div class="price">
-                         <a href="javascript:addToCart(120)" class="btns">
+                         <a href="javascript:addToCart(3)" class="btns">
                     <img src="themesmobile/68ecshopcom_mobile/images/index_flow.png">
                 </a>
-              <span href="goods.php?id=120" class="price_pro"> ￥2098.00元</span>
+              <span href="goods.php?id=3" class="price_pro"> ￥29.00元</span>
       
       
               </div>
@@ -224,16 +224,16 @@ box-shadow: 0 0 2px #ccc; }
             </a>
           </li>
                     <li >
-            <a href="goods.php?id=30" title="日本进口 KRACIE（KRACIE）牌玫瑰香味糖果32g">
+            <a href="goods.php?id=135" title="迪奥真我香水50ml">
              <div class="index_pro"> 
               <div class="products_kuang">
-                <img src="../images/201507/thumb_img/30_thumb_G_1437506667557.jpg"></div>
-              <div class="goods_name">日本进口 KRACIE（KRACIE）牌玫瑰香味糖果32g</div>
+                <img src="../images/201507/thumb_img/135_thumb_G_1437528636775.jpg"></div>
+              <div class="goods_name">迪奥真我香水50ml</div>
               <div class="price">
-                         <a href="javascript:addToCart(30)" class="btns">
+                         <a href="javascript:addToCart(135)" class="btns">
                     <img src="themesmobile/68ecshopcom_mobile/images/index_flow.png">
                 </a>
-              <span href="goods.php?id=30" class="price_pro"> ￥12.00元</span>
+              <span href="goods.php?id=135" class="price_pro"> ￥953.00元</span>
       
       
               </div>
@@ -243,16 +243,16 @@ box-shadow: 0 0 2px #ccc; }
            </ul>
         <ul>
                     <li >
-            <a href="goods.php?id=20" title="佳沛新西兰阳光金奇异果12个/进口猕猴桃/新鲜水果">
+            <a href="goods.php?id=134" title="迪奥新魅惑淡香水5ml">
              <div class="index_pro"> 
               <div class="products_kuang">
-                <img src="../images/201507/thumb_img/20_thumb_G_1437504111409.jpg"></div>
-              <div class="goods_name">佳沛新西兰阳光金奇异果12个/进口猕猴桃/新鲜水果</div>
+                <img src="../images/201507/thumb_img/134_thumb_G_1437528500701.jpg"></div>
+              <div class="goods_name">迪奥新魅惑淡香水5ml</div>
               <div class="price">
-                         <a href="javascript:addToCart(20)" class="btns">
+                         <a href="javascript:addToCart(134)" class="btns">
                     <img src="themesmobile/68ecshopcom_mobile/images/index_flow.png">
                 </a>
-              <span href="goods.php?id=20" class="price_pro"> ￥88.00元</span>
+              <span href="goods.php?id=134" class="price_pro"> ￥129.00元</span>
       
       
               </div>
@@ -260,16 +260,16 @@ box-shadow: 0 0 2px #ccc; }
             </a>
           </li>
                     <li >
-            <a href="goods.php?id=127" title="Midea/美的 MK-HJ1501电热水壶不锈钢烧水壶保温自动断电进口温控">
+            <a href="goods.php?id=136" title="Dior迪奥唇膏/变色润唇膏/粉红魅惑润唇膏3.5g 润唇蜜/口红 唇彩 唇膏">
              <div class="index_pro"> 
               <div class="products_kuang">
-                <img src="../images/201507/thumb_img/127_thumb_G_1437526071198.jpg"></div>
-              <div class="goods_name">Midea/美的 MK-HJ1501电热水壶不锈钢烧水壶保温自动断电进口温控</div>
+                <img src="../images/201507/thumb_img/136_thumb_G_1437528720014.jpg"></div>
+              <div class="goods_name">Dior迪奥唇膏/变色润唇膏/粉红魅惑润唇膏3.5g 润唇蜜/口红 唇彩 唇膏</div>
               <div class="price">
-                         <a href="javascript:addToCart(127)" class="btns">
+                         <a href="javascript:addToCart(136)" class="btns">
                     <img src="themesmobile/68ecshopcom_mobile/images/index_flow.png">
                 </a>
-              <span href="goods.php?id=127" class="price_pro"> ￥245.00元</span>
+              <span href="goods.php?id=136" class="price_pro"> ￥180.00元</span>
       
       
               </div>
@@ -277,16 +277,16 @@ box-shadow: 0 0 2px #ccc; }
             </a>
           </li>
                     <li >
-            <a href="goods.php?id=42" title="2015新款修身开衫短款七分袖小西装女薄网纱披肩防晒衫小外套女夏">
+            <a href="goods.php?id=46" title="2015夏季小西装女外套夏装薄款韩版修身短款小西服">
              <div class="index_pro"> 
               <div class="products_kuang">
-                <img src="../images/201507/thumb_img/42_thumb_G_1437515742056.jpg"></div>
-              <div class="goods_name">2015新款修身开衫短款七分袖小西装女薄网纱披肩防晒衫小外套女夏</div>
+                <img src="../images/201507/thumb_img/46_thumb_G_1437516342367.jpg"></div>
+              <div class="goods_name">2015夏季小西装女外套夏装薄款韩版修身短款小西服</div>
               <div class="price">
-                         <a href="javascript:addToCart(42)" class="btns">
+                         <a href="javascript:addToCart(46)" class="btns">
                     <img src="themesmobile/68ecshopcom_mobile/images/index_flow.png">
                 </a>
-              <span href="goods.php?id=42" class="price_pro"> ￥259.00元</span>
+              <span href="goods.php?id=46" class="price_pro"> ￥213.00元</span>
       
       
               </div>
@@ -319,46 +319,46 @@ box-shadow: 0 0 2px #ccc; }
       <div class="bd">
         <ul>
                     <li>
-            <a href="goods.php?id=100" title="苹果（Apple）iPhone 6 (A1586) 16GB 金色 移动联通电信4G手机">
+            <a href="goods.php?id=4" title="加拿大樱桃 2斤装 车厘子 樱桃 进口水果 新鲜水果">
              <div class="index_pro"> 
               <div class="products_kuang">
-                <img src="../images/201507/thumb_img/100_thumb_G_1437523484060.jpg"></div>
-              <div class="goods_name">苹果（Apple）iPhone 6 (A1586) 16GB 金色 移动联通电信4G手机</div>
+                <img src="../images/201507/thumb_img/4_thumb_G_1437501961154.jpg"></div>
+              <div class="goods_name">加拿大樱桃 2斤装 车厘子 樱桃 进口水果 新鲜水果</div>
               <div class="price">
-                 <a href="javascript:addToCart(100)" class="btns">
+                 <a href="javascript:addToCart(4)" class="btns">
                     <img src="themesmobile/68ecshopcom_mobile/images/index_flow.png">
                 </a>
-              <span href="goods.php?id=100" class="price_pro">￥4888.00元</span>
+              <span href="goods.php?id=4" class="price_pro">￥128.00元</span>
               </div>
               </div>
             </a>
           </li>
                     <li>
-            <a href="goods.php?id=131" title="摩登生活 法式梳妆台欧式梳妆台实木梳妆台">
+            <a href="goods.php?id=181" title="新的橙味浓缩水果饮料 840ml 洋酒 鸡尾酒必备辅料">
              <div class="index_pro"> 
               <div class="products_kuang">
-                <img src="../images/201507/thumb_img/131_thumb_G_1437527214145.jpg"></div>
-              <div class="goods_name">摩登生活 法式梳妆台欧式梳妆台实木梳妆台</div>
+                <img src="../images/201507/thumb_img/181_thumb_G_1437532546925.jpg"></div>
+              <div class="goods_name">新的橙味浓缩水果饮料 840ml 洋酒 鸡尾酒必备辅料</div>
               <div class="price">
-                 <a href="javascript:addToCart(131)" class="btns">
+                 <a href="javascript:addToCart(181)" class="btns">
                     <img src="themesmobile/68ecshopcom_mobile/images/index_flow.png">
                 </a>
-              <span href="goods.php?id=131" class="price_pro">￥1233.00元</span>
+              <span href="goods.php?id=181" class="price_pro">￥15.00元</span>
               </div>
               </div>
             </a>
           </li>
                     <li>
-            <a href="goods.php?id=180" title="果啤330ml*24听水蜜桃口味 果酒">
+            <a href="goods.php?id=144" title="CK卡文克莱卡莱优淡香水100ML ck香水">
              <div class="index_pro"> 
               <div class="products_kuang">
-                <img src="../images/201507/thumb_img/180_thumb_G_1437532312198.jpg"></div>
-              <div class="goods_name">果啤330ml*24听水蜜桃口味 果酒</div>
+                <img src="../images/201507/thumb_img/144_thumb_G_1437529582625.jpg"></div>
+              <div class="goods_name">CK卡文克莱卡莱优淡香水100ML ck香水</div>
               <div class="price">
-                 <a href="javascript:addToCart(180)" class="btns">
+                 <a href="javascript:addToCart(144)" class="btns">
                     <img src="themesmobile/68ecshopcom_mobile/images/index_flow.png">
                 </a>
-              <span href="goods.php?id=180" class="price_pro">￥75.00元</span>
+              <span href="goods.php?id=144" class="price_pro">￥119.00元</span>
               </div>
               </div>
             </a>
@@ -366,46 +366,46 @@ box-shadow: 0 0 2px #ccc; }
            </ul>
         <ul>
                     <li>
-            <a href="goods.php?id=191" title="雪奈儿 金属边框手机壳套保护壳新款 适用于苹果iPhone6/Plus 4.7英寸 利剑i6土豪金5.5">
+            <a href="goods.php?id=153" title="沙宣垂坠质感润发乳750ml">
              <div class="index_pro"> 
               <div class="products_kuang">
-                <img src="../images/201507/thumb_img/191_thumb_G_1437533027069.jpg"></div>
-              <div class="goods_name">雪奈儿 金属边框手机壳套保护壳新款 适用于苹果iPhone6/Plus 4.7英寸 利剑i6土豪金5.5</div>
+                <img src="../images/201507/thumb_img/153_thumb_G_1437530435593.jpg"></div>
+              <div class="goods_name">沙宣垂坠质感润发乳750ml</div>
               <div class="price">
-                 <a href="javascript:addToCart(191)" class="btns">
+                 <a href="javascript:addToCart(153)" class="btns">
                     <img src="themesmobile/68ecshopcom_mobile/images/index_flow.png">
                 </a>
-              <span href="goods.php?id=191" class="price_pro">￥78.00元</span>
+              <span href="goods.php?id=153" class="price_pro">￥90.00元</span>
               </div>
               </div>
             </a>
           </li>
                     <li>
-            <a href="goods.php?id=28" title="进口费列罗巧克力礼盒DIY心形27粒【顺丰包邮】【代写贺卡】七夕礼物生日创意礼品">
+            <a href="goods.php?id=150" title="惠氏(Wyeth)S-26金装幼儿乐幼儿配方奶粉">
              <div class="index_pro"> 
               <div class="products_kuang">
-                <img src="../images/201507/thumb_img/28_thumb_G_1437506346326.jpg"></div>
-              <div class="goods_name">进口费列罗巧克力礼盒DIY心形27粒【顺丰包邮】【代写贺卡】七夕礼物生日创意礼品</div>
+                <img src="../images/201507/thumb_img/150_thumb_G_1437530289196.jpg"></div>
+              <div class="goods_name">惠氏(Wyeth)S-26金装幼儿乐幼儿配方奶粉</div>
               <div class="price">
-                 <a href="javascript:addToCart(28)" class="btns">
+                 <a href="javascript:addToCart(150)" class="btns">
                     <img src="themesmobile/68ecshopcom_mobile/images/index_flow.png">
                 </a>
-              <span href="goods.php?id=28" class="price_pro">￥120.00元</span>
+              <span href="goods.php?id=150" class="price_pro">￥211.00元</span>
               </div>
               </div>
             </a>
           </li>
                     <li>
-            <a href="goods.php?id=37" title="笛莎（DEESHA）新品女童儿童装纯洁清新气质">
+            <a href="goods.php?id=75" title="宾格瑞（BINGGRAE）香蕉味牛奶饮料 200ml*24">
              <div class="index_pro"> 
               <div class="products_kuang">
-                <img src="../images/201507/thumb_img/37_thumb_G_1437508806047.jpg"></div>
-              <div class="goods_name">笛莎（DEESHA）新品女童儿童装纯洁清新气质</div>
+                <img src="../images/201507/thumb_img/75_thumb_G_1437522091099.jpg"></div>
+              <div class="goods_name">宾格瑞（BINGGRAE）香蕉味牛奶饮料 200ml*24</div>
               <div class="price">
-                 <a href="javascript:addToCart(37)" class="btns">
+                 <a href="javascript:addToCart(75)" class="btns">
                     <img src="themesmobile/68ecshopcom_mobile/images/index_flow.png">
                 </a>
-              <span href="goods.php?id=37" class="price_pro">￥268.00元</span>
+              <span href="goods.php?id=75" class="price_pro">￥129.00元</span>
               </div>
               </div>
             </a>
@@ -448,31 +448,31 @@ box-shadow: 0 0 2px #ccc; }
             </a>
           </li>
                     <li>
-            <a href="goods.php?id=129" title="铂尼诗 家具 床 皮床 卧室家具套装">
+            <a href="goods.php?id=220" title="润本（RUNBEN）驱蚊手环 植物精油驱蚊贴3条装">
              <div class="index_pro"> 
               <div class="products_kuang">
-                <img src="../images/201507/thumb_img/129_thumb_G_1437527006289.jpg"></div>
-              <div class="goods_name">铂尼诗 家具 床 皮床 卧室家具套装</div>
+                <img src="../images/201507/thumb_img/220_thumb_G_1437585995276.jpg"></div>
+              <div class="goods_name">润本（RUNBEN）驱蚊手环 植物精油驱蚊贴3条装</div>
               <div class="price">
-                   <a href="javascript:addToCart(129)" class="btns">
+                   <a href="javascript:addToCart(220)" class="btns">
                     <img src="themesmobile/68ecshopcom_mobile/images/index_flow.png">
                 </a>
-              <span href="goods.php?id=129" class="price_pro">￥3388.00元</span>
+              <span href="goods.php?id=220" class="price_pro">￥13.50元</span>
               </div>
               </div>
             </a>
           </li>
                     <li>
-            <a href="goods.php?id=227" title="雅诚德Arst餐具套装56头套装中式碗碟套装陶瓷碗碟套装釉上彩">
+            <a href="goods.php?id=219" title="润本 儿童宝宝无味电热蚊香液 婴儿无刺激(无味型)">
              <div class="index_pro"> 
               <div class="products_kuang">
-                <img src="../images/201507/thumb_img/227_thumb_G_1437587283837.jpg"></div>
-              <div class="goods_name">雅诚德Arst餐具套装56头套装中式碗碟套装陶瓷碗碟套装釉上彩</div>
+                <img src="../images/201507/thumb_img/219_thumb_G_1437585857563.jpg"></div>
+              <div class="goods_name">润本 儿童宝宝无味电热蚊香液 婴儿无刺激(无味型)</div>
               <div class="price">
-                   <a href="javascript:addToCart(227)" class="btns">
+                   <a href="javascript:addToCart(219)" class="btns">
                     <img src="themesmobile/68ecshopcom_mobile/images/index_flow.png">
                 </a>
-              <span href="goods.php?id=227" class="price_pro">￥455.00元</span>
+              <span href="goods.php?id=219" class="price_pro">￥24.00元</span>
               </div>
               </div>
             </a>
@@ -480,46 +480,46 @@ box-shadow: 0 0 2px #ccc; }
            </ul>
         <ul>
                     <li>
-            <a href="goods.php?id=120" title="柏年好禾 家具 欧式床 真皮实木床 法式田园公主床">
+            <a href="goods.php?id=216" title="哈罗闪sanosan婴儿洗发露沐浴乳二合一">
              <div class="index_pro"> 
               <div class="products_kuang">
-                <img src="../images/201507/thumb_img/120_thumb_G_1437525234301.jpg"></div>
-              <div class="goods_name">柏年好禾 家具 欧式床 真皮实木床 法式田园公主床</div>
+                <img src="../images/201507/thumb_img/216_thumb_G_1437585478147.jpg"></div>
+              <div class="goods_name">哈罗闪sanosan婴儿洗发露沐浴乳二合一</div>
               <div class="price">
-                   <a href="javascript:addToCart(120)" class="btns">
+                   <a href="javascript:addToCart(216)" class="btns">
                     <img src="themesmobile/68ecshopcom_mobile/images/index_flow.png">
                 </a>
-              <span href="goods.php?id=120" class="price_pro">￥2098.00元</span>
+              <span href="goods.php?id=216" class="price_pro">￥26.00元</span>
               </div>
               </div>
             </a>
           </li>
                     <li>
-            <a href="goods.php?id=202" title="安索夫迷你电脑USB2.0小音箱可爱熊猫便携笔记本台式电脑音箱 音响">
+            <a href="goods.php?id=113" title="苹果（Apple）iPhone 6 Plus (A1524) 16GB 金色 移动联通电信4G手机">
              <div class="index_pro"> 
               <div class="products_kuang">
-                <img src="../images/201507/thumb_img/202_thumb_G_1437534795824.jpg"></div>
-              <div class="goods_name">安索夫迷你电脑USB2.0小音箱可爱熊猫便携笔记本台式电脑音箱 音响</div>
+                <img src="../images/201507/thumb_img/113_thumb_G_1437524324289.jpg"></div>
+              <div class="goods_name">苹果（Apple）iPhone 6 Plus (A1524) 16GB 金色 移动联通电信4G手机</div>
               <div class="price">
-                   <a href="javascript:addToCart(202)" class="btns">
+                   <a href="javascript:addToCart(113)" class="btns">
                     <img src="themesmobile/68ecshopcom_mobile/images/index_flow.png">
                 </a>
-              <span href="goods.php?id=202" class="price_pro">￥29.00元</span>
+              <span href="goods.php?id=113" class="price_pro">￥5688.00元</span>
               </div>
               </div>
             </a>
           </li>
                     <li>
-            <a href="goods.php?id=41" title="小金蛋女宝宝皮鞋夏真皮女童秋鞋公主鞋">
+            <a href="goods.php?id=185" title="赛鲸 常青藤懒人手机支架 床上床头支架 万向调节 太空蓝">
              <div class="index_pro"> 
               <div class="products_kuang">
-                <img src="../images/201507/thumb_img/41_thumb_G_1437515470354.jpg"></div>
-              <div class="goods_name">小金蛋女宝宝皮鞋夏真皮女童秋鞋公主鞋</div>
+                <img src="../images/201507/thumb_img/185_thumb_G_1437532813329.jpg"></div>
+              <div class="goods_name">赛鲸 常青藤懒人手机支架 床上床头支架 万向调节 太空蓝</div>
               <div class="price">
-                   <a href="javascript:addToCart(41)" class="btns">
+                   <a href="javascript:addToCart(185)" class="btns">
                     <img src="themesmobile/68ecshopcom_mobile/images/index_flow.png">
                 </a>
-              <span href="goods.php?id=41" class="price_pro">￥99.00元</span>
+              <span href="goods.php?id=185" class="price_pro">￥29.90元</span>
               </div>
               </div>
             </a>
@@ -600,8 +600,9 @@ $(function(){
           <li>
           <a href="javascript:;"><i class="footerimg_2"></i><span class="gl">触屏版</span></a></li>
           <li><a href="index.php?is_c=1" class="goDesktop"><i class="footerimg_3"></i><span>电脑版</span></a></li></ul>
-  	 <p class="mf_o4">&copy; 2015-2017 手机版 版权所有，并保留所有权利。</p>
-</div> 
+  	 <p class="mf_o4">&copy; 2015-2018 美丽帮 版权所有，并保留所有权利。</p>
+</div>
+ 
 <div style="height:50px; line-height:50px; clear:both;"></div>
 <div class="v_nav">
 <div class="vf_nav">

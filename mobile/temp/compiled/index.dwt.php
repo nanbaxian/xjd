@@ -29,7 +29,7 @@
 <div id="fake-search" class="index_search">
   <div class="index_search_mid">
   <span><img src="themesmobile/68ecshopcom_mobile/images/xin/icosousuo.png"></span>
-    <input  type="text" id="search_text" class="search_text" value="请输入您所搜索的商品"/>
+    <input  type="text" id="search_text" class="search_text" value="瘦脸针"/>
   </div>
 </div>
 <?php echo $this->fetch('library/index_icon.lbi'); ?> 
