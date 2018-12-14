@@ -1,12 +1,12 @@
 <?php
 
 /**
- * 鸿宇多用户商城 虚拟卡商品管理程序
+ *  虚拟卡商品管理程序
  * ============================================================================
- * 版权所有 2015-2016 鸿宇多用户商城科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
+ * 版权所有 2015-2016 ，并保留所有权利。
+ * 网站地址: ；
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
  * $Author: sunlizhi $
@@ -984,7 +984,7 @@ elseif ($_REQUEST['act'] == 'info')
         {
             $row['storage'] = '';
             $row['brand_name'] = '';
-            $row['package_goods_list'] = get_package_goods($row['goods_id'], $row['package_attr_id']); //修改 by bbs.hongyuvip.com
+            $row['package_goods_list'] = get_package_goods($row['goods_id'], $row['package_attr_id']); //修改 by 
         }
 		
 		$sql_back = "SELECT bg.*, bo.back_type FROM " . $ecs->table('back_goods') . " AS bg " .
@@ -1055,13 +1055,13 @@ elseif ($_REQUEST['act'] == 'info')
         $act_list[] = $row;
     }
     $smarty->assign('action_list', $act_list);
-	/* 代码增加_start   By bbs.hongyuvip.com */
+	/* 代码增加_start   By  */
 	if($order['pickup_point'] > 0)
 	{
 		$pickup_point = $db->getRow('select * from ' . $ecs->table('pickup_point') . ' where id=' . $order['pickup_point']);
 		$smarty->assign('pickup_point',        $pickup_point);
 	}
-	/* 代码增加_end   By bbs.hongyuvip.com */
+	/* 代码增加_end   By  */
     /* 取得是否存在实体商品 */
     $smarty->assign('exist_real_goods', exist_real_goods($order['order_id']));
 

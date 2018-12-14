@@ -644,4 +644,4 @@ function countdown(obj, msg) {
 		}, 1000)
 	}
 }
-/* 代码增加2014-12-23 by bbs.hongyuvip.com _end */
+/* 代码增加2014-12-23 by  _end */

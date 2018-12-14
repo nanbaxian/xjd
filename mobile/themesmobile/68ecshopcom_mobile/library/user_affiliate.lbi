@@ -97,7 +97,7 @@ function selectPage(sel)
 <td bgcolor="#ffffff"><textarea  onclick="this.select();" style="width:80%; font-size:14px; height:50px; border:#eeeeee 1px solid; margin-top:10px; line-height:150%">{$shopurl}?u={$userid}</textarea> </td>
 </tr>
 
-<!--start Add By bbs.hongyuvip.com ecshop开发中心 企业QQ123456789 -->
+<!--start Add By  ecshop开发中心 企业QQ123456789 -->
 <tr>
         <td  bgcolor="#ffffff">分享到</td>
         <td  bgcolor="#ffffff"><img src="erweima_png.php?data={$shopurl}?u={$userid}" width=150 height=150>
@@ -140,7 +140,7 @@ function selectPage(sel)
 
         </td>
         </tr>
-<!--end Add By bbs.hongyuvip.com ecshop开发中心 企业QQ123456789 -->
+<!--end Add By  ecshop开发中心 企业QQ123456789 -->
 </table>
 </div>
         <!-- {else} -->

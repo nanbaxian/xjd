@@ -26,7 +26,7 @@ if (defined('WEBSITE') || defined('GETINFO'))
 	$web[$i]['qq'] = '1527200768';
 	
 	// 作者邮箱
-	$web[$i]['email'] = 'admin@hongyuvip.com';
+	$web[$i]['email'] = '';
 	
 	
 	// 申请网址

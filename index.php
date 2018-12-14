@@ -1,12 +1,12 @@
 <?php
 
 /**
- * 鸿宇多用户商城 首页文件
+ *  首页文件
  * ============================================================================
- * 版权所有 2005-2010 鸿宇多用户商城科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
+ * 版权所有 2005-2010 ，并保留所有权利。
+ * 网站地址: ；
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
  * $Author: liuhui $
@@ -21,7 +21,7 @@ if ((DEBUG_MODE & 2) != 2)
 {
     $smarty->caching = true;
 }
-/* 修改 by bbs.hongyuvip.com start */
+/* 修改 by  start */
 if (isset($_REQUEST['is_c']))
 {
     $is_c = intval($_REQUEST['is_c']);
@@ -53,7 +53,7 @@ if(!(preg_match($smartuachar, $ua)) && ($ua == '' || preg_match($uachar, $ua))&&
     }
 
 }
-/* 修改 by bbs.hongyuvip.com end */
+/* 修改 by  end */
 }
 /*------------------------------------------------------ */
 //-- Shopex系统地址转换
@@ -676,7 +676,7 @@ function get_article_new( $id = array(0), $getwhat = 'art_id', $num = 0, $isrand
 	return $articles;
 }
 
-/* 代码增加_start  By  bbs.hongyuvip.com   */
+/* 代码增加_start  By     */
 make_html();
-/* 代码增加_end  By  bbs.hongyuvip.com   */
+/* 代码增加_end  By     */
 ?>

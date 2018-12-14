@@ -32,9 +32,9 @@ $modules['04_order']['05_edit_order_print']         = 'order.php?act=templates';
 $modules['04_order']['06_undispose_booking']        = 'goods_booking.php?act=list_all';
 $modules['04_order']['09_delivery_order']           = 'order.php?act=delivery_list';
 //$modules['04_order']['10_back_order']               = 'order.php?act=back_list';
-$modules['04_order']['10_back_order']               = 'back.php?act=back_list';  //代码修改 By bbs.hongyuvip.com
+$modules['04_order']['10_back_order']               = 'back.php?act=back_list';  //代码修改 By 
 $modules['04_order']['12_order_excel']              = 'excel.php?act=order_excel';
-/* 代码增加 by bbs.hongyuvip.com start */
+/* 代码增加 by  start */
 $modules['04_order']['12_invoice_list']                 = 'order.php?act=invoice_list';
 
 $modules['18_virtual']['virtual_goods_s']   = 'virtual_goods.php?act=list&extension_code=virtual_good'; //虚拟商品列表
@@ -42,7 +42,7 @@ $modules['18_virtual']['virtual_goods_add']    = 'virtual_goods.php?act=add&exte
 $modules['18_virtual']['virtual_validate']   = 'virtual_goods_card.php?act=verification_info';
 $modules['18_virtual']['virtual_card_list']   = 'virtual_goods_card.php?act=all_card';
 
-/* 代码增加 by bbs.hongyuvip.com end */
+/* 代码增加 by  end */
 $modules['05_dianpu_manage']['01_base']               	= 	'shop_config.php?act=list_edit';
 $modules['05_dianpu_manage']['02_menu']               	= 	'navigator.php?act=list';
 $modules['05_dianpu_manage']['03_guanggao']             = 	'flashplay.php?act=list';

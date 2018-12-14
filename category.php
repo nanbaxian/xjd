@@ -1,16 +1,16 @@
 <?php
 
 /**
- * 鸿宇多用户商城 商品分类
+ *  商品分类
  * ============================================================================
- * 版权所有 2015-2016 鸿宇多用户商城科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
+ * 版权所有 2015-2016 ，并保留所有权利。
+ * 网站地址: ；
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
- * $Author: Shadow & 鸿宇
- * $Id: category.php 17217 2016-01-19 06:29:08Z Shadow & 鸿宇
+ * $Author: 
+ * $Id: category.php 17217  
 */
 
 define('IN_ECS', true);
@@ -265,7 +265,7 @@ else
 					$GLOBALS['ecs']->table('goods') . " AS g LEFT JOIN ". $GLOBALS['ecs']->table('goods_cat') . " AS gc ON g.goods_id = gc.goods_id " .
 				"WHERE g.brand_id = b.brand_id AND ($children OR " . 'gc.cat_id ' . db_create_in(array_unique(array_merge(array($cat_id), array_keys(cat_list($cat_id, 0, false))))) . ") AND b.is_show = 1 " .
 				" AND g.is_on_sale = 1 AND g.is_alone_sale = 1 AND g.is_delete = 0 ".
-				"GROUP BY b.brand_id HAVING goods_num > 0 ORDER BY b.sort_order, b.brand_id ASC"; //此SQL语句增加字段 b.brand_logo,  By  bbs.hongyuvip.com
+				"GROUP BY b.brand_id HAVING goods_num > 0 ORDER BY b.sort_order, b.brand_id ASC"; //此SQL语句增加字段 b.brand_logo,  By  
 
 		$brands = $GLOBALS['db']->getAll($sql);
 
@@ -273,7 +273,7 @@ else
 		
 		$attr_url_value = array('cid'=>$cat_id, 'bid'=>$brand, 'price_min'=>$price_min, 'price_max'=>$price_max,'filter_attr'=>$filter_attr_str);
 
-		$brand_have_logo = 0;  //代码增加   By    bbs.hongyuvip.com
+		$brand_have_logo = 0;  //代码增加   By    
 
 		foreach ($brands AS $key => $val)
 		{
@@ -360,7 +360,7 @@ else
 		$brands=$brands_wwwecshop68Com;
 		$smarty->assign('brands', $brands);
 		}
-		/* 代码增加_end    By bbs.hongyuvip.com */
+		/* 代码增加_end    By  */
 
 		/* 属性筛选 */
 		$ext = ''; //商品查询条件扩展
@@ -779,7 +779,7 @@ function category_get_goods($children, $brand, $min, $max, $ext, $size, $page, $
 
     if ($brand > 0)
     {
-		/* 代码修改_start  By  bbs.hongyuvip.com */
+		/* 代码修改_start  By   */
 		if (strstr($brand, '_'))
 		{
 			$brand_sql =str_replace("_", ",", $brand);
@@ -789,7 +789,7 @@ function category_get_goods($children, $brand, $min, $max, $ext, $size, $page, $
 		{
 			$where .=  "AND g.brand_id=$brand ";
 		}
-		/* 代码修改_end  By  bbs.hongyuvip.com */
+		/* 代码修改_end  By   */
     }
 
     if ($min > 0)
@@ -962,7 +962,7 @@ function get_cagtegory_goods_count($children, $brand = 0, $min = 0, $max = 0, $e
     
     if ($brand > 0)
     {
-		/* 代码增加_start  By  bbs.hongyuvip.com  */
+		/* 代码增加_start  By    */
 		if (strstr($brand, '_'))
 		{
 			$brand_sql =str_replace("_", ",", $brand);
@@ -972,7 +972,7 @@ function get_cagtegory_goods_count($children, $brand = 0, $min = 0, $max = 0, $e
 		{
 			$where .=  "AND g.brand_id=$brand ";
 		}
-		/* 代码增加_end  By  bbs.hongyuvip.com  */
+		/* 代码增加_end  By    */
     }
 
     if ($min > 0)
@@ -1040,7 +1040,7 @@ function get_parent_grade($cat_id)
 
 }
 
-/* 代码增加_start  By  bbs.hongyuvip.com */
+/* 代码增加_start  By   */
 //make_html();
-/* 代码增加_end   By  bbs.hongyuvip.com */
+/* 代码增加_end   By   */
 ?>

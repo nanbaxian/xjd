@@ -1,16 +1,16 @@
 <?php
 
 /**
- * 鸿宇多用户商城 积分商城
+ *  积分商城
  * ============================================================================
- * 版权所有 2015-2016 鸿宇多用户商城科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
+ * 版权所有 2015-2016 ，并保留所有权利。
+ * 网站地址: ；
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
- * $Author: Shadow & 鸿宇
- * $Id: exchange.php 17217 2016-01-19 06:29:08Z Shadow & 鸿宇
+ * $Author: 
+ * $Id: exchange.php 17217  
 */
 
 define('IN_ECS', true);
@@ -226,7 +226,7 @@ die($json->encode($row));
 			$count1 = $GLOBALS['db']->getOne("SELECT COUNT(*) FROM " . $GLOBALS['ecs']->table('comment') . " where comment_type=0 and id_value ='$goods_id' and status=1");
 			$smarty->assign('review_count',       $count1); 
 
-			//评价晒单 增加 by bbs.hongyuvip.com
+			//评价晒单 增加 by 
 			$rank_num['rank_a'] = $db->getOne("SELECT COUNT(*) AS num FROM ".$ecs->table('comment')." WHERE id_value = '$goods_id' AND status = 1 AND comment_rank in (5,4)");
 			$rank_num['rank_b'] = $db->getOne("SELECT COUNT(*) AS num FROM ".$ecs->table('comment')." WHERE id_value = '$goods_id' AND status = 1 AND comment_rank in (3,2)");
 			$rank_num['rank_c'] = $db->getOne("SELECT COUNT(*) AS num FROM ".$ecs->table('comment')." WHERE id_value = '$goods_id' AND status = 1 AND comment_rank = 1");
@@ -266,7 +266,7 @@ die($json->encode($row));
 			$goodstype = "select goods_type from ".$ecs->table('goods')." where goods_id='". $goods_id ."'";
 		$goodstype_one = $db->getOne($goodstype);
 		
-				/* 代码增加_start  By  bbs.hongyuvip.com */
+				/* 代码增加_start  By   */
 		$sql_zhyh_qq2211707 = "select attr_id from ".$ecs->table('attribute')." where cat_id='". $goodstype_one ."' and is_attr_gallery='1' ";
 		$attr_id_gallery = $db->getOne($sql_zhyh_qq2211707);
 		
@@ -326,11 +326,11 @@ die($json->encode($row));
 		//echo '<pre>';
 		//print_r($properties['spe']);
 		//echo '</pre>';
-		/* 代码增加_end  By  bbs.hongyuvip.com */
+		/* 代码增加_end  By   */
             $smarty->assign('specification',       $properties['spe']);                              // 商品规格
 
-            $smarty->assign('pictures',            get_goods_gallery_attr_www_ecshop68_com($goods_id, $goods_attr_id)); // 商品相册_修改 By bbs.hongyuvip.com
-			$smarty->assign('new_goods',           get_recommend_goods('new'));     // 最新商品  改 By bbs.hongyuvip.com
+            $smarty->assign('pictures',            get_goods_gallery_attr_www_ecshop68_com($goods_id, $goods_attr_id)); // 商品相册_修改 By 
+			$smarty->assign('new_goods',           get_recommend_goods('new'));     // 最新商品  改 By 
 			$smarty->assign('url',              $_SERVER["REQUEST_URI"]);
             assign_dynamic('exchange_goods');
         }
@@ -724,7 +724,7 @@ function get_exchange_goods_info($goods_id)
     }
 }
 
-/* 代码增加_start By bbs.hongyuvip.com */
+/* 代码增加_start By  */
 /**
  * 获得指定商品的相册
  *
@@ -756,5 +756,5 @@ function get_goods_gallery_attr_www_ecshop68_com($goods_id, $goods_attr_id)
     return $row;
 }
 
-/* 代码增加_end By bbs.hongyuvip.com */
+/* 代码增加_end By  */
 ?>

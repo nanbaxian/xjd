@@ -1,15 +1,15 @@
 <?php
 /**
- * 鸿宇多用户商城 管理中心商店设置语言文件
+ *  管理中心商店设置语言文件
  * ============================================================================
- * 版权所有 2015-2016 鸿宇多用户商城科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
+ * 版权所有 2015-2016 ，并保留所有权利。
+ * 网站地址: ；
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
- * $Author: Shadow & 鸿宇
- * $Id: shop_config.php 17217 2016-01-19 06:29:08Z Shadow & 鸿宇
+ * $Author: 
+ * $Id: shop_config.php 17217  
  */
 
 require(ROOT_PATH.ADMIN_PATH.'/sms_url.php');
@@ -462,7 +462,7 @@ $_LANG['cfg_desc']['tuihuan_days_fahuo'] = '';
 $_LANG['cfg_name']['tuihuan_days_qianshou']  = '退款/退货/维修期限（发货后第几天止）';
 $_LANG['cfg_desc']['tuihuan_days_qianshou'] = '发货后第X--Y天内可退款/退货/维修，例如：上面输3下面输5，表示发货后第3--5天内可可退款/退货/维修';
 $_LANG['cfg_name']['email_domain'] = '用户注册邮箱类型提醒：';
-$_LANG['cfg_desc']['email_domain'] = '提示：域名之间用“，”隔开（逗号不分全角、半角），域名无须带www<br>参照样式：163.com,hongyuvip.com,sina.com';
+$_LANG['cfg_desc']['email_domain'] = '提示：域名之间用“，”隔开（逗号不分全角、半角），域名无须带www<br>参照样式：163.com,,sina.com';
 
 $_LANG['cfg_name']['comment_youxiaoqi'] = '评价/晒单有效期限（确认收货后第几天止）';
 $_LANG['cfg_desc']['comment_youxiaoqi'] = '例如：设置30，则自确认收货起30天内买家可以评价、晒单';
@@ -511,7 +511,7 @@ $_LANG['cfg_name']['sms_shop_mobile'] = '商家的手机号码';
 $_LANG['cfg_desc']['sms_shop_mobile'] = '请填写接收短信的手机号码';
 
 $_LANG['cfg_name']['sms_sign'] = '短信签名';
-$_LANG['cfg_desc']['sms_sign'] = '提示：此处填写内容必须是阿里大鱼审核通过的签名，否则短信无法发送。如需技术支持请联系：鸿宇科技 & Shadow QQ：1527200768';
+$_LANG['cfg_desc']['sms_sign'] = '提示：此处填写内容必须是阿里大鱼审核通过的签名，否则短信无法发送。如需技术支持请联系：科技 & Shadow QQ：1527200768';
 
 $_LANG['cfg_name']['sms_order_placed'] = '客户下订单时是否给商家发短信';
 $_LANG['cfg_range']['sms_order_placed']['1'] = '发短信';
@@ -570,18 +570,18 @@ $_LANG['cfg_name']['sms_return_goods_tpl'] = '';
 
 
 
-/*fulltext_search_add_START_bbs.hongyuvip.com*/
+/*fulltext_search_add_START_*/
 $_LANG['cfg_name']['fulltext_search'] = '全文搜索引擎';
 $_LANG['cfg_range']['fulltext_search']['0'] = '关闭';
 $_LANG['cfg_range']['fulltext_search']['1'] = '开启';
-/*fulltext_search_add_END_bbs.hongyuvip.com*/
+/*fulltext_search_add_END_*/
 
-/* 代码增加_注册红包start  By  bbs.hongyuvip.com */
+/* 代码增加_注册红包start  By   */
 $_LANG['cfg_name']['bonus_reg_rand'] = '随机发放注册红包';
 $_LANG['cfg_desc']['bonus_reg_rand'] = '说明：红包发放类型为【按注册用户发放】时该设置才有效';
 $_LANG['cfg_range']['bonus_reg_rand'][0] = '关闭';
 $_LANG['cfg_range']['bonus_reg_rand'][1] = '打开';
-/* 代码增加_注册红包end  By  bbs.hongyuvip.com */
+/* 代码增加_注册红包end  By   */
 
 $_LANG['cfg_name']['shop_opint'] = '店铺坐标';
 ?>

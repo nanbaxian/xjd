@@ -6,9 +6,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="styles/general.css" rel="stylesheet" type="text/css" />
 <link href="styles/main.css" rel="stylesheet" type="text/css" />
-<!-- 修改 by bbs.hongyuvip.com 百度编辑器 begin -->
+<!-- 修改 by  百度编辑器 begin -->
 <?php echo $this->smarty_insert_scripts(array('files'=>'jquery.js,jquery.json.js,transport_bd.js,common.js')); ?>
-<!-- 修改 by bbs.hongyuvip.com 百度编辑器 end -->
+<!-- 修改 by  百度编辑器 end -->
 <script language="JavaScript">
 <!--
 // 这里把JS用到的所有语言都赋值到这里

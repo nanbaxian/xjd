@@ -293,18 +293,18 @@ background-position:18px -493px;
     </li>
 <li class="button" key="14_school" name="menu">
 
-	<a href="javascript:void(0);"><em id="h1_14_school"></em>鸿宇多用户商城<span id="fa_14_school"></span></a></li>
+	<a href="javascript:void(0);"><em id="h1_14_school"></em><span id="fa_14_school"></span></a></li>
 
    <li class="dropdown" id="14_school">
 
    <ul>
-        <li class="dropdown"><a href="http://bbs.hongyuvip.com/" target="_blank">官方网址</a></li>
+        <li class="dropdown"><a href="/" target="_blank">官方网址</a></li>
 
-        <li class="dropdown"><a href="http://buy.hongyuvip.com/" target="_blank">鸿宇商城</a></li>
+        <li class="dropdown"><a href="http://buy./" target="_blank">商城</a></li>
 
-        <li class="dropdown"><a href="http://zc.hongyuvip.com/" target="_blank">鸿宇众筹</a></li>
+        <li class="dropdown"><a href="http://zc./" target="_blank">众筹</a></li>
 
-        <li class="dropdown"><a href="http://bbs.hongyuvip.com/" target="_blank">在线论坛</a></li>
+        <li class="dropdown"><a href="/" target="_blank">在线论坛</a></li>
 
     </ul>
     </li>

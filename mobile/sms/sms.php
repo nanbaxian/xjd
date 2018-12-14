@@ -72,13 +72,13 @@ function read_file($file_name)
 
 if ($_GET['act'] == 'check') {
 
-    /* 代码修改_start BY bbs.hongyuvip.com */
+    /* 代码修改_start BY  */
 
     $mobile = isset($_POST['mobile']) ? trim($_POST['mobile']) : '';
 
     $mobile_code = isset($_POST['mobile_code']) ? trim($_POST['mobile_code']) : '';
 
-    /* 代码修改_end BY bbs.hongyuvip.com */
+    /* 代码修改_end BY  */
 
 
     if (time() - $_SESSION['time'] > 30 * 60) {
@@ -120,13 +120,13 @@ if ($_GET['act'] == 'check') {
 if ($_GET['act'] == 'send') {
 
 
-    /* 代码修改_start BY bbs.hongyuvip.com */
+    /* 代码修改_start BY  */
 
     $mobile = isset($_POST['mobile']) ? trim($_POST['mobile']) : '';
 
     $mobile_code = isset($_POST['mobile_code']) ? trim($_POST['mobile_code']) : '';
 
-    /* 代码修改_end BY bbs.hongyuvip.com */
+    /* 代码修改_end BY  */
 
 
     //session_start();
@@ -204,7 +204,7 @@ if ($_GET['act'] == 'send') {
 
 }
 
-/* 鸿宇独家修复 hongyuvip.com QQ交流群:90664526 by:Shadow & 鸿宇 start */
+/* 独家修复  QQ交流群:90664526 by: start */
 
 function sendSMS($mobile_phone, $content)
 {
@@ -230,7 +230,7 @@ function sendSMS($mobile_phone, $content)
        if($hy_showbug == true){
            $hy_result = $resp->sub_msg;
            if(empty($hy_result)){
-               echo "短信验证码发送失败！请检查：\n鸿宇管理中心->短信管理->App Key、App Secret\n商店设置->短信设置->短信签名、对应的模板编号\n阿里开发者控制台->安全中心->IP白名单是否正确？";
+               echo "短信验证码发送失败！请检查：\n管理中心->短信管理->App Key、App Secret\n商店设置->短信设置->短信签名、对应的模板编号\n阿里开发者控制台->安全中心->IP白名单是否正确？";
            }else{
                echo "发送失败：【" . $hy_result . "】";
            }
@@ -240,7 +240,7 @@ function sendSMS($mobile_phone, $content)
     }
 }
 
-/* 鸿宇科技修复 hongyuvip.com QQ交流群:90664526 by:Shadow & 鸿宇 end */
+/* 科技修复  QQ交流群:90664526 by: end */
 
 function checkSMS($mobile, $mobile_code)
 {

@@ -1,12 +1,12 @@
 <?php
 
 /**
- * 鸿宇多用户商城 商品详情
+ *  商品详情
  * ============================================================================
- * 版权所有 2005-2010 鸿宇多用户商城科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
+ * 版权所有 2005-2010 ，并保留所有权利。
+ * 网站地址: ；
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
  * $Author: liuhui $
@@ -270,7 +270,7 @@ if (!$smarty->is_cached('pro_goods.dwt', $cache_id))
         $volume_price_list = get_volume_price_list($goods['goods_id'], '1');
         $smarty->assign('volume_price_list',$volume_price_list);    // 商品优惠价格区间
 		
-	//评价晒单 增加 by bbs.hongyuvip.com
+	//评价晒单 增加 by 
 	$rank_num['rank_a'] = $db->getOne("SELECT COUNT(*) AS num FROM ".$ecs->table('comment')." WHERE id_value = '$goods_id' AND status = 1 AND comment_rank in (5,4)");
 	$rank_num['rank_b'] = $db->getOne("SELECT COUNT(*) AS num FROM ".$ecs->table('comment')." WHERE id_value = '$goods_id' AND status = 1 AND comment_rank in (3,2)");
 	$rank_num['rank_c'] = $db->getOne("SELECT COUNT(*) AS num FROM ".$ecs->table('comment')." WHERE id_value = '$goods_id' AND status = 1 AND comment_rank = 1");

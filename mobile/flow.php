@@ -1,16 +1,16 @@
 <?php
 
 /**
- * 鸿宇多用户商城 购物流程
+ *  购物流程
  * ============================================================================
  * 版权所有 2015-2016 HongYu科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
+ * 网站地址: ；
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
- * $Author: Shadow & 鸿宇
- * $Id: flow.php 17218 2011-01-24 04:10:41Z derek $
+ * $Author: 
+ * $Id: flow.php 17218 2011-01-24 04:10:41Z 
  */
 
 define('IN_ECS', true);
@@ -22,7 +22,7 @@ require(ROOT_PATH . 'includes/lib_order.php');
 require_once(ROOT_PATH . 'languages/' .$_CFG['lang']. '/user.php');
 require_once(ROOT_PATH . 'languages/' .$_CFG['lang']. '/shopping_flow.php');
 
-/* 代码增加_start  BY  bbs.hongyuvip.com */
+/* 代码增加_start  BY   */
 if (!empty($_REQUEST['act']) && $_REQUEST['act'] == 'selcart')
 {
 	include('includes/cls_json.php');
@@ -58,10 +58,10 @@ if (!empty($_REQUEST['act']) && $_REQUEST['act'] == 'selcart')
 	}
 	die($json->encode($res));
 }
-/* 代码增加_end  BY  bbs.hongyuvip.com */
+/* 代码增加_end  BY   */
 
 
-/* 代码增加_start  By bbs.hongyuvip.com  */
+/* 代码增加_start  By   */
 $_CFG['anonymous_buy']='0';
 $smarty->assign('lang',             $_LANG);
 if ($_REQUEST['act']=='EditAddress')
@@ -354,7 +354,7 @@ function get_consignee_list_ecshop68()
 	if ( count($consignee_list_ecshop68) && !$have_def_addr){ $consignee_list_ecshop68[0]['def_addr'] =1; }
 	return 	$consignee_list_ecshop68;
 }
-/* 代码增加_end  By bbs.hongyuvip.com  */
+/* 代码增加_end  By   */
 
 /*------------------------------------------------------ */
 //-- INPUT
@@ -932,10 +932,10 @@ elseif ($_REQUEST['step'] == 'checkout')
 
     if($flow_type != CART_EXCHANGE_GOODS){
     	//非积分兑换形式的商品
-    	/* 代码增加_start  By  bbs.hongyuvip.com */
+    	/* 代码增加_start  By   */
 		$sel_cartgoods_count = count($_REQUEST['sel_cartgoods']);
 		$_SESSION['sel_cartgoods'] =  $sel_cartgoods_count>0 ? (implode(",", $_REQUEST['sel_cartgoods'])) : $_SESSION['sel_cartgoods'];
-		/* 代码增加_end   By  bbs.hongyuvip.com */
+		/* 代码增加_end   By   */
 
 		//验证购物车中提交过来的商品中参加的活动是否都正常start
 		$_REQUEST['sel_goods'] = $_SESSION['sel_cartgoods'];
@@ -1665,7 +1665,7 @@ elseif ($_REQUEST['step'] == 'check_surplus_open')
 }
 */
 
-/*余额额支付密码_添加_START_bbs.hongyuvip.com*/
+/*余额额支付密码_添加_START_*/
 elseif ($_REQUEST['step'] == 'check_surplus_open')
 {
     $pay_code = $_SESSION['flow_order']['pay_code'];
@@ -2145,18 +2145,18 @@ elseif ($_REQUEST['step'] == 'done')
     include_once('includes/lib_clips.php');
     include_once('includes/lib_payment.php');
 
-	/* 代码增加_start  By bbs.hongyuvip.com */
+	/* 代码增加_start  By  */
 	$id_ext ="";
 	if ($_SESSION['sel_cartgoods'])
 	{
 		$id_ext = " AND rec_id in (". $_SESSION['sel_cartgoods'] .") ";
 	}
-	/* 代码增加_end  By bbs.hongyuvip.com */
+	/* 代码增加_end  By  */
 
     /* 取得购物类型 */
     $flow_type = isset($_SESSION['flow_type']) ? intval($_SESSION['flow_type']) : CART_GENERAL_GOODS;
 
-    /* 代码增加_end  By bbs.hongyuvip.com */
+    /* 代码增加_end  By  */
 	$sql_where = $_SESSION['user_id']>0 ? "user_id='". $_SESSION['user_id'] ."' " : "session_id = '" . SESS_ID . "' AND user_id=0 ";
 	$sql_where .= $id_ext;
 
@@ -2165,7 +2165,7 @@ elseif ($_REQUEST['step'] == 'done')
     $sql = "SELECT COUNT(*) FROM " . $ecs->table('cart') .
         " WHERE $sql_where " .
         "AND parent_id = 0 AND is_gift = 0 AND rec_type = '$flow_type'";
-    /* 代码增加_end  By bbs.hongyuvip.com */
+    /* 代码增加_end  By  */
     if ($db->getOne($sql) == 0)
     {
         show_message($_LANG['no_goods_in_cart'], '', '', 'warning');
@@ -2292,11 +2292,11 @@ elseif ($_REQUEST['step'] == 'done')
 	        'integral'        => isset($order_integral[$ckey]) ? intval($order_integral[$ckey]) : 0,
 	        'bonus_id'        => isset($order_bonus_id[$ckey]) ? intval($order_bonus_id[$ckey]) : 0,
 	        'need_inv'        => empty($_POST['need_inv']) ? 0 : 1,
-	        /*增值税发票_删除_START_bbs.hongyuvip.com*/
+	        /*增值税发票_删除_START_*/
         	//'inv_type'        => $_POST['inv_type'],
         	//'inv_payee'       => trim($_POST['inv_payee']),
         	//'inv_content'     => $_POST['inv_content'],
-			/*增值税发票_删除_END_bbs.hongyuvip.com*/
+			/*增值税发票_删除_END_*/
 	        'postscript'      => trim($_POST['postscript']),
 	        'how_oos'         => isset($_LANG['oos'][$_POST['how_oos']]) ? addslashes($_LANG['oos'][$_POST['how_oos']]) : '',
 	        'need_insure'     => isset($_POST['need_insure']) ? intval($_POST['need_insure']) : 0,
@@ -2313,7 +2313,7 @@ elseif ($_REQUEST['step'] == 'done')
 		$order['defaultbank'] = $_POST['www_68ecshop_com_bank'] ? trim($_POST['www_68ecshop_com_bank']) : "";
 
 
-		/*增值税发票_添加_START_bbs.hongyuvip.com*/
+		/*增值税发票_添加_START_*/
     	/*发票信息*/
 		if($_REQUEST['inv_type'] == 'normal_invoice')
 		{
@@ -2340,7 +2340,7 @@ elseif ($_REQUEST['step'] == 'done')
 			}
 		}
 
-		/*增值税发票_添加_END_bbs.hongyuvip.com*/
+		/*增值税发票_添加_END_*/
 
 	    /* 扩展信息 */
 	    if (isset($_SESSION['flow_type']) && intval($_SESSION['flow_type']) != CART_GENERAL_GOODS)
@@ -2457,9 +2457,9 @@ elseif ($_REQUEST['step'] == 'done')
 	        $order[$key] = addslashes($value);
 	    }
 
-		/* 代码增加_start  By  bbs.hongyuvip.com */
+		/* 代码增加_start  By   */
 		$order['best_time'] = isset($_POST['best_time']) ? trim($_POST['best_time']) : '';
-		/* 代码增加_end  By  bbs.hongyuvip.com */
+		/* 代码增加_end  By   */
 
 		//配送方式的钱算到里面
 	    $order['shipping_pay'][$ckey] = $_POST['pay_ship'][$ckey];
@@ -2536,10 +2536,10 @@ elseif ($_REQUEST['step'] == 'done')
 
 	    $order['order_amount']  = number_format($total['amount'], 2, '.', '');
 
-		/*增值税发票_添加_START_bbs.hongyuvip.com*/
+		/*增值税发票_添加_START_*/
     	/*发票金额*/
     	$order['inv_money'] =  $order['order_amount'] ;
-    	/*增值税发票_添加_END_bbs.hongyuvip.com*/
+    	/*增值税发票_添加_END_*/
 
     	/* 如果全部使用余额支付，检查余额是否足够 */
 	    if ($payment['pay_code'] == 'balance' && $order['order_amount'] > 0)
@@ -2716,7 +2716,7 @@ elseif ($_REQUEST['step'] == 'done')
 	    $parent_order_id = ($parent_order_id>0) ? $parent_order_id : $new_order_id;
 
 	    /* 插入订单商品 下面这个SQL有修改 by www.ecshop68.com 注意末尾那个字段 */
-	    /* 代码增加_start  By bbs.hongyuvip.com */
+	    /* 代码增加_start  By  */
 	    $sql = "INSERT INTO " . $ecs->table('order_goods') . "( " .
 	                "order_id, goods_id, goods_name, goods_sn, product_id, goods_number, market_price, cost_price, ".
 	                "goods_price,split_money, goods_attr, is_real, extension_code, parent_id, is_gift, goods_attr_id, package_attr_id) ".
@@ -2724,7 +2724,7 @@ elseif ($_REQUEST['step'] == 'done')
 	                "goods_price,split_money, goods_attr, is_real, extension_code, parent_id, is_gift, goods_attr_id, package_attr_id ".
 	            " FROM " .$ecs->table('cart') .
 	            " WHERE $sql_where AND rec_type = '$flow_type' $id_ext_new ";
-	    /* 代码增加_end  By bbs.hongyuvip.com */
+	    /* 代码增加_end  By  */
 	    $db->query($sql);
 	    /* 修改拍卖活动状态 */
 	    if ($order['extension_code']=='auction')
@@ -2807,19 +2807,19 @@ elseif ($_REQUEST['step'] == 'done')
 
 	    if ($order['order_amount'] <= 0)
 	    {
-	    	/* 代码增加_start  By bbs.hongyuvip.com */
+	    	/* 代码增加_start  By  */
 	    	$sql = "SELECT goods_id, goods_name,extension_code, goods_attr_id, goods_number AS num FROM ".
 	               $GLOBALS['ecs']->table('cart') .
 	                " WHERE is_real = 0 ".
 	                " AND $sql_where AND rec_type = '$flow_type'";
-	        /* 代码增加_end  By bbs.hongyuvip.com */
+	        /* 代码增加_end  By  */
 	        $res = $GLOBALS['db']->getAll($sql);
 
 	        $virtual_goods = array();
                 $virtual_goods_num = 0;
 	        foreach ($res AS $row)
 	        {
-                    /* 代码增加_start  By bbs.hongyuvip.com _sunlizhi*/
+                    /* 代码增加_start  By  _sunlizhi*/
 //                    if($row['extension_code'] == 'virtual_good'){
 //                        $virtual_goods_num = $virtual_goods_num+1;
 //                    }
@@ -2827,7 +2827,7 @@ elseif ($_REQUEST['step'] == 'done')
                     $goods_info = $GLOBALS['db']->getRow($sqla);
                     $valid_date = $goods_info['valid_date'];
                     $supplier_id = $goods_info['supplier_id'];
-                    /* 代码增加_end  By bbs.hongyuvip.com _sunlizhi*/
+                    /* 代码增加_end  By  _sunlizhi*/
 	            $virtual_goods[$row['extension_code']][] = array('goods_id' => $row['goods_id'], 'goods_attr_id'=>$row['goods_attr_id'], 'goods_name' => $row['goods_name'], 'num' => $row['num'],'valid_date'=>$valid_date,'supplier_id'=>$supplier_id,'mobile_phone'=>$_REQUEST['mobile_phone']);
 	        }
 
@@ -2907,7 +2907,7 @@ elseif ($_REQUEST['step'] == 'done')
     }
 
 
-	/* 代码增加_start  By  bbs.hongyuvip.com */
+	/* 代码增加_start  By   */
 	//$split_order = split_order($new_order_id);
 	$smarty->assign('split_order',      $split_order);
 	/* 如果需要，发短信 */
@@ -3491,7 +3491,7 @@ function flow_available_points()
             "FROM " . $GLOBALS['ecs']->table('cart') . " AS c, " . $GLOBALS['ecs']->table('goods') . " AS g " .
             "WHERE $sql_where AND c.goods_id = g.goods_id AND c.is_gift = 0 AND g.integral > 0 " .
             "AND c.rec_type = '" . CART_GENERAL_GOODS . "' GROUP BY g.supplier_id";
-   /* 代码修改_end  By  bbs.hongyuvip.com */
+   /* 代码修改_end  By   */
     $info = $GLOBALS['db']->getAll($sql);
     $ret = array();
     foreach($info as $key => $val){
@@ -3715,7 +3715,7 @@ function flow_drop_cart_goods($id)
     $row = $GLOBALS['db']->getRow($sql);
     if ($row)
     {
-		$sql_where = $_SESSION['user_id']>0 ? "user_id='". $_SESSION['user_id'] ."' " : "session_id = '" . SESS_ID . "' AND user_id=0 ";//添加 bbs.hongyuvip.com
+		$sql_where = $_SESSION['user_id']>0 ? "user_id='". $_SESSION['user_id'] ."' " : "session_id = '" . SESS_ID . "' AND user_id=0 ";//添加 
         //如果是超值礼包
         if ($row['extension_code'] == 'package_buy')
         {
@@ -3772,7 +3772,7 @@ function flow_drop_cart_goods($id)
 function flow_clear_cart_alone()
 {
     /* 查询：购物车中所有不可以单独销售的配件 */
-	$sql_where = $_SESSION['user_id']>0 ? "c.user_id='". $_SESSION['user_id'] ."' " : "c.session_id = '" . SESS_ID . "' AND c.user_id=0 ";//添加 bbs.hongyuvip.com
+	$sql_where = $_SESSION['user_id']>0 ? "c.user_id='". $_SESSION['user_id'] ."' " : "c.session_id = '" . SESS_ID . "' AND c.user_id=0 ";//添加 
 
     $sql = "SELECT c.rec_id, gg.parent_id
             FROM " . $GLOBALS['ecs']->table('cart') . " AS c
@@ -3793,7 +3793,7 @@ function flow_clear_cart_alone()
     {
         return;
     }
-$sql_where = $_SESSION['user_id']>0 ? "user_id='". $_SESSION['user_id'] ."' " : "session_id = '" . SESS_ID . "' AND user_id=0 ";//添加 bbs.hongyuvip.com
+$sql_where = $_SESSION['user_id']>0 ? "user_id='". $_SESSION['user_id'] ."' " : "session_id = '" . SESS_ID . "' AND user_id=0 ";//添加 
 
     /* 查询：购物车中所有商品 */
     $sql = "SELECT DISTINCT goods_id
@@ -4000,7 +4000,7 @@ function act_range_desc($favourable)
  */
 function cart_favourable()
 {
-	$sql_where = $_SESSION['user_id']>0 ? "user_id='". $_SESSION['user_id'] ."' " : "session_id = '" . SESS_ID . "' AND user_id=0 ";//添加 bbs.hongyuvip.com
+	$sql_where = $_SESSION['user_id']>0 ? "user_id='". $_SESSION['user_id'] ."' " : "session_id = '" . SESS_ID . "' AND user_id=0 ";//添加 
     $list = array();
     $sql = "SELECT is_gift, COUNT(*) AS num " .
             "FROM " . $GLOBALS['ecs']->table('cart') .
@@ -4077,7 +4077,7 @@ function add_favourable_to_cart($act_id, $act_name, $amount)
  */
 function cart_favourable_amount($favourable)
 {
-	$sql_where = $_SESSION['user_id']>0 ? "c.user_id='". $_SESSION['user_id'] ."' " : "c.session_id = '" . SESS_ID . "' AND c.user_id=0 ";//添加 bbs.hongyuvip.com
+	$sql_where = $_SESSION['user_id']>0 ? "c.user_id='". $_SESSION['user_id'] ."' " : "c.session_id = '" . SESS_ID . "' AND c.user_id=0 ";//添加 
     /* 查询优惠范围内商品总额的sql */
     $sql = "SELECT SUM(c.goods_price * c.goods_number) " .
             "FROM " . $GLOBALS['ecs']->table('cart') . " AS c, " . $GLOBALS['ecs']->table('goods') . " AS g " .

@@ -19,7 +19,7 @@
 {insert_scripts files='common.js,shopping_flow.js'}
 </head>
 <body>
-<!--余额额支付密码_添加_START_bbs.hongyuvip.com-->
+<!--余额额支付密码_添加_START_-->
 <!--弹窗start-->
 <div id="popup_window" style="position:fixed;display:none;z-index:9999;">
 <label>请输入余额支付密码:</label>
@@ -27,7 +27,7 @@
 <input type="button" onclick="end_input_surplus()" value="确定" class='bnt_blue_1 btn_pay1' />
 <input type="button" onclick="cancel_input_surplus()" value="取消" class='bnt_blue_1 btn_pay2' />
 </div>
-<!--余额额支付密码_添加_END_bbs.hongyuvip.com-->
+<!--余额额支付密码_添加_END_-->
 <div id="site-nav" style="position:relative;"> <!-- #BeginLibraryItem "/library/user_header.lbi" --><!-- #EndLibraryItem -->
   <div class="headerLayout" style="padding-top:15px; padding-bottom:5px;">
     <div class="headerCon ">
@@ -76,10 +76,10 @@
     <div class="flowBox_jm" style="margin-top:10px;">
       <div class="title_jm" >
         <table cellpadding=0 cellspacing=0 width="100%" border=0>
-          <tr> {* 代码增加_start  By  bbs.hongyuvip.com *}
+          <tr> {* 代码增加_start  By   *}
             <td width="8%" align=center><input type="checkbox" autocomplete="off" id="chkAll" name="chkAll" checked=true  onclick="return chkAll_onclick()" style="height:28px;vertical-align:middle;" >
               全选</td>
-            {* 代码增加_end  By  bbs.hongyuvip.com *}
+            {* 代码增加_end  By   *}
             <td width="37%" align=center>产品</td>
             <td width="15%" align=center>数量</td>
             <td width="15%" align=center>本店价</td>
@@ -100,7 +100,7 @@
           <td align="right" width="150"><a href="javascript:void(0);" onclick="return selcart_submit();" class="jmcheckout" style="color:#ffffff">去结算</a></td>
         </tr>
       </table>
-      {* 代码增加_start   By  bbs.hongyuvip.com *}
+      {* 代码增加_start   By   *}
       <script type="text/javascript" charset="utf-8">
 	function chkAll_onclick() 
 	{
@@ -177,8 +177,8 @@
 	     }
 	}
 	</script> 
-      {* 代码增加_End    By  bbs.hongyuvip.com *}
-      <!--增加代码_start By bbs.hongyuvip.com-->
+      {* 代码增加_End    By   *}
+      <!--增加代码_start By -->
       <script>
 	  function add_num(rec_id,goods_id,supp_id)
 	 {
@@ -281,7 +281,7 @@ else
 
 }
 </script> 
-      <!--增加代码_end By bbs.hongyuvip.com-->
+      <!--增加代码_end By -->
       <!-- {if $smarty.session.user_id gt 0} --> 
       {insert_scripts files='transport.js'} 
       <script type="text/javascript" charset="utf-8">
@@ -731,9 +731,9 @@ else
 	</script>
       <div class="flowBox_jm clearfix" style="border:none;padding-bottom:20px;">
         <div style="float:right;width:55%;text-align:right;padding:8px 20px;"> 
-          <!--余额额支付密码_更改_START_bbs.hongyuvip.com-->
+          <!--余额额支付密码_更改_START_-->
           <input onclick="return check_before_submit_vir()" type="image" src="images/jmpic/btn_done.gif" align="absmiddle" />
-          <!--余额额支付密码_更改_END_bbs.hongyuvip.com-->
+          <!--余额额支付密码_更改_END_-->
           <input name="need_inv" style="display:none;" type="checkbox"  class="input" id="ECS_NEEDINV" onclick="changeNeedInv()" value="1" checked="true" />
           <input type="hidden" name="step" value="done" />
         </div>

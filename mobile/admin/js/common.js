@@ -2,7 +2,7 @@
 
 
 
-/* JS代码增加_start  By bbs.hongyuvip.com */
+/* JS代码增加_start  By  */
 
 function reg_package(){
 
@@ -202,7 +202,7 @@ function  check_package( pid, thef)
 
 }
 
-/* JS代码增加_end  By bbs.hongyuvip.com */
+/* JS代码增加_end  By  */
 
 
 

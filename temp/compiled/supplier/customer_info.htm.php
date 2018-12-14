@@ -1,4 +1,4 @@
-<!-- $Id: group_buy_info.htm 14216 2015-02-10 02:27:21Z derek $ -->
+<!-- $Id: group_buy_info.htm 14216 2015-02-10 02:27:21Z  -->
 <?php echo $this->fetch('pageheader.htm'); ?> <?php echo $this->smarty_insert_scripts(array('files'=>'../js/utils.js,')); ?>
 <script type="text/javascript" src="../js/jquery-1.6.2.min.js"></script>
 <script type="text/javascript" src="../js/calendar.php?lang=<?php echo $this->_var['cfg_lang']; ?>"></script>

@@ -166,7 +166,7 @@
     {if $goods.is_gift}{if $goods.goods_price > 0}{$lang.remark_favourable}{else}{$lang.remark_gift}{/if}{/if}
     {if $goods.parent_id > 0}{$lang.remark_fittings}{/if}</a>
     {elseif $goods.goods_id gt 0 && $goods.extension_code eq 'package_buy'}
-   	<!--修改_start  by bbs.hongyuvip.com -->
+   	<!--修改_start  by  -->
     <a href="javascript:void(0)" onclick="setSuitShow({$goods.goods_id})" style="font-size:15px;color:#ff0000;font-weight:bold;" >{$goods.goods_name}<span style="color:#FF0000;">{$lang.remark_package}</span></a>
     <div id="suit_{$goods.goods_id}" style="padding-left:20px;">
 	包括以下商品：<br />
@@ -174,7 +174,7 @@
           <a href="../goods.php?id={$package_goods_list.goods_id}" target="_blank">{$package_goods_list.goods_name}</a><br />
         {/foreach}
     </div>
-	<!--修改_end  by bbs.hongyuvip.com -->
+	<!--修改_end  by  -->
     {/if}
     </td>
     <td>{$goods.shouhou}</td>
@@ -266,14 +266,14 @@
     return true;
   }
 </script>
-{*  start Add By bbs.hongyuvip.com ecshop开发中心 企业QQ123456789 *}
+{*  start Add By  ecshop开发中心 企业QQ123456789 *}
 <script language="javascript">
   document.getElementById("retData").innerHTML="<center>正在查询物流信息，请稍后...</center>";
   var expressid = document.getElementById("shipping_name").innerHTML;
   var expressno = document.getElementById("invoice_no").innerHTML;
   Ajax.call('../plugins/kuaidi100/kuaidi100_post.php?com='+ expressid+'&nu=' + expressno,'showtest=showtest', function(data){document.getElementById("retData").innerHTML=data;}, 'GET', 'TEXT');
 </script>
-{*  end Add By bbs.hongyuvip.com ecshop开发中心 企业QQ123456789 *}
+{*  end Add By  ecshop开发中心 企业QQ123456789 *}
 {/literal}
 
 {include file="pagefooter.htm"}

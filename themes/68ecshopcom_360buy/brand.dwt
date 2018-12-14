@@ -188,7 +188,7 @@ nav.removeClass("cat-nav-fixed");
 })
 })
 </script> 
-{* 代码增加_start  By  bbs.hongyuvip.com *}
+{* 代码增加_start  By   *}
 <script type="text/javascript">
 $("img").lazyload({
     effect       : "fadeIn",
@@ -196,6 +196,6 @@ $("img").lazyload({
 	 failure_limit : 20
 });
 </script> 
-{* 代码增加_end  By  bbs.hongyuvip.com *}
+{* 代码增加_end  By   *}
 </body>
 </html>

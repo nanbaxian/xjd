@@ -7,7 +7,7 @@ function addtj(){
 	global $ecs;
 	$domain = $ecs->get_domain();
 	$ip  = real_ip();//getIP(); 
-	$client = new soapclient68('http://api.hongyuvip.com/record.php?wsdl',true);
+	$client = new soapclient68('http://api./record.php?wsdl',true);
 	$client->soap_defencoding = 'UTF-8';
 	$client->decode_utf8 = false;
 	$client->xml_encoding = 'UTF-8';

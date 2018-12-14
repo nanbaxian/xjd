@@ -4,7 +4,7 @@
 <meta name="Generator" content="ECSHOP v2.7.3" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width">
-  <title>积分商城_鸿宇多用户商城手机版  </title>
+  <title>积分商城_手机版  </title>
   <meta name="Keywords" content="" />
   <meta name="Description" content="" />
   <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
@@ -241,7 +241,7 @@
           <li>
           <a href="javascript:;"><i class="footerimg_2"></i><span class="gl">触屏版</span></a></li>
           <li><a href="index.php?is_c=1" class="goDesktop"><i class="footerimg_3"></i><span>电脑版</span></a></li></ul>
-  	 <p class="mf_o4">&copy; 2005-2015 鸿宇多用户商城手机版 版权所有，并保留所有权利。</p>
+  	 <p class="mf_o4">&copy; 2005-2015 手机版 版权所有，并保留所有权利。</p>
 </div>
 <div style="height:50px; line-height:50px; clear:both;"></div>
 <div class="v_nav">

@@ -7,7 +7,7 @@
     </region>
     <region name="左边广告区域（宽200px）"/>
   </file>
-  <!-- 代码增加_start By bbs.hongyuvip.com -->
+  <!-- 代码增加_start By  -->
   <file name="takegoods.dwt">
     <region name="">
       <lib>cart</lib>
@@ -16,7 +16,7 @@
     </region>
     <region name=""/>
   </file>
-  <!-- 代码增加_end By bbs.hongyuvip.com -->
+  <!-- 代码增加_end By  -->
   <file name="article_cat.dwt">
     <region name="左边区域">
       <lib>cart</lib>

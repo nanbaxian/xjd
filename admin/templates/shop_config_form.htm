@@ -50,9 +50,9 @@
           {elseif $var.type eq "file"}
           <input name="{$var.code}" type="file" size="40" />
           
-           {* 代码修改_start By  bbs.hongyuvip.com 下面代码中增加一个 【or $var.code eq "erweima_logo"】 *}
+           {* 代码修改_start By   下面代码中增加一个 【or $var.code eq "erweima_logo"】 *}
           {if ($var.code eq "shop_logo" or $var.code eq "no_picture" or $var.code eq "watermark" or $var.code eq "shop_slagon" or $var.code eq "wap_logo" or $var.code eq "erweima_logo") and $var.value}
-		  {* 代码修改_end By  bbs.hongyuvip.com *}
+		  {* 代码修改_end By   *}
             <a href="?act=del&code={$var.code}"><img src="images/no.gif" alt="Delete" border="0" /></a> <img src="images/yes.gif" border="0" onmouseover="showImg('{$var.code}_layer', 'show')" onmouseout="showImg('{$var.code}_layer', 'hide')" />
             <div id="{$var.code}_layer" style="position:absolute; width:100px; height:100px; z-index:1; visibility:hidden" border="1">
               <img src="{$var.value}" border="0" />
@@ -97,7 +97,7 @@
                 <th scope="col">{$lang.invoice_type}</th>
                 <th scope="col">{$lang.invoice_rate}</th>
               </tr>
-              <!--增值税发票_更改_START_bbs.hongyuvip.com-->
+              <!--增值税发票_更改_START_-->
               <tr>
                 <td>
                   <input type='hidden' name='invoice_enable[0]' value='0'/>
@@ -124,7 +124,7 @@
                 </td>
                 <td><input name="invoice_rate[]" type="text" value="{$cfg.invoice_type.rate[1]}" /></td>
               </tr>
-			  <!--增值税发票_更改_END_bbs.hongyuvip.com-->
+			  <!--增值税发票_更改_END_-->
             </table>
             {/if}
           {/if}

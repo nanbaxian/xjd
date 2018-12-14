@@ -1,16 +1,16 @@
 <?php
 
 /**
- * 鸿宇多用户商城 用户交易相关函数库
+ *  用户交易相关函数库
  * ============================================================================
- * 版权所有 2015-2016 鸿宇多用户商城科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
+ * 版权所有 2015-2016 ，并保留所有权利。
+ * 网站地址: ；
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
- * $Author: Shadow & 鸿宇
- * $Id: lib_transaction.php 17217 2016-01-19 06:29:08Z Shadow & 鸿宇
+ * $Author: 
+ * $Id: lib_transaction.php 17217  
 */
 
 if (!defined('IN_ECS'))
@@ -315,7 +315,7 @@ function get_user_orders($user_id, $num = 10, $start = 0)
     $arr    = array();
 
     $sql = "SELECT order_id, order_sn, order_status, shipping_status, pay_status, add_time, shipping_time," .
-			" supplier_id, rebate_id, parent_order_id,	  ". //代码增加  By  bbs.hongyuvip.com
+			" supplier_id, rebate_id, parent_order_id,	  ". //代码增加  By  
            "(goods_amount + shipping_fee + insure_fee + pay_fee + pack_fee + card_fee + tax - discount) AS total_fee ".
            " FROM " .$GLOBALS['ecs']->table('order_info') .
            " WHERE user_id = '$user_id' ORDER BY add_time DESC";
@@ -355,7 +355,7 @@ function get_user_orders($user_id, $num = 10, $start = 0)
         {
             $row['handler'] = '<span style="color:red">'.$GLOBALS['_LANG']['os'][$row['order_status']] .'</span>';
         }
-	    /* 代码增加_start  By  bbs.hongyuvip.com */
+	    /* 代码增加_start  By   */
 		if ($row['shipping_status']==SS_SHIPPED || $row['shipping_status']==SS_RECEIVED || $row['shipping_status']==SS_SHIPPED_PART)
 		{
 			$now_time = gmtime();
@@ -381,7 +381,7 @@ function get_user_orders($user_id, $num = 10, $start = 0)
 			$row['handler'] .= '<br /><a href="user.php?act=order_detail&order_id='. $row['order_id'] .'" >申请返修/退款/退货</a>';
 			}
 		}
-		/* 代码增加_end  By  bbs.hongyuvip.com */
+		/* 代码增加_end  By   */
         $row['shipping_status'] = ($row['shipping_status'] == SS_SHIPPED_ING) ? SS_PREPARING : $row['shipping_status'];
         $row['order_status'] = $GLOBALS['_LANG']['os'][$row['order_status']] . ',' . $GLOBALS['_LANG']['ps'][$row['pay_status']] . ',' . $GLOBALS['_LANG']['ss'][$row['shipping_status']];
 
@@ -390,7 +390,7 @@ function get_user_orders($user_id, $num = 10, $start = 0)
                        'order_time'     => local_date($GLOBALS['_CFG']['time_format'], $row['add_time']),
                        'order_status'   => $row['order_status'],
                        'total_fee'      => price_format($row['total_fee'], false),
-			'is_suborder' => $row['parent_order_id'] ? "(子订单)" : "",  //代码增加   By  bbs.hongyuvip.com
+			'is_suborder' => $row['parent_order_id'] ? "(子订单)" : "",  //代码增加   By  
                        'handler'        => $row['handler']);		
 
     }

@@ -1,15 +1,15 @@
 <?php
 
 /**
- * 鸿宇多用户商城 注册
+ *  注册
  * ============================================================================
  * 版权所有 2015-2016 HongYu科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
+ * 网站地址: ；
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
- * $Author: Shadow & 鸿宇
+ * $Author: 
  * $Id: register.php 17217 2015-08-07 06:29:08Z niqingyang $
  */
 define('IN_ECS', true);
@@ -320,12 +320,12 @@ function action_default ()
 	
 	/* 密码提示问题 */
 	$smarty->assign('passwd_questions', $_LANG['passwd_questions']);
-	/* 代码增加_start By bbs.hongyuvip.com */
+	/* 代码增加_start By  */
 	$smarty->assign('sms_register', $_CFG['sms_register']);
-	/* 代码增加_end By bbs.hongyuvip.com */
-	/* 代码增加_star By bbs.hongyuvip.com */
+	/* 代码增加_end By  */
+	/* 代码增加_star By  */
 	$smarty->assign('sms_register', $_CFG['sms_register']);
-	/* 代码增加_end By bbs.hongyuvip.com */
+	/* 代码增加_end By  */
 	/* 增加是否关闭注册 */
 	$smarty->assign('shop_reg_closed', $_CFG['shop_reg_closed']);
 	// 登陆注册-注册类型
@@ -547,7 +547,7 @@ function action_register ()
 				$sql = 'INSERT INTO ' . $ecs->table('reg_extend_info') . ' (`user_id`, `reg_field_id`, `content`) VALUES' . $extend_field_str;
 				$db->query($sql);
 			}
-			/* 代码增加2014-12-23 by bbs.hongyuvip.com _star */
+			/* 代码增加2014-12-23 by  _star */
 			// if($_SESSION['tag'] > 0)
 			// {
 			// $sql = "update " . $GLOBALS['ecs']->table('users') . " set
@@ -564,9 +564,9 @@ function action_register ()
 			// $GLOBALS['db']->query($sql);
 			// }
 			// }
-			/* 代码增加2014-12-23 by bbs.hongyuvip.com _end */
+			/* 代码增加2014-12-23 by  _end */
 			/*
-			 * 代码增加_start By bbs.hongyuvip.com
+			 * 代码增加_start By 
 			 * include_once(ROOT_PATH . '/includes/cls_image.php');
 			 * $image = new cls_image($_CFG['bgcolor']);
 			 * $headimg_original =
@@ -585,7 +585,7 @@ function action_register ()
 			 * $_SESSION['user_id'] . "'";
 			 * $db->query($sql);
 			 * }
-			 * 代码增加_end By bbs.hongyuvip.com
+			 * 代码增加_end By 
 			 */
 			
 			/* 写入密码提示问题和答案 */
@@ -595,7 +595,7 @@ function action_register ()
 				$db->query($sql);
 			}
 			
-			/* 代码增加_start By bbs.hongyuvip.com */
+			/* 代码增加_start By  */
 			$now = gmtime();
 			if($_CFG['bonus_reg_rand'])
 			{
@@ -614,7 +614,7 @@ function action_register ()
 			{
 				$_LANG['register_success'] = '用户名 %s 注册成功,并获得官方赠送的红包礼品';
 			}
-			/* 代码增加_end By bbs.hongyuvip.com */
+			/* 代码增加_end By  */
 			
 			/* 判断是否需要自动发送注册邮件 */
 			if($GLOBALS['_CFG']['member_email_validate'] && $GLOBALS['_CFG']['send_verify_email'])
@@ -633,7 +633,7 @@ function action_register ()
 			$GLOBALS['err']->show($_LANG['sign_up'], 'register.php');
 		}
 	}
-	/* 代码增加2014-12-23 by bbs.hongyuvip.com _star */
+	/* 代码增加2014-12-23 by  _star */
 }
 
 /**

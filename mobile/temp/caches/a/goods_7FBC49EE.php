@@ -4,7 +4,7 @@
 <meta name="Generator" content="ECSHOP v2.7.3" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<title>柏年好禾 家具 欧式床 真皮实木床 法式田园公主床_家纺_家纺家居_鸿宇多用户商城手机版  </title>
+<title>柏年好禾 家具 欧式床 真皮实木床 法式田园公主床_家纺_家纺家居_手机版  </title>
 <meta name="Keywords" content="" />
 <meta name="Description" content="" />
 <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>

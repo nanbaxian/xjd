@@ -21,7 +21,7 @@
 {insert_scripts files='jquery.json.js,transport.js'}
 {* 包含脚本文件 *}
 {insert_scripts files='common.js,user.js'}
-<!--余额额支付密码_添加_START_www.68hongyuvip.com-->
+<!--余额额支付密码_添加_START_www.68-->
 {if $action eq 'account_security' || $action eq 'order_detail'}
 <script lang='javascript' type='text/javascript'>
 var action = '';//open_surplus,close_surplus,verify_surplus
@@ -172,10 +172,10 @@ function submit_surplus_form(){
 }
 </script>
 {/if}
-<!--余额额支付密码_添加_END_www.68hongyuvip.com-->
+<!--余额额支付密码_添加_END_www.68-->
 </head>
 <body>
-<!--余额额支付密码_添加_START_www.68hongyuvip.com-->
+<!--余额额支付密码_添加_START_www.68-->
 {if $action eq 'account_security' || $action eq 'order_detail'} 
 <!--弹窗start-->
 <div id="popup_window" style="width:250px;height:auto;margin-left:-125px;margin-top:-75px;left:50%;top:50%;position:fixed;background-color:lightgrey;display:none;z-index:9999;">
@@ -188,7 +188,7 @@ function submit_surplus_form(){
 </div>
 <!--弹窗end--> 
 {/if} 
-<!--余额额支付密码_添加_END_www.68hongyuvip.com-->
+<!--余额额支付密码_添加_END_www.68-->
 <div id="site-nav">
 <!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
 <div class="blank"></div>
@@ -205,7 +205,7 @@ function submit_surplus_form(){
   <div class="AreaR">
     <div class="box">
       <div class="box_1">
-        <div class="userCenterBox boxCenterList clearfix"> {* 代码增加_start  By  www.68hongyuvip.com 供货商申请开始 *}
+        <div class="userCenterBox boxCenterList clearfix"> {* 代码增加_start  By  www.68 供货商申请开始 *}
           <!--{if $action eq 'supplier_reg'}--> 
           {insert_scripts files='utils.js,transport.js'}
           <style>
@@ -562,8 +562,8 @@ function submit_surplus_form(){
 	}
 	</script> 
           <!-- {/if} --> 
-          {* 代码增加_end  By  www.68hongyuvip.com 供货商申请结束 *}
-          {* 代码增加_start  By  www.68hongyuvip.com *}
+          {* 代码增加_end  By  www.68 供货商申请结束 *}
+          {* 代码增加_start  By  www.68 *}
           <!--{if $action eq "tg_login"} -->
           <div class="tabmenu">
             <ul class="tab pngFix">
@@ -658,9 +658,9 @@ function submit_surplus_form(){
             <div class="blank5"></div>
             <!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem --> </div>
           <!-- {/if} --> 
-          {* 代码增加_end  By  www.68hongyuvip.com *}
+          {* 代码增加_end  By  www.68 *}
           
-          {* 代码增加_start  By  www.68hongyuvip.com *}
+          {* 代码增加_start  By  www.68 *}
           <!--{if $action eq "vc_login"} -->
            <div class="tabmenu">
               <ul class="tab pngFix">
@@ -731,7 +731,7 @@ function submit_surplus_form(){
 	}
         </script> 
           <!-- {/if} --> 
-          {* 代码增加_end  By  www.68hongyuvip.com *}
+          {* 代码增加_end  By  www.68 *}
           
           <!-- 用户信息界面 start--> 
           <!--{if $action eq 'profile'}--> 
@@ -990,7 +990,7 @@ menu.className=i==cursel?"active":"";
           
           <!--{if $action eq 'account_security'}-->
           <h5 class="user-title user-title-t"><span> 安全级别： 
-            <!--余额额支付密码_更改_START_www.68hongyuvip.com-->
+            <!--余额额支付密码_更改_START_www.68-->
            {if $info.is_validated eq 0 && $info.validated eq 0 && $info.is_surplus_open eq 0}很危险&nbsp;<i class="validated1"></i>建议您启动全部安全设置，以保障账户及资金安全{/if}
             {if $info.is_validated eq 0 && $info.validated eq 0 && $info.is_surplus_open eq 1}比较危险&nbsp;<i class="validated2"></i>建议您启动全部安全设置，以保障账户及资金安全{/if}
             {if $info.is_validated eq 0 && $info.validated eq 1 && $info.is_surplus_open eq 0}比较危险&nbsp;<i class="validated2"></i>建议您启动全部安全设置，以保障账户及资金安全{/if}
@@ -999,7 +999,7 @@ menu.className=i==cursel?"active":"";
             {if $info.is_validated eq 1 && $info.validated eq 1 && $info.is_surplus_open eq 0}一般&nbsp;<i class="validated3"></i>{/if}
             {if $info.is_validated eq 1 && $info.validated eq 0 && $info.is_surplus_open eq 1}一般&nbsp;<i class="validated3"></i>{/if}
             {if $info.is_validated eq 1 && $info.validated eq 1 && $info.is_surplus_open eq 1}高&nbsp;<i class="validated5"></i>{/if} 
-            <!--余额额支付密码_更改_END_www.68hongyuvip.com-->
+            <!--余额额支付密码_更改_END_www.68-->
             </span></h5>
           <div class="blank"></div>
           <div class="m m5" id="safe05">
@@ -1023,7 +1023,7 @@ menu.className=i==cursel?"active":"";
                 {else}<a href="user.php?act=update_phone" class="btn btn-8">&nbsp;&nbsp;修&nbsp;&nbsp;改&nbsp;&nbsp;</a>{/if}</div>
             </div>
             
-            <!--余额额支付密码_添加_START_www.68hongyuvip.com-->
+            <!--余额额支付密码_添加_START_www.68-->
             <div class="mc" id="surplus-mc">
                         <div class="fore1"><s class="{if $info.is_surplus_open eq 0}fore1_1{else}fore1_3{/if}"></s><strong>余额支付</strong></div>
 						<div class="fore2">{if $info.is_surplus_open eq 0}<span style="color:#ED5854;">开启后，可保障您账户余额支付的安全</span>{else}<span class="ftx-03" >您已开启账户余额支付密码功能{/if}</span></div>
@@ -1043,10 +1043,10 @@ menu.className=i==cursel?"active":"";
                             </p>
                         </div>
                     </div>
-            <!--余额额支付密码_添加_END_www.68hongyuvip.com-->
+            <!--余额额支付密码_添加_END_www.68-->
           </div>
           <!--{/if}--> 
-          <!--余额额支付密码_添加_START_www.68hongyuvip.com-->
+          <!--余额额支付密码_添加_START_www.68-->
           <!--{if $action eq 'update_surplus_password'}}--> 
           <script>
         function check_new_surplus_password(form)
@@ -1368,7 +1368,7 @@ menu.className=i==cursel?"active":"";
             </table>
           </form>
           <!--{/if}--> 
-          <!--余额额支付密码_添加_END_www.68hongyuvip.com-->
+          <!--余额额支付密码_添加_END_www.68-->
           
           <!--{if $action eq 'update_email'}-->
           <h5 class="user-title user-title-t"><span>修改已验证邮箱</span></h5>
@@ -1527,7 +1527,7 @@ menu.className=i==cursel?"active":"";
           <!--用户红包结束--> 
           <!--#订单列表界面 start--> 
           <!-- {if $action eq 'order_list'} --> 
-          {* 代码修改 start by www.68hongyuvip.com *}
+          {* 代码修改 start by www.68 *}
           <div class="tabmenu">
             <ul class="tab pngFix">
               <li class="active"> <a href="#">{$lang.label_order}</a> </li>
@@ -1575,8 +1575,8 @@ menu.className=i==cursel?"active":"";
               </tr>
               <tr class="order-hd">
                 <td colspan="8"><span class="no">
-                  <label> 订单编号：<span class="order-num"><a href="user.php?act=order_detail&order_id={$item.order_id}" class="f6">{$item.order_sn}</a>{* 代码增加_start   By  www.68hongyuvip.com *}
-                    {if $item.is_suborder}{$item.is_suborder}{/if}{* 代码增加_end   By  www.68hongyuvip.com *}</span> </label>
+                  <label> 订单编号：<span class="order-num"><a href="user.php?act=order_detail&order_id={$item.order_id}" class="f6">{$item.order_sn}</a>{* 代码增加_start   By  www.68 *}
+                    {if $item.is_suborder}{$item.is_suborder}{/if}{* 代码增加_end   By  www.68 *}</span> </label>
                   </span> <span class="deal-time">&nbsp;&nbsp;成交时间：{$item.order_time}</span> <span class="deal-time">&nbsp;&nbsp;商家店铺：{$item.shopname}</span>
                   <!-- 在线客服聊天 -->
                   <a href="javascript:chat_online({chat_order_id: '{$item.order_id}', chat_supp_id: '{$item.supplier_id}'});" title="联系客服"><img src="images/chat/web_logo.png" width="16" height="16" style="vertical-align:top;"/></a>
@@ -1762,7 +1762,7 @@ menu.className=i==cursel?"active":"";
           </table>
           <input id="s_have_hidden" value="0" type="hidden" />
           <div style="height:30px;line-heihgt:30px;clear:both"></div>
-          <!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem --> {* 代码修改 end by www.68hongyuvip.com *}
+          <!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem --> {* 代码修改 end by www.68 *}
           <div style="height:30px;line-heihgt:30px;clear:both"></div> 
           <!--{/if}--> 
           <!--#订单列表界面 end--> 
@@ -1800,7 +1800,7 @@ menu.className=i==cursel?"active":"";
           <!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem --> 
           <!--{/if}--> 
           <!--#包裹状态查询界面 end--> 
-          {* 代码增加_start By  www.68hongyuvip.com *}
+          {* 代码增加_start By  www.68 *}
           <!-- {if $action eq back_order_detail} -->
           <div class="tabmenu">
             <ul class="tab pngFix">
@@ -2566,7 +2566,7 @@ menu.className=i==cursel?"active":"";
             </tr>
           </table>
           <!-- {/if} --> 
-          {* 代码增加_end By  www.68hongyuvip.com *}
+          {* 代码增加_end By  www.68 *}
           <!-- ==========订单详情页面,包括：订单状态，商品列表，费用总计，收货人信息，支付方式，其它信息========== --> 
           <!--{if $action eq order_detail} -->
           <!-- 用于在聊天 -->
@@ -2608,7 +2608,7 @@ menu.className=i==cursel?"active":"";
               <td align="left" bgcolor="#ffffff" id="invoice_no">{$order.invoice_no}</td>
             </tr>
             <!--{/if}--> 
-            {* start Add By www.68hongyuvip.com ecshop开发中心 企业QQ123456789 *}
+            {* start Add By www.68 ecshop开发中心 企业QQ123456789 *}
           </table>
           <br/>
           <!-- {if $order.invoice_no && $order.shipping_name neq '门店自提'}-->
@@ -2646,7 +2646,7 @@ menu.className=i==cursel?"active":"";
 			<!--{/if}-->
           <!--{/if}-->
           <table>
-            {* end Add By www.68hongyuvip.com ecshop开发中心 企业QQ123456789 *}
+            {* end Add By www.68 ecshop开发中心 企业QQ123456789 *}
             <!--{if $order.to_buyer}-->
             <tr>
               <td align="right" bgcolor="#ffffff">{$lang.detail_to_buyer}：</td>
@@ -2719,7 +2719,7 @@ menu.className=i==cursel?"active":"";
               <td align="center" bgcolor="#ffffff">{$goods.goods_number}</td>
               <td align="center" bgcolor="#ffffff">{$goods.subtotal}</td>
              <!-- 
-              <td align="center" bgcolor="#ffffff">{* 代码增加_start  By  www.68hongyuvip.com *}
+              <td align="center" bgcolor="#ffffff">{* 代码增加_start  By  www.68 *}
                 {if $goods.extension_code eq 'virtual_good'}不支持此功能{else}
                 {if $not_back eq 0}
                 {if $order.shipping_status_id eq '1' || $order.shipping_status_id eq '2' || $order.shipping_status_id eq '4'} <font color=#ff3300> {if $goods.back_can}
@@ -2728,7 +2728,7 @@ menu.className=i==cursel?"active":"";
                 [已申请]
                 {/if} </font> {/if}
                 {else} <font style="color:#ff3300;">[暂不可申请退换货,请在规定时间内申请]</font> {/if}{/if}
-                {* 代码增加_end  By  www.68hongyuvip.com  *}</td>
+                {* 代码增加_end  By  www.68  *}</td>
             </tr>
              -->
 			
@@ -2854,9 +2854,9 @@ function updateEndTime(){
                   {$lang.use_more_surplus}:
                   <input name="surplus" type="text" size="8" value="0" style="border:1px solid #ccc;padding:3px 5px"/>
                   {$max_surplus} 
-                  <!--余额额支付密码_更改_START_www.68hongyuvip.com-->
+                  <!--余额额支付密码_更改_START_www.68-->
                   <input onclick="return check_surplus_open(this.form);" type="submit" name="Submit" class="submit" value="{$lang.button_submit}"/>
-                  <!--余额额支付密码_更改_END_www.68hongyuvip.com-->
+                  <!--余额额支付密码_更改_END_www.68-->
                   <input type="hidden" name="act" value="act_edit_surplus" />
                   <input type="hidden" name="order_id" value="{$smarty.get.order_id}" />
                 </form></td>
@@ -3054,7 +3054,7 @@ function updateEndTime(){
             <!-- {/if} 是否使用积分 --> 
             <!-- {if $order.bonus > 0} 是否使用红包 --> 
             <!-- {/if} --> 
-            <!--增值税发票_更改_START_www.68hongyuvip.com-->
+            <!--增值税发票_更改_START_www.68-->
             <!-- {if $order.inv_type eq 'vat_invoice'} 增值税发票 -->
             <tr>
               <td width="15%" align="right" bgcolor="#ffffff">{$lang.inv_type}：</td>
@@ -3104,7 +3104,7 @@ function updateEndTime(){
               <td width="36%" align="left" bgcolor="#ffffff">{$order.inv_content}</td>
             </tr>
             <!--{/if}--> 
-            <!--增值税发票_更改_END_www.68hongyuvip.com-->
+            <!--增值税发票_更改_END_www.68-->
             
             <!-- {if $order.postscript} 是否有订单附言 -->
             <tr>
@@ -3632,7 +3632,7 @@ function updateEndTime(){
   </div>
   <div style="height:15px; line-height:15px; clear:both;"></div>
 </div>
-<!-- #BeginLibraryItem "/library/help.lbi" --><!-- #EndLibraryItem --> <!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem --> <!-- #BeginLibraryItem "/library/site_bar.lbi" --><!-- #EndLibraryItem --> {* start Add By www.68hongyuvip.com ecshop开发中心 企业QQ123456789 *}
+<!-- #BeginLibraryItem "/library/help.lbi" --><!-- #EndLibraryItem --> <!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem --> <!-- #BeginLibraryItem "/library/site_bar.lbi" --><!-- #EndLibraryItem --> {* start Add By www.68 ecshop开发中心 企业QQ123456789 *}
 <script language="javascript">
 get_invoice_info('{$order.invoices.0.shipping_name}','{$order.invoices.0.invoice_no}',1);
 
@@ -3670,7 +3670,7 @@ function get_invoice_info2(expressid,expressno,div_id,order_id)
 	);
 }
 </script> 
-{* end Add By www.68hongyuvip.com ecshop开发中心 企业QQ123456789 *}
+{* end Add By www.68 ecshop开发中心 企业QQ123456789 *}
 </body>
 <script type="text/javascript">
 {foreach from=$lang.clips_js item=item key=key}

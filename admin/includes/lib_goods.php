@@ -1,16 +1,16 @@
 <?php
 
 /**
- * 鸿宇多用户商城 管理中心商品相关函数
+ *  管理中心商品相关函数
  * ============================================================================
- * 版权所有 2015-2016 鸿宇多用户商城科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
+ * 版权所有 2015-2016 ，并保留所有权利。
+ * 网站地址: ；
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
- * $Author: Shadow & 鸿宇
- * $Id: lib_goods.php 17217 2016-01-19 06:29:08Z Shadow & 鸿宇
+ * $Author: 
+ * $Id: lib_goods.php 17217  
  */
 
 if (!defined('IN_ECS'))
@@ -923,7 +923,7 @@ function goods_list($is_delete, $real_goods=1, $conditions = '')
         /* 供货商 */
         if(intval($_REQUEST['supp'])>0){
         	
-			/* 代码修改_start  By  bbs.hongyuvip.com */
+			/* 代码修改_start  By   */
 	        if (!empty($filter['suppliers_id']))
 	        {
 	            //$where .= " AND (supplier_id = '" . $filter['suppliers_id'] . "')";
@@ -935,7 +935,7 @@ function goods_list($is_delete, $real_goods=1, $conditions = '')
 	            //$where .= " AND (supplier_status = '" . $filter['supplier_status'] . "')";
 	            $where_supp .= " AND (supplier_status = '" . $filter['supplier_status'] . "')";
 	        }
-			/* 代码修改_end  By  bbs.hongyuvip.com */
+			/* 代码修改_end  By   */
         }
         
         $where .= $where_supp;
@@ -962,7 +962,7 @@ function goods_list($is_delete, $real_goods=1, $conditions = '')
         }else{
         	$sql = "SELECT goods_id, goods_name, goods_type, goods_sn, shop_price, is_on_sale, is_best, is_new, is_hot, sort_order, goods_number, integral, " .
                     " (promote_price > 0 AND promote_start_date <= '$today' AND promote_end_date >= '$today') AS is_promote ". 
-					", supplier_status, supplier_id ".	//代码增加   By  bbs.hongyuvip.com
+					", supplier_status, supplier_id ".	//代码增加   By  
                     " FROM " . $GLOBALS['ecs']->table('goods') . " AS g WHERE is_delete='$is_delete' $where" .
                     " ORDER BY $filter[sort_by] $filter[sort_order] ".
                     " LIMIT " . $filter['start'] . ",$filter[page_size]";
@@ -1089,7 +1089,7 @@ function virtual_goods_list($is_delete, $real_goods=1, $conditions = '')
         /* 供货商 */
         if(intval($_REQUEST['supp'])>0){
         	
-			/* 代码修改_start  By  bbs.hongyuvip.com */
+			/* 代码修改_start  By   */
 	        if (!empty($filter['suppliers_id']))
 	        {
 	            //$where .= " AND (supplier_id = '" . $filter['suppliers_id'] . "')";
@@ -1101,7 +1101,7 @@ function virtual_goods_list($is_delete, $real_goods=1, $conditions = '')
 	            //$where .= " AND (supplier_status = '" . $filter['supplier_status'] . "')";
 	            $where_supp .= " AND (supplier_status = '" . $filter['supplier_status'] . "')";
 	        }
-			/* 代码修改_end  By  bbs.hongyuvip.com */
+			/* 代码修改_end  By   */
         }
         
         $where .= $where_supp;
@@ -1133,7 +1133,7 @@ function virtual_goods_list($is_delete, $real_goods=1, $conditions = '')
         }else{
         	$sql = "SELECT distinct(g.goods_id), goods_name, goods_type, goods_sn, shop_price, is_on_sale, is_best, is_new, is_hot, sort_order, goods_number, integral, " .
                     " (promote_price > 0 AND promote_start_date <= '$today' AND promote_end_date >= '$today') AS is_promote ". 
-					", supplier_status, g.supplier_id ".	//代码增加   By  bbs.hongyuvip.com
+					", supplier_status, g.supplier_id ".	//代码增加   By  
                     " FROM " . $GLOBALS['ecs']->table('goods') . " AS g ".
                     "left join ". $GLOBALS['ecs']->table('virtual_district') ." as dis on dis.goods_id=g.goods_id ".
                    "left join ".$GLOBALS['ecs']->table('virtual_goods_district')."  as dig on dis.district_id = dig.district_id ".

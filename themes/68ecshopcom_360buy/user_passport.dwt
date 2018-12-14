@@ -115,7 +115,7 @@ function erweima1(obj, sType) { var oDiv = document.getElementById(obj); if (sTy
       <div class="mcon">
       <div id="reg-pic" class="box-pic box-pic1"></div>
       <div id="login-box" class="uc_box"> 
-        <!-- 代码直接替换form表单2014-12-23 by bbs.hongyuvip.com  _star -->
+        <!-- 代码直接替换form表单2014-12-23 by   _star -->
         <script>var mobile_field=''; var mobile_field_sms='';</script>
         <form action="user.php" method="post" name="formUser" onsubmit="return register2();">
           <div class="form">
@@ -214,11 +214,11 @@ function erweima1(obj, sType) { var oDiv = document.getElementById(obj); if (sTy
         </div>
       </form>
         <!--[if !ie]>form end<![endif]--> 
-        <!-- 代码直接替换form表单2014-12-23 by bbs.hongyuvip.com  _end -->
+        <!-- 代码直接替换form表单2014-12-23 by   _end -->
       </div>
     </div>
     </div>
-    <!-- 代码增加2014-12-23 by bbs.hongyuvip.com  _star -->
+    <!-- 代码增加2014-12-23 by   _star -->
     <script type="text/javascript">
 function ck_email()
 {
@@ -246,11 +246,11 @@ function chemailResponse(result)
 	alert(result.message);
 }
 </script> 
-    <!-- 代码增加2014-12-23 by bbs.hongyuvip.com  _end -->
+    <!-- 代码增加2014-12-23 by   _end -->
     <!--{/if}--> 
     <!--{/if}--> 
     <!--#会员注册界面 end--> 
-    <!-- 代码增加2014-12-23 by bbs.hongyuvip.com  _star -->
+    <!-- 代码增加2014-12-23 by   _star -->
     <!--{if $action eq 'forget_password'}--> 
     {insert_scripts files='sms.js'}
     <div id="entry1">
@@ -333,7 +333,7 @@ function chemailResponse(result)
     </div>
   </div>
     <!--{/if}--> 
-    <!-- 代码增加2014-12-23 by bbs.hongyuvip.com  _end -->
+    <!-- 代码增加2014-12-23 by   _end -->
     
     <!--*找回密码界面 --> 
     <!--{if $action eq 'get_password'} --> 

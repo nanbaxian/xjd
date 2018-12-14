@@ -1,16 +1,16 @@
 <?php
 
 /**
- * 鸿宇多用户商城 购物流程函数库
+ *  购物流程函数库
  * ============================================================================
- * 版权所有 2015-2016 鸿宇多用户商城科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
+ * 版权所有 2015-2016 ，并保留所有权利。
+ * 网站地址: ；
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
- * $Author: Shadow & 鸿宇
- * $Id: lib_order.php 17217 2016-01-19 06:29:08Z Shadow & 鸿宇
+ * $Author: 
+ * $Id: lib_order.php 17217  
  */
 
 if (!defined('IN_ECS'))
@@ -473,7 +473,7 @@ function order_goods($order_id)
             "og.goods_price * og.goods_number AS subtotal, og.extension_code, package_attr_id  " .
             "FROM " . $GLOBALS['ecs']->table('order_goods') . "as og right join" . $GLOBALS['ecs']->table('goods') .
 			"as g on og.goods_id = g.goods_id" .
-            " WHERE order_id = '$order_id'";// 修改 by bbs.hongyuvip.com 增加 package_attr_id 字段
+            " WHERE order_id = '$order_id'";// 修改 by  增加 package_attr_id 字段
 
     $res = $GLOBALS['db']->query($sql);
 
@@ -481,7 +481,7 @@ function order_goods($order_id)
     {
         if ($row['extension_code'] == 'package_buy')
         {
-            $row['package_goods_list'] = get_package_goods($row['goods_id'], $row['package_attr_id']); // 修改 by bbs.hongyuvip.com
+            $row['package_goods_list'] = get_package_goods($row['goods_id'], $row['package_attr_id']); // 修改 by 
         }
         $goods_list[] = $row;
     }
@@ -712,7 +712,7 @@ function order_fee($order, $goods, $consignee)
     $total['shipping_fee_formated']    = price_format($total['shipping_fee'], false);
     $total['shipping_insure_formated'] = price_format($total['shipping_insure'], false);
 
-	/* 代码增加_start  By  bbs.hongyuvip.com */
+	/* 代码增加_start  By   */
 	foreach ($goods AS $val)
     {
         $sql_supp = "select g.supplier_id, IF(g.supplier_id='0', '本网站', s.supplier_name) AS supplier_name2 from ".$GLOBALS['ecs']->table('goods').
@@ -753,7 +753,7 @@ function order_fee($order, $goods, $consignee)
 	}
 	$total['shipping_fee_formated']    = price_format($total['shipping_fee'], false);
 	
-	/* 代码增加_end  By  bbs.hongyuvip.com */
+	/* 代码增加_end  By   */
 
     // 购物车中的商品能享受红包支付的总额
     $bonus_amount = compute_discount_amount();
@@ -910,14 +910,14 @@ function get_order_sn()
  */
 function cart_goods($type = CART_GENERAL_GOODS)
 {
-	/* 代码增加_start  By  bbs.hongyuvip.com */
+	/* 代码增加_start  By   */
 	
 	$id_ext = "";
 	if ($_SESSION['sel_cartgoods'])
 	{
 		$id_ext = " AND c.rec_id in (". $_SESSION['sel_cartgoods'] .") ";
 	}
-/* 代码增加_end  By bbs.hongyuvip.com */
+/* 代码增加_end  By  */
 $sql_where = $_SESSION['user_id']>0 ? "c.user_id='". $_SESSION['user_id'] ."' " : "c.session_id = '" . SESS_ID . "' AND c.user_id=0 ";
     $sql = "SELECT c.rec_id, c.user_id, c.goods_id, c.goods_name, c.goods_sn, c.goods_number, " .
             "c.market_price, c.goods_price, c.goods_attr, c.is_real, c.extension_code, c.parent_id, c.is_gift, c.is_shipping, package_attr_id," .
@@ -925,7 +925,7 @@ $sql_where = $_SESSION['user_id']>0 ? "c.user_id='". $_SESSION['user_id'] ."' " 
             "FROM " . $GLOBALS['ecs']->table('cart') .
             " as c LEFT JOIN " . $GLOBALS['ecs']->table('goods') . " as g ON c.goods_id = g.goods_id LEFT JOIN ". $GLOBALS['ecs']->table('supplier') .
             " as s ON s.supplier_id = g.supplier_id WHERE $sql_where " .
-            "AND c.rec_type = '$type' $id_ext ";  //代码修改 By  bbs.hongyuvip.com  增加一个 $id_ext , package_attr_id
+            "AND c.rec_type = '$type' $id_ext ";  //代码修改 By    增加一个 $id_ext , package_attr_id
 
     $arr = $GLOBALS['db']->getAll($sql);
 
@@ -936,14 +936,14 @@ $sql_where = $_SESSION['user_id']>0 ? "c.user_id='". $_SESSION['user_id'] ."' " 
         $arr[$key]['formated_goods_price']  = price_format($value['goods_price'], false);
         $arr[$key]['formated_subtotal']     = price_format($value['subtotal'], false);
 
-		/* 代码增加_start  By  bbs.hongyuvip.com */
+		/* 代码增加_start  By   */
 		$arr[$key]['goods_thumb']  = $GLOBALS['db']->getOne("SELECT `goods_thumb` FROM " . $GLOBALS['ecs']->table('goods') . " WHERE `goods_id`='{$value['goods_id']}'");
         $arr[$key]['goods_thumb'] = get_image_path($value['goods_id'], $arr[$key]['goods_thumb'], true);
-		/* 代码增加_end   By  bbs.hongyuvip.com */
+		/* 代码增加_end   By   */
 
         if ($value['extension_code'] == 'package_buy')
         {
-            $arr[$key]['package_goods_list'] = get_package_goods($value['goods_id'], $value['package_attr_id']); //修改 by bbs.hongyuvip.com
+            $arr[$key]['package_goods_list'] = get_package_goods($value['goods_id'], $value['package_attr_id']); //修改 by 
         }
     }
 
@@ -1219,7 +1219,7 @@ function addto_cart($goods_id, $num = 1, $spec = array(), $parent = 0)
         'extension_code'=> $goods['extension_code'],
         'is_gift'       => 0,
         'is_shipping'   => $goods['is_shipping'],
-		'add_time'   => gmtime(),   //代码增加   By  bbs.hongyuvip.com
+		'add_time'   => gmtime(),   //代码增加   By  
         'rec_type'      => CART_GENERAL_GOODS
     );
 
@@ -1316,7 +1316,7 @@ function addto_cart($goods_id, $num = 1, $spec = array(), $parent = 0)
                 " WHERE session_id = '" .SESS_ID. "' AND goods_id = '$goods_id' ".
                 " AND parent_id = 0 AND goods_attr = '" .get_goods_attr_info($spec). "' " .
                 " AND extension_code <> 'package_buy' " .
-				" AND user_id= '".$_SESSION['user_id']."'". //代码增加  By  bbs.hongyuvip.com
+				" AND user_id= '".$_SESSION['user_id']."'". //代码增加  By  
                 " AND rec_type = 'CART_GENERAL_GOODS'";
 
         $row = $GLOBALS['db']->getRow($sql);
@@ -1367,7 +1367,7 @@ function addto_cart($goods_id, $num = 1, $spec = array(), $parent = 0)
     return true;
 }
 
-/* 重写方法_start  By  bbs.hongyuvip.com */
+/* 重写方法_start  By   */
 /**
  * 清空购物车
  * @param   int     $type   类型：默认普通商品
@@ -1385,7 +1385,7 @@ function clear_cart($type = CART_GENERAL_GOODS,$other='')
             " WHERE $sql_where  AND rec_type = '$type' $other";
     $GLOBALS['db']->query($sql);
 }
-/* 代码增加_end  By  bbs.hongyuvip.com */
+/* 代码增加_end  By   */
 
 /**
  * 获得指定的商品属性
@@ -1703,7 +1703,7 @@ function order_refund($order, $refund_type, $refund_note, $refund_amount = 0)
     }
 }
 
-/* 重构方法_start  By  bbs.hongyuvip.com */
+/* 重构方法_start  By   */
 /**
  * 获得购物车中的商品
  *
@@ -1724,14 +1724,14 @@ function get_cart_goods($other='')
 
     /* 循环、统计 */
 
-    /* 代码增加_start    By   bbs.hongyuvip.com */
+    /* 代码增加_start    By    */
 	$sql_where = $_SESSION['user_id']>0 ? "c.user_id='". $_SESSION['user_id'] ."' " : "c.session_id = '" . SESS_ID . "' AND c.user_id=0 ";
 	$sql = "SELECT c.*, g.supplier_id, IF(c.parent_id, c.parent_id, c.goods_id) AS pid  " .
             " FROM " . $GLOBALS['ecs']->table('cart') . " AS c left join " .$GLOBALS['ecs']->table('goods')." AS g ".
 			" on c.goods_id=g.goods_id ".
 			" WHERE $sql_where AND c.rec_type = '" . CART_GENERAL_GOODS . "' $other " .
             " ORDER BY pid, c.parent_id";
-	/* 代码增加_end    By   bbs.hongyuvip.com */
+	/* 代码增加_end    By    */
 
     $res = $GLOBALS['db']->query($sql);
 
@@ -1778,10 +1778,10 @@ function get_cart_goods($other='')
         }
         if ($row['extension_code'] == 'package_buy')
         {
-            $row['package_goods_list'] = get_package_goods($row['goods_id'], $row['package_attr_id'] ); //修改 by bbs.hongyuvip.com 增加一个变量
+            $row['package_goods_list'] = get_package_goods($row['goods_id'], $row['package_attr_id'] ); //修改 by  增加一个变量
         }
 
-/* 代码增加_start  By  bbs.hongyuvip.com */
+/* 代码增加_start  By   */
 		$row['is_cansel'] = is_cansel($row['goods_id'], $row['product_id'], $row['package_buy']);
 
 		if($row['supplier_id'])
@@ -1801,7 +1801,7 @@ function get_cart_goods($other='')
 		
 		//$goods_list[] = $row;
 
-		/* 代码修改_end  By  bbs.hongyuvip.com */
+		/* 代码修改_end  By   */
     }
     $total['goods_amount'] = $total['goods_price'];
     $total['saving']       = price_format($total['market_price'] - $total['goods_price'], false);
@@ -1893,7 +1893,7 @@ function exist_real_goods($order_id = 0, $flow_type = CART_GENERAL_GOODS)
  * @return  bool    true 完整 false 不完整
  */
 
-/* 代码修改_start  By  bbs.hongyuvip.com */
+/* 代码修改_start  By   */
 function check_consignee_info($consignee, $flow_type)
 {	
     if (exist_real_goods(0, $flow_type))
@@ -1931,7 +1931,7 @@ function check_consignee_info($consignee, $flow_type)
         return !empty($consignee['consignee']) ;
     }
 }
-/* 代码修改_end   By  bbs.hongyuvip.com */
+/* 代码修改_end   By   */
 
 /**
  * 获得上一次用户采用的支付和配送方式
@@ -3061,12 +3061,12 @@ function compute_discount_amount($suppid=-1)
  * @param   integer $num          礼包数量
  * @return  boolean
  */
-/* 代码修改_start By bbs.hongyuvip.com  提示：增加了两个参数 */
+/* 代码修改_start By   提示：增加了两个参数 */
 function add_package_to_cart($package_id, $num = 1, $package_attr_id='', $package_prices='')
 {
     $GLOBALS['err']->clean();
 
-	//增加 By bbs.hongyuvip.com
+	//增加 By 
 	if($package_prices)
 	{
 		$package_pricea=explode("-", $package_prices);
@@ -3114,9 +3114,9 @@ function add_package_to_cart($package_id, $num = 1, $package_attr_id='', $packag
         'goods_id'      => $package_id,
         'goods_sn'      => '',
         'goods_name'    => addslashes($package['package_name']),
-        'market_price'  => $package_pricea[0] ? $package_pricea[0] :  $package['market_package'], //修改 by bbs.hongyuvip.com
-        'goods_price'   => $package_pricea[1] ? $package_pricea[1] :  $package['package_price'], //修改 by bbs.hongyuvip.com
-		'package_attr_id' =>$package_attr_id, //增加 by bbs.hongyuvip.com
+        'market_price'  => $package_pricea[0] ? $package_pricea[0] :  $package['market_package'], //修改 by 
+        'goods_price'   => $package_pricea[1] ? $package_pricea[1] :  $package['package_price'], //修改 by 
+		'package_attr_id' =>$package_attr_id, //增加 by 
         'goods_number'  => $num,
         'goods_attr'    => '',
         'goods_attr_id' => '',
@@ -3133,7 +3133,7 @@ function add_package_to_cart($package_id, $num = 1, $package_attr_id='', $packag
         $sql = "SELECT goods_number FROM " .$GLOBALS['ecs']->table('cart').
                 " WHERE session_id = '" .SESS_ID. "' AND goods_id = '" . $package_id . "' ".
                 " AND parent_id = 0 AND extension_code = 'package_buy' " .
-                " AND package_attr_id = '$package_attr_id'  AND rec_type = '" . CART_GENERAL_GOODS . "'";   //修改 by bbs.hongyuvip.com 增加一条件
+                " AND package_attr_id = '$package_attr_id'  AND rec_type = '" . CART_GENERAL_GOODS . "'";   //修改 by  增加一条件
 
         $row = $GLOBALS['db']->getRow($sql);
 
@@ -3145,7 +3145,7 @@ function add_package_to_cart($package_id, $num = 1, $package_attr_id='', $packag
                 $sql = "UPDATE " . $GLOBALS['ecs']->table('cart') . " SET goods_number = '" . $num . "'" .
                        " WHERE session_id = '" .SESS_ID. "' AND goods_id = '$package_id' ".
                        " AND parent_id = 0 AND extension_code = 'package_buy' " .
-                       " AND package_attr_id = '$package_attr_id' AND rec_type = '" . CART_GENERAL_GOODS . "'";   //修改 by bbs.hongyuvip.com 增加一条件
+                       " AND package_attr_id = '$package_attr_id' AND rec_type = '" . CART_GENERAL_GOODS . "'";   //修改 by  增加一条件
                 $GLOBALS['db']->query($sql);
             }
             else
@@ -3166,7 +3166,7 @@ function add_package_to_cart($package_id, $num = 1, $package_attr_id='', $packag
 
     return true;
 }
-/* 代码修改_end By bbs.hongyuvip.com */
+/* 代码修改_end By  */
 /**
  * 得到新发货单号
  * @return  string
@@ -3245,9 +3245,9 @@ function judge_package_stock($package_id, $package_num = 1)
 }
 
 
-/* 代码增加_start  By  bbs.hongyuvip.com */
+/* 代码增加_start  By   */
 
-/* 代码增加_start   By   bbs.hongyuvip.com  */
+/* 代码增加_start   By     */
 function cart_weight_price2($type = CART_GENERAL_GOODS, $supplier_id)
 {
     $package_row['weight'] = 0;
@@ -3574,5 +3574,5 @@ function get_region_info($region_id)
 
     return $GLOBALS['db']->getOne($sql);
 }
-/* 代码增加_end  By  bbs.hongyuvip.com */
+/* 代码增加_end  By   */
 ?>

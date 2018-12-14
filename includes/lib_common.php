@@ -1,16 +1,16 @@
 <?php
 
 /**
- * 鸿宇多用户商城 公用函数库
+ *  公用函数库
  * ============================================================================
- * 版权所有 2015-2016 鸿宇多用户商城科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
+ * 版权所有 2015-2016 ，并保留所有权利。
+ * 网站地址: ；
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
- * $Author: Shadow & 鸿宇
- * $Id: lib_common.php 17217 2016-01-19 06:29:08Z Shadow & 鸿宇
+ * $Author: 
+ * $Id: lib_common.php 17217  
 */
 
 if (!defined('IN_ECS'))
@@ -926,7 +926,7 @@ function load_config()
         $arr['top10_time']           = intval($arr['top10_time']);
         $arr['goods_gallery_number'] = intval($arr['goods_gallery_number']) ? intval($arr['goods_gallery_number']) : 5;
         $arr['no_picture']           = !empty($arr['no_picture']) ? str_replace('../', './', $arr['no_picture']) : 'images/no_picture.gif'; // 修改默认商品图片的路径
-        // 代码修改_start bbs.hongyuvip.com
+        // 代码修改_start 
 //         $arr['qq']                   = !empty($arr['qq']) ? $arr['qq'] : '';
 //         $arr['ww']                   = !empty($arr['ww']) ? $arr['ww'] : '';
         $arr['qq'] = '';
@@ -941,16 +941,16 @@ function load_config()
         {
             $arr['ww'] = $arr['ww'] . ',' . $v['cus_no'];
         }
-        // 代码修改_end bbs.hongyuvip.com
+        // 代码修改_end 
         $arr['default_storage']      = isset($arr['default_storage']) ? intval($arr['default_storage']) : 1;
         $arr['min_goods_amount']     = isset($arr['min_goods_amount']) ? floatval($arr['min_goods_amount']) : 0;
         $arr['one_step_buy']         = empty($arr['one_step_buy']) ? 0 : 1;
         $arr['invoice_type']         = empty($arr['invoice_type']) ? array('type' => array(), 'rate' => array()) : unserialize($arr['invoice_type']);
         $arr['show_order_type']      = isset($arr['show_order_type']) ? $arr['show_order_type'] : 0;    // 显示方式默认为列表方式
         $arr['help_open']            = isset($arr['help_open']) ? $arr['help_open'] : 1;    // 显示方式默认为列表方式
-        /* fulltext_search_add_START_bbs.hongyuvip.com */
+        /* fulltext_search_add_START_ */
 	$arr['fulltext_search']            = isset($arr['fulltext_search']) ? $arr['fulltext_search'] : 0;  
-        /* fulltext_search_add_END_bbs.hongyuvip.com */
+        /* fulltext_search_add_END_ */
         $arr['shop_opint']            = isset($arr['shop_opint']) ? $arr['shop_opint'] : 0;  
 
         if (!isset($GLOBALS['_CFG']['ecs_version']))
@@ -984,9 +984,9 @@ function load_config()
  * 取得品牌列表
  * @return array 品牌列表 id => name
  */
-// 代码修改_start_derek20150129admin_goods  bbs.hongyuvip.com
+// 代码修改_start_derek20150129admin_goods  
 function get_brand_list($t = false)
-// 代码修改_end_derek20150129admin_goods  bbs.hongyuvip.com
+// 代码修改_end_derek20150129admin_goods  
 {
     $sql = 'SELECT brand_id, brand_name FROM ' . $GLOBALS['ecs']->table('brand') . ' ORDER BY sort_order';
     $res = $GLOBALS['db']->getAll($sql);
@@ -994,7 +994,7 @@ function get_brand_list($t = false)
     $brand_list = array();
     foreach ($res AS $row)
     {
-        // 代码修改_start_derek20150129admin_goods  bbs.hongyuvip.com
+        // 代码修改_start_derek20150129admin_goods  
 		
 		if ($t == true)
 		{
@@ -1006,7 +1006,7 @@ function get_brand_list($t = false)
 		{
 			$brand_list[$row['brand_id']] = addslashes($row['brand_name']);
 		}
-		// 代码修改_end_derek20150129admin_goods  bbs.hongyuvip.com
+		// 代码修改_end_derek20150129admin_goods  
     }
 
     return $brand_list;
@@ -1678,7 +1678,7 @@ function virtual_card_shipping ($goods, $order_sn, &$msg, $process = 'other')
  */
 function virtual_goods_shipping ($goods, $order_sn, &$msg, $process = 'other')
 {
-/* 代码增加_虚拟团购_START  bbs.hongyuvip.com */
+/* 代码增加_虚拟团购_START   */
     for($i=0;$i<$goods['num'];$i++){
         $coded_card_sn   = (rand(1000,9999).$i.gmtime());
         $add_date = gmtime();
@@ -1690,7 +1690,7 @@ function virtual_goods_shipping ($goods, $order_sn, &$msg, $process = 'other')
         $GLOBALS['db']->query($sql);
     }
 
-/* 代码增加_虚拟团购_END  bbs.hongyuvip.com */
+/* 代码增加_虚拟团购_END   */
 
  /* 取出卡片信息 */
      $sql = "SELECT card_id, card_sn, end_date,buy_date,supplier_id,is_verification  FROM ".$GLOBALS['ecs']->table('virtual_goods_card')." WHERE goods_id = '$goods[goods_id]' AND is_saled = 0  LIMIT " . $goods['num'];
@@ -1988,7 +1988,7 @@ function clear_tpl_files($is_cache = true, $ext = '')
 
 /**
  *  清除手机指定后缀的模板缓存或编译文件
- *  wei2 增加 start by bbs.hongyuvip.com
+ *  wei2 增加 start by 
  * @access  public
  * @param  bool       $is_cache  是否清除缓存还是清出编译文件
  * @param  string     $ext       需要删除的文件名，不包含后缀
@@ -2073,7 +2073,7 @@ function clear_tpl_files_mobile($is_cache = true, $ext = '')
 
     return $count;
 }
-/* wei2 增加 end by bbs.hongyuvip.com */
+/* wei2 增加 end by  */
 /**
  * 清除模版编译文件
  *
@@ -2100,7 +2100,7 @@ function clear_cache_files($ext = '')
 
 /**
  * 清除手机缓存文件
- * wei2 增加 start by bbs.hongyuvip.com
+ * wei2 增加 start by 
  * @access  public
  * @param   mix     $ext    模版文件名， 不包含后缀
  * @return  void
@@ -2109,7 +2109,7 @@ function clear_cache_files_mobile($ext = '')
 {
     return clear_tpl_files_mobile(true, $ext);
 }
-/* wei2 增加 end by bbs.hongyuvip.com */
+/* wei2 增加 end by  */
 /**
  * 清除模版编译和缓存文件
  *
@@ -2133,7 +2133,7 @@ function clear_all_files_mobile($ext = '')
 {
     return clear_tpl_files_mobile(false, $ext) + clear_tpl_files_mobile(true,  $ext);
 }
-/* wei2 修改 end by bbs.hongyuvip.com */
+/* wei2 修改 end by  */
 /**
  * 页面上调用的js文件
  *
@@ -3669,23 +3669,23 @@ function get_product_supplier($goods_id){
  * @param   integer $package_id
  * @return  array
  */
-/* 修改 by bbs.hongyuvip.com 增加一个参数 */
+/* 修改 by  增加一个参数 */
 function get_package_goods($package_id, $package_attr_id='')
 {
 
-	//增加 By bbs.hongyuvip.com
+	//增加 By 
 	if ($package_attr_id)
 	{
 		$package_attr_id=str_replace(",", "','", $package_attr_id);
 		$package_attr_id= "('" . $package_attr_id . "')";
 		$sql_package_attr_id = " AND concat( pg.goods_id, '-' , pg.product_id ) in  $package_attr_id ";
 	}
-	 // 下面SQL语句增加两个字段，注意逗号 , g.goods_thumb, g.shop_price   By  bbs.hongyuvip.com
+	 // 下面SQL语句增加两个字段，注意逗号 , g.goods_thumb, g.shop_price   By  
     $sql = "SELECT pg.goods_id, g.goods_name, pg.goods_number, p.goods_attr, p.product_number, p.product_id, g.goods_thumb, g.shop_price 
             FROM " . $GLOBALS['ecs']->table('package_goods') . " AS pg
                 LEFT JOIN " .$GLOBALS['ecs']->table('goods') . " AS g ON pg.goods_id = g.goods_id
                 LEFT JOIN " . $GLOBALS['ecs']->table('products') . " AS p ON pg.product_id = p.product_id
-            WHERE pg.package_id = '$package_id' $sql_package_attr_id "; //有修改 by bbs.hongyuvip.com 注意最后那个 $sql_package_attr_id
+            WHERE pg.package_id = '$package_id' $sql_package_attr_id "; //有修改 by  注意最后那个 $sql_package_attr_id
     if ($package_id == 0)
     {
         $sql .= " AND pg.admin_id = '$_SESSION[admin_id]'";
@@ -3716,10 +3716,10 @@ function get_package_goods($package_id, $package_attr_id='')
             $_row['g_p'] = $_row['goods_id'];
         }
 		
-		/* 代码增加_start   By    bbs.hongyuvip.com */
+		/* 代码增加_start   By     */
 		$_row['goods_thumb'] = get_image_path($_row['goods_id'], $_row['goods_thumb'], true);
         $_row['shop_price']    =   price_format($_row['shop_price']);
-		/* 代码增加_end  By     bbs.hongyuvip.com */
+		/* 代码增加_end  By      */
 
         //生成结果数组
         $row[] = $_row;
@@ -3948,7 +3948,7 @@ function get_province_city($provinceid = 0, $cityid = 0)
     }
     return $dizhi;
 }
-/* 代码增加_START  by  bbs.hongyuvip.com */
+/* 代码增加_START  by   */
 function gb2py($text, $exp = '')
 { 
 	if(!$text) return '';
@@ -3992,7 +3992,7 @@ function Recordkeyword($word_www_68ecshop_com, $items = 0, $searchengine = 'ecsh
 	$r = $GLOBALS['db']->getRow($sql_www_68ecshop_com);
 	if($r)
 	{
-		$items = intval($items) ;   //bbs.hongyuvip.com
+		$items = intval($items) ;   //
 		$month_search = date('Y-m', $r['updatetime']) == date('Y-m', gmtime()) ? 'month_search+1' : '1';
 		$week_search = date('W', $r['updatetime']) == date('W', gmtime()) ? 'week_search+1' : '1';
 		$today_search = date('Y-m-d', $r['updatetime']) == date('Y-m-d', gmtime()) ? 'today_search+1' : '1';
@@ -4027,7 +4027,7 @@ function Recordkeyword($word_www_68ecshop_com, $items = 0, $searchengine = 'ecsh
     	$GLOBALS['db']->query($sql_www_68ecshop_com);
 	}
 }
-/* 代码增加_END    by   bbs.hongyuvip.com */
+/* 代码增加_END    by    */
 /**
  * 发短信方法
  * @param array $supplierinfo   eg: array('商家id1'=>订单号)
@@ -4157,8 +4157,8 @@ function pushUserMsg($ecuid,$msg=array(),$type=1){
 		return false;
 	}
 }
-/* wei2 增加 end by bbs.hongyuvip.com */
-/* 代码增加_start   By bbs.hongyuvip.com */
+/* wei2 增加 end by  */
+/* 代码增加_start   By  */
 function get_city_info($province, $city, $district)
 {
 	$sql = 'select region_id from ' . $GLOBALS['ecs']->table('region') . " where region_name='$province'";
@@ -4179,9 +4179,9 @@ function get_city_info($province, $city, $district)
 	return array('province_id' => $province_id, 'province' => $province, 'city_id' => $city_id, 'city' => $city,
 				'district_id' => $district_id, 'district' => $district);
 }
-/* 代码增加_end   By bbs.hongyuvip.com */
+/* 代码增加_end   By  */
 
-/* 代码增加_start   By     bbs.hongyuvip.com */
+/* 代码增加_start   By      */
 function GetPinyin($str, $ishead=0, $isclose=1)
 {
     global $pinyins;
@@ -4241,9 +4241,9 @@ function GetPinyin($str, $ishead=0, $isclose=1)
     }
     return $restr;
 }
-/* 代码增加_end   By     bbs.hongyuvip.com */
+/* 代码增加_end   By      */
 
-/* 代码增加_start  By  bbs.hongyuvip.com */
+/* 代码增加_start  By   */
 
 /*
 * $page ： 生成哪个页面
@@ -4424,5 +4424,5 @@ function get_dir($type, $id)
 	return $dirname;
  }
 
- /* 代码增加_end  By  bbs.hongyuvip.com */
+ /* 代码增加_end  By   */
 ?>

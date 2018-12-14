@@ -3,7 +3,7 @@
 
 /**
  * 在线客服聊天系统前端请求转发拦截器
- * $Author: 鸿宇多用户商城
+ * $Author: 
  */
 define('IN_ECS', true);
 

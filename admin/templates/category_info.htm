@@ -11,7 +11,7 @@
           <font color="red">*</font> <span class="notice-span" {if $help_open}style="display:block" {else} style="display:none" {/if} id="noticeCat_name">{$lang.notice_cat_name}</span></td>
       </tr>
       
-	 {* 代码增加_start  By  bbs.hongyuvip.com *}
+	 {* 代码增加_start  By   *}
 	  <tr>
         <td class="label">目录名称:</td>
         <td>
@@ -19,7 +19,7 @@
 		  <span class="notice-span" {if $help_open}style="display:block" {else} style="display:none" {/if} id="noticePathname">生成的【真静态HTML文件】将保存到该目录下<br>例如：在这里输入 jiaju，根目录下就会生成一个 category-jiaju 的二级目录用来保存纯静态HTML文件</span>
         </td>
       </tr>
-   {* 代码增加_end  By  bbs.hongyuvip.com *}
+   {* 代码增加_end  By   *}
       
       <tr>
         <td class="label">{$lang.parent_id}:</td>
@@ -121,7 +121,7 @@
           </table>
           <span class="notice-span" {if $help_open}style="display:block" {else} style="display:none" {/if} id="noticeFilterAttr">{$lang.filter_attr_notic}</span></td>
       </tr>
-       {*代码增加_start By bbs.hongyuvip.com*}
+       {*代码增加_start By *}
 <!--隐藏lw	  <tr>
 		<td class="label">品牌排序:</td>
         <td>
@@ -136,7 +136,7 @@
 		  格式参考： 注意每个属性栏目占一行，如果一行乘不下，别管它，它会自动换行，只要没到下个属性栏目之前别按回车键就行<br><font color=#ff3300>颜色:红色,蓝色,白色,棕色,紫色<br>尺码:M,L,XL,XXL,XXL</font>
         </td>
 	  </tr>-->
-	  {*代码增加_end By bbs.hongyuvip.com*}
+	  {*代码增加_end By *}
       <tr>
         <td class="label"><a href="javascript:showNotice('noticeGrade');" title="{$lang.form_notice}"><img src="images/notice.gif" width="16" height="16" border="0" alt="{$lang.notice_style}"></a>{$lang.grade}:</td>
         <td><input type="text" name="grade" value="{$cat_info.grade|default:0}" size="40" />

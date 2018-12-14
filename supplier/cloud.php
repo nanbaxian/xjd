@@ -1,16 +1,16 @@
 <?php
 
 /**
- * 鸿宇多用户商城  云服务接口
+ *   云服务接口
  * ============================================================================
- * 版权所有 2005-2010 鸿宇多用户商城科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
+ * 版权所有 2005-2010 ，并保留所有权利。
+ * 网站地址: ；
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
- * $Author: Shadow & 鸿宇
- * $Id: cloud.php 17063 2011-07-25 06:35:46Z Shadow & 鸿宇
+ * $Author: 
+ * $Id: cloud.php 17063 2011-07-25 06:35:46Z 
 */
 
 define('IN_ECS', true);
@@ -57,7 +57,7 @@ if($act =='menu_api')
     {
         $t = new transport;
        $apiget = "ver= $data[version] &ecs_lang= $data[ecs_lang] &charset= $data[charset]&ent_id=$data[ent_id]& certificate_id=$data[certificate_id]";
-        $api_comment = $t->request('http://cloud.hongyuvip.com/menu_api.php', $apiget);
+        $api_comment = $t->request('http://cloud./menu_api.php', $apiget);
         $api_str = $api_comment["body"];
         if (!empty($api_str))
         {
@@ -97,7 +97,7 @@ elseif($act == 'cloud_remind')
     {
         $t = new transport('-1',5);
         $apiget = "ver=$data[version]&ecs_lang=$data[ecs_lang]&charset=$data[charset]&certificate_id=$data[certificate_id]&ent_id=$data[ent_id]";
-        $api_comment = $t->request('http://cloud.hongyuvip.com/cloud_remind.php', $apiget);
+        $api_comment = $t->request('http://cloud./cloud_remind.php', $apiget);
         $api_str=    $api_comment["body"];
         $json = new Services_JSON;
         $api_arr = @$json->decode($api_str,1);
@@ -137,7 +137,7 @@ elseif($act == 'close_remind')
     $remind_id=$_REQUEST['remind_id'];
     $t = new transport('-1',5);
     $apiget = "ver= $data[version] &ecs_lang= $data[ecs_lang] &charset= $data[charset] &certificate_id=$data[certificate_id]&ent_id=$data[ent_id]&remind_id=$remind_id";
-    $api_comment = $t->request('http://cloud.hongyuvip.com/cloud_remind.php', $apiget);
+    $api_comment = $t->request('http://cloud./cloud_remind.php', $apiget);
 
     $api_str = $api_comment["body"];
     $json = new Services_JSON;
@@ -155,7 +155,7 @@ elseif($act == 'close_remind')
             if (admin_priv('all','',false))
             {
                 $apiget.="&act=close_remind&ent_ac=$data[ent_ac]";
-                $result=$t->request('http://cloud.hongyuvip.com/cloud_remind.php', $apiget);
+                $result=$t->request('http://cloud./cloud_remind.php', $apiget);
                 $api_str = $result["body"];
                 //var_dump($api_str);
                 $api_arr = array();
@@ -225,7 +225,7 @@ else
     {
         $query .= '&'.$v.'='.$data[$v];
     }
-    ecs_header("Location: http://cloud.hongyuvip.com/api.php?act=".$act.$query."\n");
+    ecs_header("Location: http://cloud./api.php?act=".$act.$query."\n");
     exit();
 }
 

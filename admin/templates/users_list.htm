@@ -42,7 +42,7 @@
 					<a href="javascript:listTable.sort('mobile_phone'); ">{$lang.is_validated}&nbsp;|&nbsp;{$lang.mobile_phone}</a>
 					{$sort_mobile_phone}
 				</th>
-				<!-- #代码增加2014-12-23 by bbs.hongyuvip.com  _end -->
+				<!-- #代码增加2014-12-23 by   _end -->
 				<th>{$lang.user_money}</th>
 				<th>{$lang.frozen_money}</th>
 				<th>{$lang.rank_points}</th>
@@ -51,9 +51,9 @@
 					<a href="javascript:listTable.sort('reg_time'); ">{$lang.reg_date}</a>
 					{$sort_reg_time}
 				</th>
-				<!-- #代码增加2014-12-23 by bbs.hongyuvip.com  _star -->
+				<!-- #代码增加2014-12-23 by   _star -->
 				<th>实名认证</th>
-				<!-- #代码增加2014-12-23 by bbs.hongyuvip.com  _end -->
+				<!-- #代码增加2014-12-23 by   _end -->
 				<th>{$lang.handler}</th>
 			<tr>{foreach from=$user_list item=user}
 			<tr>
@@ -97,9 +97,9 @@
 				<td>{$user.rank_points}</td>
 				<td>{$user.pay_points}</td>
 				<td align="center">{$user.reg_time}</td>
-				<!-- #代码增加2014-12-23 by bbs.hongyuvip.com  _star -->
+				<!-- #代码增加2014-12-23 by   _star -->
 				<td>{if $user.status eq 1}审核通过{elseif $user.status eq 2}审核中{elseif $user.status eq 3}审核不通过{else}未审核{/if}</td>
-				<!-- #代码增加2014-12-23 by bbs.hongyuvip.com  _end -->
+				<!-- #代码增加2014-12-23 by   _end -->
 				<td align="center">
 					<a href="users.php?act=edit&id={$user.user_id}" title="{$lang.edit}">
 						<img src="images/icon_edit.gif" border="0" height="16" width="16" />

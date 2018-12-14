@@ -227,7 +227,7 @@ nav.removeClass("cat-nav-fixed");
 })
 })
 </script> 
-{* 代码增加_start  By  bbs.hongyuvip.com *}
+{* 代码增加_start  By   *}
 <script type="text/javascript">
 $("img").lazyload({
     effect       : "fadeIn",

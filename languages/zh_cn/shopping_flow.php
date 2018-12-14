@@ -1,16 +1,16 @@
 <?php
 
 /**
- * 鸿宇多用户商城 购物流程相关语言
+ *  购物流程相关语言
  * ============================================================================
- * 版权所有 2015-2016 鸿宇多用户商城科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
+ * 版权所有 2015-2016 ，并保留所有权利。
+ * 网站地址: ；
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
- * $Author: Shadow & 鸿宇
- * $Id: shopping_flow.php 17217 2016-01-19 06:29:08Z Shadow & 鸿宇
+ * $Author: 
+ * $Id: shopping_flow.php 17217  
 */
 
 $_LANG['flow_login_register']['username_not_null'] = '请您输入用户名。';
@@ -171,19 +171,19 @@ $_LANG['bonus_sn_error'] = '该红包序列号不正确';
 $_LANG['bonus_min_amount_error'] = '订单商品金额没有达到使用该红包的最低金额 %s';
 $_LANG['bonus_is_ok'] = '该红包序列号可以使用，可以抵扣 %s';
 
-/* 代码增加_start   By bbs.hongyuvip.com */
+/* 代码增加_start   By  */
 $_LANG['pickup_point_list'] = '自提点列表';
 $_LANG['shop_name'] = '店名';
 $_LANG['address'] = '地址';
 $_LANG['contact'] = '联系人';
 $_LANG['phone'] = '固定电话';
 $_LANG['empty_pickup_point'] = '该地区暂无自提点';
-/* 代码增加_end   By bbs.hongyuvip.com */
+/* 代码增加_end   By  */
 $_LANG['shopping_myship'] = '我的配送';
 $_LANG['shopping_activity'] = '活动列表';
 $_LANG['shopping_package'] = '超值礼包列表';
-/*增值税发票_添加_START_bbs.hongyuvip.com*/
+/*增值税发票_添加_START_*/
 $_LANG['normal_invoice'] = '普通发票';
 $_LANG['vat_invoice'] = '增值税发票';
-/*增值税发票_添加_END_bbs.hongyuvip.com*/
+/*增值税发票_添加_END_*/
 ?>

@@ -1,12 +1,12 @@
 <?php
 
 /**
- * 鸿宇多用户商城 找回密码
+ *  找回密码
  * ============================================================================
- * 版权所有 2015-2016 鸿宇多用户商城科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
+ * 版权所有 2015-2016 ，并保留所有权利。
+ * 网站地址: ；
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
  * $Author: niqingyang $
@@ -392,7 +392,7 @@ function action_to_success()
 	$smarty->display('user_findPwd.dwt');
 }
 
-/* 余额额支付密码_添加_END_bbs.hongyuvip.com */
+/* 余额额支付密码_添加_END_ */
 function get_takegoods_orders ($user_id, $num = 10, $start = 0)
 {
 	$order_status = array(
@@ -421,8 +421,8 @@ function get_takegoods_orders ($user_id, $num = 10, $start = 0)
 	return $arr;
 }
 
-/* 代码增加_end By bbs.hongyuvip.com */
-/* 代码增加_start By bbs.hongyuvip.com */
+/* 代码增加_end By  */
+/* 代码增加_start By  */
 function get_user_backorders ($user_id, $num = 10, $start = 0)
 {
 	/* 取得订单列表 */
@@ -461,7 +461,7 @@ function mc_random ($length, $char_str = 'abcdefghijklmnopqrstuvwxyz0123456789')
 	return $hash;
 }
 
-/* 代码增加2014-12-23 by bbs.hongyuvip.com _end */
+/* 代码增加2014-12-23 by  _end */
 function get_user_yue ($user_id)
 {
 	$sql = "SELECT user_money FROM " . $GLOBALS['ecs']->table('users') . "WHERE user_id = '$user_id'";

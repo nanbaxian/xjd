@@ -8,7 +8,7 @@ var process_request = "{$lang.process_request}";
    <ul>
    <li class="userInfo">
    {insert_scripts files='transport.js,utils.js'}
-   <font id="ECS_MEMBERZONE">{* 鸿宇多用户商城 提醒您：根据用户id来调用member_info.lbi显示不同的界面  *}{insert name='member_info'} </font>
+   <font id="ECS_MEMBERZONE">{*  提醒您：根据用户id来调用member_info.lbi显示不同的界面  *}{insert name='member_info'} </font>
    </li>
    <!--{if $navigator_list.top}-->
    <li id="topNav" class="clearfix">

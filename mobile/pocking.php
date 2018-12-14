@@ -1,16 +1,16 @@
 <?php
 
 /**
- * 鸿宇多用户商城 商品详情
+ *  商品详情
  * ============================================================================
- * * 版权所有 2008-2015 鸿宇多用户商城科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com;
+ * * 版权所有 2008-2015 ，并保留所有权利。
+ * 网站地址: ;
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
- * $Author: derek $
- * $Id: goods.php 17217 2016-01-19 06:29:08Z derek $
+ * $Author: 
+ * $Id: goods.php 17217  
 */
 
 define('IN_ECS', true);
@@ -233,10 +233,10 @@ if($_REQUEST['act']=='taocan'){
         //获取关联礼包
     $package_goods_list = get_package_goods_list($goods_id);
     $smarty->assign('package_goods_list',$package_goods_list);    // 获取关联礼包
-		/* 代码增加_start By bbs.hongyuvip.com */
+		/* 代码增加_start By  */
     $package_goods_list_120 = get_package_goods_list_120($goods_id);
     $smarty->assign('package_goods_list_120',$package_goods_list_120);    // 获取关联礼包
-		/* 代码增加_end By bbs.hongyuvip.com */
+		/* 代码增加_end By  */
     $smarty->display('goods_taocan.dwt');
     exit;
 }
@@ -244,7 +244,7 @@ if($_REQUEST['act']=='taocan'){
 /* 商品自提点　*/
 if($_REQUEST['act']=='ziti'){
     $goods_id = empty($_REQUEST['goods_id'])?'':intval($_REQUEST['goods_id']);
-/* 代码增加_start   By bbs.hongyuvip.com */
+/* 代码增加_start   By  */
 	$smarty->assign('shop_country',   $_CFG['shop_country']);
 	$sql = 'select region_id, region_name from ' . $ecs->table('region') . ' where parent_id=' . $_CFG['shop_country'];
 	$country_list = $GLOBALS['db']->getAll($sql);
@@ -253,7 +253,7 @@ if($_REQUEST['act']=='ziti'){
 	$smarty->assign('city_id',        $city_id);
 	$district_id = $db->getOne('select region_id from ' . $ecs->table('region') . ' where parent_id=' . $city_id);
 	$smarty->assign('district_id',    $district_id);
-/* 代码增加_end   By bbs.hongyuvip.com */
+/* 代码增加_end   By  */
     $smarty->display('goods_ziti.dwt');
     exit;
 }
@@ -466,10 +466,10 @@ if (!$smarty->is_cached('goods_ziti.dwt', $cache_id))
         //获取关联礼包
         $package_goods_list = get_package_goods_list($goods['goods_id']);
         $smarty->assign('package_goods_list',$package_goods_list);    // 获取关联礼包
-		/* 代码增加_start By bbs.hongyuvip.com */
+		/* 代码增加_start By  */
 		$package_goods_list_120 = get_package_goods_list_120($goods['goods_id']);
         $smarty->assign('package_goods_list_120',$package_goods_list_120);    // 获取关联礼包
-		/* 代码增加_end By bbs.hongyuvip.com */
+		/* 代码增加_end By  */
 
         assign_dynamic('goods');
         $volume_price_list = get_volume_price_list($goods['goods_id'], '1');
@@ -949,7 +949,7 @@ function get_zhekou($goods_id)
 	}
     return $zhekou;
 }
-/* 代码增加_start  By bbs.hongyuvip.com */
+/* 代码增加_start  By  */
 function get_package_goods_list_120($goods_id)
 {
 	$now = gmtime();
@@ -1069,5 +1069,5 @@ function get_package_goods_list_120($goods_id)
 }
 
 
-/* 代码增加_start  By bbs.hongyuvip.com */
+/* 代码增加_start  By  */
 ?>

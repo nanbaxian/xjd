@@ -1,21 +1,21 @@
 <?php
 
 /**
- * 鸿宇多用户商城 管理中心共用语言文件
+ *  管理中心共用语言文件
  * ============================================================================
- * 版权所有 2015-2016 鸿宇多用户商城科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
+ * 版权所有 2015-2016 ，并保留所有权利。
+ * 网站地址: ；
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
- * $Author: Shadow & 鸿宇
- * $Id: common.php 17217 2016-01-19 06:29:08Z Shadow & 鸿宇
+ * $Author: 
+ * $Id: common.php 17217  
 */
 
 $_LANG['app_name'] = 'ECSHOP';
-$_LANG['cp_home'] = '鸿宇多用户商城 - 鸿宇多用户商城V4.2 ECshop论坛交流中心 HongYuvip.com 管理中心';
-$_LANG['copyright'] = '版权所有 &copy; 2008-2015 鸿宇多用户商城科技有限公司，并保留所有权利。';
+$_LANG['cp_home'] = ' - V4.2 ECshop论坛交流中心  管理中心';
+$_LANG['copyright'] = '版权所有 &copy; 2008-2015 ，并保留所有权利。';
 $_LANG['query_info'] = '共执行 %d 个查询，用时 %s 秒';
 $_LANG['memory_info'] = '，内存占用 %0.3f MB';
 $_LANG['gzip_enabled'] = '，Gzip 已启用';
@@ -69,12 +69,12 @@ $_LANG['is_int'] = '应该为整数';
 $_LANG['button_new'] = ' 新建 ';
 $_LANG['top_huanying'] = ' ，欢迎您！ ';
 //yyy添加end
-/* 代码增加_start   By bbs.hongyuvip.com */
+/* 代码增加_start   By  */
 $_LANG['17_pickup_point_manage'] = '自提点管理';
 $_LANG['pickup_point_list'] = '自提点列表';
 $_LANG['pickup_point_add']  = '添加自提点';
 $_LANG['pickup_point_batch_add'] = '自提点批量上传';
-/* 代码增加_end   By bbs.hongyuvip.com */
+/* 代码增加_end   By  */
 $_LANG['button_submit'] = ' 确定 ';
 $_LANG['button_save'] = ' 保存 ';
 $_LANG['button_reset'] = ' 重置 ';
@@ -154,15 +154,15 @@ $_LANG['13_backup'] = '数据库管理';
 $_LANG['14_sms'] = '短信管理';
 $_LANG['15_rec'] = '推荐管理';
 $_LANG['16_email_manage'] = '邮件群发管理';
-$_LANG['17_weixin_manage'] = '微信模块';  //增加 by bbs.hongyuvip.com 微商城
+$_LANG['17_weixin_manage'] = '微信模块';  //增加 by  微商城
 $_LANG['18_virtual'] = '虚拟团购管理'; 
 /* 商品管理 */
-/* 代码增加_start  By  supplier.hongyuvip.com */
+/* 代码增加_start  By   */
 $_LANG['01_goods_list'] = '商品列表';
 $_LANG['02_supplier_goods_list'] = '入驻商商品列表';
 $_LANG['03_goods_add'] = '添加新商品';
 $_LANG['04_category_list'] = '商品分类';
-/* 代码增加_end  By  supplier.hongyuvip.com */
+/* 代码增加_end  By   */
 $_LANG['04_category_add'] = '添加分类';
 $_LANG['05_comment_manage'] = '用户评论';
 $_LANG['05_question_manage'] = '用户咨询';  
@@ -189,7 +189,7 @@ $_LANG['50_virtual_card_list'] = '虚拟商品列表';
 $_LANG['51_virtual_card_add'] = '添加虚拟商品';
 $_LANG['52_virtual_card_change'] = '更改加密串';
 $_LANG['goods_auto'] = '商品自动上下架';
-$_LANG['price_batch'] = '批量修改价格'; //代码增加 By bbs.hongyuvip.com
+$_LANG['price_batch'] = '批量修改价格'; //代码增加 By 
 $_LANG['article_auto'] = '文章自动发布';
 $_LANG['navigator'] = '自定义导航栏';
 
@@ -216,10 +216,10 @@ $_LANG['14_package_list'] = '超值礼包';
 $_LANG['package_add'] = '添加超值礼包';
 
 /* 订单管理 */
-/* 代码增加_start  By  supplier.hongyuvip.com */
+/* 代码增加_start  By   */
 $_LANG['01_order_list'] = '订单列表';
 $_LANG['02_supplier_order'] = '入驻商订单列表';
-/* 代码增加_end  By  supplier.hongyuvip.com */
+/* 代码增加_end  By   */
 $_LANG['03_order_query'] = '订单查询';
 $_LANG['04_merge_order'] = '合并订单';
 $_LANG['05_edit_order_print'] = '订单打印';
@@ -231,9 +231,9 @@ $_LANG['11_supplier_back_order'] = '入驻商退换货列表';
 //ecshop add start 2013-08-06
 $_LANG['12_order_excel'] = '订单导出';
 //ecshop add end 2013-08-06
-/*增值税发票_添加_START_bbs.hongyuvip.com*/
+/*增值税发票_添加_START_*/
 $_LANG['12_invoice_list'] = '发票列表';
-/*增值税发票_添加_END_bbs.hongyuvip.com*/
+/*增值税发票_添加_END_*/
 
 /* 广告管理 */
 $_LANG['ad_position'] = '广告位置';
@@ -241,9 +241,9 @@ $_LANG['ad_list'] = '广告列表';
 
 /* 报表统计 */
 $_LANG['flow_stats'] = '流量分析';
-/* 代码添加_START  By   bbs.hongyuvip.com */
+/* 代码添加_START  By    */
 $_LANG['keyword'] = '客户搜索记录';
-/* 代码添加_END By   bbs.hongyuvip.com */
+/* 代码添加_END By    */
 $_LANG['searchengine_stats'] = '搜索引擎';
 $_LANG['report_order'] = '订单统计';
 $_LANG['report_sell'] = '销售概况';
@@ -268,7 +268,7 @@ $_LANG['vote_list'] = '在线调查';
 $_LANG['08_unreply_msg'] = '会员留言';
 $_LANG['03_users_list'] = '会员列表';
 
-$_LANG['04_users_export'] = '会员导出';  //代码增加   By   bbs.hongyuvip.com
+$_LANG['04_users_export'] = '会员导出';  //代码增加   By   
 
 $_LANG['04_users_add'] = '添加会员';
 $_LANG['05_user_rank_list'] = '会员等级';
@@ -378,7 +378,7 @@ $_LANG['alipay_login'] = '<a href="https://www.alipay.com/user/login.htm?goto=ht
 $_LANG['alipay_look'] = '<a href=\"https://www.alipay.com/himalayas/practicality.htm\" target=\"_blank\">请申请成功后登录支付宝账户查看</a>';
 
 
-/* 代码增加_start  By   supplier.hongyuvip.com */
+/* 代码增加_start  By    */
 $_LANG['02_supplier'] = '入驻商管理';  
 $_LANG['05_supplier_rank'] = '入驻商等级';
 
@@ -443,8 +443,8 @@ $_LANG['05_header'] 			= '店铺头部自定义';
 $_LANG['06_templates'] 			= '店铺模板选择';
 $_LANG['07_street'] 			= '店铺街信息设置';
 
-/* 代码增加_end  By   supplier.hongyuvip.com */
-//微信管理 增加 start by bbs.hongyuvip.com 微商城
+/* 代码增加_end  By    */
+//微信管理 增加 start by  微商城
 $_LANG['weixin_config']   = '微信设置';
 $_LANG['weixin_addconfig']  = '多微信设置';
 $_LANG['weixin_menu']  = '自定义菜单';
@@ -461,9 +461,9 @@ $_LANG['weixin_addkey']   = '关键字回复';
 //活动管理
 $_LANG['weixin_act']  = '活动管理';
 $_LANG['weixin_award']  = '中奖管理';
-//增加 end by bbs.hongyuvip.com 微商城
+//增加 end by  微商城
 $_LANG['website'] = '合作登录管理';  //名字你可以自己定
-/* 代码增加_start  By  bbs.hongyuvip.com */
+/* 代码增加_start  By   */
 $_LANG['16_takegoods_list']			= '提货券管理';
 $_LANG['16_takegoods_order']		= '提货券提货列表';
 $_LANG['takegoods_list']   = '提货券管理';
@@ -478,7 +478,7 @@ $_LANG['cfg_name']['takegoods_check_money'] = '给提货券配置商品时是否
 $_LANG['cfg_range']['takegoods_check_money']['1'] = '开启';
 $_LANG['cfg_range']['takegoods_check_money']['0'] = '关闭';
 $_LANG['template_files']['takegoods'] = '提货商品页模板';
-/* 代码增加_end  By  bbs.hongyuvip.com */
+/* 代码增加_end  By   */
 $_LANG['sendmail'] = '发送邮件';
 $_LANG['login_now'] = '立即登录';
 $_LANG['update_pwd_success'] = '您的新密码已修改成功！';

@@ -1,16 +1,16 @@
 <?php
 
 /**
- * 鸿宇多用户商城 图片批量处理程序
+ *  图片批量处理程序
  * ============================================================================
- * 版权所有 2015-2016 鸿宇多用户商城科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
+ * 版权所有 2015-2016 ，并保留所有权利。
+ * 网站地址: ；
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
- * $Author: Shadow & 鸿宇
- * $Id: picture_batch.php 17217 2016-01-19 06:29:08Z Shadow & 鸿宇
+ * $Author: 
+ * $Id: picture_batch.php 17217  
 */
 
 define('IN_ECS', true);
@@ -431,7 +431,7 @@ function process_image($page = 1, $page_size = 100, $type = 0, $thumb= true, $wa
                 $file_name .= cls_image::get_filetype(empty($row['img_url']) ? $row['img_original']: $row['img_url']);
 
                 /*
-				* 生成商品详情页图片_start By bbs.hongyuvip.com
+				* 生成商品详情页图片_start By 
 				* 将 copy(ROOT_PATH . $row['img_original'], $dir . $file_name); 注释或者删除
 				*  增加下面这两行
 				*/
@@ -440,13 +440,13 @@ function process_image($page = 1, $page_size = 100, $type = 0, $thumb= true, $wa
 				$image_middle = $GLOBALS['image']->make_thumb(ROOT_PATH . $row['img_original'], $GLOBALS['_CFG']['image_width'],  $GLOBALS['_CFG']['image_height'], $dir);
 				$image_middle = ROOT_PATH . $image_middle;
 
-				/* 生成商品详情页图片_end By bbs.hongyuvip.com */
+				/* 生成商品详情页图片_end By  */
 
-				/* 将下面这行的    $dir . $file_name    改为 $image_middle By bbs.hongyuvip.com  */
+				/* 将下面这行的    $dir . $file_name    改为 $image_middle By   */
                 $image = $GLOBALS['image']->add_watermark($image_middle ,'',$GLOBALS['_CFG']['watermark'], $GLOBALS['_CFG']['watermark_place'], $GLOBALS['_CFG']['watermark_alpha']);
                 if (!$image)
                 {
-                     @unlink($image_middle);  //将前面这行的    $dir . $file_name    改为 $image_middle      By bbs.hongyuvip.com
+                     @unlink($image_middle);  //将前面这行的    $dir . $file_name    改为 $image_middle      By 
 
                      $msg = sprintf($GLOBALS['_LANG']['error_pos'], $row['goods_id']) . "\n" . $GLOBALS['image']->error_msg();
                      if ($silent)

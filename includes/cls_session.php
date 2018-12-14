@@ -1,16 +1,16 @@
 <?php
 
 /**
- * 鸿宇多用户商城 SESSION 鍏?敤绫诲簱
+ *  SESSION 鍏?敤绫诲簱
  * ============================================================================
  * * 鐗堟潈鎵€鏈 2005-2012 涓婃捣鍟嗘淳缃戠粶绉戞妧鏈夐檺鍏?徃锛屽苟淇濈暀鎵€鏈夋潈鍒┿€
- * 缃戠珯鍦板潃: http://bbs.hongyuvip.com锛
+ * 缃戠珯鍦板潃: 锛
  * ----------------------------------------------------------------------------
  * 杩欎笉鏄?竴涓?嚜鐢辫蒋浠讹紒鎮ㄥ彧鑳藉湪涓嶇敤浜庡晢涓氱洰鐨勭殑鍓嶆彁涓嬪?绋嬪簭浠ｇ爜杩涜?淇?敼鍜
  * 浣跨敤锛涗笉鍏佽?瀵圭▼搴忎唬鐮佷互浠讳綍褰㈠紡浠讳綍鐩?殑鐨勫啀鍙戝竷銆
  * ============================================================================
- * $Author: Shadow & 鸿宇
- * $Id: cls_session.php 17217 2016-01-19 06:29:08Z Shadow & 鸿宇
+ * $Author: 
+ * $Id: cls_session.php 17217  
 */
 
 if (!defined('IN_ECS'))
@@ -113,7 +113,7 @@ class cls_session
         {
             $this->gen_session_id();
 
-            setcookie($this->session_name, $this->session_id . $this->gen_session_key($this->session_id), time()+86400*7, $this->session_cookie_path, $this->session_cookie_domain, $this->session_cookie_secure); //代码修改 By  bbs.hongyuvip.com
+            setcookie($this->session_name, $this->session_id . $this->gen_session_key($this->session_id), time()+86400*7, $this->session_cookie_path, $this->session_cookie_domain, $this->session_cookie_secure); //代码修改 By  
         }
 
         register_shutdown_function(array(&$this, 'close_session'));
@@ -264,17 +264,17 @@ class cls_session
     {
         $GLOBALS['_SESSION'] = array();
 
-		/* 注释掉下面这段代码或者直接删除_start   By  bbs.hongyuvip.com */
+		/* 注释掉下面这段代码或者直接删除_start   By   */
         //setcookie($this->session_name, $this->session_id, 1, $this->session_cookie_path, $this->session_cookie_domain, $this->session_cookie_secure);
 
-        /* 鸿宇多用户商城 鑷?畾涔夋墽琛岄儴鍒 */
+        /*  鑷?畾涔夋墽琛岄儴鍒 */
         //if (!empty($GLOBALS['ecs']))
         //{
             //$this->db->query('DELETE FROM ' . $GLOBALS['ecs']->table('cart') . " WHERE session_id = '$this->session_id'");
         //}
-        /* 鸿宇多用户商城 鑷?畾涔夋墽琛岄儴鍒 */
+        /*  鑷?畾涔夋墽琛岄儴鍒 */
 		
-		/* 注释掉下面这段代码或者直接删除_end   By  bbs.hongyuvip.com */
+		/* 注释掉下面这段代码或者直接删除_end   By   */
 
         $this->db->query('DELETE FROM ' . $this->session_data_table . " WHERE sesskey = '" . $this->session_id . "' LIMIT 1");
 

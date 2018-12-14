@@ -1,4 +1,4 @@
-<!-- $Id: pre_sale_list.htm 14216 2015-02-10 02:27:21Z derek $ -->
+<!-- $Id: pre_sale_list.htm 14216 2015-02-10 02:27:21Z  -->
 
 <?php if ($this->_var['full_page']): ?>
 <?php echo $this->fetch('pageheader.htm'); ?>

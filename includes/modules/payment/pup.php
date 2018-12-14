@@ -41,7 +41,7 @@ if (isset($set_modules) && $set_modules == TRUE)
     $modules[$i]['author']  = 'ECSHOP TEAM';
 
     /* 网址 */
-    $modules[$i]['website'] = 'http://bbs.hongyuvip.com';
+    $modules[$i]['website'] = '';
 
     /* 版本号 */
     $modules[$i]['version'] = '1.0.0';

@@ -25,7 +25,7 @@
     <?php if ($this->_var['use_storage']): ?>
     <th><a href="javascript:listTable.sort('goods_number'); "><?php echo $this->_var['lang']['goods_number']; ?></a><?php echo $this->_var['sort_goods_number']; ?></th>
     <?php endif; ?>
-    <th>标签</th> <!-- 晒单插件 增加 by bbs.hongyuvip.com -->
+    <th>标签</th> <!-- 晒单插件 增加 by  -->
     <th><?php echo $this->_var['lang']['handler']; ?></th>
   <tr>
   <?php $_from = $this->_var['goods_list']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'goods');if (count($_from)):
@@ -43,7 +43,7 @@
     <?php if ($this->_var['use_storage']): ?>
     <td align="right"><span onclick="listTable.edit(this, 'edit_goods_number', <?php echo $this->_var['goods']['goods_id']; ?>)"><?php echo $this->_var['goods']['goods_number']; ?></span></td>
     <?php endif; ?>
-    <td align="center"><a href="goods_tag.php?act=list&goods_id=<?php echo $this->_var['goods']['goods_id']; ?>" target="_blank">标签</a></td> <!-- 晒单插件 增加 by bbs.hongyuvip.com -->
+    <td align="center"><a href="goods_tag.php?act=list&goods_id=<?php echo $this->_var['goods']['goods_id']; ?>" target="_blank">标签</a></td> <!-- 晒单插件 增加 by  -->
     <td align="center">
       <a href="../goods.php?id=<?php echo $this->_var['goods']['goods_id']; ?>" target="_blank" title="<?php echo $this->_var['lang']['view']; ?>"><img src="images/icon_view.gif" width="16" height="16" border="0" /></a>
       <a href="goods.php?act=edit&goods_id=<?php echo $this->_var['goods']['goods_id']; ?><?php if ($this->_var['code'] != 'real_goods'): ?>&supplier_status=<?php echo $_REQUEST['supplier_status']; ?>&extension_code=<?php echo $this->_var['code']; ?><?php endif; ?>" title="<?php echo $this->_var['lang']['edit']; ?>"><img src="images/icon_edit.gif" width="16" height="16" border="0" /></a>

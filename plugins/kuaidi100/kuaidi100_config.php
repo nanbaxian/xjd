@@ -60,7 +60,7 @@ switch ($getcom){
 	case "中铁快运":
 		$postcom = 'zhongtiewuliu';
 		break;		
-		/* 修改 by bbs.hongyuvip.com start */
+		/* 修改 by  start */
 	case "百世汇通":
 		$postcom = 'huitongkuaidi';
 		break;
@@ -70,7 +70,7 @@ switch ($getcom){
 	case "德邦":
 		$postcom = 'debangwuliu';
 		break;
-		/* 修改 by bbs.hongyuvip.com end */
+		/* 修改 by  end */
 	case "FedEx":
 		$postcom = 'fedex';
 		break;		

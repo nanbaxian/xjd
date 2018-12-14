@@ -1,4 +1,4 @@
-<!-- $Id: templates_list.htm 16480 2009-07-21 13:33:40Z Shadow & 鸿宇 -->
+<!-- $Id: templates_list.htm 16480 2009-07-21 13:33:40Z  -->
 <?php echo $this->fetch('pageheader.htm'); ?>
 <!-- start templates list -->
 <div class="list-div">

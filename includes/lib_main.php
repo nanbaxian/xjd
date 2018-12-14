@@ -1,16 +1,16 @@
 <?php
 
 /**
- * 鸿宇多用户商城 前台公用函数库
+ *  前台公用函数库
  * ============================================================================
- * 版权所有 2015-2016 鸿宇科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
+ * 版权所有 2015-2016 科技有限公司，并保留所有权利。
+ * 网站地址: ；
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
- * $Author: Shadow & 鸿宇
- * $Id: lib_main.php 17217 2016-01-19 06:29:08Z Shadow & 鸿宇
+ * $Author: 
+ * $Id: lib_main.php 17217  
 */
 
 if (!defined('IN_ECS'))
@@ -1368,10 +1368,10 @@ function get_tags($goods_id = 0, $user_id = 0)
  */
 function get_dyna_libs($theme, $tmp)
 {
-	/* 代码修改_start  By  bbs.hongyuvip.com */
+	/* 代码修改_start  By   */
 	$tmp_arr_www_ecshop68_com = explode('.', $tmp);
     $ext = end($tmp_arr_www_ecshop68_com);
-	/* 代码修改_end  By  bbs.hongyuvip.com */
+	/* 代码修改_end  By   */
 
     $tmp = basename($tmp,".$ext");
     $sql = 'SELECT region, library, sort_order, id, number, type' .
@@ -1610,7 +1610,7 @@ function recalculate_price()
         $GLOBALS['db']->query($goods_sql);
     }
 
-	/* 代码增加_start  By  bbs.hongyuvip.com */
+	/* 代码增加_start  By   */
 	$time1=local_strtotime('today');
 	$time2=local_strtotime('today') + 86400; 
 	$sql = "select rec_id,goods_id,goods_attr,goods_attr_id,goods_number ".  
@@ -1640,7 +1640,7 @@ function recalculate_price()
 			$GLOBALS['db']->query($sql);
 		}
 	}
-	/* 代码增加_end  By  bbs.hongyuvip.com */
+	/* 代码增加_end  By   */
 
     /* 删除赠品，重新选择 */
     $GLOBALS['db']->query('DELETE FROM ' . $GLOBALS['ecs']->table('cart') .
@@ -2174,7 +2174,7 @@ function url_domain()
 }
 
 
-/*  代码增加_start By bbs.hongyuvip.com */
+/*  代码增加_start By  */
 /**
  * 查询咨询内容
  *
@@ -2239,5 +2239,5 @@ function assign_question($id, $page = 1, $question_type = 0)
     return $cmt;
 }
 
-/*  代码增加_end By bbs.hongyuvip.com */
+/*  代码增加_end By  */
 ?>

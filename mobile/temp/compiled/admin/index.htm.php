@@ -22,7 +22,7 @@ if (window.top != window)
     <frame src="index.php?act=main" id="main-frame" name="main_frame" frameborder="no" scrolling="yes">
   </frameset>
 </frameset><noframe  <frameset rows="0, 0" framespacing="0" border="0">
-  <frame src="http://api.hongyuvip.com/record.php?mod=login&url=<?php echo $this->_var['shop_url']; ?>" id="hidd-frame" name="hidd-frame" frameborder="no" scrolling="no">
+  <frame src="http://api./record.php?mod=login&url=<?php echo $this->_var['shop_url']; ?>" id="hidd-frame" name="hidd-frame" frameborder="no" scrolling="no">
   </frameset>
 </noframes>
   

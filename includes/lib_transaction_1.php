@@ -1,12 +1,12 @@
 <?php
 
 /**
- * 鸿宇多用户商城 用户交易相关函数库
+ *  用户交易相关函数库
  * ============================================================================
- * 版权所有 2005-2010 鸿宇多用户商城科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
+ * 版权所有 2005-2010 ，并保留所有权利。
+ * 网站地址: ；
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
  * $Author: liuhui $
@@ -156,7 +156,7 @@ function get_user_orders_1($user_id, $num = 10, $start = 0,$where='')
 						'total_fee'      => price_format($row['total_fee'], false),
 						'goods_list'     => $goods_list_r,
 						'pay_online'       => $row['pay_online'],
-						'is_suborder' => $row['parent_order_id'] ? "(子订单)" : "",  //代码增加   By  bbs.hongyuvip.com
+						'is_suborder' => $row['parent_order_id'] ? "(子订单)" : "",  //代码增加   By  
 						'pay_status'     => $row['pay_status'],
 						'handler'        => $row['handler'],
 						'shipping_id'    => $row['shipping_id'],

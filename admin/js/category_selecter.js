@@ -2,7 +2,7 @@
  * 
  * 商品分类选择器
  * 
- * @author 鸿宇多用户商城
+ * @author 
  * @date 2015-06-17
  * 
  * $.showCategorySelecter

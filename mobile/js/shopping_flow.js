@@ -651,7 +651,7 @@ function checkOrderForm(frm)
 		// }
 
 		if (frm.elements[i].name == 'payment' && frm.elements[i].checked) {
-			/* 代码修改_start By bbs.hongyuvip.com */
+			/* 代码修改_start By  */
 			if (frm.elements[i].value == '0') {
 				if (have_other == true) {
 					paymentSelected = true;
@@ -669,7 +669,7 @@ function checkOrderForm(frm)
                         else {
 				paymentSelected = true;
 			}
-			/* 代码修改_end By bbs.hongyuvip.com */
+			/* 代码修改_end By  */
 		}
 	}
 
@@ -881,7 +881,7 @@ function checkConsignee(frm)
   return ! err;
 
 }
-//<!--增值税发票_添加_START_bbs.hongyuvip.com-->
+//<!--增值税发票_添加_START_-->
 
 function check_taxpayer_id(t,id)
 
@@ -988,4 +988,4 @@ function check_preg_match(v,type)
     return preg.test(v);
 
 }
-//<!--增值税发票_添加_END_bbs.hongyuvip.com-->
+//<!--增值税发票_添加_END_-->

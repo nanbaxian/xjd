@@ -33,7 +33,7 @@ function erweima1(obj, sType) { var oDiv = document.getElementById(obj); if (sTy
 		</div>
 	</div>
 	<div class="w">
-		<!-- 代码增加2014-12-23 by bbs.hongyuvip.com  _star -->
+		<!-- 代码增加2014-12-23 by   _star -->
 		<!--{if $action eq 'step_1'}-->
 		<div id="find_pw">
 			<div class="find_con">
@@ -520,7 +520,7 @@ function erweima1(obj, sType) { var oDiv = document.getElementById(obj); if (sTy
 			</div>
 		</div>
 		<!--{/if}-->
-		<!-- 代码增加2014-12-23 by bbs.hongyuvip.com  _end -->
+		<!-- 代码增加2014-12-23 by   _end -->
 		<!--*找回密码界面 -->
 		<!--{if $action eq 'get_password'} -->
 		{insert_scripts files='utils.js'}

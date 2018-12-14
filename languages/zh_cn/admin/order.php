@@ -1,16 +1,16 @@
 <?php
 
 /**
- * 鸿宇多用户商城 订单管理语言文件
+ *  订单管理语言文件
  * ============================================================================
- * 版权所有 2015-2016 鸿宇多用户商城科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
+ * 版权所有 2015-2016 ，并保留所有权利。
+ * 网站地址: ；
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
- * $Author: Shadow & 鸿宇
- * $Id: order.php 17217 2016-01-19 06:29:08Z Shadow & 鸿宇
+ * $Author: 
+ * $Id: order.php 17217  
  */
 
 /* 订单搜索 */
@@ -403,7 +403,7 @@ $_LANG['label_return_time'] = '退货时间';
 $_LANG['tips_back_del'] = '退货单删除成功！';
 
 $_LANG['goods_num_err'] = '库存不足，请重新选择！';
-/* 代码增加_start   By bbs.hongyuvip.com */
+/* 代码增加_start   By  */
 $_LANG['label_pickup_point'] = '所选自提点：';
 $_LANG['p_shop_name'] = '店名：';
 $_LANG['p_address'] = '地址：';
@@ -412,8 +412,8 @@ $_LANG['p_phone'] = '联系方式：';
 $_LANG['order_type'] = '订单类型';
 $_LANG['pickup_order'] = '自提订单';
 $_LANG['normal_order'] = '一般订单';
-/* 代码增加_end   By bbs.hongyuvip.com */
-/*增值税发票_添加_START_bbs.hongyuvip.com*/
+/* 代码增加_end   By  */
+/*增值税发票_添加_START_*/
 /*发票列表新增*/
 $_LANG['unprovided'] = '未开票';
 $_LANG['provided'] = '已开票';
@@ -460,5 +460,5 @@ $_LANG['label_inv_status'] = '发票状态：';
 $_LANG['label_inv_money'] = '发票金额：';
 $_LANG['label_action_note2'] = '备注：';
 $_LANG['js_languages']['remove_invoice_confirm'] = '您确定删除该订单的发票信息吗？';
-/*增值税发票_添加_END_bbs.hongyuvip.com*/
+/*增值税发票_添加_END_*/
 ?>

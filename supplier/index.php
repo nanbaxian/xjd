@@ -1,15 +1,15 @@
 <?php
 /**
- * 鸿宇多用户商城 控制台首页
+ *  控制台首页
  * ============================================================================
- * 版权所有 2015-2016 鸿宇多用户商城科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
+ * 版权所有 2015-2016 ，并保留所有权利。
+ * 网站地址: ；
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
- * $Author: Shadow & 鸿宇
- * $Id: index.php 17217 2016-01-19 06:29:08Z Shadow & 鸿宇
+ * $Author: 
+ * $Id: index.php 17217  
 */
 
 define('IN_ECS', true);
@@ -175,7 +175,7 @@ elseif ($_REQUEST['act'] == 'main')
 	$smarty->assign('supplier_article',  $supplier_article);
     $smarty->assign('supplier_notice',  nl2br($_CFG['supplier_notice']));
     
-    /*后台管理起始页_添加_START_bbs.hongyuvip.com*/
+    /*后台管理起始页_添加_START_*/
     $today_start=mktime(0,0,0,date('m'),date('d'),date('Y'));
     $today_end=mktime(0,0,0,date('m'),date('d')+1,date('Y'))-1;
     $month_start=mktime(0,0,0,date('m'),1,date('Y'));
@@ -444,7 +444,7 @@ elseif ($_REQUEST['act'] == 'main')
     $sales_option['yAxis'] = $sales_yAxis;
     $sales_option['series'] = $sales_series;
     $smarty->assign('sales_option',json_encode($sales_option));
-    /*后台管理起始页_添加_END_bbs.hongyuvip.com*/
+    /*后台管理起始页_添加_END_*/
     $smarty->display('start.htm');
 }
 
@@ -484,7 +484,7 @@ elseif ($_REQUEST['act'] == 'main_api')
         $apiget = "ver= $ecs_version &lang= $ecs_lang &release= $ecs_release &php_ver= $php_ver &mysql_ver= $mysql_ver &ocount= $ocount &oamount= $oamount &gcount= $gcount &charset= $ecs_charset &usecount= $ecs_user &template= $ecs_template &style= $ecs_style &url= $shop_url &patch= $patch_file ";
 
         $t = new transport;
-        //$api_comment = $t->request('http://api.hongyuvip.com/checkver.php', $apiget);
+        //$api_comment = $t->request('http://api./checkver.php', $apiget);
         //$api_str = $api_comment["body"];
         //echo $api_str;
 		$api_str = 'supplier';

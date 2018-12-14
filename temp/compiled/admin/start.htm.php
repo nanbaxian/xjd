@@ -1,4 +1,4 @@
-<!-- $Id: start.htm 17216 2011-01-19 06:03:12Z Shadow & 鸿宇 -->
+<!-- $Id: start.htm 17216 2011-01-19 06:03:12Z  -->
 <?php echo $this->fetch('pageheader_bd.htm'); ?>
 <!-- directory install start -->
 <ul id="lilist" style="padding:0; margin: 0; list-style-type:none; color: #CC0000;">
@@ -97,12 +97,12 @@
                         <span><?php echo $this->_var['task']['commission']; ?> 个</span>
                     </li>
                     <li class="li_even">
-                        <!-- 代码修改_start  By  bbs.hongyuvip.com -->
+                        <!-- 代码修改_start  By   -->
                         <!--
                         <strong><a href="goods.php?act=list&supplier_status=0">待审核商品</a></strong>
                         -->
                         <strong><a href="goods.php?act=list&supp=1&supplier_status=0">待审核商品</a></strong>
-                        <!-- 代码修改_end  By  bbs.hongyuvip.com -->
+                        <!-- 代码修改_end  By   -->
                         <span><?php echo $this->_var['task']['goods']; ?> 个</span>
                     </li>
                     <li>
@@ -339,9 +339,9 @@
 
     <td><?php echo $this->_var['ecs_charset']; ?>UTF-8</td>
 
-    <td>鸿宇官网:</td>
+    <td>官网:</td>
 
-    <td>HongYuvip.com</td>
+    <td></td>
 
   </tr>
 

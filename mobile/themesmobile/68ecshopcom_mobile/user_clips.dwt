@@ -41,9 +41,9 @@
 
 {if $action eq 'message_list'}{include file='library/user_message.lbi'}{/if}
 {if $action eq 'comment_list'}{include file='library/user_comments.lbi'}{/if}
-  <!-- start Add By bbs.hongyuvip.com ecshop开发中心 企业QQ123456789 -->
+  <!-- start Add By  ecshop开发中心 企业QQ123456789 -->
   {if $action eq 'affiliate'}{include file='library/user_affiliate.lbi'}{/if} 
-  <!-- end Add By bbs.hongyuvip.com ecshop开发中心 企业QQ123456789 -->
+  <!-- end Add By  ecshop开发中心 企业QQ123456789 -->
   <!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem --> </div>
 <!-- #BeginLibraryItem "/library/footer_nav.lbi" --><!-- #EndLibraryItem -->
 </body>

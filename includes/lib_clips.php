@@ -1,16 +1,16 @@
 <?php
 
 /**
- * 鸿宇多用户商城 用户相关函数库
+ *  用户相关函数库
  * ============================================================================
- * 版权所有 2015-2016 鸿宇多用户商城科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
+ * 版权所有 2015-2016 ，并保留所有权利。
+ * 网站地址: ；
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
- * $Author: Shadow & 鸿宇
- * $Id: lib_clips.php 17217 2016-01-19 06:29:08Z Shadow & 鸿宇
+ * $Author: 
+ * $Id: lib_clips.php 17217  
  */
 
 if (!defined('IN_ECS'))
@@ -618,13 +618,13 @@ function get_user_surplus($user_id)
 function get_user_default($user_id)
 {
     $user_bonus = get_user_bonus();
-/*代码修改2014-12-23 by bbs.hongyuvip.com  _star */
+/*代码修改2014-12-23 by   _star */
     $sql = "SELECT * FROM " .$GLOBALS['ecs']->table('users'). " WHERE user_id = '$user_id'";
-/*代码修改2014-12-23 by bbs.hongyuvip.com  _end */
+/*代码修改2014-12-23 by   _end */
     $row = $GLOBALS['db']->getRow($sql);
-    /* 代码增加_start By bbs.hongyuvip.com */
+    /* 代码增加_start By  */
     $_SESSION['user_name'] =$row['user_name'];
-    /* 代码增加_end By bbs.hongyuvip.com */
+    /* 代码增加_end By  */
     $info = array();
     $info['username']  = stripslashes($_SESSION['user_name']);
     $info['shop_name'] = $GLOBALS['_CFG']['shop_name'];
@@ -633,7 +633,7 @@ function get_user_default($user_id)
     $info['is_validate'] = ($GLOBALS['_CFG']['member_email_validate'] && !$row['is_validated'])?0:1;
     $info['credit_line'] = $row['credit_line'];
     $info['formated_credit_line'] = price_format($info['credit_line'], false);
-	/*代码增加2014-12-23 by bbs.hongyuvip.com  _star */
+	/*代码增加2014-12-23 by   _star */
 	$info['mobile_phone'] = $row['mobile_phone'];
 	$info['email']	= $row['email'];
 	$info['status'] = $row['status'];
@@ -641,7 +641,7 @@ function get_user_default($user_id)
 	$info['validated'] = $row['validated'];
 	$info['is_surplus_open'] = $row['is_surplus_open'];
 	$info['status'] = $row['status'];
-    /*代码增加2014-12-23 by bbs.hongyuvip.com  _end */
+    /*代码增加2014-12-23 by   _end */
     //如果$_SESSION中时间无效说明用户是第一次登录。取当前登录时间。
     $last_time = !isset($_SESSION['last_time']) ? $row['last_login'] : $_SESSION['last_time'];
 

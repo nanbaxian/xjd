@@ -14,9 +14,9 @@
         <!--{if $show_transform_points}--> 
         <a href="user.php?act=transform_points" class="item {if $action eq 'transform_points'}curs{/if}"><span>{$lang.label_transform_points}</span><i></i></a>
         <!--{/if}--> 
-	{* 代码增加_start  By  bbs.hongyuvip.com *}
+	{* 代码增加_start  By   *}
 	<a href="user.php?act=vc_login" class="item {if $action eq 'vc_login'}curs{/if}">储值卡充值</a>
-	{* 代码增加_end  By  bbs.hongyuvip.com *}
+	{* 代码增加_end  By   *}
       </div>
       <div class="func func2 clearfix">
         <p class="title"><i></i><span>交易中心</span></p>

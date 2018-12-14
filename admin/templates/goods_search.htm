@@ -19,13 +19,13 @@
       <select name="suppliers_id"><option value="0">{$lang.intro_type}</option>{html_options options=$suppliers_list_name selected=$smarty.get.suppliers_id}</select>
       
 	
-	  {* 代码增加_start  By  bbs.hongyuvip.com *}
+	  {* 代码增加_start  By   *}
 	  <select name="supplier_status"><option value="">审核状态</option>
 	  {foreach from=$supplier_status_list key=supplier_key item=supplier_status}
 	  <option value="{$supplier_key}" {if $supplier_key neq ''  and $supplier_key eq $smarty.get.supplier_status}selected{/if}>{$supplier_status}</option>
 	  {/foreach}
 	  </select>
-	  {* 代码增加_end  By  bbs.hongyuvip.com *}
+	  {* 代码增加_end  By   *}
 	  {/if}
       <!-- 上架 -->
       <select name="is_on_sale"><option value=''>{$lang.intro_type}</option><option value="1">{$lang.on_sale}</option><option value="0">{$lang.not_on_sale}</option></select>
@@ -49,9 +49,9 @@
 		{/if}
           {if $suppliers_exists eq 1}
           listTable.filter['suppliers_id'] = document.forms['searchForm'].elements['suppliers_id'].value;
-		  /* 代码增加_start  By  bbs.hongyuvip.com */
+		  /* 代码增加_start  By   */
 		listTable.filter['supplier_status'] = document.forms['searchForm'].elements['supplier_status'].value;
-		/* 代码增加_end  By  bbs.hongyuvip.com */
+		/* 代码增加_end  By   */
           {/if}
         listTable.filter['is_on_sale'] = document.forms['searchForm'].elements['is_on_sale'].value;
         {/if}

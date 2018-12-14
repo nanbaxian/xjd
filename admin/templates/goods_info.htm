@@ -1,8 +1,8 @@
 <!-- $Id: goods_info.htm 17126 2010-04-23 10:30:26Z liuhui $ -->
-<!-- 修改 by bbs.hongyuvip.com 百度编辑器 begin -->
+<!-- 修改 by  百度编辑器 begin -->
 
 {include file="pageheader_bd.htm"} {insert_scripts files="../js/utils.js,selectzone_bd.js,colorselector.js"}
-<!-- 修改 by bbs.hongyuvip.com 百度编辑器 end -->
+<!-- 修改 by  百度编辑器 end -->
 <script type="text/javascript" src="../js/calendar.php?lang={$cfg_lang}"></script>
 <link href="../js/calendar/calendar.css" rel="stylesheet" type="text/css" />
 <!-- zTree Style -->
@@ -112,7 +112,7 @@
 				<tr>
 					<td class="label">{$lang.lab_goods_brand}</td>
 					<td>
-						<!-- 代码修改_start_derek20150129admin_goods  bbs.hongyuvip.com -->
+						<!-- 代码修改_start_derek20150129admin_goods   -->
 
 						<input id="brand_search" name="brand_search" type="text" value="{$brand_name_val|default:请输入……}" onclick="onC_search()" onblur="onB_search()" oninput="onK_search(this.value)" />
 						<input id="brand_search_bf" name="brand_search_bf" type="hidden" value="{$brand_name_val}" />
@@ -144,7 +144,7 @@
 			}
             </script>
 
-						<!-- 代码修改_end_derek20150129admin_goods  bbs.hongyuvip.com -->
+						<!-- 代码修改_end_derek20150129admin_goods   -->
 						{if $is_add}
 						<a href="javascript:void(0)" title="{$lang.rapid_add_brand}" onclick="rapidBrandAdd()" class="special">{$lang.rapid_add_brand}</a>
 						<span id="brand_add" style="display:none;">
@@ -155,7 +155,7 @@
 						</span>
 						{/if}
 
-						<!-- 代码增加_start_derek20150129admin_goods  bbs.hongyuvip.com -->
+						<!-- 代码增加_start_derek20150129admin_goods   -->
 
 						<div id="brand_content" style="margin-top:5px; margin-bottom:10px; display:none">
 							<div style="float:left; overflow-y:scroll; width:420px; height:120px; border:#CCC 1px solid">
@@ -270,7 +270,7 @@
 			}
             </script>
 
-						<!-- 代码增加_end_derek20150129admin_goods  bbs.hongyuvip.com -->
+						<!-- 代码增加_end_derek20150129admin_goods   -->
 					</td>
 				</tr>
 				{if $suppliers_exists eq 1}
@@ -496,7 +496,7 @@
 					</td>
 				</tr>
 				<!--代码增加_end byjdy-->
-				{* 代码增加_start By bbs.hongyuvip.com *}
+				{* 代码增加_start By  *}
 				<!--{if $goods.supplier_id}-->
 				<tr>
 					<td class="label">审核状态</td>
@@ -516,7 +516,7 @@
 					</td>
 				</tr>
 				<!--{/if}-->
-				{* 代码增加_end By bbs.hongyuvip.com *}
+				{* 代码增加_end By  *}
 			</table>
 
 			<!-- 璇︾粏鎻忚堪 -->
@@ -646,7 +646,7 @@
 			</table>
 			{/if}
 
-			<!--代码修改_start By bbs.hongyuvip.com  将 商品相册 这部分代码完全修改成下面这样-->
+			<!--代码修改_start By   将 商品相册 这部分代码完全修改成下面这样-->
 			<table width="100%" id="gallery-table" style="display:none" align="center">
 				<!-- 图片列表 -->
 				<tr>
@@ -714,7 +714,7 @@
 				</tr>
 			</table>
 
-			<!--代码修改_end By bbs.hongyuvip.com-->
+			<!--代码修改_end By -->
 
 			<!-- 鍏宠仈鍟嗗搧 -->
 			<table width="90%" id="linkgoods-table" style="display:none" align="center">
@@ -890,10 +890,10 @@
 				<input type="hidden" name="extension_code" value="{$code}" />
 				{/if}
 
-				<!--修改代码_start By bbs.hongyuvip.com 主要是给这两个INPUT各自增加了一个ID， id="goods_info_submit"  id="goods_info_reset" -->
+				<!--修改代码_start By  主要是给这两个INPUT各自增加了一个ID， id="goods_info_submit"  id="goods_info_reset" -->
 				<input id="goods_info_submit" type="submit" value="{$lang.button_submit}" class="button" />
 				<input id="goods_info_reset" type="reset" value="{$lang.button_reset}" class="button" />
-				<!--修改代码_end By bbs.hongyuvip.com-->
+				<!--修改代码_end By -->
 
 			</div>
 			<input type="hidden" name="act" value="{$form_act}" />
@@ -1285,14 +1285,14 @@ function chu (result)
 
       var response = result.content;
 
-	  // 代码增加_start_derek20150129admin_goods  bbs.hongyuvip.com
+	  // 代码增加_start_derek20150129admin_goods  
 	  
 	  document.getElementById("brand_search").value = response.brand;
 	  document.getElementById("brand_id").value = response.id;
 	  document.getElementById("xin_brand").innerHTML += "&nbsp;[<a href=javascript:go_brand_id("+response.id+",'"+response.brand+"')>"+response.brand+"</a>]&nbsp;";
 	  document.getElementById("xin_brand").style.display = "block";
 
-	  // 代码增加_end_derek20150129admin_goods  bbs.hongyuvip.com
+	  // 代码增加_end_derek20150129admin_goods  
 
       var selCat = document.forms['theForm'].elements['brand_id'];
       var opt = document.createElement("OPTION");

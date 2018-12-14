@@ -1,16 +1,16 @@
 <?php
 
 /**
- * 鸿宇多用户商城 权限对照表
+ *  权限对照表
  * ============================================================================
- * 版权所有 2015-2016 鸿宇多用户商城科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
+ * 版权所有 2015-2016 ，并保留所有权利。
+ * 网站地址: ；
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
- * $Author: Shadow & 鸿宇
- * $Id: inc_priv.php 15503 2008-12-24 09:22:45Z Shadow & 鸿宇
+ * $Author: 
+ * $Id: inc_priv.php 15503 2008-12-24 09:22:45Z 
  */
 if(! defined('IN_ECS'))
 {
@@ -21,7 +21,7 @@ if(! defined('IN_ECS'))
 $purview['01_goods_list'] = array(
 	'goods_manage', 'remove_back'
 );
-/* 代码增加_start By supplier.hongyuvip.com */
+/* 代码增加_start By  */
 $purview['02_supplier_goods_list'] = array(
 	'goods_manage', 'remove_back'
 );
@@ -29,7 +29,7 @@ $purview['03_goods_add'] = 'goods_manage';
 $purview['04_category_list'] = array(
 	'cat_manage', 'cat_drop'
 ); // 分类添加、分类转移和删除
-/* 代码增加_end By supplier.hongyuvip.com */
+/* 代码增加_end By  */
 $purview['05_comment_manage'] = 'comment_priv';
 $purview['05_order_comment'] = 'order_comment_priv'; // 代码增加 --订单评论
 $purview['06_goods_brand_list'] = 'brand_manage';
@@ -80,7 +80,7 @@ $purview['vote_list'] = 'vote_priv';
 // 会员管理权限
 $purview['03_users_list'] = 'users_manage';
 
-$purview['04_users_export'] = 'users_manage'; // 代码增加 By bbs.hongyuvip.com
+$purview['04_users_export'] = 'users_manage'; // 代码增加 By 
 
 $purview['04_users_add'] = 'users_manage';
 $purview['05_user_rank_list'] = 'user_rank';
@@ -131,10 +131,10 @@ $purview['ad_position'] = 'ad_manage';
 $purview['ad_list'] = 'ad_manage';
 
 // 订单管理权限
-/* 代码增加_start By supplier.hongyuvip.com */
+/* 代码增加_start By  */
 $purview['01_order_list'] = 'order_view';
 $purview['02_supplier_order'] = 'order_view';
-/* 代码增加_end By supplier.hongyuvip.com */
+/* 代码增加_end By  */
 $purview['03_order_query'] = 'order_view';
 $purview['04_merge_order'] = 'order_os_edit';
 $purview['05_edit_order_print'] = 'order_os_edit';
@@ -149,9 +149,9 @@ $purview['12_invoice_list'] = 'invoice_manage';
 
 // 报表统计权限
 $purview['flow_stats'] = 'client_flow_stats';
-/* 代码添加_START By bbs.hongyuvip.com */
+/* 代码添加_START By  */
 $purview['keyword'] = 'client_flow_stats';
-/* 代码添加_SEND By bbs.hongyuvip.com */
+/* 代码添加_SEND By  */
 $purview['report_guest'] = 'client_flow_stats';
 $purview['report_users'] = 'client_flow_stats';
 $purview['visit_buy_per'] = 'client_flow_stats';
@@ -195,7 +195,7 @@ $purview['magazine_list'] = 'magazine_list';
 $purview['view_sendlist'] = 'view_sendlist';
 $purview['sendmail'] = 'send_mail';
 
-/* 代码增加_start By supplier.hongyuvip.com */
+/* 代码增加_start By  */
 $purview['05_supplier_rank'] = 'supplier_rank';
 $purview['01_supplier_reg'] = 'supplier_manage';
 $purview['02_supplier_list'] = 'supplier_manage';
@@ -204,7 +204,7 @@ $purview['03_rebate_pay'] = 'supplier_rebate';
 $purview['04_shop_category'] = 'supplier_manage';
 $purview['05_shop_street'] = 'supplier_manage';
 $purview['06_supplier_tag'] = 'supplier_tag';
-/* 代码增加_end By supplier.hongyuvip.com */
+/* 代码增加_end By  */
 // 微信权限
 // $purview['weixin_config']= 'weixin_config';
 // $purview['weixin_addconfig']= 'weixin_addconfig';
@@ -223,11 +223,11 @@ $purview['06_supplier_tag'] = 'supplier_tag';
 // $purview['weixin_qiandao']= 'weixin_qiandao';
 // $purview['weixin_addkey']= 'weixin_addkey';
 $purview['website'] = 'website';
-/* 代码增加_start By bbs.hongyuvip.com */
+/* 代码增加_start By  */
 $purview['16_takegoods_list'] = 'takegoods_list';
 $purview['16_takegoods_order'] = 'takegoods_order';
 $purview['website'] = 'website';
-/* 代码增加_end By bbs.hongyuvip.com */
+/* 代码增加_end By  */
 
 // 自提点管理权限
 $purview['pickup_point_list'] = 'pickup_point_manage';

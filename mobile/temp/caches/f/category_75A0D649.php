@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="format-detection" content="telephone=no">
 <meta name="viewport" content="minimal-ui=yes,width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<title>服装服饰_鸿宇多用户商城手机版  </title>
+<title>服装服饰_手机版  </title>
 <meta name="Keywords" content="" />
 <meta name="Description" content="" />
 <link rel="stylesheet" type="text/css" href="themesmobile/68ecshopcom_mobile/css/public.css"/>

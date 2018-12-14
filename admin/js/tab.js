@@ -32,7 +32,7 @@ document.getElementById("tabbar-div").onclick = function(e)
 {
   var obj = Utils.srcElement(e);
 
-  /* 代码增加_start  By bbs.hongyuvip.com */
+  /* 代码增加_start  By  */
 		if (obj.id=="gallery-tab")
 		{
 			document.getElementById("goods_info_submit").style.display='none';
@@ -47,7 +47,7 @@ document.getElementById("tabbar-div").onclick = function(e)
 			document.getElementById("goods_info_reset").style.display='';
 			}
 		}
-		/* 代码增加_end  By bbs.hongyuvip.com */
+		/* 代码增加_end  By  */
 
   if (obj.className == "tab-front" || obj.className == '' || obj.tagName.toLowerCase() != 'span')
   {

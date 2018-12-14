@@ -11,7 +11,7 @@ $db_user   = "root";
 // database password
 $db_pass   = "root";
 
-// HongYuJD-V7.2 bbs.hongyuvip.com
+//
 $prefix    = "ecs_";
 
 $timezone    = "PRC";
@@ -36,6 +36,6 @@ define('AUTH_KEY', 'this is a key');
 
 define('OLD_AUTH_KEY', '');
 
-define('API_TIME', '2018-12-13 12:28:18');
+define('API_TIME', '2018-12-14 10:29:48');
 
 ?>

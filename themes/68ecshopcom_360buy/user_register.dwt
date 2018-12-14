@@ -181,7 +181,7 @@ function erweima1(obj, sType) { var oDiv = document.getElementById(obj); if (sTy
 						</div>
 					</form>
 					<!--[if !ie]>form end<![endif]-->
-					<!-- 代码直接替换form表单2014-12-23 by bbs.hongyuvip.com  _end -->
+					<!-- 代码直接替换form表单2014-12-23 by   _end -->
 				</div>
 			</div>
 		</div>

@@ -1,12 +1,12 @@
 <?php
 
 /**
- * 鸿宇多用户商城 动态内容函数库
+ *  动态内容函数库
  * ============================================================================
- * 版权所有 2005-2010 鸿宇多用户商城科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
+ * 版权所有 2005-2010 ，并保留所有权利。
+ * 网站地址: ；
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
  * $Author: liuhui $
@@ -137,7 +137,7 @@ function get_evaluation_sumss($goods_id)
 $sql = "SELECT count(*) FROM " . $GLOBALS['ecs']->table('comment') . " WHERE status=1 and  comment_type =0 and id_value =".$goods_id ;//status=1表示通过了的评论才算  comment_type =0表示针对商品的评价 感谢zhangyh的提醒
     return $GLOBALS['db']->getOne($sql);
 }
-/* 代码增加_start  By  bbs.hongyuvip.com */
+/* 代码增加_start  By   */
 /**
  * 调用浏览历史
  *
@@ -193,7 +193,7 @@ function insert_history_list()
     }
     return $str;
 }
-/* 代码增加_end  By  bbs.hongyuvip.com */
+/* 代码增加_end  By   */
 /**
  * 调用购物车信息
  *
@@ -245,7 +245,7 @@ function insert_cart_info()
     return $output;
 }
 
-/* 代码增加_start  By  bbs.hongyuvip.com */
+/* 代码增加_start  By   */
 /**
  * 调用三方客服信息
  *
@@ -271,7 +271,7 @@ function insert_customer_service()
 	$output = $GLOBALS['smarty']->fetch('library/customer_service.lbi');
 	return $output;
 }
-/* 代码增加_end  By  bbs.hongyuvip.com */
+/* 代码增加_end  By   */
 
 /**
  * 调用指定的广告位的广告
@@ -636,7 +636,7 @@ function insert_goods_sells($arr)
     }
     return $number;
 }
-/* 代码增加_start By bbs.hongyuvip.com */
+/* 代码增加_start By  */
 /**
  * 调用评论信息
  *
@@ -672,7 +672,7 @@ function insert_question($arr)
 
     return $val;
 }
-/* 代码增加_end By bbs.hongyuvip.com */
+/* 代码增加_end By  */
 
 /*
  * 调用店铺logo与首页 

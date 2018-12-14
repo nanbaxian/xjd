@@ -228,7 +228,7 @@ var btn_buy = "{$lang.btn_buy}";
 var is_cancel = "{$lang.is_cancel}";
 var select_spe = "{$lang.select_spe}";
 </script> 
-<!-- 代码增加_end  By  bbs.hongyuvip.com -->
+<!-- 代码增加_end  By   -->
 <script type="text/javascript" src="js/json2.js"></script> 
 <script>
 $(document).ready(function(e) {
@@ -334,5 +334,5 @@ function toggle_compare_box()
   </div>
 </div>
 <a class="compareHolder" href="javascript:void(0)" onClick="toggle_compare_box()">对比栏</a> 
-<!-- 代码增加_end  By  bbs.hongyuvip.com -->
+<!-- 代码增加_end  By   -->
 

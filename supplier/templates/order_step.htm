@@ -341,7 +341,7 @@ region.isAdmin=true;
     <td><textarea name="card_message" cols="60" rows="3">{$order.card_message}</textarea></td>
   </tr>
   {/if}
-   <!--增值税发票_删除_START_bbs.hongyuvip.com-->
+   <!--增值税发票_删除_START_-->
   <!--<tr>
     <th>{$lang.label_inv_type}</th>
     <td><input name="inv_type" type="text" id="inv_type" value="{$order.inv_type}" size="40" /></td>
@@ -354,7 +354,7 @@ region.isAdmin=true;
     <th>{$lang.label_inv_content}</th>
     <td><input name="inv_content" value="{$order.inv_content}" size="40" text="text" /></td>
   </tr>-->
-  <!--增值税发票_删除_END_bbs.hongyuvip.com-->
+  <!--增值税发票_删除_END_-->
   {/if}
   <tr>
     <th>{$lang.label_postscript}</th>
@@ -451,7 +451,7 @@ region.isAdmin=true;
 </form>
 
 {elseif $step eq "invoice"}
-<!--增值税发票_删除_START_bbs.hongyuvip.com-->
+<!--增值税发票_删除_START_-->
 <!--<form name="theForm" action="order.php?act=step_post&step={$step}&order_id={$order_id}&step_act={$step_act}" method="post" onsubmit="return checkShipping()">
 <div class="list-div">
 <table cellpadding="3" cellspacing="1">
@@ -482,8 +482,8 @@ region.isAdmin=true;
     <input type="button" value="{$lang.button_cancel}" class="button" onclick="location.href='order.php?act=process&func=cancel_order&order_id={$order_id}&step_act={$step_act}'" />
   </p>
 </form>-->
-<!--增值税发票_删除_END_bbs.hongyuvip.com-->
-<!--增值税发票_添加_START_bbs.hongyuvip.com-->
+<!--增值税发票_删除_END_-->
+<!--增值税发票_添加_START_-->
 <script lang='javascript' type='text/javascript'>
   function $(id)
   {
@@ -954,7 +954,7 @@ function save_inv_remark_response(result)
 }
 </script>
 {/if}
-<!--增值税发票_添加_END_bbs.hongyuvip.com-->
+<!--增值税发票_添加_END_-->
 {/if}
 
 <script language="JavaScript">

@@ -88,7 +88,7 @@ Array.prototype.del= function(ele){
 	if(typeof UI != 'undefined'&&UI.dialog){
 		w.alert = function(str){
 			UI.dialog.open({
-				sTitle : '鸿宇店铺提示',
+				sTitle : '店铺提示',
 				sContent : gConfig.assembles.dialog_content(str,1),
 				nBtn : 1,
 				fSure : function(){
@@ -500,7 +500,7 @@ message_box = (function(){
             return (num2/num1*10).toFixed(1);
         },
         /*
-         * 设置鸿宇价
+         * 设置价
          */
         _set_jd_price : function(data,tag){
             var _price = data.p>=0?data.p:tag;

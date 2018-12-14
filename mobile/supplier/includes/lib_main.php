@@ -1,16 +1,16 @@
 <?php
 
 /**
- * 鸿宇多用户商城 管理中心公用函数库
+ *  管理中心公用函数库
  * ============================================================================
- * 版权所有 2015-2016 鸿宇多用户商城科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
+ * 版权所有 2015-2016 ，并保留所有权利。
+ * 网站地址: ；
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
- * $Author: Shadow & 鸿宇
- * $Id: lib_main.php 17217 2016-01-19 06:29:08Z Shadow & 鸿宇
+ * $Author: 
+ * $Id: lib_main.php 17217  
 */
 
 if (!defined('IN_ECS'))
@@ -311,7 +311,7 @@ function get_position_list()
 function create_html_editor($input_name, $input_value = '')
 {
     global $smarty;
-    /* 修改 by bbs.hongyuvip.com 百度编辑器 begin */
+    /* 修改 by  百度编辑器 begin */
     $HTML='
     <script type="text/javascript" charset="utf-8" src="../includes/ueditor/ueditor.config.js"></script>
     <script type="text/javascript" charset="utf-8" src="../includes/ueditor/ueditor.all.js"></script>
@@ -325,7 +325,7 @@ function create_html_editor($input_name, $input_value = '')
     });
     </script>';
     $smarty->assign('FCKeditor', $HTML);
-    /* 修改 by bbs.hongyuvip.com 百度编辑器 end */
+    /* 修改 by  百度编辑器 end */
 }
 
 

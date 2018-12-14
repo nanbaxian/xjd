@@ -925,7 +925,7 @@ function assign_commentex( $id, $type, $page = 1, $flag = 0 )
 		$res = $GLOBALS['db']->selectLimit( $sql, $size, ( $page - 1 ) * $size );
 		$arr = array( );
 		$ids = "";
-		while ( ( $row = $GLOBALS['db']->fetchRow( $res ) ) ) // 修改 By  hongyuvip.com
+		while ( ( $row = $GLOBALS['db']->fetchRow( $res ) ) ) // 修改 By  
 		{
 				$ids .= $row['comment_id'];
 				$arr[$row['comment_id']]['id'] = $row['comment_id'];

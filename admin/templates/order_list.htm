@@ -1,4 +1,4 @@
-<!--增值税发票_添加_START_bbs.hongyuvip.com-->
+<!--增值税发票_添加_START_-->
 {if $act eq 'invoice_list'}
 {if $full_page}
 {include file="pageheader.htm"}
@@ -182,7 +182,7 @@
 {include file="pagefooter.htm"}
 {/if}
 {else}
-<!--增值税发票_添加_END_bbs.hongyuvip.com-->
+<!--增值税发票_添加_END_-->
 {if $full_page}
 {include file="pageheader.htm"}
 {insert_scripts files="../js/utils.js,listtable.js"}
@@ -205,14 +205,14 @@
 	  {/foreach}
     </select>
 	{/if}
-    	<!-- 代码增加_start   By bbs.hongyuvip.com -->
+    	<!-- 代码增加_start   By  -->
     {$lang.order_type}
     <select name="order_type">
     	<option value="0">{$lang.select_please}</option>
         <option value="1">{$lang.normal_order}</option>
         <option value="2">{$lang.pickup_order}</option>
     </select>
-	<!-- 代码增加_end   By bbs.hongyuvip.com -->
+	<!-- 代码增加_end   By  -->
     <input type="submit" value="{$lang.button_search}" class="button" />
     <a href="order.php?act=list&supp={$smarty.request.supp|default:0}&composite_status={$os_unconfirmed}">{$lang.cs.$os_unconfirmed}</a>
     <a href="order.php?act=list&supp={$smarty.request.supp|default:0}&composite_status={$cs_await_pay}">{$lang.cs.$cs_await_pay}</a>
@@ -233,9 +233,9 @@
 	{if $supp_list}
 	<th><a href="javascript:listTable.sort('supplier_name', 'DESC'); ">供货商家</a>{$sort_supplier_name}</th>
 	{/if}
-    <!-- 代码增加_start   By bbs.hongyuvip.com -->
+    <!-- 代码增加_start   By  -->
     <th>{$lang.order_type}</th>
-	<!-- 代码增加_end   By bbs.hongyuvip.com -->
+	<!-- 代码增加_end   By  -->
     <th><a href="javascript:listTable.sort('add_time', 'DESC'); ">{$lang.order_time}</a>{$sort_order_time}</th>
     <th><a href="javascript:listTable.sort('consignee', 'DESC'); ">{$lang.consignee}</a>{$sort_consignee}</th>
     <th><a href="javascript:listTable.sort('total_fee', 'DESC'); ">{$lang.total_fee}</a>{$sort_total_fee}</th>
@@ -250,9 +250,9 @@
 	{if $supp_list}
 	<td>{$order.supplier_name|escape:html}</td>
 	{/if}
-    <!-- 代码增加_start   By bbs.hongyuvip.com -->
+    <!-- 代码增加_start   By  -->
 	<td>{if $order.is_pickup eq 1}{$lang.pickup_order}{else}{$lang.normal_order}{/if}</td>
-	<!-- 代码增加_end   By bbs.hongyuvip.com -->
+	<!-- 代码增加_end   By  -->
     <td>{$order.buyer|escape}<br />{$order.short_order_time}</td>
     <td align="left" valign="top"><a href="mailto:{$order.email}"> {$order.consignee|escape}</a>{if $order.tel} [TEL: {$order.tel|escape}]{/if} <br />{$order.address|escape}</td>
     <td align="right" valign="top" nowrap="nowrap">{$order.formated_total_fee}</td>
@@ -319,9 +319,9 @@ listTable.filter.{$key} = '{$item}';
 		{if $supp_list}
 		listTable.filter['suppid'] = document.forms['searchForm'].elements['suppid'].value;
 		{/if}
-		<!-- 代码增加_start   By bbs.hongyuvip.com -->
+		<!-- 代码增加_start   By  -->
 		listTable.filter['order_type'] = document.forms['searchForm'].elements['order_type'].value;
-		<!-- 代码增加_end   By bbs.hongyuvip.com -->
+		<!-- 代码增加_end   By  -->
         listTable.filter['page'] = 1;
         listTable.loadList();
     }
@@ -513,6 +513,6 @@ listTable.filter.{$key} = '{$item}';
 
 {include file="pagefooter.htm"}
 {/if}
-<!--增值税发票_添加_START_bbs.hongyuvip.com-->
+<!--增值税发票_添加_START_-->
 {/if}
-<!--增值税发票_添加_END_bbs.hongyuvip.com-->
+<!--增值税发票_添加_END_-->

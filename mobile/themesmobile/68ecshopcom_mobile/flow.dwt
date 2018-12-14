@@ -94,7 +94,7 @@
                          {if $goods_li.goods_id gt 0 && $goods_li.is_gift eq 0 && $goods_li.parent_id eq 0}
                           <div class="xm-input-number">
                         <div class="act_wrap">
-                          <!--修改代码_start  By bbs.hongyuvip.com-->
+                          <!--修改代码_start  By -->
                           <a href="javascript:;" onclick="minus_num({$goods_li.rec_id}, {$goods_li.goods_id}, {$key});" id="jiannum{$goods_li.rec_id}" class="input-sub {if $goods_li.goods_number<2}{else}active{/if}"></a>
                           <input type="text" onKeyDown='if(event.keyCode == 13) event.returnValue = false' name="goods_number[{$goods_li.rec_id}]" id="goods_number_{$goods_li.rec_id}" value="{$goods_li.goods_number}"  class="input-num"  onblur="change_price({$goods_li.rec_id}, {$goods_li.goods_id}, {$key})"/>
                           <input type="hidden" id="hidden_{$goods_li.rec_id}" value="{$goods_li.goods_number}">
@@ -149,14 +149,14 @@
               <span class="hot_text">不含运费</span>
             </div>
             <div class="right">
-              {* 代码修改_start  By bbs.hongyuvip.com *}
-              <input type="button" href="javascript:void();"  onclick="return selcart_submit();" class="xm-button " value="去结算">{* 代码修改_end  By bbs.hongyuvip.com *}</div>
+              {* 代码修改_start  By  *}
+              <input type="button" href="javascript:void();"  onclick="return selcart_submit();" class="xm-button " value="去结算">{* 代码修改_end  By  *}</div>
           </div>
         </form>
       </div>
     </div>
 
-    {* 代码增加_start   By  bbs.hongyuvip.com *}
+    {* 代码增加_start   By   *}
     <script type="text/javascript" charset="utf-8">   
     $(".inner .cart-checkbox").click(function(){
   if($(this).hasClass('checked')){
@@ -279,8 +279,8 @@ $('.quanxuan .cart-checkbox').removeClass('checked');
       }
   }
   </script>
-    {* 代码增加_End    By  bbs.hongyuvip.com *}
-    <!--增加代码_start By bbs.hongyuvip.com-->
+    {* 代码增加_End    By   *}
+    <!--增加代码_start By -->
     <script>
   function add_num(rec_id,goods_id)
    {
@@ -583,7 +583,7 @@ function close_gift(suitId){
         <div class="checkout_other" >
         <div class="jmbag" href="javascript:void(0);" onclick="showCheckoutOther(this);"><span class="right_arrow_flow"></span>开发票{if $how_oos_list}和缺货处理{/if}</div>
   
-      <!--增值税发票_更改_START_bbs.hongyuvip.com-->
+      <!--增值税发票_更改_START_-->
       <div class="subbox_other" width="100%">
     
         <!-- {if $inv_content_list} 能否开发票 -->
@@ -689,7 +689,7 @@ function close_gift(suitId){
          </div>
          {/if}
       </div>
-      <!--增值税发票_更改_END_bbs.hongyuvip.com-->
+      <!--增值税发票_更改_END_-->
     </div>
         <!-- {/if} --> 
         </td>

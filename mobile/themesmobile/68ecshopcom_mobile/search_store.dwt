@@ -55,7 +55,7 @@ $(".ft-bands div").mouseover(function(){
 $(this).addClass('ft-col-cur').siblings().removeClass('ft-col-cur'); //切换选项卡标签的class
 })
 </script>
-{* 代码增加_start  By  bbs.hongyuvip.com *}
+{* 代码增加_start  By   *}
 <script type="text/javascript">
 $("img").lazyload({
     effect       : "fadeIn",
@@ -63,7 +63,7 @@ $("img").lazyload({
 	 failure_limit : 20
 });
 </script>
-{* 代码增加_end  By  bbs.hongyuvip.com *}
+{* 代码增加_end  By   *}
 </html>
 
 

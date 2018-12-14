@@ -1,23 +1,23 @@
 <?php
 
 /**
- * 鸿宇多用户商城 会员管理程序
+ *  会员管理程序
  * ============================================================================
- * 版权所有 2015-2016 鸿宇多用户商城科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
+ * 版权所有 2015-2016 ，并保留所有权利。
+ * 网站地址: ；
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
- * $Author: Shadow & 鸿宇
- * $Id: users.php 17217 2016-01-19 06:29:08Z Shadow & 鸿宇
+ * $Author: 
+ * $Id: users.php 17217  
  */
  
  
 define('IN_ECS', true);
 
 require (dirname(__FILE__) . '/includes/init.php');
-/* 代码增加2014-12-23 by bbs.hongyuvip.com _star */
+/* 代码增加2014-12-23 by  _star */
 include_once (ROOT_PATH . '/includes/cls_image.php');
 $image = new cls_image($_CFG['bgcolor']);
 $exc = new exchange($ecs->table('users'), $db, 'user_id', 'user_name');
@@ -171,7 +171,7 @@ elseif ($_REQUEST['act'] == 'insert')
 	$birthday = $_POST['birthdayYear'] . '-' . $_POST['birthdayMonth'] . '-' . $_POST['birthdayDay'];
 	$rank = empty($_POST['user_rank']) ? 0 : intval($_POST['user_rank']);
 	$credit_line = empty($_POST['credit_line']) ? 0 : floatval($_POST['credit_line']);
-	/* 代码增加2014-12-23 by bbs.hongyuvip.com _star */
+	/* 代码增加2014-12-23 by  _star */
 	$real_name = empty($_POST['real_name']) ? '' : trim($_POST['real_name']);
 	$card = empty($_POST['card']) ? '' : trim($_POST['card']);
 	$country = $_POST['country'];
@@ -180,7 +180,7 @@ elseif ($_REQUEST['act'] == 'insert')
 	$district = $_POST['district'];
 	$address = empty($_POST['address']) ? '' : trim($_POST['address']);
 	$status = $_POST['status'];
-	/* 代码增加2014-12-23 by bbs.hongyuvip.com _end */
+	/* 代码增加2014-12-23 by  _end */
 	$users = & init_users();
 	
 	if(! $users->add_user($username, $password, $email))
@@ -261,7 +261,7 @@ elseif ($_REQUEST['act'] == 'insert')
 	$other['mobile_phone'] = isset($_POST['extend_field5']) ? htmlspecialchars(trim($_POST['extend_field5'])) : '';
 	
 	$db->autoExecute($ecs->table('users'), $other, 'UPDATE', "user_name = '$username'");
-	/* 代码增加2014-12-23 by bbs.hongyuvip.com _star */
+	/* 代码增加2014-12-23 by  _star */
 	if(isset($_FILES['face_card']) && $_FILES['face_card']['tmp_name'] != '')
 	{
 		$face_card = $image->upload_image($_FILES['face_card']);
@@ -292,7 +292,7 @@ elseif ($_REQUEST['act'] == 'insert')
 		$sql = "update " . $ecs->table('users') . " set `back_card` = '$back_card' where user_name = '" . $username . "'";
 		$db->query($sql);
 	}
-	/* 代码增加2014-12-23 by bbs.hongyuvip.com _end */
+	/* 代码增加2014-12-23 by  _end */
 	/* 记录管理员操作 */
 	admin_log($_POST['username'], 'add', 'users');
 	
@@ -327,7 +327,7 @@ elseif ($_REQUEST['act'] == 'edit')
 	$row['user_name'] = addslashes($row['user_name']);
 	$users = & init_users();
 	$user = $users->get_user_info($row['user_name']);
-	/* 代码增加2014-12-23 by bbs.hongyuvip.com _star */
+	/* 代码增加2014-12-23 by  _star */
 
 		
 
@@ -341,7 +341,7 @@ elseif ($_REQUEST['act'] == 'edit')
 	
 	
 	
-	/* 代码增加2014-12-23 by bbs.hongyuvip.com _end */
+	/* 代码增加2014-12-23 by  _end */
 	
 	$row = $db->GetRow($sql);
 	
@@ -365,7 +365,7 @@ elseif ($_REQUEST['act'] == 'edit')
 		$user['office_phone'] = $row['office_phone'];
 		$user['home_phone'] = $row['home_phone'];
 		$user['mobile_phone'] = $row['mobile_phone'];
-		/* 代码增加2014-12-23 by bbs.hongyuvip.com _star */
+		/* 代码增加2014-12-23 by  _star */
 		$user['real_name'] = $row['real_name'];
 		$user['card'] = $row['card'];
 		$user['face_card'] = $row['face_card'];
@@ -376,7 +376,7 @@ elseif ($_REQUEST['act'] == 'edit')
 		$user['district'] = $row['district'];
 		$user['address'] = $row['address'];
 		$user['status'] = $row['status'];
-		/* 代码增加2014-12-23 by bbs.hongyuvip.com _end */
+		/* 代码增加2014-12-23 by  _end */
 	}
 	else
 	{
@@ -467,7 +467,7 @@ elseif ($_REQUEST['act'] == 'edit')
 		}
 	}
 	
-	/* 代码增加2014-12-23 by bbs.hongyuvip.com _star */
+	/* 代码增加2014-12-23 by  _star */
 	$smarty->assign('lang', $_LANG);
 	$smarty->assign('country_list', get_regions());
 	$province_list = get_regions(1, $row['country']);
@@ -477,7 +477,7 @@ elseif ($_REQUEST['act'] == 'edit')
 	$smarty->assign('province_list', $province_list);
 	$smarty->assign('city_list', $city_list);
 	$smarty->assign('district_list', $district_list);
-	/* 代码增加2014-12-23 by bbs.hongyuvip.com _end */
+	/* 代码增加2014-12-23 by  _end */
 	
 	assign_query_info();
 	$smarty->assign('ur_here', $_LANG['users_edit']);

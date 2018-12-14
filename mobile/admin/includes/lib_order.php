@@ -1,12 +1,12 @@
 <?php
 
 /**
- * 鸿宇多用户商城 购物流程函数库
+ *  购物流程函数库
  * ============================================================================
- * 版权所有 2005-2010 鸿宇多用户商城科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
+ * 版权所有 2005-2010 ，并保留所有权利。
+ * 网站地址: ；
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
  * $Author: yehuaixiao $
@@ -470,7 +470,7 @@ function order_goods($order_id)
             "goods_price, goods_attr, is_real, parent_id, is_gift, " .
             "goods_price * goods_number AS subtotal, extension_code, package_attr_id " .
             "FROM " . $GLOBALS['ecs']->table('order_goods') .
-            " WHERE order_id = '$order_id'";  // 修改 by bbs.hongyuvip.com 增加 package_attr_id 字段
+            " WHERE order_id = '$order_id'";  // 修改 by  增加 package_attr_id 字段
 
     $res = $GLOBALS['db']->query($sql);
 
@@ -478,7 +478,7 @@ function order_goods($order_id)
     {
         if ($row['extension_code'] == 'package_buy')
         {
-            $row['package_goods_list'] = get_package_goods($row['goods_id'], $row['package_attr_id']); // 修改 by bbs.hongyuvip.com
+            $row['package_goods_list'] = get_package_goods($row['goods_id'], $row['package_attr_id']); // 修改 by 
         }
         $goods_list[] = $row;
     }
@@ -863,7 +863,7 @@ function cart_goods($type = CART_GENERAL_GOODS)
             "goods_price * goods_number AS subtotal " .
             "FROM " . $GLOBALS['ecs']->table('cart') .
             " WHERE session_id = '" . SESS_ID . "' " .
-            "AND rec_type = '$type'"; //这句SQL有修改 by bbs.hongyuvip.com 增加一个 package_attr_id
+            "AND rec_type = '$type'"; //这句SQL有修改 by  增加一个 package_attr_id
 
     $arr = $GLOBALS['db']->getAll($sql);
 
@@ -876,7 +876,7 @@ function cart_goods($type = CART_GENERAL_GOODS)
 
         if ($value['extension_code'] == 'package_buy')
         {
-            $arr[$key]['package_goods_list'] = get_package_goods($value['goods_id'], $value['package_attr_id']); //修改 by bbs.hongyuvip.com
+            $arr[$key]['package_goods_list'] = get_package_goods($value['goods_id'], $value['package_attr_id']); //修改 by 
         }
     }
 
@@ -1634,7 +1634,7 @@ function get_cart_goods()
         }
         if ($row['extension_code'] == 'package_buy')
         {
-            $row['package_goods_list'] = get_package_goods($row['goods_id'], $row['package_attr_id'] ); //修改 by bbs.hongyuvip.com 增加一个变量
+            $row['package_goods_list'] = get_package_goods($row['goods_id'], $row['package_attr_id'] ); //修改 by  增加一个变量
         }
         $goods_list[] = $row;
     }
@@ -2811,12 +2811,12 @@ function compute_discount_amount()
  * @param   integer $num          礼包数量
  * @return  boolean
  */
- /* 代码修改_start By bbs.hongyuvip.com  提示：增加了两个参数 */
+ /* 代码修改_start By   提示：增加了两个参数 */
 function add_package_to_cart($package_id, $num = 1, $package_attr_id='', $package_prices='')
 {
     $GLOBALS['err']->clean();
 
-	//增加 By bbs.hongyuvip.com
+	//增加 By 
 	if($package_prices)
 	{
 		$package_pricea=explode("-", $package_prices);
@@ -2865,9 +2865,9 @@ function add_package_to_cart($package_id, $num = 1, $package_attr_id='', $packag
         'goods_id'      => $package_id,
         'goods_sn'      => '',
         'goods_name'    => addslashes($package['package_name']),
-        'market_price'  => $package_pricea[0] ? $package_pricea[0] :  $package['market_package'], //修改 by bbs.hongyuvip.com
-        'goods_price'   => $package_pricea[1] ? $package_pricea[1] :  $package['package_price'], //修改 by bbs.hongyuvip.com
-		'package_attr_id' =>$package_attr_id, //增加 by bbs.hongyuvip.com
+        'market_price'  => $package_pricea[0] ? $package_pricea[0] :  $package['market_package'], //修改 by 
+        'goods_price'   => $package_pricea[1] ? $package_pricea[1] :  $package['package_price'], //修改 by 
+		'package_attr_id' =>$package_attr_id, //增加 by 
         'goods_number'  => $num,
         'goods_attr'    => '',
         'goods_attr_id' => '',
@@ -2884,7 +2884,7 @@ function add_package_to_cart($package_id, $num = 1, $package_attr_id='', $packag
         $sql = "SELECT goods_number FROM " .$GLOBALS['ecs']->table('cart').
                 " WHERE session_id = '" .SESS_ID. "' AND goods_id = '" . $package_id . "' ".
                 " AND parent_id = 0 AND extension_code = 'package_buy' " .
-                " AND package_attr_id = '$package_attr_id'  AND rec_type = '" . CART_GENERAL_GOODS . "'";  //修改 by bbs.hongyuvip.com 增加一条件
+                " AND package_attr_id = '$package_attr_id'  AND rec_type = '" . CART_GENERAL_GOODS . "'";  //修改 by  增加一条件
 
         $row = $GLOBALS['db']->getRow($sql);
 
@@ -2896,7 +2896,7 @@ function add_package_to_cart($package_id, $num = 1, $package_attr_id='', $packag
                 $sql = "UPDATE " . $GLOBALS['ecs']->table('cart') . " SET goods_number = '" . $num . "'" .
                        " WHERE session_id = '" .SESS_ID. "' AND goods_id = '$package_id' ".
                        " AND parent_id = 0 AND extension_code = 'package_buy' " .
-                       " AND package_attr_id = '$package_attr_id' AND rec_type = '" . CART_GENERAL_GOODS . "'";   //修改 by bbs.hongyuvip.com 增加一条件
+                       " AND package_attr_id = '$package_attr_id' AND rec_type = '" . CART_GENERAL_GOODS . "'";   //修改 by  增加一条件
                 $GLOBALS['db']->query($sql);
             }
             else
@@ -2917,7 +2917,7 @@ function add_package_to_cart($package_id, $num = 1, $package_attr_id='', $packag
 
     return true;
 }
-/* 代码修改_end By bbs.hongyuvip.com */
+/* 代码修改_end By  */
 
 /**
  * 得到新发货单号

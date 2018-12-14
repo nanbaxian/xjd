@@ -1,16 +1,16 @@
 <?php
 
 /**
- * 鸿宇多用户商城 管理员信息以及权限管理程序
+ *  管理员信息以及权限管理程序
  * ============================================================================
- * 版权所有 2015-2016 鸿宇多用户商城科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
+ * 版权所有 2015-2016 ，并保留所有权利。
+ * 网站地址: ；
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
- * $Author: Shadow & 鸿宇
- * $Id: privilege.php 17217 2016-01-19 06:29:08Z Shadow & 鸿宇
+ * $Author: 
+ * $Id: privilege.php 17217  
 */
 
 define('IN_ECS', true);
@@ -725,11 +725,11 @@ function clear_cart()
 
     // 删除cart中无效的数据
 
-	/* 代码修改_start  By  bbs.hongyuvip.com */
+	/* 代码修改_start  By   */
 	$time_valid = gmtime() - 86400*7;
     $sql = "DELETE FROM " . $GLOBALS['ecs']->table('cart') .
             " WHERE  add_time < '". $time_valid ."' AND  session_id NOT " . db_create_in($valid_sess);
-	/* 代码修改_end  By  bbs.hongyuvip.com */
+	/* 代码修改_end  By   */
 
     $GLOBALS['db']->query($sql);
 }

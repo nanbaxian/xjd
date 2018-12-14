@@ -13,7 +13,7 @@ function get_gallery_attr(goods_id, goods_attr_id)
 		
 		/* 
 		*   注意此处的 demo1 名字要与 library/goods_gallery.lbi里的 <div id="demo1" style="float:left"> 里的ID一致 
-		*   By bbs.hongyuvip.com
+		*   By 
 		*/		
 		document.getElementById("demo1").style.marginLeft="0px";
 		document.getElementById("demo2").style.marginLeft="0px";
@@ -56,7 +56,7 @@ function changeAtt(t,goods_id) {
 	//var formBuy = document.forms['ECS_FORMBUY'];
 	//spec_arr = getSelectedAttributes(formBuy);
 	//Ajax.call('goods.php?act=get_products_info', 'id=' + spec_arr+ '&goods_id=' + goods_id, shows_number, 'GET', 'JSON');
-	changePrice();    // By bbs.hongyuvip.com
+	changePrice();    // By 
 
 }
 

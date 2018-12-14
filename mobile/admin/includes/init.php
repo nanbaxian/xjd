@@ -1,16 +1,16 @@
 <?php
 
 /**
- * 鸿宇多用户商城 管理中心公用文件
+ *  管理中心公用文件
  * ============================================================================
- * * 版权所有 2008-2015 鸿宇多用户商城科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com;
+ * * 版权所有 2008-2015 ，并保留所有权利。
+ * 网站地址: ;
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
- * $Author: derek $
- * $Id: init.php 17217 2016-01-19 06:29:08Z derek $
+ * $Author: 
+ * $Id: init.php 17217  
 */
 
 if (!defined('IN_ECS'))
@@ -236,7 +236,7 @@ if(isset($_GET['ent_id']) && isset($_GET['ent_ac']) &&  isset($_GET['ent_sign'])
         $t = new transport('-1',5);
         $apiget = "act=ent_sign&ent_id= $ent_id & certificate_id=$certificate_id";
 
-        $t->request('http://cloud.hongyuvip.com/api.php', $apiget);
+        $t->request('http://cloud./api.php', $apiget);
         $db->query('UPDATE '.$ecs->table('ecsmart_shop_config',1) . ' SET value = "'. $ent_id .'" WHERE code = "ent_id"');
         $db->query('UPDATE '.$ecs->table('ecsmart_shop_config',1) . ' SET value = "'. $ent_ac .'" WHERE code = "ent_ac"');
         $db->query('UPDATE '.$ecs->table('ecsmart_shop_config',1) . ' SET value = "'. $ent_sign .'" WHERE code = "ent_sign"');

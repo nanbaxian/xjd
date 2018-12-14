@@ -4,9 +4,9 @@
 <meta name="Generator" content="ECSHOP v2.7.3" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<title>鸿宇多用户商城手机版  </title>
-<meta name="Keywords" content="鸿宇多用户商城手机版" />
-<meta name="Description" content="鸿宇多用户商城手机版" />
+<title>手机版  </title>
+<meta name="Keywords" content="手机版" />
+<meta name="Description" content="手机版" />
 <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
 <link rel="stylesheet" type="text/css" href="themesmobile/68ecshopcom_mobile/css/public.css"/>
 <link rel="stylesheet" type="text/css" href="themesmobile/68ecshopcom_mobile/css/index.css"/>
@@ -32,7 +32,7 @@ window.onerror = killerrors;
 </script>
 <a href="catalog.php" class="top_bt"></a>
 <a href="flow.php" class='user_btn'></a>
-<span href="javascript:void(0)" class="logo">鸿宇多用户商城手机版</span>
+<span href="javascript:void(0)" class="logo">手机版</span>
  </header>
  
 <style>
@@ -600,7 +600,7 @@ $(function(){
           <li>
           <a href="javascript:;"><i class="footerimg_2"></i><span class="gl">触屏版</span></a></li>
           <li><a href="index.php?is_c=1" class="goDesktop"><i class="footerimg_3"></i><span>电脑版</span></a></li></ul>
-  	 <p class="mf_o4">&copy; 2015-2017 鸿宇多用户商城手机版 版权所有，并保留所有权利。</p>
+  	 <p class="mf_o4">&copy; 2015-2017 手机版 版权所有，并保留所有权利。</p>
 </div> 
 <div style="height:50px; line-height:50px; clear:both;"></div>
 <div class="v_nav">

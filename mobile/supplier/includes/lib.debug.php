@@ -300,7 +300,7 @@ if (USE_DEBUGLIB) {
                 $output .= '<span style="color:red;font-size:small;">print_a( empty array )</span>';
             }
 
-            $pa = new Print_a_class;   //�����޸�  By  bbs.hongyuvip.com
+            $pa = new Print_a_class;   //�����޸�  By  
             $show_object_vars and $pa->show_object_vars = true;
             if( $limit ) {
                 $pa->limit = $limit;

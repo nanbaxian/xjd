@@ -1,12 +1,12 @@
 <?php
 
 /**
- * 鸿宇多用户商城 公用函数库
+ *  公用函数库
  * ============================================================================
- * 版权所有 2005-2010 鸿宇多用户商城科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
+ * 版权所有 2005-2010 ，并保留所有权利。
+ * 网站地址: ；
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
  * $Author: liuhui $
@@ -2527,11 +2527,11 @@ function get_package_info($id)
  * @return  array
  */
 
-/* 修改 by bbs.hongyuvip.com 增加一个参数 */
+/* 修改 by  增加一个参数 */
 function get_package_goods($package_id, $package_attr_id='')
 {
 
-	//增加 By bbs.hongyuvip.com
+	//增加 By 
 	if ($package_attr_id)
 	{
 		$package_attr_id=str_replace(",", "','", $package_attr_id);
@@ -2543,7 +2543,7 @@ function get_package_goods($package_id, $package_attr_id='')
             FROM " . $GLOBALS['ecs']->table('package_goods') . " AS pg
                 LEFT JOIN " .$GLOBALS['ecs']->table('goods') . " AS g ON pg.goods_id = g.goods_id
                 LEFT JOIN " . $GLOBALS['ecs']->table('products') . " AS p ON pg.product_id = p.product_id
-            WHERE pg.package_id = '$package_id' $sql_package_attr_id "; //有修改 by bbs.hongyuvip.com 注意最后那个 $sql_package_attr_id
+            WHERE pg.package_id = '$package_id' $sql_package_attr_id "; //有修改 by  注意最后那个 $sql_package_attr_id
     if ($package_id == 0)
     {
         $sql .= " AND pg.admin_id = '$_SESSION[admin_id]'";

@@ -7,7 +7,7 @@ var _CHECK_RESULT = {
 };
 
 /* $Id : user.js 4865 2007-01-31 14:04:10Z paulgao $ */
-/* 代码增加2014-12-23 by bbs.hongyuvip.com _star */
+/* 代码增加2014-12-23 by  _star */
 function check_username(val) {
 	if (val == '') {
 		document.getElementById('username_message').innerHTML = '用户名不能为空！';
@@ -60,7 +60,7 @@ function identity() {
 	}
 	return true;
 }
-/* 代码增加2014-12-23 by bbs.hongyuvip.com _end */
+/* 代码增加2014-12-23 by  _end */
 /*******************************************************************************
  * 修改会员信息
  */
@@ -71,7 +71,7 @@ function userEdit() {
 	var reg = null;
 	var passwd_answer = frm.elements['passwd_answer'] ? Utils.trim(frm.elements['passwd_answer'].value) : '';
 	var sel_question = frm.elements['sel_question'] ? Utils.trim(frm.elements['sel_question'].value) : '';
-	/* 代码增加2014-12-23 by bbs.hongyuvip.com _star */
+	/* 代码增加2014-12-23 by  _star */
 	var username = frm.elements['username'].value;
 	if (username.length == 0) {
 		msg += '用户名不能为空' + '\n';
@@ -79,7 +79,7 @@ function userEdit() {
 		msg += username_chana + '\n';
 	}
 
-	/* 代码增加2014-12-23 by bbs.hongyuvip.com _end */
+	/* 代码增加2014-12-23 by  _end */
 	if (email.length == 0) {
 		msg += email_empty + '\n';
 	} else {
@@ -1307,7 +1307,7 @@ function calResult() {
 		}
 	}
 }
-/* 代码增加2014-12-23 by bbs.hongyuvip.com _star */
+/* 代码增加2014-12-23 by  _star */
 function choose_type(val) {
 	if (val == 0) {
 		document.getElementById('f_mobile').style.display = 'none';
@@ -1392,4 +1392,4 @@ function countdown(obj, msg) {
 		}, 1000)
 	}
 }
-/* 代码增加2014-12-23 by bbs.hongyuvip.com _end */
+/* 代码增加2014-12-23 by  _end */

@@ -1,16 +1,16 @@
 <?php
 
 /**
- * 鸿宇多用户商城 购物流程函数库
+ *  购物流程函数库
  * ============================================================================
- * * 版权所有 2008-2015 鸿宇多用户商城科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com;
+ * * 版权所有 2008-2015 ，并保留所有权利。
+ * 网站地址: ;
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
- * $Author: derek $
- * $Id: lib_order.php 17217 2016-01-19 06:29:08Z derek $
+ * $Author: 
+ * $Id: lib_order.php 17217  
  */
 
 if (!defined('IN_ECS'))
@@ -743,7 +743,7 @@ function order_fee($order, $goods, $consignee)
     $total['shipping_fee_formated']    = price_format($total['shipping_fee'], false);
     $total['shipping_insure_formated'] = price_format($total['shipping_insure'], false);*/
 
-	/* 代码增加_start  By  bbs.hongyuvip.com */
+	/* 代码增加_start  By   */
 	if (count($order['shipping_pay']) > 0 && $total['real_goods_count'] > 0){
 
 		
@@ -796,7 +796,7 @@ function order_fee($order, $goods, $consignee)
 		$total['shipping_fee_formated']    = price_format($total['shipping_fee'], false);
 	}
 	
-	/* 代码增加_end  By  bbs.hongyuvip.com */
+	/* 代码增加_end  By   */
 
     // 购物车中的商品能享受红包支付的总额
     $bonus_amount = compute_discount_amount();
@@ -981,7 +981,7 @@ $sql_where = $_SESSION['user_id']>0 ? "c.user_id='". $_SESSION['user_id'] ."' " 
 			" on ga.act_id = c.goods_id and c.extension_code = 'package_buy'" .
 			" left join " . $GLOBALS['ecs']->table('supplier') . " as ss on ss.supplier_id = ga.supplier_id " .
 			" WHERE $sql_where " .
-            " AND c.rec_type = '$type' $id_ext ";  //代码修改 By  bbs.hongyuvip.com  增加一个 $id_ext , package_attr_id
+            " AND c.rec_type = '$type' $id_ext ";  //代码修改 By    增加一个 $id_ext , package_attr_id
 
     $arr = $GLOBALS['db']->getAll($sql);
 
@@ -1827,7 +1827,7 @@ function get_cart_goods($other='')
         }
         if ($row['extension_code'] == 'package_buy')
         {
-            $row['package_goods_list'] = get_package_goods($row['goods_id'], $row['package_attr_id'] ); //修改 by bbs.hongyuvip.com 增加一个变量
+            $row['package_goods_list'] = get_package_goods($row['goods_id'], $row['package_attr_id'] ); //修改 by  增加一个变量
         }
 	$row['is_cansel'] = is_cansel($row['goods_id'], $row['product_id'], $row['package_buy']);
 

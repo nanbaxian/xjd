@@ -31,7 +31,7 @@
   	  <!-- #BeginLibraryItem "/library/best_nei.lbi" --><!-- #EndLibraryItem --> 
       <!--i-right end--> 
       
-      {* 代码替换_start  By  bbs.hongyuvip.com *}
+      {* 代码替换_start  By   *}
       <!--组合搜索 开始--> 
       <script type="text/javascript">
 	
@@ -471,7 +471,7 @@
       
       <!--{/if}--> 
       <!--组合搜索 结束--> 
-      {* 代码替换_end  By  bbs.hongyuvip.com *}
+      {* 代码替换_end  By   *}
       
       <!--select end -->
       <div style="height:0px; line-height:0px; clear:both;"></div>
@@ -648,7 +648,7 @@ nav.removeClass("cat-nav-fixed");
 })
 })
 </script> 
-{* 代码增加_start  By  bbs.hongyuvip.com *}
+{* 代码增加_start  By   *}
 <script type="text/javascript">
 $("img").lazyload({
     effect       : "fadeIn",

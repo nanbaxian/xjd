@@ -72,7 +72,7 @@ function countdown(obj, msg) {
 							<h5 class="user-title user-title-t">
 								<span>
 									安全级别：
-									<!--余额额支付密码_更改_START_bbs.hongyuvip.com-->
+									<!--余额额支付密码_更改_START_-->
 									{if $info.is_validated eq 0 && $info.validated eq 0 && $info.is_surplus_open eq 0}很危险&nbsp;
 									<i class="validated1"></i>
 									&nbsp;建议您启动全部安全设置，以保障账户及资金安全{/if} {if $info.is_validated eq 0 && $info.validated eq 0 && $info.is_surplus_open eq 1}较低&nbsp;
@@ -90,7 +90,7 @@ function countdown(obj, msg) {
 									{/if} {if $info.is_validated eq 1 && $info.validated eq 1 && $info.is_surplus_open eq 1}高&nbsp;
 									<i class="validated5"></i>
 									{/if}
-									<!--余额额支付密码_更改_END_bbs.hongyuvip.com-->
+									<!--余额额支付密码_更改_END_-->
 								</span>
 							</h5>
 							<div class="blank"></div>
@@ -152,7 +152,7 @@ function countdown(obj, msg) {
 										<!-- {/if} -->
 									</div>
 								</div>
-								<!--余额额支付密码_添加_START_bbs.hongyuvip.com-->
+								<!--余额额支付密码_添加_START_-->
 								<div class="mc" id="surplus-mc">
 									<div class="fore1">
 										<s class="{if $info.is_surplus_open eq 0}fore1_1{else}fore1_3{/if}"></s>
@@ -180,7 +180,7 @@ function countdown(obj, msg) {
                             			</p>
                         			</div>
 								</div>
-								<!--余额额支付密码_添加_END_bbs.hongyuvip.com-->
+								<!--余额额支付密码_添加_END_-->
 								<!-- 会员用户信息同步给商家 START -->
 								<!-- {if $is_supplier == 1} -->
 								<div class="mc">
@@ -212,7 +212,7 @@ function countdown(obj, msg) {
 							</div>
 							<!-- {/if} -->
 							<!-- 账户中心首页 end -->
-							<!-- 代码增加2015-08-05 by bbs.hongyuvip.com  _star -->
+							<!-- 代码增加2015-08-05 by   _star -->
 							<!-- {if $action eq 'password_reset'} -->
 							<h5 title="修改登录密码" class="user-title user-title-t">
 								<span>修改登录密码</span>
@@ -2626,14 +2626,14 @@ function countdown(obj, msg) {
 		<!-- #EndLibraryItem -->
 		<!-- #BeginLibraryItem "/library/site_bar.lbi" -->
 		<!-- #EndLibraryItem -->
-		{* start Add By bbs.hongyuvip.com ecshop开发中心 企业QQ123456789 *}
+		{* start Add By  ecshop开发中心 企业QQ123456789 *}
 		<script language="javascript">
 	document.getElementById("retData").innerHTML="<center>正在查询物流信息，请稍后...</center>";
 	var expressid = document.getElementById("shipping_name").innerHTML.replace(/(^\s*)|(\s*$)/g, "");
 	var expressno = '{$order.invoice_no}';
 	Ajax.call('plugins/kuaidi100/kuaidi100_post.php?com='+ expressid+'&nu=' + expressno,'showtest=showtest', function(data){document.getElementById("retData").innerHTML=data;}, 'GET', 'TEXT');
 </script>
-		{* end Add By bbs.hongyuvip.com ecshop开发中心 企业QQ123456789 *}
+		{* end Add By  ecshop开发中心 企业QQ123456789 *}
 </body>
 <script type="text/javascript">
 {foreach from=$lang.clips_js item=item key=key}

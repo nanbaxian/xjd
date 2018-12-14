@@ -1,16 +1,16 @@
 <?php
 
 /**
- * 鸿宇多用户商城 管理中心商品相关函数
+ *  管理中心商品相关函数
  * ============================================================================
- * 版权所有 2015-2016 鸿宇多用户商城科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
+ * 版权所有 2015-2016 ，并保留所有权利。
+ * 网站地址: ；
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
- * $Author: Shadow & 鸿宇
- * $Id: lib_goods.php 17217 2016-01-19 06:29:08Z Shadow & 鸿宇
+ * $Author: 
+ * $Id: lib_goods.php 17217  
  */
 
 if (!defined('IN_ECS'))
@@ -859,12 +859,12 @@ function goods_list($is_delete, $real_goods=1, $conditions = '')
     {
         $day = getdate();
         $today = local_mktime(23, 59, 59, $day['mon'], $day['mday'], $day['year']);
-        /* 代码增加_虚拟团购_START  bbs.hongyuvip.com */
+        /* 代码增加_虚拟团购_START   */
        // $filter['is_virtual']  = empty($_REQUEST['is_virtual'])? 0 : intval($_REQUEST['is_virtual']);
         $filter['city']  = empty($_REQUEST['city'])? 0 : intval($_REQUEST['city']);
         $filter['county']  = empty($_REQUEST['county'])? 0 : intval($_REQUEST['county']);
         $filter['district_id']  = empty($_REQUEST['district_id'])? 0 : intval($_REQUEST['district_id']);
-        /* 代码增加_虚拟团购_END  bbs.hongyuvip.com */
+        /* 代码增加_虚拟团购_END   */
         $filter['cat_id']           = empty($_REQUEST['cat_id']) ? 0 : intval($_REQUEST['cat_id']);
 		$filter['supplier_status']           = $_REQUEST['supplier_status']!='' ?  $_REQUEST['supplier_status'] : '';
         $filter['intro_type']       = empty($_REQUEST['intro_type']) ? '' : trim($_REQUEST['intro_type']);
@@ -930,7 +930,7 @@ function goods_list($is_delete, $real_goods=1, $conditions = '')
         {
             $where .= " AND extension_code='$filter[extension_code]'";
         }
-		/* 虚拟团购代码添加 by bbs.hongyuvip.com start */
+		/* 虚拟团购代码添加 by  start */
 		if($filter['city']){
              $where .= " AND dig.city='$filter[city]'";
         }
@@ -940,7 +940,7 @@ function goods_list($is_delete, $real_goods=1, $conditions = '')
         if($filter['district_id']){
                 $where .= " AND dig.district_id=$filter[district_id]";
         }
-		/* 虚拟团购代码添加 by bbs.hongyuvip.com end */
+		/* 虚拟团购代码添加 by  end */
 		
         /* 关键字 */
         if (!empty($filter['keyword']))
@@ -969,7 +969,7 @@ function goods_list($is_delete, $real_goods=1, $conditions = '')
 
         /* 记录总数 */
 
-	         /* 代码增加_虚拟团购_START  bbs.hongyuvip.com */
+	         /* 代码增加_虚拟团购_START   */
             if(!$real_goods && $filter['extension_code'] == 'virtual_good'){
                 $sql = "SELECT COUNT(distinct(g.goods_id)) FROM " .$GLOBALS['ecs']->table('goods'). " AS g,"
                         .$GLOBALS['ecs']->table('supplier_goods_cat')." as sgc, ".$GLOBALS['ecs']->table('virtual_district')." as dis, ".
@@ -980,13 +980,13 @@ function goods_list($is_delete, $real_goods=1, $conditions = '')
                 $sql = "SELECT COUNT(distinct(g.goods_id)) FROM " .$GLOBALS['ecs']->table('goods'). " AS g,".$GLOBALS['ecs']->table('supplier_goods_cat')." as sgc WHERE sgc.goods_id=g.goods_id AND is_delete='$is_delete' AND sgc.supplier_id='". $_SESSION['supplier_id'] ."' $where";
 				file_put_contents('./322223.txt',$sql);
             }
-	 /* 代码增加_虚拟团购_END  bbs.hongyuvip.com */
+	 /* 代码增加_虚拟团购_END   */
         $filter['record_count'] = $GLOBALS['db']->getOne($sql);
 
         /* 分页大小 */
         $filter = page_and_size($filter);
 
-/* 代码增加_虚拟团购_START  bbs.hongyuvip.com */
+/* 代码增加_虚拟团购_START   */
          if(!$real_goods && $filter['extension_code'] == 'virtual_good'){
              $sql = "SELECT distinct(g.goods_id), goods_name, goods_type, goods_sn, shop_price, is_on_sale, is_best, is_new, is_hot, sort_order,supplier_status, goods_number, integral, " .
                     " (promote_price > 0 AND promote_start_date <= '$today' AND promote_end_date >= '$today') AS is_promote ".
@@ -1002,7 +1002,7 @@ function goods_list($is_delete, $real_goods=1, $conditions = '')
                     " ORDER BY $filter[sort_by] $filter[sort_order] ".
                     " LIMIT " . $filter['start'] . ",$filter[page_size]";
          }
-          /* 代码增加_虚拟团购_END  bbs.hongyuvip.com */
+          /* 代码增加_虚拟团购_END   */
 		  
         $filter['keyword'] = stripslashes($filter['keyword']);
         set_filter($filter, $sql, $param_str);
@@ -1013,7 +1013,7 @@ function goods_list($is_delete, $real_goods=1, $conditions = '')
         $filter = $result['filter'];
     }
     $row = $GLOBALS['db']->getAll($sql);
-/* 代码增加_虚拟团购_START  bbs.hongyuvip.com */
+/* 代码增加_虚拟团购_START   */
     /* 虚拟商品列表 添加商圈 */
     foreach($row as $k=>$v){
         $sql = "select d.district_id,v.district_name from ".$GLOBALS['ecs']->table('virtual_district')." as d 
@@ -1027,7 +1027,7 @@ function goods_list($is_delete, $real_goods=1, $conditions = '')
         }
          $row[$k]['district']  = substr($str,0,strlen($str)-1); 
     }
-     /* 代码增加_虚拟团购_END bbs.hongyuvip.com */
+     /* 代码增加_虚拟团购_END  */
     return array('goods' => $row, 'filter' => $filter, 'page_count' => $filter['page_count'], 'record_count' => $filter['record_count']);
 }
 

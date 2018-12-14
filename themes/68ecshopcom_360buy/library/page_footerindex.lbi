@@ -90,7 +90,7 @@
     </div>    
   </div>
 </div>
-{* 代码增加_start  By  bbs.hongyuvip.com *}
+{* 代码增加_start  By   *}
 <script type="text/javascript">
 Ajax.call('api/okgoods.php', '', '', 'GET', 'JSON');
 $("img").lazyload({
@@ -99,4 +99,4 @@ $("img").lazyload({
 	 failure_limit : 20
 });
 </script>
-{* 代码增加_end  By  bbs.hongyuvip.com *}
+{* 代码增加_end  By   *}

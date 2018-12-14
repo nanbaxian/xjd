@@ -1,16 +1,16 @@
 <?php
 
 /**
- * 鸿宇多用户商城 会员中心
+ *  会员中心
  * ============================================================================
- * 版权所有 2015-2016 鸿宇多用户商城科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
+ * 版权所有 2015-2016 ，并保留所有权利。
+ * 网站地址: ；
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
- * $Author: Shadow & 鸿宇
- * $Id: user.php 17217 2016-01-19 06:29:08Z Shadow & 鸿宇
+ * $Author: 
+ * $Id: user.php 17217  
  */
 define('IN_ECS', true);
 
@@ -29,37 +29,37 @@ $back_act = '';
 // 不需要登录的操作或自己验证是否登录（如ajax处理）的act
 $not_login_arr = array(
 	'login', 'act_login', 'act_edit_password', 'get_password', 'send_pwd_email', 'password', 'signin', 'add_tag', 'collect', 're_collect', 'return_to_cart', 'book_goods','add_book_goods', 'logout', 'user_bonus', 'email_list', 'validate_email', 'send_hash_mail', 'order_query', 'is_registered', 'check_email', 'check_mobile_phone', 'clear_history', 'qpassword_name', 'get_passwd_question', 'check_answer', 'check_register', 'oath', 'oath_login', 'other_login', 'ch_email', 'ck_email', 'check_username', 'forget_password', 'getverifycode', 'step_1',
-/*余额额支付密码_更改_START_bbs.hongyuvip.com*/
+/*余额额支付密码_更改_START_*/
 'act_forget_pass', 're_pass', 'open_surplus_password', 'close_surplus_password'
 );
-/* 余额额支付密码_更改_END_bbs.hongyuvip.com */
+/* 余额额支付密码_更改_END_ */
 
 /* 显示页面的action列表 */
 $ui_arr = array(
 	'login', 'profile', 'order_list', 'order_detail', 'address_list', 'collection_list', 'follow_shop', 'message_list', 'tag_list', 'get_password', 'reset_password', 'booking_list', 'add_booking', 'account_raply', 'account_deposit', 'account_log', 'account_detail', 'act_account', 'pay', 'default', 'bonus', 'group_buy', 'group_buy_detail', 'affiliate', 'comment_list', 'validate_email', 'track_packages', 'transform_points', 'qpassword_name', 'get_passwd_question', 'check_answer', 'check_register', 'back_order', 'back_list', 'back_order_detail', 'back_order_act', 'back_replay', 'my_comment', 'my_comment_send', 'shaidan_send', 'shaidan_sale', 'account_security', 'act_identity', 'check_phone', 'update_password', 're_binding', 'update_phone', 'update_email', 'act_update_email', 
 	're_binding_email', 'ch_email', 'ck_email', 'step_1', 'forget_password', 'back_order_detail', 'del_back_order', 'back_order_detail_edit', 'add_huan_goods',
-/*余额额支付密码_更改_START_bbs.hongyuvip.com*/
+/*余额额支付密码_更改_START_*/
 'act_forget_pass', 're_pass', 'auction_list', 'forget_surplus_password', 'act_forget_surplus_password', 'update_surplus_password', 'act_update_surplus_password', 'verify_reset_surplus_email', 'get_verify_code'
 ); // 代码修改
    // By
-   // bbs.hongyuvip.com
-/* 余额额支付密码_更改_END_bbs.hongyuvip.com */
+   // 
+/* 余额额支付密码_更改_END_ */
 
-/* 代码增加_start By bbs.hongyuvip.com */
+/* 代码增加_start By  */
 $ui_arr[] = "supplier_reg";
-/* 代码增加_end By bbs.hongyuvip.com */
-/* 代码增加_start By bbs.hongyuvip.com */
+/* 代码增加_end By  */
+/* 代码增加_start By  */
 $ui_arr[] = 'tg_login_act';
 $ui_arr[] = 'tg_login';
 $ui_arr[] = 'tg_order';
-/* 代码增加_end By bbs.hongyuvip.com */
-/* 代码增加_start By bbs.hongyuvip.com */
+/* 代码增加_end By  */
+/* 代码增加_start By  */
 $ui_arr[] = 'vc_login_act';
 $ui_arr[] = 'vc_login';
 $ui_arr[] = 'update_password_success';
 $ui_arr[] = 'to_update_password';
 $not_login_arr[] = 'login_check_yzm';
-/* 代码增加_end By bbs.hongyuvip.com */
+/* 代码增加_end By  */
 $not_login_arr[] = 'check_mobile';
 $not_login_arr[] = 'send_email_code';
 $not_login_arr[] = 'send_mobile_code';
@@ -142,7 +142,7 @@ call_user_func($function_name);
 
 /* 路由 */
 
-/* 代码增加_start By bbs.hongyuvip.com */
+/* 代码增加_start By  */
 function action_supplier_reg ()
 {
 	// 获取全局变量
@@ -308,7 +308,7 @@ function action_act_supplier_del ()
 	show_message('操作成功！', '返回上一页', 'user.php', 'info');
 }
 
-/* 代码增加_end By bbs.hongyuvip.com */
+/* 代码增加_end By  */
 
 // 用户中心欢迎页
 function action_default ()
@@ -330,20 +330,20 @@ function action_default ()
 			$smarty->assign('next_rank_name', sprintf($_LANG['next_level'], $rank['next_rank'], $rank['next_rank_name']));
 		}
 	}
-	/* 代码增加2014-12-23 by bbs.hongyuvip.com _star */
+	/* 代码增加2014-12-23 by  _star */
 	$min_time = gmtime() - 86400 * $_CFG['comment_youxiaoqi'];
 	$num_comment = $db->getOne("SELECT COUNT(*) AS num FROM " . $ecs->table('order_goods') . " AS og
 							LEFT JOIN " . $ecs->table('order_info') . " AS o ON og.order_id=o.order_id
         WHERE o.user_id = '$user_id' AND og.is_back = 0 AND og.comment_state = 0 AND o.shipping_time_end > $min_time");
 	$smarty->assign('num_comment', $num_comment);
 	$smarty->assign('is_identity', $_CFG['identity']);
-	/* 代码增加2014-12-23 by bbs.hongyuvip.com _end */
-	/* 代码增加--cb--推荐分成-- by bbs.hongyuvip.com _star */
+	/* 代码增加2014-12-23 by  _end */
+	/* 代码增加--cb--推荐分成-- by  _star */
 	$rn = $rank['rank_name'];
 	$recomm = $db->getOne("SELECT is_recomm FROM " . $GLOBALS['ecs']->table('user_rank') . " WHERE rank_name= '$rn'");
 	
 	$smarty->assign('recomm', $recomm); // 获取当前用户是否是分成用户判断是否显示我的推荐
-	/* 代码增加--cb--推荐分成-- by bbs.hongyuvip.com _end */
+	/* 代码增加--cb--推荐分成-- by  _end */
 	
 	$smarty->assign('info', get_user_default($user_id)); // 获取用户中心默认页面所需的数据
 	$smarty->assign('gouwuche', get_user_gouwuche($user_id)); // 获取当前用户购物车里面的数据
@@ -392,7 +392,7 @@ function action_getverifycode ()
 	$shuzi = "0123456789";
 	$verifycode = mc_random(6, $shuzi);
 	
-	$content = '您的验证码为' . $verifycode . '【鸿宇多用户商城】';
+	$content = '您的验证码为' . $verifycode . '【】';
 	/* 发送注册手机短信验证 */
 	$ret = sendSMS($phone, $content);
 	
@@ -403,7 +403,7 @@ function action_getverifycode ()
 	$db->query($sql);
 	
 	echo 'ok';
-	/* 代码增加2014-12-23 by bbs.hongyuvip.com _end */
+	/* 代码增加2014-12-23 by  _end */
 }
 // 第三方登录接口
 function action_oath ()
@@ -651,7 +651,7 @@ function action_validate_email ()
 	show_message($_LANG['validate_fail']);
 }
 
-/* 代码增加2014-12-23 by bbs.hongyuvip.com _star */
+/* 代码增加2014-12-23 by  _star */
 function action_check_username ()
 {
 	// 获取全局变量
@@ -686,7 +686,7 @@ function action_check_username ()
 	}
 }
 
-/* 代码增加2014-12-23 by bbs.hongyuvip.com _end */
+/* 代码增加2014-12-23 by  _end */
 /* 验证用户注册用户名是否可以注册 */
 function action_is_registered ()
 {
@@ -939,7 +939,7 @@ function action_act_login ()
 			show_message($_LANG['invalid_captcha'], $_LANG['relogin_lnk'], 'user.php', 'error');
 		}
 	}
-	/* 代码增加2014-12-23 by bbs.hongyuvip.com _star */
+	/* 代码增加2014-12-23 by  _star */
 	if(is_email($username))
 	{
 		$sql = "select user_name from " . $ecs->table('users') . " where email='" . $username . "'";
@@ -966,7 +966,7 @@ function action_act_login ()
 			$username = $username_e;
 		}
 	}
-	/* 代码增加2014-12-23 by bbs.hongyuvip.com _end */
+	/* 代码增加2014-12-23 by  _end */
 	if($user->login($username, $password, isset($_POST['remember'])))
 	{
 		update_user_info();
@@ -986,7 +986,7 @@ function action_act_login ()
 	}
 }
 
-/* 代码增加2014-12-23 by bbs.hongyuvip.com _star */
+/* 代码增加2014-12-23 by  _star */
 function action_ch_email ()
 {
 	
@@ -1080,7 +1080,7 @@ function action_ck_email ()
 	}
 }
 
-/* 代码增加2014-12-23 by bbs.hongyuvip.com _end */
+/* 代码增加2014-12-23 by  _end */
 /* 处理 ajax 的登录请求 */
 function action_signin ()
 {
@@ -1192,14 +1192,14 @@ function action_profile ()
 	$user_id = $_SESSION['user_id'];
 	
 	include_once (ROOT_PATH . 'includes/lib_transaction.php');
-	/* 代码增加2014-12-23 by bbs.hongyuvip.com _star */
+	/* 代码增加2014-12-23 by  _star */
 	include_once (ROOT_PATH . 'languages/' . $_CFG['lang'] . '/shopping_flow.php');
 	$smarty->assign('lang', $_LANG);
 	
 	$smarty->assign('country_list', get_regions());
-	/* 代码增加2014-12-23 by bbs.hongyuvip.com _end */
+	/* 代码增加2014-12-23 by  _end */
 	$user_info = get_profile($user_id);
-	/* 代码增加2014-12-23 by bbs.hongyuvip.com _star */
+	/* 代码增加2014-12-23 by  _star */
 	$province_list = get_regions(1, $user_info['country']);
 	$city_list = get_regions(2, $user_info['province']);
 	$district_list = get_regions(3, $user_info['city']);
@@ -1207,7 +1207,7 @@ function action_profile ()
 	$smarty->assign('province_list', $province_list);
 	$smarty->assign('city_list', $city_list);
 	$smarty->assign('district_list', $district_list);
-	/* 代码增加2014-12-23 by bbs.hongyuvip.com _end */
+	/* 代码增加2014-12-23 by  _end */
 	$user_info = get_profile($user_id);
 	
 	/* 取出注册扩展字段 */
@@ -1281,9 +1281,9 @@ function action_act_edit_profile ()
 	// trim($_POST['extend_field5']) : '';
 	$sel_question = empty($_POST['sel_question']) ? '' : compile_str($_POST['sel_question']);
 	$passwd_answer = isset($_POST['passwd_answer']) ? compile_str(trim($_POST['passwd_answer'])) : '';
-	/* 代码增加2014-12-23 by bbs.hongyuvip.com _star */
+	/* 代码增加2014-12-23 by  _star */
 	$username = trim($_POST['username']);
-	/* 代码增加2014-12-23 by bbs.hongyuvip.com _end */
+	/* 代码增加2014-12-23 by  _end */
 	
 	/* 更新用户扩展字段的数据 */
 	$sql = 'SELECT id FROM ' . $ecs->table('reg_fields') . ' WHERE type = 0 AND display = 1 ORDER BY dis_order, id'; // 读出所有扩展字段的id
@@ -1314,7 +1314,7 @@ function action_act_edit_profile ()
 		$sql = 'UPDATE ' . $ecs->table('users') . " SET `passwd_question`='$sel_question', `passwd_answer`='$passwd_answer'  WHERE `user_id`='" . $_SESSION['user_id'] . "'";
 		$db->query($sql);
 	}
-	/* 代码增加2014-12-23 by bbs.hongyuvip.com _star */
+	/* 代码增加2014-12-23 by  _star */
 	$sql = "select user_name from " . $GLOBALS['ecs']->table('users') . " where user_id = '" . $_SESSION['user_id'] . "'";
 	$u_name = $GLOBALS['db']->getOne($sql);
 	if($username != $u_name)
@@ -1331,7 +1331,7 @@ function action_act_edit_profile ()
 			show_message("用户名存在中文");
 		}
 	}
-	/* 代码增加2014-12-23 by bbs.hongyuvip.com _end */
+	/* 代码增加2014-12-23 by  _end */
 	if(! empty($office_phone) && ! preg_match('/^[\d|\_|\-|\s]+$/', $office_phone))
 	{
 		show_message($_LANG['passport_js']['office_phone_invalid']);
@@ -1404,7 +1404,7 @@ function action_act_edit_img ()
 		show_message("您没有选择要修改的头像图片！", $_LANG['profile_lnk'], 'user.php?act=profile', 'info');
 	}
 	
-	/* 代码增加_start By bbs.hongyuvip.com */
+	/* 代码增加_start By  */
 	include_once (ROOT_PATH . '/includes/cls_image.php');
 	$image = new cls_image($_CFG['bgcolor']);
 	$headimg_original = $image->upload_image($_FILES['headimg'], 'headimg/' . date('Ym'));
@@ -1415,11 +1415,11 @@ function action_act_edit_img ()
 	$sql = 'UPDATE ' . $ecs->table('users') . " SET `headimg`='$headimg_thumb'  WHERE `user_id`='" . $_SESSION['user_id'] . "'";
 	$db->query($sql);
 	$_SESSION['headimg'] = $headimg_thumb;
-	/* 代码增加_end By bbs.hongyuvip.com */
+	/* 代码增加_end By  */
 	show_message($_LANG['edit_profile_success'], $_LANG['profile_lnk'], 'user.php?act=profile', 'info');
 }
 
-/* 代码增加2014-12-23 by bbs.hongyuvip.com _star */
+/* 代码增加2014-12-23 by  _star */
 function action_account_security ()
 {
 	
@@ -2120,7 +2120,7 @@ function action_order_detail ()
 	$sql_invoices = "SELECT invoice_no,shipping_name FROM ".$GLOBALS['ecs']->table('delivery_order')." WHERE order_id = ".$order['order_id'];
 	$order['invoices'] = $GLOBALS['db']->getAll($sql_invoices);
         
-	/* 退换货插件 bbs.hongyuvip.com增加 */
+	/* 退换货插件 增加 */
 	$shipping_time = $db->getOne("SELECT shipping_time FROM " . $ecs->table('order_info') . " WHERE order_id = '$order_id'");
 	$now_time = gmtime();
 	$not_back = 0;
@@ -2139,7 +2139,7 @@ function action_order_detail ()
 		}
 	}
 	$smarty->assign('not_back', $not_back);
-	/* 退换货插件 bbs.hongyuvip.com增加 */
+	/* 退换货插件 增加 */
 	if($order === false)
 	{
 		$err->show($_LANG['back_home_lnk'], './');
@@ -2309,9 +2309,9 @@ function action_order_detail ()
 	$order['order_status'] = $_LANG['os'][$order['order_status']];
 	$order['pay_status'] = $_LANG['ps'][$order['pay_status']];
 	$order['shipping_status_id'] = $order['shipping_status']; // 代码增加 By
-	                                                          // bbs.hongyuvip.com
+	                                                          // 
 	$order['shipping_status'] = $_LANG['ss'][$order['shipping_status']];
-	/* 增值税发票_添加_START_bbs.hongyuvip.com */
+	/* 增值税发票_添加_START_ */
 	/* 增值税发票收票地址 */
 	if($order['inv_type'] == 'vat_invoice')
 	{
@@ -2319,16 +2319,16 @@ function action_order_detail ()
 	}
 	/* 发票金额 */
 	$order['formatted_inv_money'] = price_format($order['inv_money']);
-	/* 增值税发票_添加_END_bbs.hongyuvip.com */
+	/* 增值税发票_添加_END_ */
 	$smarty->assign('order', $order);
-	/* 代码增加_start By bbs.hongyuvip.com */
+	/* 代码增加_start By  */
 	$smarty->assign('mobile_phone', $GLOBALS['db']->getOne("select mobile_phone from " . $GLOBALS['ecs']->table('users') . " where user_id='$_SESSION[user_id]'"));
 	foreach($goods_list as $goods_key => $goods_val)
 	{
 		$sql_goods = "select count(*) from " . $ecs->table('back_order') . " where order_id='$order[order_id]' and goods_id='$goods_val[goods_id]'";
 		$back_order_count = $db->getOne($sql_goods);
 		$goods_list[$goods_key]['back_can'] = $back_order_count ? '0' : '1';
-		/* 代码增加_start By bbs.hongyuvip.com _20150804 */
+		/* 代码增加_start By  _20150804 */
 		if($goods_val['extension_code'] == 'virtual_good')
 		{
 			$virtual_goods_card = $db->getAll("select gc.card_sn,gc.end_date,buy_date from " . $ecs->table('virtual_goods_card') . " as gc join (select order_id,order_sn from " . $ecs->table('order_info') . " where order_id='$goods_val[order_id]') as oi on gc.order_sn = oi.order_sn");
@@ -2341,7 +2341,7 @@ function action_order_detail ()
 			}
 			$goods_list[$goods_key]['virtual_goods_card'] = $virtual_goods_card;
 		}
-		/* 代码增加_end By bbs.hongyuvip.com _20150804 */
+		/* 代码增加_end By  _20150804 */
 		
 		$goods_list[$key]['shouhou'] = $shouhou;
 	}
@@ -2383,9 +2383,9 @@ function action_order_detail ()
 	$order['order_status'] = $_LANG['os'][$order['order_status']];
 	$order['pay_status'] = $_LANG['ps'][$order['pay_status']];
 	$order['shipping_status_id'] = $order['shipping_status']; // 代码增加 By
-	                                                          // bbs.hongyuvip.com
+	                                                          // 
 	$order['shipping_status'] = $_LANG['ss'][$order['shipping_status']];
-	/* 增值税发票_添加_START_bbs.hongyuvip.com */
+	/* 增值税发票_添加_START_ */
 	/* 增值税发票收票地址 */
 	if($order['inv_type'] == 'vat_invoice')
 	{
@@ -2393,22 +2393,22 @@ function action_order_detail ()
 	}
 	/* 发票金额 */
 	$order['formatted_inv_money'] = price_format($order['inv_money']);
-	/* 增值税发票_添加_END_bbs.hongyuvip.com */
+	/* 增值税发票_添加_END_ */
 	$smarty->assign('order', $order);
-	/* 代码增加_start By bbs.hongyuvip.com */
+	/* 代码增加_start By  */
 	foreach($goods_list as $goods_key => $goods_val)
 	{
 		$sql_goods = "select count(*) from " . $ecs->table('back_order') . " where order_id='$order[order_id]' and goods_id='$goods_val[goods_id]'";
 		$back_order_count = $db->getOne($sql_goods);
 		$goods_list[$goods_key]['back_can'] = $back_order_count ? '0' : '1';
 	}
-	/* 代码增加_end By bbs.hongyuvip.com */
+	/* 代码增加_end By  */
 	$smarty->assign('goods_list', $goods_list);
 	$smarty->display('user_transaction.dwt');
 }
 
 /*
- * 代码增加_start By bbs.hongyuvip.com
+ * 代码增加_start By 
  * 退换货订单详情
  */
 function action_back_order_detail ()
@@ -2459,7 +2459,7 @@ function action_back_order_detail ()
 	}
 	$smarty->assign('list_backgoods', $list_backgoods);
 	
-	/* 回复留言 bbs.hongyuvip.com增加 */
+	/* 回复留言 增加 */
 	$res = $db->getAll("SELECT * FROM " . $ecs->table('back_replay') . " WHERE back_id = '$back_id' ORDER BY add_time ASC");
 	foreach($res as $value)
 	{
@@ -2647,7 +2647,7 @@ function action_back_order ()
 		}
 	}
 	
-	// 收货地址 bbs.hongyuvip.com增加
+	// 收货地址 增加
 	include_once (ROOT_PATH . 'includes/lib_transaction.php');
 	$order = $db->getRow("SELECT * FROM " . $ecs->table('order_info') . " WHERE order_id='$order_id'");
 	$smarty->assign('order', $order);
@@ -2858,7 +2858,7 @@ function action_add_huan_goods ()
 	die($json->encode($result));
 }
 
-/* 代码增加_end By bbs.hongyuvip.com */
+/* 代码增加_end By  */
 
 /* 取消订单 */
 function action_cancel_order ()
@@ -4224,7 +4224,7 @@ function action_merge_order ()
 	$from_order = isset($_POST['from_order']) ? trim($_POST['from_order']) : '';
 	$to_order = isset($_POST['to_order']) ? trim($_POST['to_order']) : '';
 	
-	/* 代码增加_start By bbs.hongyuvip.com */
+	/* 代码增加_start By  */
 	$sql = "select supplier_id from " . $ecs->table('order_info') . " where order_sn='$from_order' ";
 	$supplier_id_from = $db->getOne($sql);
 	$sql = "select supplier_id from " . $ecs->table('order_info') . " where order_sn='$to_order' ";
@@ -4233,7 +4233,7 @@ function action_merge_order ()
 	{
 		show_message('由于供货商不同,订单合并失败', $_LANG['order_list_lnk'], 'user.php?act=order_list', 'info');
 	}
-	/* 代码增加_end By bbs.hongyuvip.com */
+	/* 代码增加_end By  */
 	
 	if(merge_user_order($from_order, $to_order, $user_id))
 	{
@@ -5401,7 +5401,7 @@ function action_clear_history ()
 	setcookie('ECS[history]', '', 1);
 }
 
-/* 代码增加_start By bbs.hongyuvip.com */
+/* 代码增加_start By  */
 function action_vc_login ()
 {
 	$user = $GLOBALS['user'];
@@ -5484,8 +5484,8 @@ function action_vc_login_act ()
 	$smarty->display('user_transaction.dwt');
 }
 
-/* 代码增加_end By bbs.hongyuvip.com */
-/* 代码增加_start By bbs.hongyuvip.com */
+/* 代码增加_end By  */
+/* 代码增加_start By  */
 function action_tg_login ()
 {
 	$user = $GLOBALS['user'];
@@ -5591,7 +5591,7 @@ function action_tg_order_confirm ()
 	show_message('恭喜，成功确认收货！', '返回提货列表页', 'user.php?act=tg_order');
 }
 
-/* 商品评价/晒单 增加 by bbs.hongyuvip.com */
+/* 商品评价/晒单 增加 by  */
 function action_my_comment ()
 {
 	$user = $GLOBALS['user'];
@@ -5768,7 +5768,7 @@ function action_my_comment_send ()
 	exit();
 }
 
-/* 余额额支付密码_添加_START_bbs.hongyuvip.com */
+/* 余额额支付密码_添加_START_ */
 function action_check_surplus_open ()
 {
 	$user = $GLOBALS['user'];
@@ -5976,8 +5976,8 @@ function action_auction_list ()
 	$smarty->display('user_clips.dwt');
 }
 
-/* 账户安全_end_bbs.hongyuvip.com */
-/* 余额额支付密码_添加_END_bbs.hongyuvip.com */
+/* 账户安全_end_ */
+/* 余额额支付密码_添加_END_ */
 function get_takegoods_orders ($user_id, $num = 10, $start = 0)
 {
 	$order_status = array(
@@ -6006,8 +6006,8 @@ function get_takegoods_orders ($user_id, $num = 10, $start = 0)
 	return $arr;
 }
 
-/* 代码增加_end By bbs.hongyuvip.com */
-/* 代码增加_start By bbs.hongyuvip.com */
+/* 代码增加_end By  */
+/* 代码增加_start By  */
 function get_user_backorders ($user_id, $num = 10, $start = 0)
 {
 	/* 取得订单列表 */
@@ -6039,8 +6039,8 @@ function get_user_backorders ($user_id, $num = 10, $start = 0)
 	return $arr;
 }
 
-/* 代码增加_end By bbs.hongyuvip.com */
-/* 代码增加2014-12-23 by bbs.hongyuvip.com _star */
+/* 代码增加_end By  */
+/* 代码增加2014-12-23 by  _star */
 function is_telephone ($phone)
 {
 	$chars = "/^13[0-9]{1}[0-9]{8}$|15[0-9]{1}[0-9]{8}$|18[0-9]{1}[0-9]{8}$/";
@@ -6062,7 +6062,7 @@ function mc_random ($length, $char_str = 'abcdefghijklmnopqrstuvwxyz0123456789')
 	return $hash;
 }
 
-/* 代码增加2014-12-23 by bbs.hongyuvip.com _end */
+/* 代码增加2014-12-23 by  _end */
 function get_user_payed($user_id)
 {
     $sql = "SELECT SUM(user_money) FROM " .$GLOBALS['ecs']->table('account_log').

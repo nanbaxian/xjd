@@ -96,7 +96,7 @@ if ($_REQUEST['step'] == 'getverifycode')
     $smarty->assign('user_mobile',	$mobile);
     $smarty->assign('verify_code',  $verifycode);
 
-    $content = '您好，您的验证码'.$verifycode.';【鸿宇多用户商城】';
+    $content = '您好，您的验证码'.$verifycode.';【】';
 	/* 发送注册手机短信验证 */
 	$ret = sendSMS($mobile, $content);
 	

@@ -1,15 +1,6 @@
 <?php
 /**
- * 鸿宇多用户商城 控制台首页
- * ============================================================================
- * 版权所有 2015-2016 HongYu科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
- * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
- * 踏踏实实做事，堂堂正正做人。
- * ============================================================================
- * $Author: Shadow & 鸿宇
- * $Id: index.php 17217 2016-01-19 06:29:08Z Shadow & 鸿宇
+ *  控制台首页 
 */
 
 define('IN_ECS', true);
@@ -45,7 +36,7 @@ elseif ($_REQUEST['act'] == 'top')
             $lst[$tmp[1]] = $tmp[0];
         }
     }
-    // 代码修改   By  bbs.hongyuvip.com Start
+    // 代码修改   By   Start
     // 获得管理员设置的菜单
     
 //     $datainfo['order']     = $db->GetOne('SELECT COUNT(order_id) FROM ' . $ecs->table('order_info'));
@@ -59,7 +50,7 @@ elseif ($_REQUEST['act'] == 'top')
 //     $datainfo['comment']     = $db->GetOne('SELECT COUNT(comment_id) FROM ' . $ecs->table('comment'));
     // 修改内容：用户评论增加了普通评论的查询条件
     $datainfo['comment']     = $db->GetOne('SELECT COUNT(comment_id) FROM ' . $ecs->table('comment') . ' WHERE parent_id = 0');
-    // 代码修改   By  bbs.hongyuvip.com End
+    // 代码修改   By   End
     // 获得管理员ID
     $smarty->assign('send_mail_on',$_CFG['send_mail_on']);
     $smarty->assign('nav_list', $lst);
@@ -162,18 +153,18 @@ elseif ($_REQUEST['act'] == 'menu')
 elseif ($_REQUEST['act'] == 'clear_cache')
 {
     clear_all_files();
-    clearhtml_all();  //代码增加   By  bbs.hongyuvip.com
+    clearhtml_all();  //代码增加   By  
     sys_msg($_LANG['caches_cleared']);
 }
-//bbs.hongyuvip.com手机缓存修改start
+//手机缓存修改start
 elseif ($_REQUEST['act'] == 'clear_cache_mobile')
 {
     clear_all_files_mobile();
 
     sys_msg($_LANG['caches_cleared']);
 }
-//bbs.hongyuvip.com手机缓存修改end
-/* 代码增加_start  By  bbs.hongyuvip.com */
+//手机缓存修改end
+/* 代码增加_start  By   */
 elseif ($_REQUEST['act'] == 'clear_html')
 {
 	clearhtml_all();  
@@ -185,7 +176,7 @@ elseif ($_REQUEST['act'] == 'clear_index')
 	clearhtml_file('index', '0', '0');  
     sys_msg('首页纯静态文件更新完成！');
 }
-/* 代码增加_end  By  bbs.hongyuvip.com */
+/* 代码增加_end  By   */
 /*------------------------------------------------------ */
 //-- 主窗口，起始页
 /*------------------------------------------------------ */
@@ -343,7 +334,7 @@ elseif ($_REQUEST['act'] == 'main')
     /* 取得支持货到付款和不支持货到付款的支付方式 */
     $ids = get_pay_ids();
     
-    /*后台管理起始页_修改_START_bbs.hongyuvip.com*/
+    /*后台管理起始页_修改_START_*/
     $today_start=mktime(0,0,0,date('m'),date('d'),date('Y'));
     $today_end=mktime(0,0,0,date('m'),date('d')+1,date('Y'))-1;
     $month_start=mktime(0,0,0,date('m'),1,date('Y'));
@@ -355,9 +346,9 @@ elseif ($_REQUEST['act'] == 'main')
     $today['money'] = $db->GetOne($sql);
     $today['formatted_money'] = price_format($today['money']);
     //今日订单数
-    /* 代码修改_hongyuvip.com_20150729_STAR */
+    /* 代码修改_20150729_STAR */
     $today['order'] = $db->GetOne('SELECT COUNT(*) FROM ' .$ecs->table('order_info'). ' WHERE `confirm_time` BETWEEN '.$today_start.' AND '.$today_end.' AND supplier_id=0');
-   /* 代码修改_hongyuvip.com_20150729_END */
+   /* 代码修改_20150729_END */
 //今日注册会员
     $today['user'] = $db->GetOne('SELECT COUNT(*) FROM ' .$ecs->table('users'). ' WHERE `reg_time` BETWEEN '.$today_start.' AND '.$today_end);
     //今日入驻店铺数
@@ -371,20 +362,20 @@ elseif ($_REQUEST['act'] == 'main')
     //待处理佣金
     $task['commission'] = $db->getOne('SELECT COUNT(*) FROM '.$ecs->table('supplier_rebate').' WHERE is_pay_ok=0');
     //待审核商品
-    // 代码修改   By  bbs.hongyuvip.com Start
+    // 代码修改   By   Start
 //     $task['goods'] = $db->getOne('SELECT COUNT(*) FROM '.$ecs->table('goods').' WHERE supplier_status=0 AND is_delete=0 AND is_real=1 AND supplier_id=0');
     $task['goods'] = $db->getOne('SELECT COUNT(*) FROM '.$ecs->table('goods').' WHERE supplier_status=0 AND is_delete=0 AND is_real=1 AND supplier_id<>0');
-    // 代码修改   By  bbs.hongyuvip.com End
+    // 代码修改   By   End
     //待处理会员充值
     $task['deposit'] = $db->GetOne('SELECT COUNT(*) FROM '.$ecs->table('user_account'). ' WHERE `process_type`=0 AND `is_paid`=0');
     //待处理会员提现
     $task['withdraw'] = $db->GetOne('SELECT COUNT(*) FROM '.$ecs->table('user_account'). ' WHERE `process_type`=1 AND `is_paid`=0');
     //待回复会员留言
 	    //待审核店铺
-    // 代码修改   By  bbs.hongyuvip.com Start
+    // 代码修改   By   Start
 //    $task['shop'] = $db->getOne('SELECT COUNT(*) FROM '.$ecs->table('supplier').' WHERE status=0');
     $task['shop'] = $db->getOne('SELECT COUNT(*) FROM '.$ecs->table('supplier')." WHERE applynum = 3 AND status in ('0', '-1')");
-    // 代码修改   By  bbs.hongyuvip.com End
+    // 代码修改   By   End
 
     $sql = "SELECT\n".
             "	COUNT(count)\n".
@@ -406,7 +397,7 @@ elseif ($_REQUEST['act'] == 'main')
     $task['message'] = $db->getOne($sql);
     $task['message'] = empty($task['message'])?0:$task['message'];
     //待回复商品评论
-    // 代码修改   By  bbs.hongyuvip.com Start
+    // 代码修改   By   Start
 //    $sql = "SELECT\n".
 //            "	COUNT(count)\n".
 //            "FROM\n".
@@ -425,17 +416,17 @@ elseif ($_REQUEST['act'] == 'main')
 //            "			COUNT(cc.comment_id) = 0\n".
 //            "	) AS a";
     $sql = "SELECT count(*) FROM " .$GLOBALS['ecs']->table('comment'). " WHERE parent_id = 0";
-    // 代码修改   By  bbs.hongyuvip.com End
+    // 代码修改   By   End
     $task['comment'] = $db->getOne($sql);
     $task['comment'] = empty($task['comment'])?0:$task['comment'];
     //待处理用户晒单
-    // 代码修改   By  bbs.hongyuvip.com Start
+    // 代码修改   By   Start
     $sql = 'SELECT COUNT(*) FROM ' .$GLOBALS['ecs']->table('shaidan'). ' AS a '.
         'LEFT JOIN ' .$GLOBALS['ecs']->table('users'). ' AS u ON u.user_id = a.user_id '.
         'LEFT JOIN ' .$GLOBALS['ecs']->table('order_goods'). ' AS og ON og.rec_id = a.rec_id ';
 //    $task['shared'] = $db->GetOne('SELECT COUNT(*) FROM '.$ecs->table('shaidan'). ' WHERE `status`=0;');
     $task['shared'] = $db->GetOne($sql);
-    // 代码修改   By  bbs.hongyuvip.com End
+    // 代码修改   By   End
     //待处理标签审核
     $task['tag'] = $db->GetOne('SELECT COUNT(*) FROM '.$ecs->table('goods_tag'). ' WHERE `state`=0;');
     //待处理总数
@@ -564,19 +555,19 @@ elseif ($_REQUEST['act'] == 'main')
     //待发货订单
     $order['await_ship']   = $db->GetOne('SELECT COUNT(*)'.
     ' FROM ' .$ecs->table('order_info') .
-        // 代码修改   By  bbs.hongyuvip.com Start
+        // 代码修改   By   Start
 //    " WHERE supplier_id=0  " . order_query_sql('await_ship'));
     " WHERE supplier_id=0 AND extension_code != 'virtual_good' " . order_query_sql('await_ship'));
-    // 代码修改   By  bbs.hongyuvip.com End
+    // 代码修改   By   End
     $status['await_ship']  = CS_AWAIT_SHIP;
     //待支付订单
     $order['await_pay']    = $db->GetOne('SELECT COUNT(*)'.
     ' FROM ' .$ecs->table('order_info') .
-    // 代码修改   By  bbs.hongyuvip.com Start
+    // 代码修改   By   Start
 //    " WHERE supplier_id=0  " . order_query_sql('await_pay'));
     " WHERE supplier_id=0 AND extension_code != 'virtual_good' " . order_query_sql('await_pay'));
-    // 代码修改   By  bbs.hongyuvip.com End
-    // 代码修改   By  bbs.hongyuvip.com End
+    // 代码修改   By   End
+    // 代码修改   By   End
     $status['await_pay']   = CS_AWAIT_PAY;
     //待确认订单
     $sql = 'SELECT COUNT(*) FROM ' .$ecs->table('order_info').
@@ -588,31 +579,31 @@ elseif ($_REQUEST['act'] == 'main')
     " WHERE supplier_id=0 AND shipping_status=" .SS_SHIPPED_PART);
     $status['shipped_part'] = OS_SHIPPED_PART;
     //退款申请
-    // 代码修改   By  bbs.hongyuvip.com Start
+    // 代码修改   By   Start
     $sql = "SELECT COUNT(*) FROM " .$GLOBALS['ecs']->table('user_account'). " AS ua, ".
         $GLOBALS['ecs']->table('users') . " AS u WHERE  ua.process_type = '1'  AND ua.is_paid = '0' ";
     //    $order['new_repay'] = $db->getOne('SELECT COUNT(*) FROM ' . $ecs->table('back_order') . ' WHERE status_back=5 AND back_type=4 AND supplier_id=0');
     $order['new_repay'] = $db->getOne($sql);
-    // 代码修改   By  bbs.hongyuvip.com End
+    // 代码修改   By   End
     //退货申请
-    // 代码修改   By  bbs.hongyuvip.com Start
+    // 代码修改   By   Start
 //    $order['returns'] = $db->getOne('SELECT COUNT(*) FROM '.$ecs->table('back_order').' WHERE status_back=5 AND back_type=1 AND supplier_id=0');
     $order['returns'] = $db->getOne('SELECT COUNT(*) FROM '.$ecs->table('back_order').'');
-    // 代码修改   By  bbs.hongyuvip.com End
+    // 代码修改   By   End
     //缺货登记
-    // 代码修改   By  bbs.hongyuvip.com Start
+    // 代码修改   By   Start
     $sql = 'SELECT COUNT(*) FROM ' .$GLOBALS['ecs']->table('booking_goods'). ' AS bg, '.
     $GLOBALS['ecs']->table('goods'). ' AS g '.
     "WHERE bg.goods_id = g.goods_id";
 //    $order['booking_goods'] = $db->getOne('SELECT COUNT(*) FROM ' . $ecs->table('booking_goods') . ' AS bg LEFT JOIN '.$ecs->table('goods').' AS g ON bg.goods_id=g.goods_id WHERE g.supplier_id=0 AND is_dispose=0');
     $order['booking_goods'] = $db->getOne($sql);
-    // 代码修改   By  bbs.hongyuvip.com End
+    // 代码修改   By   End
     //成交订单数
     $sql = 'SELECT COUNT(*) FROM ' . $ecs->table('order_info').
-    // 代码修改   By  bbs.hongyuvip.com Start
+    // 代码修改   By   Start
 //    " WHERE supplier_id=0 " . order_query_sql('finished');
     " WHERE supplier_id=0 AND extension_code != 'virtual_good'" . order_query_sql('finished');
-    // 代码修改   By  bbs.hongyuvip.com End
+    // 代码修改   By   End
     $order['finished']     = $db->GetOne($sql);
     $status['finished']    = CS_FINISHED;
     
@@ -790,7 +781,7 @@ elseif ($_REQUEST['act'] == 'main')
     $sales_option['yAxis'] = $sales_yAxis;
     $sales_option['series'] = $sales_series;
     $smarty->assign('sales_option',json_encode($sales_option));
-    /*后台管理起始页_修改_END_bbs.hongyuvip.com*/
+    /*后台管理起始页_修改_END_*/
 
     assign_query_info();
     $smarty->assign('ecs_lang',     $_CFG['lang']);

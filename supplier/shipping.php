@@ -1,16 +1,16 @@
 <?php
 
 /**
- * 鸿宇多用户商城 配送方式管理程序
+ *  配送方式管理程序
  * ============================================================================
- * 版权所有 2015-2016 鸿宇多用户商城科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
+ * 版权所有 2015-2016 ，并保留所有权利。
+ * 网站地址: ；
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
- * $Author: Shadow & 鸿宇
- * $Id: shipping.php 17217 2016-01-19 06:29:08Z Shadow & 鸿宇
+ * $Author: 
+ * $Id: shipping.php 17217  
 */
 
 define('IN_ECS', true);
@@ -129,7 +129,7 @@ elseif ($_REQUEST['act'] == 'install')
         $insure = empty($modules[0]['insure']) ? 0 : $modules[0]['insure'];
 		$support_pickup =  isset($modules[0]['support_pickup']) && $modules[0]['support_pickup'] ? 1 : 0;
 		$is_default_show = (in_array(addslashes($modules[0]['code']),$not_set_default)) ? 1 : 0;//如果在设置数据中，添加时就为默认配送方式
-		/* 代码修改_start   By bbs.hongyuvip.com */
+		/* 代码修改_start   By  */
         $sql = "INSERT INTO " . $ecs->table('shipping') . " (" .
                     "shipping_code, shipping_name, shipping_desc, insure, support_cod, enabled, print_bg, config_lable, print_model , support_pickup, is_default_show" .
                 ",supplier_id) VALUES (" .

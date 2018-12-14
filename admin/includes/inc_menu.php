@@ -1,16 +1,16 @@
 <?php
 
 /**
- * 鸿宇多用户商城 管理中心菜单数组
+ *  管理中心菜单数组
  * ============================================================================
- * 版权所有 2015-2016 鸿宇科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
+ * 版权所有 2015-2016 科技有限公司，并保留所有权利。
+ * 网站地址: ；
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
- * $Author: Shadow & 鸿宇
- * $Id: inc_menu.php 17217 2016-01-19 06:29:08Z Shadow & 鸿宇
+ * $Author: 
+ * $Id: inc_menu.php 17217  
  */
 if(! defined('IN_ECS'))
 {
@@ -83,11 +83,11 @@ $modules['04_order']['11_supplier_back_order'] = 'back.php?act=back_list&supp=1'
 $modules['04_order']['12_order_excel'] = 'excel.php?act=order_excel';
 $modules['04_order']['11_kuaidi_order'] = 'kuaidi_order.php?act=list';
 $modules['04_order']['12_kuaidi_order2'] = 'kuaidi_order.php?act=list&order_status=4&is_finish=1';
-/* 增值税发票_添加_START_bbs.hongyuvip.com */
+/* 增值税发票_添加_START_ */
 $modules['04_order']['12_invoice_list'] = 'order.php?act=invoice_list';
-/* 增值税发票_添加_START_bbs.hongyuvip.com */
+/* 增值税发票_添加_START_ */
 
-/* 虚拟卷订单列表_添加_START_bbs.hongyuvip.com */
+/* 虚拟卷订单列表_添加_START_ */
 $modules['18_virtual']['virtual_goods_add'] = 'virtual_goods.php?act=add&extension_code=virtual_good'; // 添加虚拟商品
 $modules['18_virtual']['virtual_goods_sup'] = 'virtual_goods.php?act=list&extension_code=virtual_good&supp=1'; // 虚拟商品列表
 $modules['18_virtual']['virtual_goods_list'] = 'virtual_goods.php?act=list&extension_code=virtual_good'; // 虚拟商品列表
@@ -95,7 +95,7 @@ $modules['18_virtual']['virtual_card_list'] = 'virtual_goods_card.php?act=all_ca
 $modules['18_virtual']['virtual_validate'] = 'virtual_goods_card.php?act=verification_info';
 $modules['18_virtual']['virtual_category'] = 'category.php?act=virtual_list'; // 虚拟商品分类管理
 $modules['18_virtual']['virtual_district'] = 'virtual_goods.php?act=district'; // 虚拟商品商圈管理
-/* 虚拟卷订单列表_添加_START_bbs.hongyuvip.com */
+/* 虚拟卷订单列表_添加_START_ */
 
 $modules['05_banner']['ad_position'] = 'ad_position.php?act=list';
 $modules['05_banner']['ad_list'] = 'ads.php?act=list';

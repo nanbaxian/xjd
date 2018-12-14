@@ -354,8 +354,8 @@ frmBody1.rows="113,*";
 <ul>
 <li class="show_9"><a href="privilege.php?act=logout" target="_top"><?php echo $this->_var['lang']['signout']; ?></a></li>
 <!--<li class="show_8"><a href="javascript:web_address();"><?php echo $this->_var['lang']['help']; ?></a></li>-->
-<li class="show_8"><a href="http://bbs.hongyuvip.com/" target="_blank"><?php echo $this->_var['lang']['help']; ?></a></li>
-<li class="show_7"><a href="http://bbs.hongyuvip.com/"  target="_blank"><?php echo $this->_var['lang']['about']; ?></a></li>
+<li class="show_8"><a href="/" target="_blank"><?php echo $this->_var['lang']['help']; ?></a></li>
+<li class="show_7"><a href="/"  target="_blank"><?php echo $this->_var['lang']['about']; ?></a></li>
 <li class="show_6"><a href="privilege.php?act=modif" target="main_frame"><?php echo $this->_var['lang']['profile']; ?></a></li>
 
 <li class="show_3" ><a href="index.php?act=first" target="main_frame"><?php echo $this->_var['lang']['shop_guide']; ?></a></li> 

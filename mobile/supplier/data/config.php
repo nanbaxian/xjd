@@ -11,7 +11,7 @@ $db_user   = "root";
 // database password
 $db_pass   = "root";
 
-// HongYuJD-V7.2 bbs.hongyuvip.com
+// HongYuJD-V7.2 
 $prefix    = "ecs_";
 
 $timezone    = "PRC";

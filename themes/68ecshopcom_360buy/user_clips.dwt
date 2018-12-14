@@ -743,7 +743,7 @@ function selectPage(sel)
                     <td bgcolor="#ffffff"><input size="40" onclick="this.select();" type="text" value="[url={$shopurl}?u={$userid}][img]{$shopurl}{$logosrc}[/img][/url]" style="border:1px solid #ccc;" />
                       {$lang.recommend_bbscode}</td>
                   </tr>
-                  <!-- start Add By bbs.hongyuvip.com ecshop开发中心 企业QQ123456789 -->
+                  <!-- start Add By  ecshop开发中心 企业QQ123456789 -->
                   <tr>
                     <td  bgcolor="#ffffff">分享到</td>
                     <td  bgcolor="#ffffff"><img src="erweima_png.php?data={$shopurl}mobile/?u={$userid}" width=150 height=150>
@@ -778,7 +778,7 @@ function selectPage(sel)
 	with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
 </script></td>
                   </tr>
-                  <!-- end Add By bbs.hongyuvip.com 鸿宇开发中心 QQ1527200768 -->
+                  <!-- end Add By  开发中心 QQ1527200768 -->
                   
                 </table>
               </div>

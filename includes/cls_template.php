@@ -1,12 +1,12 @@
 <?php
 
 /**
- * 鸿宇多用户商城 模版类
+ *  模版类
  * ============================================================================
- * 版权所有 2005-2010 鸿宇多用户商城科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
+ * 版权所有 2005-2010 ，并保留所有权利。
+ * 网站地址: ；
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
  * $Author: liuhui $
@@ -403,11 +403,11 @@ class cls_template
         }
         else
         {
-			/* 代码修改_start  By  bbs.hongyuvip.com */
+			/* 代码修改_start  By   */
             //$tag_sel = array_shift(explode(' ', $tag));
 			$tag_arr_www_ecshop68_com = explode(' ', $tag);
 			$tag_sel = array_shift($tag_arr_www_ecshop68_com);
-			/* 代码修改_end  By  bbs.hongyuvip.com */
+			/* 代码修改_end  By   */
 
             switch ($tag_sel)
             {
@@ -1090,9 +1090,9 @@ class cls_template
 
             /* 在头部加入版本信息 */
             $source = preg_replace('/<head>/i', "<head>\r\n<meta name=\"Generator\" content=\"" . APPNAME .' ' . VERSION . "\" />",  $source);
-			/* By bbs.hongyuvip.com 代码增加_start */
+			/* By  代码增加_start */
 			$source = preg_replace('/<head>/i', "<head>\r\n<base href=\"". $GLOBALS['ecs']->url() ."\" />",  $source);
-			/* By bbs.hongyuvip.com 代码增加_end */
+			/* By  代码增加_end */
 			
             /* 修正css路径 */
             $source = preg_replace('/(<link\shref=["|\'])(?:\.\/|\.\.\/)?(css\/)?([a-z0-9A-Z_]+\.css["|\']\srel=["|\']stylesheet["|\']\stype=["|\']text\/css["|\'])/i','\1' . $tmp_dir . '\2\3', $source);

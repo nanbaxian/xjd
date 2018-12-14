@@ -113,7 +113,7 @@ if ($this->_foreach['nav_top_list']['total'] > 0):
             <div class="site-cont site-brand">
               <h2>关于我们<span>About</span></h2>
               <ul class="site-list">
-                <li><a href="http://hongyuvip.com">鸿宇科技有限公司 </a></li>
+                <li><a href="http://">科技有限公司 </a></li>
               </ul>
             </div>
           </div>

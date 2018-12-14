@@ -12,9 +12,9 @@ var alertedSurplus = false;
 
 var groupBuyShipping = null;
 var groupBuyPayment = null;
-/* 余额额支付密码_添加_START_bbs.hongyuvip.com */
+/* 余额额支付密码_添加_START_ */
 var selected_pay_code = null;
-/* 余额额支付密码_添加_END_bbs.hongyuvip.com */
+/* 余额额支付密码_添加_END_ */
 
 function selectShipping(recid, suppid) {
 	$('#desc_'+suppid).html($('#ship_'+suppid+'_'+recid).attr('title'));//显示配送描述的地方
@@ -42,7 +42,7 @@ function orderShipping(result) {
  * 改变配送方式
  */
 function selectShipping_old(obj) {
-	/* 代码增加_start By bbs.hongyuvip.com */
+	/* 代码增加_start By  */
 	var theForm = obj.form;
 	var con_country = theForm.elements['have_consignee'].value;
 	if (con_country == '0') {
@@ -50,7 +50,7 @@ function selectShipping_old(obj) {
 		obj.checked = false;
 		return;
 	}
-	/* 代码增加_end By bbs.hongyuvip.com */
+	/* 代码增加_end By  */
 	if (selectedShipping == obj) {
 		return;
 	} else {
@@ -59,7 +59,7 @@ function selectShipping_old(obj) {
 
 	var supportCod = obj.attributes['supportCod'].value * 1;
 	var supportPickup = 0;
-	/* 代码修改_start By bbs.hongyuvip.com */
+	/* 代码修改_start By  */
 	if (obj.attributes['supoortPickup']) {
 		supportPickup = obj.attributes['supoortPickup'].value * 1;
 		if (supportPickup == 0) {
@@ -68,7 +68,7 @@ function selectShipping_old(obj) {
 			document.getElementById('pickup_point_box').style.display = '';
 		}
 	}
-	/* 代码修改_end By bbs.hongyuvip.com */
+	/* 代码修改_end By  */
 	var theForm = obj.form;
 
 	for (var i = 0; i < theForm.elements.length; i++) {
@@ -115,14 +115,14 @@ function orderShippingSelectedResponse(result) {
 		alert(ex.message);
 	}
 
-	/* 代码增加_start By bbs.hongyuvip.com */
+	/* 代码增加_start By  */
 	if (document.getElementById('supplier_shipping') != undefined) {
 		document.getElementById('supplier_shipping').innerHTML = result.supplier_shipping;
 	}
 	if (document.getElementById('pickup_point_box')) {
 		document.getElementById('pickup_point_box').innerHTML = result.pickup_content;
 	}
-	/* 代码增加_end By bbs.hongyuvip.com */
+	/* 代码增加_end By  */
 
 	orderSelectedResponse(result);
 }
@@ -135,7 +135,7 @@ function orderShippingSelectedResponse(result) {
  * @returns {undefined}
  */
 function selectVirtualGroupPayment(obj) {
-	/* 代码增加_start By bbs.hongyuvip.com */
+	/* 代码增加_start By  */
 	var theForm = obj.form;
 	var mobile_phone = theForm.elements['mobile_phone'].value;
 	if (mobile_phone == '') {
@@ -143,7 +143,7 @@ function selectVirtualGroupPayment(obj) {
 		obj.checked = false;
 		return;
 	}
-	/* 代码增加_end By bbs.hongyuvip.com */
+	/* 代码增加_end By  */
 	if (selectedPayment == obj) {
 		return;
 	} else {
@@ -156,7 +156,7 @@ function selectVirtualGroupPayment(obj) {
  * 改变支付方式
  */
 function selectPayment(obj) {
-	/* 代码增加_start By bbs.hongyuvip.com */
+	/* 代码增加_start By  */
 	var theForm = obj.form;
 	var con_country = theForm.elements['have_consignee'].value;
 	if (con_country == '0') {
@@ -164,7 +164,7 @@ function selectPayment(obj) {
 		obj.checked = false;
 		return;
 	}
-	/* 代码增加_end By bbs.hongyuvip.com */
+	/* 代码增加_end By  */
 	if (selectedPayment == obj) {
 		return;
 	} else {
@@ -225,7 +225,7 @@ function handleGroupBuyPayment(obj) {
  * 改变商品包装
  */
 function selectPack(obj) {
-	/* 代码修改_start By bbs.hongyuvip.com */
+	/* 代码修改_start By  */
 	var theForm = obj.form;
 	var con_country = theForm.elements['have_consignee'].value;
 	if (con_country == '0') {
@@ -237,7 +237,7 @@ function selectPack(obj) {
 	document.getElementById('packimage').href = packimage[aaa];
 
 	Ajax.call('flow.php?step=select_pack', 'pack=' + aaa, orderSelectedResponse, 'GET', 'JSON');
-	/* 代码修改_end By bbs.hongyuvip.com */
+	/* 代码修改_end By  */
 }
 
 /*******************************************************************************
@@ -245,12 +245,12 @@ function selectPack(obj) {
  */
 function selectCard(obj) {
 
-	/* 代码修改_start By bbs.hongyuvip.com */
+	/* 代码修改_start By  */
 	var aaa = obj.options[obj.selectedIndex].value;
 	document.getElementById('cardimage').href = cardimage[aaa];
 	document.getElementById('card_message').disabled = (aaa > 0) ? false : true;
 	Ajax.call('flow.php?step=select_card', 'card=' + aaa, orderSelectedResponse, 'GET', 'JSON');
-	/* 代码修改_end By bbs.hongyuvip.com */
+	/* 代码修改_end By  */
 }
 
 /*******************************************************************************
@@ -281,9 +281,9 @@ function orderSelectedResponse(result) {
 	}
 
 	try {
-		/* 余额额支付密码_添加_START_bbs.hongyuvip.com */
+		/* 余额额支付密码_添加_START_ */
 		selected_pay_code = result.pay_code;
-		/* 余额额支付密码_添加_END_bbs.hongyuvip.com */
+		/* 余额额支付密码_添加_END_ */
 		var layer = document.getElementById("ECS_ORDERTOTAL");
 
 		layer.innerHTML = (typeof result == "object") ? result.content : result;
@@ -303,14 +303,14 @@ function orderSelectedResponse(result) {
  * 改变余额
  */
 function changeSurplus(val) {
-	/* 代码增加_start By bbs.hongyuvip.com */
+	/* 代码增加_start By  */
 	var con_country = document.forms['theForm'].elements['have_consignee'].value;
 	if (con_country == '0') {
 		alert('请先选择配送地址！');
 		obj.checked = false;
 		return;
 	}
-	/* 代码增加_end By bbs.hongyuvip.com */
+	/* 代码增加_end By  */
 
 	if (selectedSurplus == val) {
 		// return;
@@ -325,14 +325,14 @@ function changeSurplus(val) {
  * 改变余额-虚拟团购
  */
 function changeSurplusVir(val) {
-	/* 代码增加_start By bbs.hongyuvip.com */
+	/* 代码增加_start By  */
 	var mobile_phone = document.forms['theForm'].elements['mobile_phone'].value;
 	if (mobile_phone == '') {
 		alert('请先绑定手机！');
 		obj.checked = false;
 		return;
 	}
-	/* 代码增加_end By bbs.hongyuvip.com */
+	/* 代码增加_end By  */
 
 	if (selectedSurplus == val) {
 		// return;
@@ -376,14 +376,14 @@ function changeSurplusResponse(obj) {
  * 改变积分
  */
 function changeIntegral(val, suppid) {
-	/* 代码增加_start By bbs.hongyuvip.com */
+	/* 代码增加_start By  */
 	var con_country = document.forms['theForm'].elements['have_consignee'].value;
 	if (con_country == '0') {
 		alert('请先选择配送地址！');
 		obj.checked = false;
 		return;
 	}
-	/* 代码增加_end By bbs.hongyuvip.com */
+	/* 代码增加_end By  */
 	if (selectedIntegral == val) {
 		return;
 	} else {
@@ -417,14 +417,14 @@ function changeIntegralResponse(obj) {
  * 改变红包
  */
 function changeBonus(val, suppid) {
-	/* 代码增加_start By bbs.hongyuvip.com */
+	/* 代码增加_start By  */
 	var con_country = document.forms['theForm'].elements['have_consignee'].value;
 	if (con_country == '0') {
 		alert('请先选择配送地址！');
 		obj.checked = false;
 		return;
 	}
-	/* 代码增加_end By bbs.hongyuvip.com */
+	/* 代码增加_end By  */
 	if (selectedBonus == val) {
 		// return;
 	} else {
@@ -460,14 +460,14 @@ function changeBonusResponse(obj) {
  * 验证红包序列号
  */
 function validateBonus(val, suppid) {
-	/* 代码增加_start By bbs.hongyuvip.com */
+	/* 代码增加_start By  */
 	var con_country = document.forms['theForm'].elements['have_consignee'].value;
 	if (con_country == '0') {
 		alert('请先选择配送地址！');
 		obj.checked = false;
 		return;
 	}
-	/* 代码增加_end By bbs.hongyuvip.com */
+	/* 代码增加_end By  */
 	if (val == '输入优惠券') {
 		val = 0;
 	}
@@ -493,14 +493,14 @@ function validateBonusResponse(obj) {
  * 改变发票的方式
  */
 function changeNeedInv() {
-	/* 代码增加_start By bbs.hongyuvip.com */
+	/* 代码增加_start By  */
 	var con_country = document.forms['theForm'].elements['have_consignee'].value;
 	if (con_country == '0') {
 		alert('请先选择配送地址！');
 		obj.checked = false;
 		return;
 	}
-	/* 代码增加_end By bbs.hongyuvip.com */
+	/* 代码增加_end By  */
 	var obj = document.getElementById('ECS_NEEDINV');
 	var objType = document.getElementById('ECS_INVTYPE');
 	var objPayee = document.getElementById('ECS_INVPAYEE');
@@ -513,7 +513,7 @@ function changeNeedInv() {
 	if (objType != null) {
 		objType.disabled = !obj.checked;
 	}
-	// 增值税发票_添加_START_bbs.hongyuvip.com
+	// 增值税发票_添加_START_
 	var individual_inv = document.forms['theForm'].elements['inv_payee_type'].item(0);
 	var unit_inv = document.forms['theForm'].elements['inv_payee_type'].item(1);
 	var inv_payee_type = individual_inv.checked ? individual_inv.value : '';
@@ -540,7 +540,7 @@ function changeNeedInv() {
 	} else {
 		objPayee.style.display = 'none';
 	}
-	// 增值税发票_添加_END_bbs.hongyuvip.com
+	// 增值税发票_添加_END_
 
 	Ajax.call('flow.php?step=change_needinv', 'need_inv=' + needInv + '&inv_type=' + encodeURIComponent(invType) + '&inv_payee=' + encodeURIComponent(invPayee) + '&inv_content=' + encodeURIComponent(invContent), changeNeedInvResponse, 'GET');
 }
@@ -582,7 +582,7 @@ function changeOOS(obj) {
 	Ajax.call('flow.php?step=change_oos', 'oos=' + obj.value, null, 'GET');
 }
 
-/* 余额额支付密码_添加_START_bbs.hongyuvip.com */
+/* 余额额支付密码_添加_START_ */
 function check_before_submit() {
 	var the_form = document.getElementById("theForm");
 	if (checkOrderForm(the_form)) {
@@ -630,7 +630,7 @@ function submit_the_form() {
 	var the_form = document.getElementById("theForm");
 	the_form.submit();
 }
-/* 余额额支付密码_添加_END_bbs.hongyuvip.com */
+/* 余额额支付密码_添加_END_ */
 
 /*******************************************************************************
  * 检查提交的订单表单
@@ -639,7 +639,7 @@ function checkOrderForm(frm) {
 	var paymentSelected = false;
 	var shippingSelected = true;
 
-	/* 代码增加_start By bbs.hongyuvip.com */
+	/* 代码增加_start By  */
 
 	have_other = false;
 	if (frm.elements['payment_other']) {
@@ -668,7 +668,7 @@ function checkOrderForm(frm) {
 				have_alipay = true;
 			}
 		}
-		/* 代码增加_end By bbs.hongyuvip.com */
+		/* 代码增加_end By  */
 	}
 
 	// 检查是否选择了支付配送方式
@@ -679,7 +679,7 @@ function checkOrderForm(frm) {
 		// }
 
 		if (frm.elements[i].name == 'payment' && frm.elements[i].checked) {
-			/* 代码修改_start By bbs.hongyuvip.com */
+			/* 代码修改_start By  */
 			if (frm.elements[i].value == '0') {
 				if (have_other == true) {
 					paymentSelected = true;
@@ -695,7 +695,7 @@ function checkOrderForm(frm) {
 			} else {
 				paymentSelected = true;
 			}
-			/* 代码修改_end By bbs.hongyuvip.com */
+			/* 代码修改_end By  */
 		}
 	}
 
@@ -744,7 +744,7 @@ function checkOrderForm(frm) {
 			}
 		}
 	}
-	// 增值税发票_添加_START_bbs.hongyuvip.com
+	// 增值税发票_添加_START_
 	/* 检查发票 */
 	if (document.getElementById('ECS_NEEDINV').checked) {
 		if (frm.elements['inv_content'].value == '0' || frm.elements['inv_content'].value == '') {
@@ -774,7 +774,7 @@ function checkOrderForm(frm) {
 			return false;
 		}
 	}
-	// 增值税发票_添加_END_bbs.hongyuvip.com
+	// 增值税发票_添加_END_
 	frm.action = frm.action + '?step=done';
 	return true;
 }
@@ -861,7 +861,7 @@ function checkConsignee(frm) {
 	}
 	return !err;
 }
-// 增值税发票_添加_START_bbs.hongyuvip.com
+// 增值税发票_添加_START_
 function check_taxpayer_id(t, id) {
 	if (!check_preg_match(t.value, 'taxpayer_id')) {
 		document.getElementById(id).innerHTML = '纳税人识别号错误，请检查！';
@@ -901,7 +901,7 @@ function check_preg_match(v, type) {
 	var preg = new RegExp(pattern);
 	return preg.test(v);
 }
-// 增值税发票_添加_END_bbs.hongyuvip.com
+// 增值税发票_添加_END_
 
 function doNewMobile() {
 	var mobile_phone = $("#mobile_phone").val();

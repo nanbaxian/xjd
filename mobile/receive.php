@@ -1,16 +1,16 @@
 <?php
 
 /**
- * 鸿宇多用户商城 处理收回确认的页面
+ *  处理收回确认的页面
  * ============================================================================
- * * 版权所有 2008-2015 鸿宇科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com;
+ * * 版权所有 2008-2015 科技有限公司，并保留所有权利。
+ * 网站地址: ;
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
- * $Author: derek $
- * $Id: receive.php 17217 2016-01-19 06:29:08Z derek $
+ * $Author: 
+ * $Id: receive.php 17217  
  */
 
 define('IN_ECS', true);
@@ -44,7 +44,7 @@ elseif ($order['consignee'] != $consignee)
 }
 else
 {
-    /* 鸿宇科技修复 hongyuvip.com QQ交流群:90664526 by:Shadow & 鸿宇 start */
+    /* 科技修复  QQ交流群:90664526 by: start */
 
     $act = !empty($_REQUEST['act']) ? rawurldecode($_REQUEST['con']) : 'confirm'; // 验证码
     if ($act == 'confirm')
@@ -61,7 +61,7 @@ else
         $msg = $_LANG['act_ok'];
     }
 
-    /* 鸿宇科技修复 hongyuvip.com QQ交流群:90664526 by:Shadow & 鸿宇 end */
+    /* 科技修复  QQ交流群:90664526 by: end */
 
 //    /* 修改订单发货状态为“确认收货” */
 //    $sql = "UPDATE " . $ecs->table('order_info') . " SET shipping_status = '" . SS_RECEIVED . "' WHERE order_id = '$order_id'";

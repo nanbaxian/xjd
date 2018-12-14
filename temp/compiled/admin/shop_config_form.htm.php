@@ -105,7 +105,7 @@
                 <th scope="col"><?php echo $this->_var['lang']['invoice_type']; ?></th>
                 <th scope="col"><?php echo $this->_var['lang']['invoice_rate']; ?></th>
               </tr>
-              <!--增值税发票_更改_START_bbs.hongyuvip.com-->
+              <!--增值税发票_更改_START_-->
               <tr>
                 <td>
                   <input type='hidden' name='invoice_enable[0]' value='0'/>
@@ -132,7 +132,7 @@
                 </td>
                 <td><input name="invoice_rate[]" type="text" value="<?php echo $this->_var['cfg']['invoice_type']['rate']['1']; ?>" /></td>
               </tr>
-			  <!--增值税发票_更改_END_bbs.hongyuvip.com-->
+			  <!--增值税发票_更改_END_-->
             </table>
             <?php endif; ?>
           <?php endif; ?>

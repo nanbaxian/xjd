@@ -1,4 +1,4 @@
-<!--增值税发票_添加_START_bbs.hongyuvip.com-->
+<!--增值税发票_添加_START_-->
 <?php if ($this->_var['act'] == 'invoice_list'): ?>
 <?php if ($this->_var['full_page']): ?>
 <?php echo $this->fetch('pageheader.htm'); ?>
@@ -186,7 +186,7 @@
 <?php echo $this->fetch('pagefooter.htm'); ?>
 <?php endif; ?>
 <?php else: ?>
-<!--增值税发票_添加_END_bbs.hongyuvip.com-->
+<!--增值税发票_添加_END_-->
 <?php if ($this->_var['full_page']): ?>
 <?php echo $this->fetch('pageheader.htm'); ?>
 <?php echo $this->smarty_insert_scripts(array('files'=>'../js/utils.js,listtable.js')); ?>
@@ -485,6 +485,6 @@ listTable.filter.<?php echo $this->_var['key']; ?> = '<?php echo $this->_var['it
 
 <?php echo $this->fetch('pagefooter.htm'); ?>
 <?php endif; ?>
-<!--增值税发票_添加_START_bbs.hongyuvip.com-->
+<!--增值税发票_添加_START_-->
 <?php endif; ?>
-<!--增值税发票_添加_END_bbs.hongyuvip.com-->
+<!--增值税发票_添加_END_-->

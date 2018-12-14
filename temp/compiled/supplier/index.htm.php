@@ -23,7 +23,7 @@ if (window.top != window)
   </frameset>
 </frameset><noframes></noframes>
   <frameset rows="0, 0" framespacing="0" border="0">
-  <!-- http://api.hongyuvip.com/record.php?mod=login&url=<?php echo $this->_var['shop_url']; ?> -->
+  <!-- http://api./record.php?mod=login&url=<?php echo $this->_var['shop_url']; ?> -->
   <frame src="" id="hidd-frame" name="hidd-frame" frameborder="no" scrolling="no">
   </frameset>
 </head>

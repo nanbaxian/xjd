@@ -1,6 +1,6 @@
 var domain_url = 'http://'+document.domain+'/';
 /* $Id : common.js 4865 2007-01-31 14:04:10Z paulgao $ */
-/* JS代码增加_start  By bbs.hongyuvip.com */
+/* JS代码增加_start  By  */
 function reg_package() {
 	var pal = document.getElementById("package_tit").getElementsByTagName("h2");
 	var pal_count = pal.length;
@@ -110,7 +110,7 @@ function isSelectAttr(spec_arr) {
 	return ret;
 }
 
-/* JS代码增加_end By bbs.hongyuvip.com */
+/* JS代码增加_end By  */
 /*******************************************************************************
  * 添加商品到购物车
  * @param extCode 扩展代码，可以自定义一些扩展属性，例如：'pre_sale'
@@ -157,7 +157,7 @@ function addToCart(goodsId, parentId, isnowbuy, extCode) {
 
 }
 
-/* 组合购买__添加商品到购物车__Start By bbs.hongyuvip.com */
+/* 组合购买__添加商品到购物车__Start By  */
 function addToCartNums(goodsId, parentId) {
 	var goodsIds = goodsId.substr(0, goodsId.length - 1).split(',');
 	var buynum = goodsIds.length - 1;
@@ -181,7 +181,7 @@ function addToCartNums(goodsId, parentId) {
 
 	}
 }
-/* 组合购买__添加商品到购物车__End By bbs.hongyuvip.com */
+/* 组合购买__添加商品到购物车__End By  */
 
 /**
  * 获得选定的商品属性
@@ -356,7 +356,7 @@ function signInResponse(result) {
 	}
 }
 
-/* 代码增加_start By bbs.hongyuvip.com */
+/* 代码增加_start By  */
 /*******************************************************************************
  * 咨询的翻页函数
  */
@@ -384,16 +384,16 @@ function comment_type_curr(page, id, type, comment_level) {
 	document.getElementById('comment_li_' + comment_level).className = 'curr';
 	Ajax.call('comment.php?act=gotopage', 'page=' + page + '&id=' + id + '&type=' + type + '&comment_level=' + comment_level, gotoPageResponse, 'GET', 'JSON');
 }
-/* 代码增加_end By bbs.hongyuvip.com */
+/* 代码增加_end By  */
 
-/* 代码修改_start 整个替换掉即可 By bbs.hongyuvip.com */
+/* 代码修改_start 整个替换掉即可 By  */
 /*******************************************************************************
  * 评论的翻页函数
  */
 function gotoPage(page, id, type, comment_level) {
 	Ajax.call('comment.php?act=gotopage', 'page=' + page + '&id=' + id + '&type=' + type + '&comment_level=' + comment_level, gotoPageResponse, 'GET', 'JSON');
 }
-/* 代码修改_end By bbs.hongyuvip.com */
+/* 代码修改_end By  */
 
 function gotoPageResponse(result) {
 	document.getElementById("ECS_COMMENT").innerHTML = result.content;
@@ -868,14 +868,14 @@ function doane(event) {
 /*******************************************************************************
  * 添加礼包到购物车
  */
-/* 代码修改_start By bbs.hongyuvip.com 这里增加了一个变量 */
+/* 代码修改_start By  这里增加了一个变量 */
 function addPackageToCart(packageId, indexId) {
 	var package_info = new Object();
 	var number = 1;
 
 	package_info.package_id = packageId
 	package_info.number = number;
-	/* 代码增加_start By bbs.hongyuvip.com */
+	/* 代码增加_start By  */
 	if (typeof (indexId) != "undefined") {
 		goods_id_list = get_packcheck_list(indexId);
 		id_re = /[,]$/g;
@@ -899,10 +899,10 @@ function addPackageToCart(packageId, indexId) {
 		package_info.package_prices = market_pack + '-' + price_pack;
 
 	}
-	/* 代码增加_end By bbs.hongyuvip.com */
+	/* 代码增加_end By  */
 	Ajax.call('flow.php?step=add_package_to_cart', 'package_info=' + $.toJSON(package_info), addPackageToCartResponse, 'POST', 'JSON');
 }
-/* 代码修改_end By bbs.hongyuvip.com */
+/* 代码修改_end By  */
 /*******************************************************************************
  * 处理添加礼包到购物车的反馈信息
  */

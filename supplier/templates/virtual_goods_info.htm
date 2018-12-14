@@ -1,8 +1,8 @@
 <!-- $Id: goods_info.htm 17126 2010-04-23 10:30:26Z liuhui $ -->
-<!-- 修改 by bbs.hongyuvip.com 百度编辑器 begin -->
+<!-- 修改 by  百度编辑器 begin -->
 {include file="pageheader_bd.htm"}
 {insert_scripts files="../js/utils.js,selectzone_bd.js,validator.js"}
-<!-- 修改 by bbs.hongyuvip.com 百度编辑器 end -->
+<!-- 修改 by  百度编辑器 end -->
 <script type="text/javascript" src="../js/calendar.php?lang={$cfg_lang}"></script>
 <script type="text/javascript" src="../js/jquery.ztree.all-3.5.min.js"></script>
 <script type="text/javascript" src="../js/category_selecter.js"></script>
@@ -392,7 +392,7 @@ width:auto;
         </table>
         {/if}
 
-       <!--代码修改_start By bbs.hongyuvip.com  将 商品相册 这部分代码完全修改成下面这样-->
+       <!--代码修改_start By   将 商品相册 这部分代码完全修改成下面这样-->
         <table width="90%" id="gallery-table" style="display:none" align="center">
           <!-- 图片列表 -->
           <tr>
@@ -897,14 +897,14 @@ function chu (result)
 
       var response = result.content;
 
-	  // 代码增加_start_derek20150129admin_goods  bbs.hongyuvip.com
+	  // 代码增加_start_derek20150129admin_goods  
 	  
 	  document.getElementById("brand_search").value = response.brand;
 	  document.getElementById("brand_id").value = response.id;
 	  document.getElementById("xin_brand").innerHTML += "&nbsp;[<a href=javascript:go_brand_id("+response.id+",'"+response.brand+"')>"+response.brand+"</a>]&nbsp;";
 	  document.getElementById("xin_brand").style.display = "block";
 
-	  // 代码增加_end_derek20150129admin_goods  bbs.hongyuvip.com
+	  // 代码增加_end_derek20150129admin_goods  
 
 
       var selCat = document.forms['theForm'].elements['brand_id'];

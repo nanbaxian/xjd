@@ -9,9 +9,9 @@
 <!-- {foreach from=$cartgoods.goods_list name="goods_list" item=goods} -->
 <tr>
   <td style="width:100%;{if !$smarty.foreach.goods_list.last}border-bottom:1px dashed #ddd;{/if}"><table cellpadding="5" cellspacing="1" border=0 width="100%" {if !$goods.is_cansel}style="background:#ddd;"{/if}>
-      <tr > {* 代码增加_start  By  bbs.hongyuvip.com *}
+      <tr > {* 代码增加_start  By   *}
 	<td  align="center"  width="5%"><input type="checkbox" autocomplete="off" name="sel_cartgoods[]" value="{$goods.rec_id}" id="sel_cartgoods_{$goods.rec_id}" checked=checked onclick="select_cart_goods();"></td>
-	{* 代码增加_end  By  bbs.hongyuvip.com *}
+	{* 代码增加_end  By   *}
 	<td  align="center"  width="40%">
     <!-- {if $goods.goods_id gt 0 && $goods.extension_code neq 'package_buy'} 商品 -->
 	  

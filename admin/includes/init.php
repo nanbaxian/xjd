@@ -1,16 +1,16 @@
 <?php
 
 /**
- * 鸿宇多用户商城 管理中心公用文件
+ *  管理中心公用文件
  * ============================================================================
- * 版权所有 2015-2016 鸿宇多用户商城科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
+ * 版权所有 2015-2016 ，并保留所有权利。
+ * 网站地址: ；
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
- * $Author: Shadow & 鸿宇
- * $Id: init.php 17217 2016-01-19 06:29:08Z Shadow & 鸿宇
+ * $Author: 
+ * $Id: init.php 17217  
 */
 
 if (!defined('IN_ECS'))
@@ -231,7 +231,7 @@ if(isset($_GET['ent_id']) && isset($_GET['ent_ac']) &&  isset($_GET['ent_sign'])
     require(ROOT_PATH . 'includes/cls_transport.php');
     $t = new transport('-1',5);
     $apiget = "act=ent_sign&ent_id= $ent_id &ent_ac= $ent_ac &ent_sign= $ent_sign &ent_email= $ent_email &domain_url= $domain_url";
-    $api_comment = $t->request('http://cloud.hongyuvip.com/api.php', $apiget);
+    $api_comment = $t->request('http://cloud./api.php', $apiget);
     $api_str = $api_comment["body"];
     if($api_str == $ent_sign)
     {

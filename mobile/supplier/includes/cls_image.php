@@ -1,7 +1,7 @@
 <?php
 
 /**
- * 鸿宇多用户商城 后台对上传文件的处理类(实现图片上传，图片缩小， 增加水印)
+ *  后台对上传文件的处理类(实现图片上传，图片缩小， 增加水印)
  * 需要定义以下常量
  *  define('ERR_INVALID_IMAGE',             1);
  *  define('ERR_NO_GD',                     2);
@@ -13,14 +13,14 @@
  *  define('ROOT_PATH',                     '网站根目录')
  *
  * ============================================================================
- * 版权所有 2015-2016 鸿宇多用户商城科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
+ * 版权所有 2015-2016 ，并保留所有权利。
+ * 网站地址: ；
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
- * $Author: Shadow & 鸿宇
- * $Id: cls_image.php 17217 2016-01-19 06:29:08Z Shadow & 鸿宇
+ * $Author: 
+ * $Id: cls_image.php 17217  
 */
 
 if (!defined('IN_ECS'))
@@ -264,7 +264,7 @@ class cls_image
         }
 
         /* 生成文件 */
-	/* wei2 修改 start by bbs.hongyuvip.com */
+	/* wei2 修改 start by  */
         if (function_exists('imagejpeg'))
         {
             $filename .= '.jpg';
@@ -280,7 +280,7 @@ class cls_image
             $filename .= '.png';
             imagepng($img_thumb, $dir . $filename, 95);
         }
- 	/* wei2 修改 end by bbs.hongyuvip.com */
+ 	/* wei2 修改 end by  */
         else
         {
             $this->error_msg = $GLOBALS['_LANG']['creating_failure'];

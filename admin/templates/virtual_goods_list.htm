@@ -28,15 +28,15 @@
     <th><a href="javascript:listTable.sort('is_new'); ">{$lang.is_new}</a>{$sort_is_new}</th>
     <th><a href="javascript:listTable.sort('is_hot'); ">{$lang.is_hot}</a>{$sort_is_hot}</th>-->
 	{if $suppliers_exists eq 1}
-	{* 代码增加_start  By  bbs.hongyuvip.com *}
+	{* 代码增加_start  By   *}
 	<th>审核状态</th>
-	{* 代码增加_end  By  bbs.hongyuvip.com *}
+	{* 代码增加_end  By   *}
 	{/if}
     <th><a href="javascript:listTable.sort('sort_order'); ">{$lang.sort_order}</a>{$sort_sort_order}</th>
     {if $use_storage}
     <th><a href="javascript:listTable.sort('goods_number'); ">{$lang.goods_number}</a>{$sort_goods_number}</th>
     {/if}
-    <th>标签</th> <!-- 晒单插件 增加 by bbs.hongyuvip.com -->
+    <th>标签</th> <!-- 晒单插件 增加 by  -->
     <th>{$lang.handler}</th>
   <tr>
   {foreach from=$goods_list item=goods}
@@ -55,7 +55,7 @@
     <td align="center"><img src="images/{if $goods.is_new}yes{else}no{/if}.gif" onclick="listTable.toggle(this, 'toggle_new', {$goods.goods_id})" /></td>
     <td align="center"><img src="images/{if $goods.is_hot}yes{else}no{/if}.gif" onclick="listTable.toggle(this, 'toggle_hot', {$goods.goods_id})" /></td> -->
 	{if $suppliers_exists eq 1}
-	{* 代码增加_start  By  bbs.hongyuvip.com *}
+	{* 代码增加_start  By   *}
     <td align="center">
     {if $goods.supplier_id}
     {if $goods.supplier_status eq '-1'}
@@ -64,13 +64,13 @@
     <img src="images/{if $goods.supplier_status eq '1'}yes{elseif $goods.supplier_status eq '0'}no{/if}.gif" onclick="listTable.toggle(this, 'toggle_status', {$goods.goods_id})" />
     {/if}
     {/if}
-</td>	{* 代码增加_end  By  bbs.hongyuvip.com *}
+</td>	{* 代码增加_end  By   *}
 	{/if}
     <td align="center"><span onclick="listTable.edit(this, 'edit_sort_order', {$goods.goods_id})">{$goods.sort_order}</span></td>
     {if $use_storage}
     <td align="right"><span onclick="listTable.edit(this, 'edit_goods_number', {$goods.goods_id})">{$goods.goods_number}</span></td>
     {/if}
-    <td align="center"><a href="goods_tag.php?act=list&goods_id={$goods.goods_id}" target="_blank">标签</a></td> <!-- 晒单插件 增加 by bbs.hongyuvip.com -->
+    <td align="center"><a href="goods_tag.php?act=list&goods_id={$goods.goods_id}" target="_blank">标签</a></td> <!-- 晒单插件 增加 by  -->
     <td align="center">
       <a href="../goods.php?id={$goods.goods_id}" target="_blank" title="{$lang.view}"><img src="images/icon_view.gif" width="16" height="16" border="0" /></a>
       <a href="virtual_goods.php?act=edit&goods_id={$goods.goods_id}&supplier_id={$goods.supplier_id}{if $code neq 'real_goods'}&extension_code={$code}{/if}" title="{$lang.edit}"><img src="images/icon_edit.gif" width="16" height="16" border="0" /></a>

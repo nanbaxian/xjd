@@ -1,4 +1,4 @@
-<?php exit;?>a:3:{s:8:"template";a:18:{i:0;s:67:"C:/phpStudy/PHPTutorial/WWW/xjd/themes/68ecshopcom_360buy/index.dwt";i:1;s:86:"C:/phpStudy/PHPTutorial/WWW/xjd/themes/68ecshopcom_360buy/library/page_headerindex.lbi";i:2;s:81:"C:/phpStudy/PHPTutorial/WWW/xjd/themes/68ecshopcom_360buy/library/user_header.lbi";i:3;s:87:"C:/phpStudy/PHPTutorial/WWW/xjd/themes/68ecshopcom_360buy/library/user_header_right.lbi";i:4;s:78:"C:/phpStudy/PHPTutorial/WWW/xjd/themes/68ecshopcom_360buy/library/head_nav.lbi";i:5;s:80:"C:/phpStudy/PHPTutorial/WWW/xjd/themes/68ecshopcom_360buy/library/header_tan.lbi";i:6;s:79:"C:/phpStudy/PHPTutorial/WWW/xjd/themes/68ecshopcom_360buy/library/index_ad3.lbi";i:7;s:80:"C:/phpStudy/PHPTutorial/WWW/xjd/themes/68ecshopcom_360buy/library/order_type.lbi";i:8;s:82:"C:/phpStudy/PHPTutorial/WWW/xjd/themes/68ecshopcom_360buy/library/cat_articles.lbi";i:9;s:84:"C:/phpStudy/PHPTutorial/WWW/xjd/themes/68ecshopcom_360buy/library/index_ad_group.lbi";i:10;s:81:"C:/phpStudy/PHPTutorial/WWW/xjd/themes/68ecshopcom_360buy/library/ad_position.lbi";i:11;s:80:"C:/phpStudy/PHPTutorial/WWW/xjd/themes/68ecshopcom_360buy/library/stores_tab.lbi";i:12;s:79:"C:/phpStudy/PHPTutorial/WWW/xjd/themes/68ecshopcom_360buy/library/cat_goods.lbi";i:13;s:86:"C:/phpStudy/PHPTutorial/WWW/xjd/themes/68ecshopcom_360buy/library/page_footerindex.lbi";i:14;s:78:"C:/phpStudy/PHPTutorial/WWW/xjd/themes/68ecshopcom_360buy/library/site_bar.lbi";i:15;s:79:"C:/phpStudy/PHPTutorial/WWW/xjd/themes/68ecshopcom_360buy/library/vote_list.lbi";i:16;s:78:"C:/phpStudy/PHPTutorial/WWW/xjd/themes/68ecshopcom_360buy/library/left_bar.lbi";i:17;s:88:"C:/phpStudy/PHPTutorial/WWW/xjd/themes/68ecshopcom_360buy/library/arrive_notice_list.lbi";}s:7:"expires";i:1544678910;s:8:"maketime";i:1544675310;}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php exit;?>a:3:{s:8:"template";a:18:{i:0;s:67:"C:/phpStudy/PHPTutorial/WWW/xjd/themes/68ecshopcom_360buy/index.dwt";i:1;s:86:"C:/phpStudy/PHPTutorial/WWW/xjd/themes/68ecshopcom_360buy/library/page_headerindex.lbi";i:2;s:81:"C:/phpStudy/PHPTutorial/WWW/xjd/themes/68ecshopcom_360buy/library/user_header.lbi";i:3;s:87:"C:/phpStudy/PHPTutorial/WWW/xjd/themes/68ecshopcom_360buy/library/user_header_right.lbi";i:4;s:78:"C:/phpStudy/PHPTutorial/WWW/xjd/themes/68ecshopcom_360buy/library/head_nav.lbi";i:5;s:80:"C:/phpStudy/PHPTutorial/WWW/xjd/themes/68ecshopcom_360buy/library/header_tan.lbi";i:6;s:79:"C:/phpStudy/PHPTutorial/WWW/xjd/themes/68ecshopcom_360buy/library/index_ad3.lbi";i:7;s:80:"C:/phpStudy/PHPTutorial/WWW/xjd/themes/68ecshopcom_360buy/library/order_type.lbi";i:8;s:82:"C:/phpStudy/PHPTutorial/WWW/xjd/themes/68ecshopcom_360buy/library/cat_articles.lbi";i:9;s:84:"C:/phpStudy/PHPTutorial/WWW/xjd/themes/68ecshopcom_360buy/library/index_ad_group.lbi";i:10;s:81:"C:/phpStudy/PHPTutorial/WWW/xjd/themes/68ecshopcom_360buy/library/ad_position.lbi";i:11;s:80:"C:/phpStudy/PHPTutorial/WWW/xjd/themes/68ecshopcom_360buy/library/stores_tab.lbi";i:12;s:79:"C:/phpStudy/PHPTutorial/WWW/xjd/themes/68ecshopcom_360buy/library/cat_goods.lbi";i:13;s:86:"C:/phpStudy/PHPTutorial/WWW/xjd/themes/68ecshopcom_360buy/library/page_footerindex.lbi";i:14;s:78:"C:/phpStudy/PHPTutorial/WWW/xjd/themes/68ecshopcom_360buy/library/site_bar.lbi";i:15;s:79:"C:/phpStudy/PHPTutorial/WWW/xjd/themes/68ecshopcom_360buy/library/vote_list.lbi";i:16;s:78:"C:/phpStudy/PHPTutorial/WWW/xjd/themes/68ecshopcom_360buy/library/left_bar.lbi";i:17;s:88:"C:/phpStudy/PHPTutorial/WWW/xjd/themes/68ecshopcom_360buy/library/arrive_notice_list.lbi";}s:7:"expires";i:1544758194;s:8:"maketime";i:1544754594;}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <base href="http://localhost/xjd/" />
@@ -7,12 +7,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 <meta name="renderer" content="webkit" />
-<meta name="Keywords" content="鸿宇科技多用户商城" />
-<meta name="Description" content="鸿宇科技多用户商城" />
-<title>鸿宇科技多用户商城</title>
+<meta name="Keywords" content="加拿大 美容 多伦多 整形 整容 医美 爱美 美丽 瘦身" />
+<meta name="Description" content="美丽帮" />
+<title>美丽帮</title>
 <link rel="shortcut icon" href="favicon.ico" />
 <link rel="icon" href="animated_favicon.gif" type="image/gif" />
-<link rel="alternate" type="application/rss+xml" title="RSS|鸿宇科技多用户商城" href="feed.php" />
+<link rel="alternate" type="application/rss+xml" title="RSS|美丽帮" href="feed.php" />
 <link rel="stylesheet" href="themes/68ecshopcom_360buy/css/index.css" />
 <link rel="stylesheet" type="text/css" href="themes/68ecshopcom_360buy/css/68ecshop_commin.css" />
 <script type="text/javascript" src="themes/68ecshopcom_360buy/js/jquery-1.6.2.min.js"></script>
@@ -152,7 +152,7 @@ var process_request = "正在处理您的请求...";
             <div class="site-cont site-brand">
               <h2>关于我们<span>About</span></h2>
               <ul class="site-list">
-                <li><a href="http://hongyuvip.com">鸿宇科技有限公司 </a></li>
+                <li><a href="http://">科技有限公司 </a></li>
               </ul>
             </div>
           </div>
@@ -178,7 +178,7 @@ function loginactResponse(result)
   <div class="headerLayout">
     <div class="headerCon ">
       <h1 id="mallLogo" class="mall-logo"> 
-     	<a href="/" class="header-logo" title="logo"><img src="themes/68ecshopcom_360buy/images/header/logo.jpg" /></a>
+     	<a href="/" class="header-logo" title="logo" ><img src="themes/68ecshopcom_360buy/images/header/logo.jpg" width="300px" /></a>
       </h1>
       <div class="header-extra">
         <div class="header-banner"> 
@@ -209,25 +209,16 @@ function loginactResponse(result)
           </form>
           <ul class="hot-query" >
                     	<li style="border-left: none;">
-            	<a href="search.php?keywords=iPhone5" title="iPhone5">iPhone5</a>
+            	<a href="search.php?keywords=%E6%B0%B4%E5%85%89%E9%92%88" title="水光针">水光针</a>
             </li>
                     	<li >
-            	<a href="search.php?keywords=NZXT" title="NZXT">NZXT</a>
+            	<a href="search.php?keywords=%E9%9A%86%E8%83%B8" title="隆胸">隆胸</a>
             </li>
                     	<li >
-            	<a href="search.php?keywords=%E6%97%85%E8%A1%8C%E5%8C%85" title="旅行包">旅行包</a>
+            	<a href="search.php?keywords=%E7%99%BD%E7%93%B7%E5%A8%83%E5%A8%83" title="白瓷娃娃">白瓷娃娃</a>
             </li>
                     	<li >
-            	<a href="search.php?keywords=%E6%A0%BC%E5%8A%9B%E7%94%B5%E6%9A%96%E5%99%A8" title="格力电暖器">格力电暖器</a>
-            </li>
-                    	<li >
-            	<a href="search.php?keywords=%E5%B9%B4%E8%B4%A7%E5%85%88%E5%88%B0%E5%AE%B6" title="年货先到家">年货先到家</a>
-            </li>
-                    	<li >
-            	<a href="search.php?keywords=MX2" title="MX2">MX2</a>
-            </li>
-                    	<li >
-            	<a href="search.php?keywords=%E9%B8%BF%E5%AE%87%E7%A7%91%E6%8A%80%E5%A4%9A%E7%94%A8%E6%88%B7%E5%95%86%E5%9F%8E" title="鸿宇科技多用户商城">鸿宇科技多用户商城</a>
+            	<a href="search.php?keywords=%E7%98%A6%E8%BA%AB" title="瘦身">瘦身</a>
             </li>
                       
           </ul>
@@ -2850,6 +2841,16 @@ $(document).ready(function(){
 								<div class="anli_con">
 									<ul class="yyyy_1 anli_con_num" style="position: absolute; width: 1210px; height: 40px; top: 0px; left: 0px;">
 																														<li class="fore1">
+											<a href="category.php?id=1&amp;brand=48" target="_blank" title="楼兰密语">
+												<img width="100" height="40" src="data/brandlogo/1437431622196514430.jpg" alt="楼兰密语">
+											</a>
+										</li>
+																				<li >
+											<a href="category.php?id=1&amp;brand=47" target="_blank" title="口水娃">
+												<img width="100" height="40" src="data/brandlogo/1437431609681889286.jpg" alt="口水娃">
+											</a>
+										</li>
+																				<li >
 											<a href="category.php?id=1&amp;brand=41" target="_blank" title="伊利">
 												<img width="100" height="40" src="data/brandlogo/1437431337248235690.jpg" alt="伊利">
 											</a>
@@ -2902,16 +2903,6 @@ $(document).ready(function(){
 																				<li >
 											<a href="category.php?id=1&amp;brand=50" target="_blank" title="糖糖屋">
 												<img width="100" height="40" src="data/brandlogo/1437431655511622908.jpg" alt="糖糖屋">
-											</a>
-										</li>
-																				<li >
-											<a href="category.php?id=1&amp;brand=48" target="_blank" title="楼兰密语">
-												<img width="100" height="40" src="data/brandlogo/1437431622196514430.jpg" alt="楼兰密语">
-											</a>
-										</li>
-																				<li >
-											<a href="category.php?id=1&amp;brand=47" target="_blank" title="口水娃">
-												<img width="100" height="40" src="data/brandlogo/1437431609681889286.jpg" alt="口水娃">
 											</a>
 										</li>
 																			</ul>
@@ -3553,6 +3544,16 @@ $(document).ready(function(){
 								<div class="anli_con">
 									<ul class="yyyy_2 anli_con_num" style="position: absolute; width: 1210px; height: 40px; top: 0px; left: 0px;">
 																														<li class="fore1">
+											<a href="category.php?id=2&amp;brand=60" target="_blank" title="曼妮芬（ManniForm）">
+												<img width="100" height="40" src="data/brandlogo/1437432607921594733.jpg" alt="曼妮芬（ManniForm）">
+											</a>
+										</li>
+																				<li >
+											<a href="category.php?id=2&amp;brand=51" target="_blank" title="享爱.">
+												<img width="100" height="40" src="data/brandlogo/1437432512022024124.jpg" alt="享爱.">
+											</a>
+										</li>
+																				<li >
 											<a href="category.php?id=2&amp;brand=58" target="_blank" title="达芙妮">
 												<img width="100" height="40" src="data/brandlogo/1437436184083765295.jpg" alt="达芙妮">
 											</a>
@@ -3600,16 +3601,6 @@ $(document).ready(function(){
 																				<li >
 											<a href="category.php?id=2&amp;brand=55" target="_blank" title="卓诗尼">
 												<img width="100" height="40" src="data/brandlogo/1437436548477690017.jpg" alt="卓诗尼">
-											</a>
-										</li>
-																				<li >
-											<a href="category.php?id=2&amp;brand=60" target="_blank" title="曼妮芬（ManniForm）">
-												<img width="100" height="40" src="data/brandlogo/1437432607921594733.jpg" alt="曼妮芬（ManniForm）">
-											</a>
-										</li>
-																				<li >
-											<a href="category.php?id=2&amp;brand=51" target="_blank" title="享爱.">
-												<img width="100" height="40" src="data/brandlogo/1437432512022024124.jpg" alt="享爱.">
 											</a>
 										</li>
 																			</ul>
@@ -4251,6 +4242,16 @@ $(document).ready(function(){
 								<div class="anli_con">
 									<ul class="yyyy_3 anli_con_num" style="position: absolute; width: 1210px; height: 40px; top: 0px; left: 0px;">
 																														<li class="fore1">
+											<a href="category.php?id=3&amp;brand=4" target="_blank" title="雅诗兰黛">
+												<img width="100" height="40" src="data/brandlogo/1437428885582505638.jpg" alt="雅诗兰黛">
+											</a>
+										</li>
+																				<li >
+											<a href="category.php?id=3&amp;brand=17" target="_blank" title="珀莱雅">
+												<img width="100" height="40" src="data/brandlogo/1437429832547767116.jpg" alt="珀莱雅">
+											</a>
+										</li>
+																				<li >
 											<a href="category.php?id=3&amp;brand=18" target="_blank" title="兰芝">
 												<img width="100" height="40" src="data/brandlogo/1437429934755120717.jpg" alt="兰芝">
 											</a>
@@ -4288,16 +4289,6 @@ $(document).ready(function(){
 																				<li >
 											<a href="category.php?id=3&amp;brand=15" target="_blank" title="韩束">
 												<img width="100" height="40" src="data/brandlogo/1437429723052152963.jpg" alt="韩束">
-											</a>
-										</li>
-																				<li >
-											<a href="category.php?id=3&amp;brand=4" target="_blank" title="雅诗兰黛">
-												<img width="100" height="40" src="data/brandlogo/1437428885582505638.jpg" alt="雅诗兰黛">
-											</a>
-										</li>
-																				<li >
-											<a href="category.php?id=3&amp;brand=17" target="_blank" title="珀莱雅">
-												<img width="100" height="40" src="data/brandlogo/1437429832547767116.jpg" alt="珀莱雅">
 											</a>
 										</li>
 																			</ul>
@@ -4942,6 +4933,21 @@ $(document).ready(function(){
 								<div class="anli_con">
 									<ul class="yyyy_4 anli_con_num" style="position: absolute; width: 1210px; height: 40px; top: 0px; left: 0px;">
 																														<li class="fore1">
+											<a href="category.php?id=4&amp;brand=23" target="_blank" title="朵唯">
+												<img width="100" height="40" src="data/brandlogo/1437430309280593896.jpg" alt="朵唯">
+											</a>
+										</li>
+																				<li >
+											<a href="category.php?id=4&amp;brand=28" target="_blank" title="LG">
+												<img width="100" height="40" src="data/brandlogo/1437430374768843113.jpg" alt="LG">
+											</a>
+										</li>
+																				<li >
+											<a href="category.php?id=4&amp;brand=96" target="_blank" title="贝古贝古">
+												<img width="100" height="40" src="data/brandlogo/1437438440162456222.jpg" alt="贝古贝古">
+											</a>
+										</li>
+																				<li >
 											<a href="category.php?id=4&amp;brand=32" target="_blank" title="努比亚">
 												<img width="100" height="40" src="data/brandlogo/1437430574094435270.png" alt="努比亚">
 											</a>
@@ -4994,21 +5000,6 @@ $(document).ready(function(){
 																				<li >
 											<a href="category.php?id=4&amp;brand=6" target="_blank" title="Dior">
 												<img width="100" height="40" src="data/brandlogo/1437428980225446797.jpg" alt="Dior">
-											</a>
-										</li>
-																				<li >
-											<a href="category.php?id=4&amp;brand=25" target="_blank" title="华为">
-												<img width="100" height="40" src="data/brandlogo/1437430344637755359.jpg" alt="华为">
-											</a>
-										</li>
-																				<li >
-											<a href="category.php?id=4&amp;brand=21" target="_blank" title="摩托罗拉">
-												<img width="100" height="40" src="data/brandlogo/1437430289405669696.jpg" alt="摩托罗拉">
-											</a>
-										</li>
-																				<li >
-											<a href="category.php?id=4&amp;brand=70" target="_blank" title="西门子">
-												<img width="100" height="40" src="data/brandlogo/1437433823734794032.gif" alt="西门子">
 											</a>
 										</li>
 																			</ul>
@@ -5650,6 +5641,16 @@ $(document).ready(function(){
 								<div class="anli_con">
 									<ul class="yyyy_5 anli_con_num" style="position: absolute; width: 1210px; height: 40px; top: 0px; left: 0px;">
 																														<li class="fore1">
+											<a href="category.php?id=5&amp;brand=72" target="_blank" title="海信">
+												<img width="100" height="40" src="data/brandlogo/1437433854063455383.jpg" alt="海信">
+											</a>
+										</li>
+																				<li >
+											<a href="category.php?id=5&amp;brand=30" target="_blank" title="三星">
+												<img width="100" height="40" src="data/brandlogo/1437430441802693617.png" alt="三星">
+											</a>
+										</li>
+																				<li >
 											<a href="category.php?id=5&amp;brand=70" target="_blank" title="西门子">
 												<img width="100" height="40" src="data/brandlogo/1437433823734794032.gif" alt="西门子">
 											</a>
@@ -5687,16 +5688,6 @@ $(document).ready(function(){
 																				<li >
 											<a href="category.php?id=5&amp;brand=67" target="_blank" title="美的">
 												<img width="100" height="40" src="data/brandlogo/1437433779804083933.jpg" alt="美的">
-											</a>
-										</li>
-																				<li >
-											<a href="category.php?id=5&amp;brand=72" target="_blank" title="海信">
-												<img width="100" height="40" src="data/brandlogo/1437433854063455383.jpg" alt="海信">
-											</a>
-										</li>
-																				<li >
-											<a href="category.php?id=5&amp;brand=30" target="_blank" title="三星">
-												<img width="100" height="40" src="data/brandlogo/1437430441802693617.png" alt="三星">
 											</a>
 										</li>
 																			</ul>
@@ -6338,6 +6329,16 @@ $(document).ready(function(){
 								<div class="anli_con">
 									<ul class="yyyy_6 anli_con_num" style="position: absolute; width: 1210px; height: 40px; top: 0px; left: 0px;">
 																														<li class="fore1">
+											<a href="category.php?id=6&amp;brand=62" target="_blank" title="稻草人">
+												<img width="100" height="40" src="data/brandlogo/1437432889680565833.jpg" alt="稻草人">
+											</a>
+										</li>
+																				<li >
+											<a href="category.php?id=6&amp;brand=84" target="_blank" title="全有家居">
+												<img width="100" height="40" src="data/brandlogo/1437436872931901715.jpg" alt="全有家居">
+											</a>
+										</li>
+																				<li >
 											<a href="category.php?id=6&amp;brand=48" target="_blank" title="楼兰密语">
 												<img width="100" height="40" src="data/brandlogo/1437431622196514430.jpg" alt="楼兰密语">
 											</a>
@@ -6380,16 +6381,6 @@ $(document).ready(function(){
 																				<li >
 											<a href="category.php?id=6&amp;brand=11" target="_blank" title="MISS FACE">
 												<img width="100" height="40" src="data/brandlogo/1437429301820829673.jpg" alt="MISS FACE">
-											</a>
-										</li>
-																				<li >
-											<a href="category.php?id=6&amp;brand=62" target="_blank" title="稻草人">
-												<img width="100" height="40" src="data/brandlogo/1437432889680565833.jpg" alt="稻草人">
-											</a>
-										</li>
-																				<li >
-											<a href="category.php?id=6&amp;brand=84" target="_blank" title="全有家居">
-												<img width="100" height="40" src="data/brandlogo/1437436872931901715.jpg" alt="全有家居">
 											</a>
 										</li>
 																			</ul>
@@ -7031,6 +7022,16 @@ $(document).ready(function(){
 								<div class="anli_con">
 									<ul class="yyyy_7 anli_con_num" style="position: absolute; width: 1210px; height: 40px; top: 0px; left: 0px;">
 																														<li class="fore1">
+											<a href="category.php?id=7&amp;brand=91" target="_blank" title="哈尔滨">
+												<img width="100" height="40" src="data/brandlogo/1437437282844642612.jpg" alt="哈尔滨">
+											</a>
+										</li>
+																				<li >
+											<a href="category.php?id=7&amp;brand=99" target="_blank" title="合生元">
+												<img width="100" height="40" src="data/brandlogo/1437438487779734440.jpg" alt="合生元">
+											</a>
+										</li>
+																				<li >
 											<a href="category.php?id=7&amp;brand=40" target="_blank" title="蒙牛">
 												<img width="100" height="40" src="data/brandlogo/1437431322523724265.jpg" alt="蒙牛">
 											</a>
@@ -7073,16 +7074,6 @@ $(document).ready(function(){
 																				<li >
 											<a href="category.php?id=7&amp;brand=105" target="_blank" title="雀氏">
 												<img width="100" height="40" src="data/brandlogo/1437438581895901815.jpg" alt="雀氏">
-											</a>
-										</li>
-																				<li >
-											<a href="category.php?id=7&amp;brand=91" target="_blank" title="哈尔滨">
-												<img width="100" height="40" src="data/brandlogo/1437437282844642612.jpg" alt="哈尔滨">
-											</a>
-										</li>
-																				<li >
-											<a href="category.php?id=7&amp;brand=99" target="_blank" title="合生元">
-												<img width="100" height="40" src="data/brandlogo/1437438487779734440.jpg" alt="合生元">
 											</a>
 										</li>
 																			</ul>
@@ -7727,6 +7718,16 @@ $(document).ready(function(){
 								<div class="anli_con">
 									<ul class="yyyy_8 anli_con_num" style="position: absolute; width: 1210px; height: 40px; top: 0px; left: 0px;">
 																														<li class="fore1">
+											<a href="category.php?id=8&amp;brand=12" target="_blank" title="姬芮">
+												<img width="100" height="40" src="data/brandlogo/1437429559203552370.jpg" alt="姬芮">
+											</a>
+										</li>
+																				<li >
+											<a href="category.php?id=8&amp;brand=99" target="_blank" title="合生元">
+												<img width="100" height="40" src="data/brandlogo/1437438487779734440.jpg" alt="合生元">
+											</a>
+										</li>
+																				<li >
 											<a href="category.php?id=8&amp;brand=97" target="_blank" title="皇家宝贝">
 												<img width="100" height="40" src="data/brandlogo/1437438450967200189.jpg" alt="皇家宝贝">
 											</a>
@@ -7784,16 +7785,6 @@ $(document).ready(function(){
 																				<li >
 											<a href="category.php?id=8&amp;brand=96" target="_blank" title="贝古贝古">
 												<img width="100" height="40" src="data/brandlogo/1437438440162456222.jpg" alt="贝古贝古">
-											</a>
-										</li>
-																				<li >
-											<a href="category.php?id=8&amp;brand=53" target="_blank" title="茵曼（INMAN）">
-												<img width="100" height="40" src="data/brandlogo/1437432530915190983.jpg" alt="茵曼（INMAN）">
-											</a>
-										</li>
-																				<li >
-											<a href="category.php?id=8&amp;brand=12" target="_blank" title="姬芮">
-												<img width="100" height="40" src="data/brandlogo/1437429559203552370.jpg" alt="姬芮">
 											</a>
 										</li>
 																			</ul>
@@ -7921,13 +7912,12 @@ $(document).ready(function(){
                <a href="help.php" >帮助中心</a><em style="display:none">|</em>
                            </p>
       <p>
-      <a href="javascript:;">&copy; 2015-2018 鸿宇科技多用户商城 版权所有，并保留所有权利。</a> <a href="javascript:;">中国贵州省贵阳市 </a>
-      <a href="javascript:;"></a>
-        <a href="javascript:;"></a>
+      <a href="javascript:;">&copy; 2015-2018 美丽帮 版权所有，并保留所有权利。</a> <a href="javascript:;">加拿大多伦多万锦 </a>
+      <a href="javascript:;">      Tel: 6478775668      </a>
+        <a href="javascript:;">      E-mail: nanbaxian@gmail.com      </a>
       </p>
       <p>
-                                    <a href="http://wpa.qq.com/msgrd?V=1&amp;Uin=1527200768&amp;Site=鸿宇科技多用户商城&amp;Menu=yes" target="_blank"><img src="http://wpa.qq.com/pa?p=1:1527200768:4" height="16" border="0" alt="QQ" /> 1527200768</a>
-                                                                                          </p>
+                                                                                                      </p>
       </div>      
     </div>    
   </div>

@@ -1,15 +1,15 @@
 <?php
 /**
- * 鸿宇多用户商城 预售活动前台文件
+ *  预售活动前台文件
  * ============================================================================
- * * 版权所有 2008-2015 鸿宇多用户商城科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
+ * * 版权所有 2008-2015 ，并保留所有权利。
+ * 网站地址: ；
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
- * $Author: 鸿宇多用户商城 $
- * $Id: pre_sale.php 17217 2015-06-24 10:57:00Z 鸿宇多用户商城 $
+ * $Author:  $
+ * $Id: pre_sale.php 17217 2015-06-24 10:57:00Z  $
  */
 define('IN_ECS', true);
 
@@ -208,7 +208,7 @@ function action_view ()
 		$count1 = $GLOBALS['db']->getOne("SELECT COUNT(*) FROM " . $GLOBALS['ecs']->table('comment') . " where comment_type=0 and id_value ='$goods_id' and status=1");
 		$smarty->assign('review_count', $count1); // 评论数
 		                                          
-		// 评价晒单 增加 by bbs.hongyuvip.com
+		// 评价晒单 增加 by 
 		$rank_num['rank_a'] = $GLOBALS['db']->getOne("SELECT COUNT(*) AS num FROM " . $GLOBALS['ecs']->table('comment') . " WHERE id_value = '$goods_id' AND status = 1 AND comment_rank in (5,4)");
 		$rank_num['rank_b'] = $GLOBALS['db']->getOne("SELECT COUNT(*) AS num FROM " . $GLOBALS['ecs']->table('comment') . " WHERE id_value = '$goods_id' AND status = 1 AND comment_rank in (3,2)");
 		$rank_num['rank_c'] = $GLOBALS['db']->getOne("SELECT COUNT(*) AS num FROM " . $GLOBALS['ecs']->table('comment') . " WHERE id_value = '$goods_id' AND status = 1 AND comment_rank = 1");
@@ -261,7 +261,7 @@ function action_view ()
 		$smarty->assign('new_goods', get_recommend_goods('new')); // 最新商品
 		$smarty->assign('shop_country', $_CFG['shop_country']);
 		
-		/* 代码增加_start By bbs.hongyuvip.com */
+		/* 代码增加_start By  */
 		$sql_attr = "SELECT a.attr_id, ga.goods_attr_id FROM " . $GLOBALS['ecs']->table('attribute') . " AS a left join " . $GLOBALS['ecs']->table('goods_attr') . "  AS ga on a.attr_id=ga.attr_id  WHERE a.is_attr_gallery=1 and ga.goods_id='" . $goods_id . "' order by ga.goods_attr_id ";
 		$goods_attr = $GLOBALS['db']->getRow($sql_attr);
 		if($goods_attr)
@@ -291,7 +291,7 @@ function action_view ()
 		$smarty->assign('page_title', $position['title']); // 页面标题
 		$smarty->assign('ur_here', $position['ur_here']); // 当前位置
 		
-		/* 代码增加_start By bbs.hongyuvip.com */
+		/* 代码增加_start By  */
 		$goods['supplier_name'] = "网站自营";
 		if($goods['supplier_id'] > 0)
 		{

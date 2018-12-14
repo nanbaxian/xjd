@@ -1,20 +1,20 @@
 <?php
 
 /**
- * 鸿宇多用户商城 搜索程序
+ *  搜索程序
  * ============================================================================
- * 版权所有 2015-2016 鸿宇多用户商城科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
+ * 版权所有 2015-2016 ，并保留所有权利。
+ * 网站地址: ；
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
- * $Author: Shadow & 鸿宇
- * $Id: search.php 17217 2016-01-19 06:29:08Z Shadow & 鸿宇
+ * $Author: 
+ * $Id: search.php 17217  
 */
 
 define('IN_ECS', true);
-/* 代码添加_START  By   bbs.hongyuvip.com */
+/* 代码添加_START  By    */
 define('_SP_', chr(0xFF).chr(0xFE)); 
 define('UCS2', 'ucs-2be');
 
@@ -27,7 +27,7 @@ if($type>0){
     exit;
 }
 
-/* 代码添加_END  By   bbs.hongyuvip.com */
+/* 代码添加_END  By    */
 if (!function_exists("htmlspecialchars_decode"))
 {
     function htmlspecialchars_decode($string, $quote_style = ENT_COMPAT)
@@ -184,7 +184,7 @@ else
     $tag_where = '';
     if (!empty($_REQUEST['keywords']))
     {
-        /* 代码修改_START   By    bbs.hongyuvip.com   */
+        /* 代码修改_START   By       */
 		include_once('includes/lib_splitword_www_68ecshop_com.php');
 		$Recordkw = str_replace(array("\'"), array(''), trim($_REQUEST['keywords']));
 		$cfg_soft_lang_www_68ecshop_com = 'utf-8';
@@ -221,7 +221,7 @@ else
 		//$db->autoReplace($ecs->table('keywords'), array('date' => local_date('Y-m-d'),
         //'searchengine' => 'ecshop', 'keyword' => htmlspecialchars_decode(str_replace('%', '', $Recordkw)), 'count' => 1), array('count' => 1));
 
-		/* 代码修改_END   By    bbs.hongyuvip.com   */
+		/* 代码修改_END   By       */
         $keywords .= ')';
 
 		//echo "<pre>";
@@ -376,16 +376,16 @@ else
             $attr_in = " AND " . db_create_in($col, 'g.goods_id');
         }
     }
-   /* fulltext_search_add_START_bbs.hongyuvip.com */
+   /* fulltext_search_add_START_ */
     if($_CFG['fulltext_search'] == '0'){
-   /* fulltext_search_add_END_bbs.hongyuvip.com */
+   /* fulltext_search_add_END_ */
     /* 获得符合条件的商品总数 */
     $sql   = "SELECT COUNT(*) FROM " .$ecs->table('goods'). " AS g ".
         "WHERE g.is_delete = 0 AND g.is_on_sale = 1 AND g.is_alone_sale = 1 AND g.is_virtual=0  $attr_in $categories ".
         "AND (( 1 "  . $keywords . $brand . $min_price . $max_price . $intro . $outstock ." ) ".$tag_where." )";
     $count = $db->getOne($sql);
-	/* 代码添加_START   By  bbs.hongyuvip.com  */
-    if ($page == 1 && $Recordkw && $count && !$category) Recordkeyword($Recordkw, $count, 'ecshop');  // 代码修改  By   bbs.hongyuvip.com
+	/* 代码添加_START   By    */
+    if ($page == 1 && $Recordkw && $count && !$category) Recordkeyword($Recordkw, $count, 'ecshop');  // 代码修改  By   
 	if($count==0)
 	{
 		if (preg_match('/^[a-zA-z]+$/i', $_REQUEST['keywords']))
@@ -403,7 +403,7 @@ else
 	{
 		$smarty->assign('beizhuxinxi_www_68ecshop_com', '关键词<font color=#cc0000>'.$_REQUEST['keyword_zm'].'</font>搜索结果为零，<br>但是我们为您匹配到了相关关键词<font color=#cc0000>'.$_REQUEST['keywords'].'</font>，下面是它的查询结果！');
 	}
-	/* 代码添加_END   By  bbs.hongyuvip.com  */
+	/* 代码添加_END   By    */
     $max_page = ($count> 0) ? ceil($count / $size) : 1;
     if ($page > $max_page)
     {
@@ -424,7 +424,7 @@ else
 
     
     }
-    /* fulltext_search_add_START_bbs.hongyuvip.com */
+    /* fulltext_search_add_START_ */
     
     if($_CFG['fulltext_search'] == '1'){
         require ( "./includes/sphinxapi.php" );
@@ -500,7 +500,7 @@ else
         }
     }
 	
-    /* fulltext_search_add_END_bbs.hongyuvip.com */
+    /* fulltext_search_add_END_ */
     
     $res = $db->SelectLimit($sql, $size, ($page - 1) * $size);
 
@@ -550,14 +550,14 @@ else
         {
             $arr[$row['goods_id']]['goods_name'] = $row['goods_name'];
         }
-		/* 代码添加_START   By    bbs.hongyuvip.com */
+		/* 代码添加_START   By     */
 		$arr[$row['goods_id']]['goods_name_www_68ecshop_com'] =  $arr[$row['goods_id']]['goods_name'];
 		foreach($replacef_www_68ecshop_com as $key_www_68ecshop_com =>$temp_qq)
 		{
 				//$replacet[$key_www_68ecshop_com]=  '<strong style="color:#cc0000;">'. $temp_qq .'</strong>';;
 				$arr[$row['goods_id']]['goods_name_www_68ecshop_com'] = preg_replace('/(?!<[^>]*)'.$temp_qq.'(?![^<]*>)/i', '<strong style="color:#cc0000;">'. $temp_qq .'</strong>', $arr[$row['goods_id']]['goods_name_www_68ecshop_com']);
 		}
-		/* 代码添加_END  By  bbs.hongyuvip.com */
+		/* 代码添加_END  By   */
         $arr[$row['goods_id']]['type']          = $row['goods_type'];
         $arr[$row['goods_id']]['market_price']  = price_format($row['market_price']);
         $arr[$row['goods_id']]['shop_price']    = price_format($row['shop_price']);
@@ -650,7 +650,7 @@ else
     $smarty->assign('helps',       get_shop_help());      // 网店帮助
     $smarty->assign('top_goods',  get_top10());           // 销售排行
     $smarty->assign('promotion_info', get_promotion_info());
-	/* bbs.hongyuvip.com */
+	/*  */
 	$sql= "select g.cat_id, count(*) AS cat_count from ".$ecs->table('goods')." AS g ".
 				"WHERE g.is_delete = 0 AND g.is_on_sale = 1 AND g.is_alone_sale = 1 $attr_in ".
                 "AND (( 1 " . $categories . $keywords . $brand . $min_price . $max_price . $intro . $outstock . " ) ".$tag_where." ) " .
@@ -747,7 +747,7 @@ else
 	//echo '<pre>';
 	//print_r($cat_two_arr);
 	//echo '</pre>';
-	/* bbs.hongyuvip.com */
+	/*  */
     $smarty->display('search.dwt');
 }
 

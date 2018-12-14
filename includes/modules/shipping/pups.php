@@ -30,15 +30,15 @@ if (isset($set_modules) && $set_modules == TRUE)
 
     /* 配送方式是否支持货到付款 */
     $modules[$i]['cod']     = false;
-/* 代码增加_start   By bbs.hongyuvip.com */
+/* 代码增加_start   By  */
 	/* 配送方式是否支持门店自提 */
     $modules[$i]['support_pickup']     = TRUE;
-/* 代码增加_end   By bbs.hongyuvip.com */
+/* 代码增加_end   By  */
     /* 插件的作者 */
     $modules[$i]['author']  = 'ECSHOP TEAM';
 
     /* 插件作者的官方网站 */
-    $modules[$i]['website'] = 'http://bbs.hongyuvip.com';
+    $modules[$i]['website'] = '';
 
     /* 配送接口需要的参数 */
     $modules[$i]['configure'] = array(

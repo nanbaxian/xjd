@@ -1,12 +1,12 @@
 <?php
 
 /**
- * 鸿宇多用户商城 商品分类管理程序
+ *  商品分类管理程序
  * ============================================================================
- * 版权所有 2005-2010 鸿宇多用户商城科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
+ * 版权所有 2005-2010 ，并保留所有权利。
+ * 网站地址: ；
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
  * $Author: liuhui $
@@ -228,11 +228,11 @@ if ($_REQUEST['act'] == 'insert')
  
    $cat['cat_name']     = !empty($_POST['cat_name'])     ? trim($_POST['cat_name'])     : '';
    $arrCatName = explode("," ,$cat['cat_name']);
-  /*  代码增加_start By bbs.hongyuvip.com */
+  /*  代码增加_start By  */
    $cat['brand_qq']  = !empty($_POST['brand_wwwecshop68com']) ? $_POST['brand_wwwecshop68com'] : '';
    $cat['attr_wwwecshop68com']  = !empty($_POST['attr_qq']) ? $_POST['attr_qq'] : '';
    
-	/* 代码增加_start  By   bbs.hongyuvip.com  */
+	/* 代码增加_start  By     */
 	$cat['path_name']     = !empty($_POST['path_name'])     ? trim($_POST['path_name'])     : '';
 	if($cat['path_name'] != '')
 	{
@@ -243,9 +243,9 @@ if ($_REQUEST['act'] == 'insert')
 		   sys_msg('对不起，已经存在同名目录', 0, $link);
 		}
 	}
-	/* 代码增加_end  By   bbs.hongyuvip.com  */
+	/* 代码增加_end  By     */
    
- /*  代码增加_end By bbs.hongyuvip.com */
+ /*  代码增加_end By  */
  foreach($arrCatName as $arrCatNameValue)
  {
   $cat['cat_name'] = $arrCatNameValue;
@@ -416,14 +416,14 @@ if ($_REQUEST['act'] == 'update')
     $cat['grade']        = !empty($_POST['grade'])        ? intval($_POST['grade'])      : 0;
     $cat['filter_attr']  = !empty($_POST['filter_attr'])  ? implode(',', array_unique(array_diff($_POST['filter_attr'],array(0)))) : 0;
     $cat['cat_recommend']  = !empty($_POST['cat_recommend'])  ? $_POST['cat_recommend'] : array();
-	 /*  代码增加_srat By bbs.hongyuvip.com */
+	 /*  代码增加_srat By  */
 	$cat['brand_qq']  = !empty($_POST['brand_wwwecshop68com']) ? $_POST['brand_wwwecshop68com'] : '';
 	$cat['attr_wwwecshop68com']  = !empty($_POST['attr_qq']) ? $_POST['attr_qq'] : '';
-	 /*  代码增加_end By bbs.hongyuvip.com */
+	 /*  代码增加_end By  */
 	/* 代码增加_start Byjdy */
 	
 	
-	/* 代码增加_start  By   bbs.hongyuvip.com  */
+	/* 代码增加_start  By     */
 	$cat['path_name']     = !empty($_POST['path_name'])     ? trim($_POST['path_name'])     : '';
 	if($cat['path_name'] != '')
 	{
@@ -434,7 +434,7 @@ if ($_REQUEST['act'] == 'update')
 		   sys_msg('对不起，已经存在同名目录', 0, $link);
 		}
 	}
-	/* 代码增加_end  By   bbs.hongyuvip.com  */
+	/* 代码增加_end  By     */
 	
 	
 	
@@ -479,7 +479,7 @@ if ($_REQUEST['act'] == 'update')
 	$cat['show_in_index']       =  !empty($_POST['show_in_index'])  ? $_POST['show_in_index'] : '0';
 	/* 代码增加_end Byjdy */
 
-	/* 代码增加_start  By   bbs.hongyuvip.com  */
+	/* 代码增加_start  By     */
 	$cat['path_name']     = !empty($_POST['path_name'])     ? trim($_POST['path_name'])     : '';
 	if($cat['path_name'] != ''){
 		$is_have = $db->getOne("select count(*)  from ". $ecs->table('category') ." where cat_id !='$cat_id' and path_name='$cat[path_name]' "); 
@@ -489,7 +489,7 @@ if ($_REQUEST['act'] == 'update')
 		   sys_msg('对不起，已经存在同名目录', 0, $link);
 		}
 	}
-	/* 代码增加_end  By   bbs.hongyuvip.com  */
+	/* 代码增加_end  By     */
 
     /* 判断分类名是否重复 */
 

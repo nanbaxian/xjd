@@ -1,16 +1,16 @@
 <?php
 
 /**
- * 鸿宇多用户商城 商品管理程序
+ *  商品管理程序
  * ============================================================================
- * 版权所有 2015-2016 鸿宇多用户商城科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
+ * 版权所有 2015-2016 ，并保留所有权利。
+ * 网站地址: ；
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
- * $Author: Shadow & 鸿宇
- * $Id: goods.php 17217 2016-01-19 06:29:08Z Shadow & 鸿宇
+ * $Author: 
+ * $Id: goods.php 17217  
 */
 
 define('IN_ECS', true);
@@ -160,11 +160,11 @@ elseif ($_REQUEST['act'] == 'add' || $_REQUEST['act'] == 'edit' || $_REQUEST['ac
 	admin_priv('goods_manage');
     //include_once(ROOT_PATH . 'includes/fckeditor/fckeditor.php'); // 包含 html editor 类文件
 
-	// 代码增加_start_derek20150129admin_goods  bbs.hongyuvip.com
+	// 代码增加_start_derek20150129admin_goods  
 
 	include_once(ROOT_PATH . '/includes/Pinyin.php');
 
-	// 代码增加_end_derek20150129admin_goods  bbs.hongyuvip.com
+	// 代码增加_end_derek20150129admin_goods  
 
     $is_add = $_REQUEST['act'] == 'add'; // 添加还是编辑的标识
     $is_copy = $_REQUEST['act'] == 'copy'; //是否复制
@@ -305,13 +305,13 @@ elseif ($_REQUEST['act'] == 'add' || $_REQUEST['act'] == 'edit' || $_REQUEST['ac
         $sql = "SELECT * FROM " . $ecs->table('goods') . " WHERE goods_id = '$_REQUEST[goods_id]'";
         $goods = $db->getRow($sql);
 
-		// 代码增加_start_derek20150129admin_goods  bbs.hongyuvip.com
+		// 代码增加_start_derek20150129admin_goods  
 		
 		$r_b_id = $db->getOne("select brand_name from ".$ecs->table('brand')." where brand_id=".$goods['brand_id']);
 		$goods['brand_name'] = $r_b_id;
 		$smarty->assign('brand_name_val',$goods['brand_name']);
 		
-		// 代码增加_end_derek20150129admin_goods  bbs.hongyuvip.com
+		// 代码增加_end_derek20150129admin_goods  
 
         /* 虚拟卡商品复制时, 将其库存置为0*/
         if ($is_copy && $code != '')
@@ -578,7 +578,7 @@ elseif ($_REQUEST['act'] == 'add' || $_REQUEST['act'] == 'edit' || $_REQUEST['ac
     $goods_name_style = explode('+', empty($goods['goods_name_style']) ? '+' : $goods['goods_name_style']);
 
     /* 创建 html editor */
-   create_html_editor('goods_desc', htmlspecialchars($goods['goods_desc'])); /* 修改 by bbs.hongyuvip.com 百度编辑器 */
+   create_html_editor('goods_desc', htmlspecialchars($goods['goods_desc'])); /* 修改 by  百度编辑器 */
 
     /* 模板赋值 */
 	$action_link_supplier = $is_add ? array('href' => 'goods.php?act=list&supplier_status=0' , 'text' => '返回商品列表'): array('href' => 'goods.php?act=list&supplier_status='.$_REQUEST['supplier_status'] , 'text' => '返回商品列表');
@@ -589,12 +589,12 @@ elseif ($_REQUEST['act'] == 'add' || $_REQUEST['act'] == 'edit' || $_REQUEST['ac
     $smarty->assign('goods_name_color', $goods_name_style[0]);
     $smarty->assign('goods_name_style', $goods_name_style[1]);
     $smarty->assign('cat_list', cat_list(0, $goods['cat_id']));
-	// 代码修改_start_derek20150129admin_goods  bbs.hongyuvip.com
+	// 代码修改_start_derek20150129admin_goods  
     $smarty->assign('goods_cat_id', $goods['cat_id']);
 	
     $smarty->assign('brand_list', get_brand_list(true));
 	
-	// 代码修改_start_derek20150129admin_goods  bbs.hongyuvip.com
+	// 代码修改_start_derek20150129admin_goods  
     $smarty->assign('unit_list', get_unit_list());
     $smarty->assign('user_rank_list', get_user_rank_list());
     $smarty->assign('weight_unit', $is_add ? '1' : ($goods['goods_weight'] >= 1 ? '1' : '0.001'));
@@ -708,10 +708,10 @@ elseif ($_REQUEST['act'] == 'insert' || $_REQUEST['act'] == 'update')
         }
 
         // 相册图片
-		/* 代码增加_start   By bbs.hongyuvip.com */
+		/* 代码增加_start   By  */
 		if($_FILES['img_url']['error'])
 		{
-		/* 代码增加_end   By bbs.hongyuvip.com */
+		/* 代码增加_end   By  */
         foreach ($_FILES['img_url']['error'] AS $key => $value)
         {
             if ($value == 0)
@@ -730,9 +730,9 @@ elseif ($_REQUEST['act'] == 'insert' || $_REQUEST['act'] == 'update')
                 sys_msg(sprintf($_LANG['img_url_too_big'], $key + 1, $htm_maxsize), 1, array(), false);
             }
         }
-			/* 代码增加_start   By bbs.hongyuvip.com */
+			/* 代码增加_start   By  */
 		}
-		/* 代码增加_end   By bbs.hongyuvip.com */
+		/* 代码增加_end   By  */
     }
     /* 4.1版本 */
     else

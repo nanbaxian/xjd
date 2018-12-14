@@ -1,12 +1,12 @@
 <?php
 
 /**
- * 鸿宇多用户商城 订单管理
+ *  订单管理
  * ============================================================================
- * 版权所有 2005-2010 鸿宇多用户商城科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
+ * 版权所有 2005-2010 ，并保留所有权利。
+ * 网站地址: ；
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
  * $Author: yehuaixiao $
@@ -90,7 +90,7 @@ elseif ($_REQUEST['act'] == 'list')
     $smarty->display('order_list.htm');
 }
 
-/*增值税发票_添加_START_bbs.hongyuvip.com*/
+/*增值税发票_添加_START_*/
 elseif($_REQUEST['act'] == 'invoice_list')
 {
     admin_priv('invoice_manage');
@@ -109,7 +109,7 @@ elseif($_REQUEST['act'] == 'invoice_list')
     $smarty->assign('act','invoice_list');
     $smarty->display('order_list.htm');
 }
-/*增值税发票_添加_END_bbs.hongyuvip.com*/
+/*增值税发票_添加_END_*/
 
 /*------------------------------------------------------ */
 //-- 排序、分页、查询
@@ -117,7 +117,7 @@ elseif($_REQUEST['act'] == 'invoice_list')
 elseif ($_REQUEST['act'] == 'query')
 {
     /* 检查权限 */
-    /*增值税发票_更改_START_bbs.hongyuvip.com*/
+    /*增值税发票_更改_START_*/
     if(isset($_REQUEST['act_detail'])&&$_REQUEST['act_detail']=='invoice_query')
     {
         admin_priv('invoice_manage');
@@ -127,7 +127,7 @@ elseif ($_REQUEST['act'] == 'query')
     {
         admin_priv('order_view');
     }
-    /*增值税发票_更改_END_bbs.hongyuvip.com*/
+    /*增值税发票_更改_END_*/
 
     $order_list = order_list();
     
@@ -362,7 +362,7 @@ elseif ($_REQUEST['act'] == 'info')
         $order['formated_money_refund'] = price_format(abs($order['order_amount']));
     }
 
-	/*增值税发票_添加_START_bbs.hongyuvip.com*/
+	/*增值税发票_添加_START_*/
     /*增值税发票收票地址*/
     if($order['inv_type'] == 'vat_invoice')
     {
@@ -370,7 +370,7 @@ elseif ($_REQUEST['act'] == 'info')
     }
     /*发票金额*/
     $order['formatted_inv_money'] = price_format($order['inv_money']);
-    /*增值税发票_添加_END_bbs.hongyuvip.com*/
+    /*增值税发票_添加_END_*/
 
     /* 其他处理 */
     $order['order_time']    = local_date($_CFG['time_format'], $order['add_time']);
@@ -481,7 +481,7 @@ elseif ($_REQUEST['act'] == 'info')
         {
             $row['storage'] = '';
             $row['brand_name'] = '';
-            $row['package_goods_list'] = get_package_goods($row['goods_id'], $row['package_attr_id']); //修改 by bbs.hongyuvip.com
+            $row['package_goods_list'] = get_package_goods($row['goods_id'], $row['package_attr_id']); //修改 by 
         }
 		
 		$sql_back = "SELECT bg.*, bo.back_type FROM " . $ecs->table('back_goods') . " AS bg " .
@@ -555,13 +555,13 @@ elseif ($_REQUEST['act'] == 'info')
         $act_list[] = $row;
     }
     $smarty->assign('action_list', $act_list);
-	/* 代码增加_start   By bbs.hongyuvip.com */
+	/* 代码增加_start   By  */
 	if($order['pickup_point'] > 0)
 	{
 		$pickup_point = $db->getRow('select * from ' . $ecs->table('pickup_point') . ' where id=' . $order['pickup_point']);
 		$smarty->assign('pickup_point',        $pickup_point);
 	}
-	/* 代码增加_end   By bbs.hongyuvip.com */
+	/* 代码增加_end   By  */
     /* 取得是否存在实体商品 */
     $smarty->assign('exist_real_goods', exist_real_goods($order['order_id']));
 
@@ -1979,10 +1979,10 @@ file_put_contents('./3$_REQUEST3.txt',var_export($_REQUEST,true));
             $order['card_fee']  = 0;
             $order['card_message'] = '';
         }
-        /*增值税发票_删除_START_bbs.hongyuvip.com*/
+        /*增值税发票_删除_START_*/
         //$order['inv_type']      = $_POST['inv_type'];
         //$order['inv_payee']     = $_POST['inv_payee'];
-		/*增值税发票_删除_END_bbs.hongyuvip.com*/
+		/*增值税发票_删除_END_*/
         $order['inv_content']   = $_POST['inv_content'];
         $order['how_oos']       = $_POST['how_oos'];
         $order['postscript']    = $_POST['postscript'];
@@ -2249,7 +2249,7 @@ file_put_contents('./3$_REQUEST3.txt',var_export($_REQUEST,true));
 		
 		
 		
-        /*增值税发票_更改_START_bbs.hongyuvip.com*/
+        /*增值税发票_更改_START_*/
     	$order = array();
         $arr = array('inv_type','inv_payee_type','inv_payee',
             'inv_content','inv_money','inv_remark',
@@ -2325,7 +2325,7 @@ file_put_contents('./3$_REQUEST3.txt',var_export($_REQUEST,true));
         $sn = $old_order['order_sn'];
         admin_log($sn, 'edit', 'order');
         exit;
-	/*增值税发票_更改_END_bbs.hongyuvip.com*/
+	/*增值税发票_更改_END_*/
     }
 }
 
@@ -2343,9 +2343,9 @@ elseif ($_REQUEST['act'] == 'add' || $_REQUEST['act'] == 'edit')
     $smarty->assign('order_id', $order_id);
 
     /* 取得参数 step */
-    /*增值税发票_更改_START_bbs.hongyuvip.com*/
+    /*增值税发票_更改_START_*/
     $step_list = array('user', 'goods', 'consignee', 'shipping', 'payment', 'other', 'money','invoice');
-    /*增值税发票_更改_END_bbs.hongyuvip.com*/
+    /*增值税发票_更改_END_*/
     $step = isset($_GET['step']) && in_array($_GET['step'], $step_list) ? $_GET['step'] : 'user';
     $smarty->assign('step', $step);
 
@@ -2628,7 +2628,7 @@ elseif ($_REQUEST['act'] == 'add' || $_REQUEST['act'] == 'edit')
         	
         }
 		
-        /*增值税发票_更改_START_bbs.hongyuvip.com*/
+        /*增值税发票_更改_START_*/
         $order['order_time']    = local_date($_CFG['time_format'], $order['add_time']);
         if(!empty($_REQUEST['step_detail']))
         {
@@ -2650,7 +2650,7 @@ elseif ($_REQUEST['act'] == 'add' || $_REQUEST['act'] == 'edit')
         }
         $smarty->assign('cfg',$_CFG);
         $smarty->assign('order', $order);
-        /*增值税发票_更改_END_bbs.hongyuvip.com*/
+        /*增值税发票_更改_END_*/
 	
     }
 
@@ -2909,7 +2909,7 @@ elseif ($_REQUEST['act'] == 'operate')
         $operation      = 'confirm';
     }
 /*------------------------------------------------------ */
-//-- start一键发货 增加 by bbs.hongyuvip.com
+//-- start一键发货 增加 by 
 /*------------------------------------------------------ */
     elseif (isset($_POST['to_shipping']))
 	{
@@ -3532,7 +3532,7 @@ elseif ($_REQUEST['act'] == 'operate')
     }
 }
 /*------------------------------------------------------ */
-//-- end一键发货 增加 by bbs.hongyuvip.com
+//-- end一键发货 增加 by 
 /*------------------------------------------------------ */
     /* 付款 */
     elseif (isset($_POST['pay']))
@@ -3823,7 +3823,7 @@ elseif ($_REQUEST['act'] == 'operate')
         }
 
         /* 操作成功 */
-        $links[] = array('href' => 'order.php?act=list&' . list_link_postfix(), 'text' => $_LANG['01_order_list']);//supplier.hongyuvip.com
+        $links[] = array('href' => 'order.php?act=list&' . list_link_postfix(), 'text' => $_LANG['01_order_list']);//
         sys_msg($_LANG['act_ok'], 0, $links);
     }
     /* 订单删除 */
@@ -4369,7 +4369,7 @@ elseif ($_REQUEST['act'] == 'batch_operate_post')
 
         /* 模板赋值 */
         $smarty->assign('order_info', $sn_str);
-        $smarty->assign('action_link', array('href' => 'order.php?act=list', 'text' => $_LANG['01_order_list']));//supplier.hongyuvip.com
+        $smarty->assign('action_link', array('href' => 'order.php?act=list', 'text' => $_LANG['01_order_list']));//
         $smarty->assign('order_list',   $order_list_no_fail);
 
         /* 显示模板 */
@@ -5279,7 +5279,7 @@ elseif ($_REQUEST['act'] == 'remove_order')
     }
 }
 
-/*增值税发票_添加_START_bbs.hongyuvip.com*/
+/*增值税发票_添加_START_*/
 /*删除订单的发票信息*/
 elseif($_REQUEST['act'] == 'remove_invoice')
 {
@@ -5427,7 +5427,7 @@ elseif($_REQUEST['act'] == 'save_inv_remark')
         $result['message'] = '备注不能为空！';
     }
 }
-/*增值税发票_添加_END_bbs.hongyuvip.com*/
+/*增值税发票_添加_END_*/
 
 /*------------------------------------------------------ */
 //-- 根据关键字和id搜索用户
@@ -5635,7 +5635,7 @@ elseif ($_REQUEST['act'] == 'get_goods_info')
     make_json_result($goods);
 }
 
-/*增值税发票_添加_START_bbs.hongyuvip.com*/
+/*增值税发票_添加_START_*/
 /*发票列表操作*/
 elseif($_REQUEST['act'] == 'invoice_op')
 {
@@ -6013,7 +6013,7 @@ function export_invoice_to_xml_excel($rows)
         echo $data;
     }
 }
-/*增值税发票_添加_END_bbs.hongyuvip.com*/
+/*增值税发票_添加_END_*/
 
 /**
  * 取得状态列表
@@ -6431,12 +6431,12 @@ function order_list()
 
         $filter['start_time'] = empty($_REQUEST['start_time']) ? '' : (strpos($_REQUEST['start_time'], '-') > 0 ?  local_strtotime($_REQUEST['start_time']) : $_REQUEST['start_time']);
         $filter['end_time'] = empty($_REQUEST['end_time']) ? '' : (strpos($_REQUEST['end_time'], '-') > 0 ?  local_strtotime($_REQUEST['end_time']) : $_REQUEST['end_time']);
-        /* 代码增加_start   By bbs.hongyuvip.com */
+        /* 代码增加_start   By  */
 		$filter['order_type'] = isset($_REQUEST['order_type']) ? intval($_REQUEST['order_type']) : 0;
-		/* 代码增加_end   By bbs.hongyuvip.com */
+		/* 代码增加_end   By  */
         $filter['supp'] = (isset($_REQUEST['supp']) && !empty($_REQUEST['supp']) && intval($_REQUEST['supp'])>0) ? intval($_REQUEST['supp']) : 0;    
         $filter['suppid'] = (isset($_REQUEST['suppid']) && !empty($_REQUEST['suppid']) && intval($_REQUEST['suppid'])>0) ? intval($_REQUEST['suppid']) : 0;
-        /*增值税发票_添加_START_bbs.hongyuvip.com*/
+        /*增值税发票_添加_START_*/
         $filter['inv_status'] = empty($_REQUEST['inv_status']) ? '' : trim($_REQUEST['inv_status']);
         $filter['inv_type'] = empty($_REQUEST['inv_type']) ? '' : trim($_REQUEST['inv_type']);
         $filter['vat_inv_consignee_name'] = empty($_REQUEST['vat_inv_consignee_name']) ? '' : trim($_REQUEST['vat_inv_consignee_name']);
@@ -6447,7 +6447,7 @@ function order_list()
             $filter['start_time'] = $filter['add_time'];
             $filter['end_time'] = $filter['add_time'] + '86400';
         }
-        /*增值税发票_添加_END_bbs.hongyuvip.com*/
+        /*增值税发票_添加_END_*/
 		
 		//$where = 'WHERE 1 ';
         $where = ($filter['supp']>0) ? 'WHERE o.supplier_id > 0' : 'WHERE o.supplier_id = 0';
@@ -6537,7 +6537,7 @@ function order_list()
         {
             $where .= " AND o.add_time <= '$filter[end_time]'";
         }
-		/*增值税发票_添加_START_bbs.hongyuvip.com*/
+		/*增值税发票_添加_START_*/
         if($filter['inv_status'])
         {
             $where .= " AND o.inv_status = '$filter[inv_status]'";
@@ -6559,11 +6559,11 @@ function order_list()
             $where .= " AND o.inv_type != ''";
         }
        
-         /* 普通订单不显示虚拟团购订单 添加_START_bbs.hongyuvip.com*/
+         /* 普通订单不显示虚拟团购订单 添加_START_*/
         $where .= " AND o.extension_code != 'virtual_good'";
-         /* 普通订单不显示虚拟团购订单 添加_END_bbs.hongyuvip.com*/
-		/*增值税发票_添加_END_bbs.hongyuvip.com*/
-		/* 代码增加_start   By bbs.hongyuvip.com */
+         /* 普通订单不显示虚拟团购订单 添加_END_*/
+		/*增值税发票_添加_END_*/
+		/* 代码增加_start   By  */
 		switch($filter['order_type'])
 		{
 			case 1:
@@ -6573,7 +6573,7 @@ function order_list()
 				$where .= " AND o.is_pickup > 0";
 				break;
 		}
-		/* 代码增加_end   By bbs.hongyuvip.com */
+		/* 代码增加_end   By  */
         //综合状态
         switch($filter['composite_status'])
         {
@@ -6664,14 +6664,14 @@ function order_list()
                     "o.pay_status, o.consignee, o.address, o.email, o.tel, o.extension_code, o.extension_id, " .
                     "(" . order_amount_field('o.') . ") AS total_fee, " .
                     "IFNULL(u.user_name, '" .$GLOBALS['_LANG']['anonymous']. "') AS buyer,supplier_name,o.froms,is_pickup  ".
-                	/*增值税发票_添加_START_bbs.hongyuvip.com*/
+                	/*增值税发票_添加_START_*/
 					',o.mobile,o.inv_payee,o.inv_content,o.inv_type,o.vat_inv_company_name'.
 					',o.vat_inv_taxpayer_id,o.vat_inv_registration_address,o.vat_inv_registration_phone'.
 					',o.vat_inv_deposit_bank,o.vat_inv_bank_account'.
 					',o.inv_consignee_name,o.inv_consignee_phone,o.inv_consignee_country'.
 					',o.inv_consignee_province,o.inv_consignee_city,o.inv_consignee_district'.
 					',o.inv_consignee_address,o.inv_status,o.inv_payee_type,o.inv_money'.
-        			/*增值税发票_添加_END_bbs.hongyuvip.com*/
+        			/*增值税发票_添加_END_*/
 			    " FROM " . $GLOBALS['ecs']->table('order_info') . " AS o " .
         		" LEFT JOIN " . $GLOBALS['ecs']->table('supplier') . " AS s ON s.supplier_id=o.supplier_id ".
                 " LEFT JOIN " .$GLOBALS['ecs']->table('users'). " AS u ON u.user_id=o.user_id ". $where .
@@ -6683,14 +6683,14 @@ function order_list()
                     "o.pay_status, o.consignee, o.address, o.email, o.tel, o.extension_code, o.extension_id, " .
                     "(" . order_amount_field('o.') . ") AS total_fee, " .
                     "IFNULL(u.user_name, '" .$GLOBALS['_LANG']['anonymous']. "') AS buyer, o.froms , is_pickup ".
-                	/*增值税发票_添加_START_bbs.hongyuvip.com*/
+                	/*增值税发票_添加_START_*/
 					',o.mobile,o.inv_payee,o.inv_content,o.inv_type,o.vat_inv_company_name'.
 					',o.vat_inv_taxpayer_id,o.vat_inv_registration_address,o.vat_inv_registration_phone'.
 					',o.vat_inv_deposit_bank,o.vat_inv_bank_account'.
 					',o.inv_consignee_name,o.inv_consignee_phone,o.inv_consignee_country'.
 					',o.inv_consignee_province,o.inv_consignee_city,o.inv_consignee_district'.
 					',o.inv_consignee_address,o.inv_status,o.inv_payee_type,o.inv_money'.
-        			/*增值税发票_添加_END_bbs.hongyuvip.com*/
+        			/*增值税发票_添加_END_*/
 				" FROM " . $GLOBALS['ecs']->table('order_info') . " AS o " .
                 " LEFT JOIN " .$GLOBALS['ecs']->table('users'). " AS u ON u.user_id=o.user_id ". $where .
                 " ORDER BY $filter[sort_by] $filter[sort_order] ".
@@ -6720,10 +6720,10 @@ function order_list()
         $row[$key]['formated_money_paid'] = price_format($value['money_paid']);
         $row[$key]['formated_total_fee'] = price_format($value['total_fee']);
         $row[$key]['short_order_time'] = local_date('m-d H:i', $value['add_time']);
-        /*增值税发票_添加_START_bbs.hongyuvip.com*/
+        /*增值税发票_添加_START_*/
         $row[$key]['formatted_add_time'] = local_date('Y-m-d H:i',$value['add_time']);
         $row[$key]['formatted_inv_money'] = price_format($value['inv_money']);
-		/*增值税发票_添加_END_bbs.hongyuvip.com*/
+		/*增值税发票_添加_END_*/
 		if ($value['order_status'] == OS_INVALID || $value['order_status'] == OS_CANCELED)
         {
             /* 如果该订单为无效或取消则显示删除链接 */
@@ -6789,13 +6789,13 @@ function order_list()
 		}
     }
     $arr = array('orders' => $row, 'filter' => $filter, 'page_count' => $filter['page_count'], 'record_count' => $filter['record_count']);
-	/*增值税发票_添加_START_bbs.hongyuvip.com*/
+	/*增值税发票_添加_START_*/
     if($filter['inv_type'])
     {
         global $smarty;
         $smarty->assign('inv_type',$filter['inv_type']);
     }
-    /*增值税发票_添加_END_bbs.hongyuvip.com*/
+    /*增值税发票_添加_END_*/
     return $arr;
 }
 

@@ -1,4 +1,4 @@
-/*!  2016-03-28 Shadow & 鸿宇科技 QQ:1527200768 */
+/*!  2016-03-28 科技 QQ:1527200768 */
 (function (e, t) {
     function n(e) {
         var t = e.length, n = lt.type(e);

@@ -1,4 +1,4 @@
-<!-- $Id: start.htm 17216 2011-01-19 06:03:12Z Shadow & 鸿宇 -->
+<!-- $Id: start.htm 17216 2011-01-19 06:03:12Z  -->
 <?php echo $this->fetch('pageheader_bd.htm'); ?>
 <!-- directory install start -->
 
@@ -31,7 +31,7 @@
   <?php endforeach; endif; unset($_from); ?><?php $this->pop_vars();; ?>
 </ul>
 <ul style="padding:0; margin: 0; list-style-type:none; color: #CC0000;">
- <!-- <script type="text/javascript" src="http://bbs.hongyuvip.com/notice.php?v=1&n=8&f=ul"></script>-->
+ <!-- <script type="text/javascript" src="/notice.php?v=1&n=8&f=ul"></script>-->
 </ul>
 <!-- directory install end -->
 <!-- start personal message -->

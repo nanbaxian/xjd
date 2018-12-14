@@ -1,8 +1,8 @@
 <!-- $Id: goods_info.htm 17126 2010-04-23 10:30:26Z liuhui $ -->
-<!-- 修改 by bbs.hongyuvip.com 百度编辑器 begin -->
+<!-- 修改 by  百度编辑器 begin -->
 <?php echo $this->fetch('pageheader_bd.htm'); ?>
 <?php echo $this->smarty_insert_scripts(array('files'=>'../js/utils.js,selectzone_bd.js,validator.js')); ?>
-<!-- 修改 by bbs.hongyuvip.com 百度编辑器 end -->
+<!-- 修改 by  百度编辑器 end -->
 <script type="text/javascript" src="../js/calendar.php?lang=<?php echo $this->_var['cfg_lang']; ?>"></script>
 <script type="text/javascript" src="../js/jquery.ztree.all-3.5.min.js"></script>
 <script type="text/javascript" src="../js/category_selecter.js"></script>
@@ -139,7 +139,7 @@ width:auto;
           <tr>
             <td class="label"><?php echo $this->_var['lang']['lab_goods_brand']; ?></td>
             <td>
-             <!-- 代码修改_start_derek20150129admin_goods  bbs.hongyuvip.com -->
+             <!-- 代码修改_start_derek20150129admin_goods   -->
             
             <input id="brand_search" name="brand_search" type="text" value="<?php echo empty($this->_var['brand_name_val']) ? '请输入……' : $this->_var['brand_name_val']; ?>" onclick="onC_search()" onblur="onB_search()" oninput="onK_search(this.value)" />
             <input id="brand_search_bf" name="brand_search_bf" type="hidden" value="<?php echo $this->_var['brand_name_val']; ?>" />
@@ -171,8 +171,8 @@ width:auto;
 			}
             </script>
             
-            <!-- 代码修改_end_derek20150129admin_goods  bbs.hongyuvip.com -->
-            <!-- 代码增加_start_derek20150129admin_goods  bbs.hongyuvip.com -->
+            <!-- 代码修改_end_derek20150129admin_goods   -->
+            <!-- 代码增加_start_derek20150129admin_goods   -->
 
             <div id="brand_content" style="margin-top:5px; margin-bottom:10px; display:none">
             <div style="float:left; overflow-y:scroll; width:420px; height:120px; border:#CCC 1px solid">
@@ -260,7 +260,7 @@ width:auto;
 			}
             </script>
             
-            <!-- 代码增加_end_derek20150129admin_goods  bbs.hongyuvip.com -->
+            <!-- 代码增加_end_derek20150129admin_goods   -->
               
             </td>
           </tr>
@@ -472,7 +472,7 @@ if ($this->_foreach['volume_price_tab']['total'] > 0):
         </table>
         <?php endif; ?>
 
-       <!--代码修改_start By bbs.hongyuvip.com  将 商品相册 这部分代码完全修改成下面这样-->
+       <!--代码修改_start By   将 商品相册 这部分代码完全修改成下面这样-->
         <table width="90%" id="gallery-table" style="display:none" align="center">
           <!-- 图片列表 -->
           <tr>
@@ -534,7 +534,7 @@ if ($this->_foreach['color_list']['total'] > 0):
        
         </table>
 
-		<!--代码修改_end By bbs.hongyuvip.com-->
+		<!--代码修改_end By -->
 
         <!-- 鍏宠仈鍟嗗搧 -->
         <!--table width="90%" id="linkgoods-table" style="display:none" align="center">
@@ -1103,14 +1103,14 @@ function chu (result)
 
       var response = result.content;
 
-	  // 代码增加_start_derek20150129admin_goods  bbs.hongyuvip.com
+	  // 代码增加_start_derek20150129admin_goods  
 	  
 	  document.getElementById("brand_search").value = response.brand;
 	  document.getElementById("brand_id").value = response.id;
 	  document.getElementById("xin_brand").innerHTML += "&nbsp;[<a href=javascript:go_brand_id("+response.id+",'"+response.brand+"')>"+response.brand+"</a>]&nbsp;";
 	  document.getElementById("xin_brand").style.display = "block";
 
-	  // 代码增加_end_derek20150129admin_goods  bbs.hongyuvip.com
+	  // 代码增加_end_derek20150129admin_goods  
 
 
       var selCat = document.forms['theForm'].elements['brand_id'];

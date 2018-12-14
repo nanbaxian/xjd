@@ -1,12 +1,12 @@
 <?php
 
 /**
- * 鸿宇多用户商城 管理中心供货商管理
+ *  管理中心供货商管理
  * ============================================================================
- * 版权所有 2015-2016 鸿宇多用户商城科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
+ * 版权所有 2015-2016 ，并保留所有权利。
+ * 网站地址: ；
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
  * $Author: 68ecshop $
@@ -234,7 +234,7 @@ elseif ($_REQUEST['act']=='update')
 							'supplier_remark'   => trim($_POST['supplier_remark']),
 							'status'   => intval($_POST['status'])
                            );
-  /* 代码增加_start  By  supplier.hongyuvip.com */
+  /* 代码增加_start  By   */
   /* 取得供货商信息 */
   //$sql = "SELECT * FROM " . $ecs->table('supplier') . " WHERE supplier_id = '" . $supplier_id ."' ";
   $sql = "select s.supplier_id,s.add_time,s.status,u.* from " . $ecs->table('supplier') . " as s left join ". $ecs->table('users') .
@@ -280,7 +280,7 @@ elseif ($_REQUEST['act']=='update')
 					"VALUES(".$supplier_old['user_id'].", '".$supplier_old['user_name']."', '".$supplier_old['email']."', '".$supplier_old['password']."', '".$supplier_old['ec_salt']."', ".$supplier_old['last_login'].", ".$supplier_old['last_login'].", '".$supplier_old['last_ip']."', 'all', '', '', 0, ".$supplier_old['supplier_id'].", NULL, NULL, ".intval($_POST['status']).")";
 	  	$db->query($insql);
   }
-	/* 代码增加_end  By  supplier.hongyuvip.com */
+	/* 代码增加_end  By   */
 
 	/* 保存供货商信息 */
 	$db->autoExecute($ecs->table('supplier'), $supplier, 'UPDATE', "supplier_id = '" . $supplier_id . "'");

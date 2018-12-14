@@ -106,7 +106,7 @@
     <td><div align="right"><strong>{$lang.from_order}</strong></div></td>
     <td>{$order.froms}</td>
   </tr>
-   <!--增值税发票_添加_START_bbs.hongyuvip.com-->
+   <!--增值税发票_添加_START_-->
   <!--普通发票显示内容-->
   <tr>
     <th colspan='4'>{$lang.inv_info}
@@ -183,7 +183,7 @@
     <td colspan='4'><div align="center" style='height:50px;line-height:50px;'><strong>没有发票信息</strong></div></td>
   </tr>
   {/if}
-  <!--增值税发票_添加_END_bbs.hongyuvip.com-->
+  <!--增值税发票_添加_END_-->
   <tr>
     <th colspan="4">{$lang.other_info}<a href="order.php?act=edit&order_id={$order.order_id}&step=other" class="special">{$lang.edit}</a></th>
     </tr>
@@ -344,7 +344,7 @@
   <tr>
     <td><div align="right"></div>
       <div align="right"><strong>{$lang.label_operable_act}</strong> </div></td>
-    <!-- 一键发货begin 修改 by bbs.hongyuvip.com  -->
+    <!-- 一键发货begin 修改 by   -->
     {if $order.pay_status == 2 && $order.shipping_status != 1 && $order.order_status == 1 }
     <td colspan="2">
     <!-- 如果为预售活动的订单，那么预售活动为成功处理前，不能发货 -->
@@ -357,7 +357,7 @@
     {else}
     <td colspan="5">
     {/if}
-    <!-- 一键发货end 修改 by bbs.hongyuvip.com -->  {if $operable_list.confirm}
+    <!-- 一键发货end 修改 by  -->  {if $operable_list.confirm}
       <input name="confirm" type="submit" value="{$lang.op_confirm}" class="button" />
         {/if} {if $operable_list.pay}
         <input name="pay" type="submit" value="{$lang.op_pay}" class="button" />

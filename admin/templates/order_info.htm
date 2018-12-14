@@ -106,7 +106,7 @@
     <td><div align="right"><strong>{$lang.from_order}</strong></div></td>
     <td>{$order.referer}</td>
   </tr>
-   <!--增值税发票_添加_START_bbs.hongyuvip.com-->
+   <!--增值税发票_添加_START_-->
   <!--普通发票显示内容-->
   <tr>
     <th colspan='4'>{$lang.inv_info}
@@ -183,8 +183,8 @@
     <td colspan='4'><div align="center" style='height:50px;line-height:50px;'><strong>没有发票信息</strong></div></td>
   </tr>
   {/if}
-  <!--增值税发票_添加_END_bbs.hongyuvip.com-->
-  <!-- 代码增加_start   By bbs.hongyuvip.com -->
+  <!--增值税发票_添加_END_-->
+  <!-- 代码增加_start   By  -->
   <tr>
   	<td><div align="right"><strong>{$lang.label_pickup_point}</strong></div></td>
     <td colspan="3">
@@ -192,11 +192,11 @@
         {$lang.p_phone}{$pickup_point.phone}&nbsp;&nbsp;{$lang.p_address}{$pickup_point.address}
     </td>
   </tr>
-  <!-- 代码增加_end   By bbs.hongyuvip.com -->
+  <!-- 代码增加_end   By  -->
   <tr>
     <th colspan="4">{$lang.other_info}<a href="order.php?act=edit&order_id={$order.order_id}&step=other" class="special">{$lang.edit}</a></th>
     </tr>
- <!--增值税发票_删除_START_bbs.hongyuvip.com-->
+ <!--增值税发票_删除_START_-->
   <!--<tr>
     <td><div align="right"><strong>{$lang.label_inv_type}</strong></div></td>
     <td>{$order.inv_type}</td>
@@ -209,7 +209,7 @@
     <td><div align="right"><strong>{$lang.label_inv_content}</strong></div></td>
     <td>{$order.inv_content}</td>
   </tr>-->
-  <!--增值税发票_删除_END_bbs.hongyuvip.com-->
+  <!--增值税发票_删除_END_-->
   <tr>
     <td><div align="right"><strong>{$lang.label_postscript}</strong></div></td>
     <td colspan="3">{$order.postscript}</td>
@@ -288,7 +288,7 @@
     {if $goods.is_gift}{if $goods.goods_price > 0}{$lang.remark_favourable}{else}{$lang.remark_gift}{/if}{/if}
     {if $goods.parent_id > 0}{$lang.remark_fittings}{/if}</a>
     {elseif $goods.goods_id gt 0 && $goods.extension_code eq 'package_buy'}
-   	<!--修改_start  by bbs.hongyuvip.com -->
+   	<!--修改_start  by  -->
     <a href="javascript:void(0)" onclick="setSuitShow({$goods.goods_id})" style="font-size:15px;color:#ff0000;font-weight:bold;" >{$goods.goods_name}<span style="color:#FF0000;">{$lang.remark_package}</span></a>
     <div id="suit_{$goods.goods_id}" style="padding-left:20px;">
 	包括以下商品：<br />
@@ -296,7 +296,7 @@
           <a href="../goods.php?id={$package_goods_list.goods_id}" target="_blank">{$package_goods_list.goods_name}</a><br />
         {/foreach}
     </div>
-	<!--修改_end  by bbs.hongyuvip.com -->
+	<!--修改_end  by  -->
     {/if}
     </td>
     <td>{$goods.shouhou}</td>
@@ -369,7 +369,7 @@
   <tr>
     <td><div align="right"></div>
       <div align="right"><strong>{$lang.label_operable_act}</strong> </div></td>
-	<!-- 一键发货begin 修改 by bbs.hongyuvip.com  -->
+	<!-- 一键发货begin 修改 by   -->
     {if $order.pay_status == 2 && $order.shipping_status != 1 && $order.order_status == 1 }
     <td colspan="2">
     <!-- 如果为预售活动的订单，那么预售活动为成功处理前，不能发货 -->
@@ -383,7 +383,7 @@
     {else}
     <td colspan="5">
     {/if}
-    <!-- 一键发货end 修改 by bbs.hongyuvip.com -->
+    <!-- 一键发货end 修改 by  -->
     <!-- 
     op_confirm-{$lang.op_confirm}</br>
     op_pay-{$lang.op_pay}</br>
@@ -414,11 +414,11 @@
         {/if} {if $operable_list.invalid}
         <input name="invalid" type="submit" value="{$lang.op_invalid}" class="button" />
         {/if} {if $operable_list.return}
-        {* 代码修改_start  By  bbs.hongyuvip.com *}
+        {* 代码修改_start  By   *}
 		<!--
         <input name="return" type="submit" value="{$lang.op_return}" class="button" />
 		-->
-		{* 代码修改_end  By  bbs.hongyuvip.com *}
+		{* 代码修改_end  By   *}
         {/if} {if $operable_list.to_delivery}
         <input name="to_delivery" type="submit" value="{$lang.op_to_delivery}" class="button"/>
         <input name="order_sn" type="hidden" value="{$order.order_sn}" />

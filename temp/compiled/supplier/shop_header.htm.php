@@ -1,8 +1,8 @@
 <!-- $Id: shop_config.htm 16865 2009-12-10 06:05:32Z sxc_shop $ -->
-<!-- 修改 by bbs.hongyuvip.com 百度编辑器 begin -->
+<!-- 修改 by  百度编辑器 begin -->
 <?php echo $this->fetch('pageheader_bd.htm'); ?>
 <?php echo $this->smarty_insert_scripts(array('files'=>'../js/utils.js,selectzone_bd.js,validator.js')); ?>
-<!-- 修改 by bbs.hongyuvip.com 百度编辑器 end -->
+<!-- 修改 by  百度编辑器 end -->
 <link href="styles/jquery.bigcolorpicker.css" rel="stylesheet" type="text/css" />
 <?php echo $this->smarty_insert_scripts(array('files'=>'../js/utils.js,../js/region.js')); ?>
 <?php echo $this->smarty_insert_scripts(array('files'=>'jquery-1.6.1.js,jquery.bigcolorpicker.js')); ?>

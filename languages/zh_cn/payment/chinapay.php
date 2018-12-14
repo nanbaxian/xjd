@@ -1,7 +1,7 @@
 <?php
 
 /**
- * 鸿宇多用户商城 银联在线语言包文件(chinapay)
+ *  银联在线语言包文件(chinapay)
  */
 
 global $_LANG;

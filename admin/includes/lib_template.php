@@ -1,16 +1,16 @@
 <?php
 
 /**
- * 鸿宇多用户商城 管理中心模版相关公用函数库
+ *  管理中心模版相关公用函数库
  * ============================================================================
- * 版权所有 2015-2016 鸿宇多用户商城科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
+ * 版权所有 2015-2016 ，并保留所有权利。
+ * 网站地址: ；
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
- * $Author: Shadow & 鸿宇
- * $Id: lib_template.php 17217 2016-01-19 06:29:08Z Shadow & 鸿宇
+ * $Author: 
+ * $Id: lib_template.php 17217  
 */
 
 if (!defined('IN_ECS'))
@@ -46,20 +46,20 @@ $template_files = array(
     'auction_list.dwt',
     'auction.dwt',
     'message_board.dwt',
-	'takegoods',   //代码增加   By  bbs.hongyuvip.com
+	'takegoods',   //代码增加   By  
     'exchange_list.dwt',
 );
 
 /* 每个模板允许设置的库项目 */
 $page_libs = array(
-	/* 代码增加_start  By  bbs.hongyuvip.com */
+	/* 代码增加_start  By   */
    'takegoods' => array(
         '/library/ur_here.lbi' => 0,
         '/library/cart.lbi' => 0,
         '/library/category_tree.lbi' => 0,
         '/library/history.lbi' => 0,
     ),
-	/* 代码增加_end  By  bbs.hongyuvip.com */
+	/* 代码增加_end  By   */
     'article' => array(
         '/library/ur_here.lbi' => 0,
         '/library/search_form.lbi' => 0,

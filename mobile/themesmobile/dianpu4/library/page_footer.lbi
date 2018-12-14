@@ -13,10 +13,10 @@
     <!-- {/foreach} -->
 		<div class="sm" id="branch-office">
 	<div class="smt">
-		<h3>鸿宇自营覆盖区县</h3>
+		<h3>自营覆盖区县</h3>
 	</div>
 	<div class="smc">
-		<p>鸿宇已向全国979个区县提供自营配送服务，支持货到付款、POS机刷卡和售后上门服务。</p>
+		<p>已向全国979个区县提供自营配送服务，支持货到付款、POS机刷卡和售后上门服务。</p>
 		<p class="ar"><a href="#" target="_blank">查看详情&nbsp;></a></p>
 	</div>
 </div>

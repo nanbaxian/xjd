@@ -1,16 +1,16 @@
 <?php
 
 /**
- * 鸿宇多用户商城 订单管理
+ *  订单管理
  * ============================================================================
- * * 版权所有 2008-2015 鸿宇多用户商城科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
+ * * 版权所有 2008-2015 ，并保留所有权利。
+ * 网站地址: ；
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
- * $Author: derek $
- * $Id: order.php 17219 2015-12-10-10:49:19Z derek $
+ * $Author: 
+ * $Id: order.php 17219 2015-12-10-10:49:19Z 
  */
 
 define('IN_ECS', true);
@@ -955,7 +955,7 @@ elseif ($_REQUEST['act'] == 'delivery_ship')
 			{
 				$mobi = $order['tel'];
 			}
-			$content = "您的订单".$order['order_sn']."已于".local_date("Y-m-d H:i:s",time())."发货。【鸿宇多用户商城】";
+			$content = "您的订单".$order['order_sn']."已于".local_date("Y-m-d H:i:s",time())."发货。【】";
             sendSMS($mobi, $content);
 			foreach ($arrse as $key => $asei)
 			{
@@ -3012,7 +3012,7 @@ elseif ($_REQUEST['act'] == 'operate')
 				{
 					$mobi = $order['tel'];
 				}
-				$content = "您的订单".$order['order_sn']."已于".local_date("Y-m-d H:i:s",time())."发货。【鸿宇多用户商城】";
+				$content = "您的订单".$order['order_sn']."已于".local_date("Y-m-d H:i:s",time())."发货。【】";
 				sendSMS($mobi, $content);
 				foreach ($arrse as $key => $asei)
 				{
@@ -3311,7 +3311,7 @@ elseif ($_REQUEST['act'] == 'operate')
 			{
 				$mobi = $order['tel'];
 			}
-			$content = "您的订单".$order['order_sn']."已于".local_date("Y-m-d H:i:s",time())."发货。【鸿宇多用户商城】";
+			$content = "您的订单".$order['order_sn']."已于".local_date("Y-m-d H:i:s",time())."发货。【】";
             sendSMS($mobi, $content);
 			foreach ($arrse as $key => $asei)
 			{

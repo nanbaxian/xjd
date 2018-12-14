@@ -1,16 +1,16 @@
 <?php
 
 /**
- * 鸿宇多用户商城 品牌列表
+ *  品牌列表
  * ============================================================================
- * 版权所有 2015-2016 鸿宇多用户商城科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
+ * 版权所有 2015-2016 ，并保留所有权利。
+ * 网站地址: ；
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
- * $Author: Shadow & 鸿宇
- * $Id: brand.php 17217 2016-01-19 06:29:08Z Shadow & 鸿宇
+ * $Author: 
+ * $Id: brand.php 17217  
 */
 
 define('IN_ECS', true);
@@ -321,7 +321,7 @@ function brand_get_goods($brand_id, $cate, $size, $page, $sort, $order)
                 "ON mp.goods_id = g.goods_id AND mp.user_rank = '$_SESSION[user_rank]' " .
             "WHERE g.is_on_sale = 1 AND g.is_alone_sale = 1 AND g.is_delete = 0 AND g.brand_id = '$brand_id' $cate_where".
             "ORDER BY $sort $order";
-	/* 代码增加_start  By  bbs.hongyuvip.com */
+	/* 代码增加_start  By   */
 	if ($sort=='salenum')
 	{
 		$sql = 'SELECT SUM(o.goods_number) as salenum, g.goods_id, g.goods_name, g.click_count, g.goods_number, g.goods_name_style, g.market_price, g.is_new, g.is_best, g.is_hot, g.shop_price AS org_price, ' .
@@ -333,7 +333,7 @@ function brand_get_goods($brand_id, $cate, $size, $page, $sort, $order)
 				
 	}
 	
-	/* 代码增加_end  By  bbs.hongyuvip.com */
+	/* 代码增加_end  By   */
     $res = $GLOBALS['db']->selectLimit($sql, $size, ($page - 1) * $size);
 
     $arr = array();

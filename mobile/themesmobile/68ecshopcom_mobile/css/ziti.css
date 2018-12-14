@@ -1,6 +1,6 @@
  /*=========自提点样式========*/
 .goods_nav{ width:30%; float:right; right:5px; overflow:hidden; position:fixed;margin-top:-11px; z-index:9999999}
-/* 代码增加_start   By bbs.hongyuvip.com */
+/* 代码增加_start   By  */
 .pickup_point_wrap {
 	position: relative;
 	text-align: left;
@@ -91,7 +91,7 @@ color: #ffffff;
 	background-color: #E31939;
 	color: white;
 }
-/* 代码增加_end   By bbs.hongyuvip.com */
+/* 代码增加_end   By  */
 .stars_box{
 	position:relative;
 	z-index:1;

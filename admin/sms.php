@@ -1,16 +1,16 @@
 <?php
 
 /**
- * 鸿宇多用户商城 短信模块 之 控制器
+ *  短信模块 之 控制器
  * ============================================================================
- * 版权所有 2015-2016 鸿宇多用户商城科技有限公司，并保留所有权利。
- * 网站地址: http://bbs.hongyuvip.com；
+ * 版权所有 2015-2016 ，并保留所有权利。
+ * 网站地址: ；
  * ----------------------------------------------------------------------------
- * 仅供学习交流使用，如需商用请购买正版版权。鸿宇不承担任何法律责任。
+ * 仅供学习交流使用，如需商用请购买正版版权。不承担任何法律责任。
  * 踏踏实实做事，堂堂正正做人。
  * ============================================================================
- * $Author: Shadow & 鸿宇
- * $Id: sms.php 17217 2016-01-19 06:29:08Z Shadow & 鸿宇
+ * $Author: 
+ * $Id: sms.php 17217  
  */
 
 define('IN_ECS', true);
@@ -49,8 +49,8 @@ error_reporting(0);
             <p>App Secret：<input type="text" id="secretkey" name="hy_secretkey" style="width: 228px;" value='<?php echo $hy_secretkey ?>'/><p>
             <p style="color: #808080;">　特别注意：① 阿里大鱼短信环境必须是：PHP5.3　MySQL5.1/5.5</p>
             <p style="color: #808080;">　　　　　　② 请前往：系统设置 -> 商店设置 -> 短信设置 填写短信模板ID和短信签名（请从阿里大鱼->配置管理中获取模板ID和短信签名）。</p>
-            <p style="color: #808080;">　　　　　　③ 如需技术支持请联系：鸿宇科技 & Shadow QQ:1527200768</p>
-            <p style="color: #808080;">　　　　　　④ 点击查看<a href="http://bbs.hongyuvip.com/?/article/125" target="_blank" style="margin: 0 5px;">鸿宇版阿里大鱼短信使用教程</a></p>
+            <p style="color: #808080;">　　　　　　③ 如需技术支持请联系：科技 & Shadow QQ:1527200768</p>
+            <p style="color: #808080;">　　　　　　④ 点击查看<a href="/?/article/125" target="_blank" style="margin: 0 5px;">版阿里大鱼短信使用教程</a></p>
         </div>
 
         <!-- 短信模板 -->
@@ -72,7 +72,7 @@ error_reporting(0);
         <input class="button" type="submit" name="submit" id="submit" value="提交修改"/><br/><br/><br/>
     </form>
 </div>
-<div style="width: 100%;line-height: 35px;font-size: 12px;color: #585858;text-align: center;position:fixed;bottom:0;border-top: 1px solid #DCDCDC;"><a href="http://hongyuvip.com" target="_blank" style="text-decoration: none;color: #585858;">Copyright © 2015 - 2016 鸿宇科技 版权所有 盗版必究 </a></div>
+<div style="width: 100%;line-height: 35px;font-size: 12px;color: #585858;text-align: center;position:fixed;bottom:0;border-top: 1px solid #DCDCDC;"><a href="http://" target="_blank" style="text-decoration: none;color: #585858;">Copyright © 2015 - 2016 科技 版权所有 盗版必究 </a></div>
 </body>
 </html>
 
