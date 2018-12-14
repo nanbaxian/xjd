@@ -682,7 +682,7 @@ frmBody1.rows="98,*";
 
 <div id="header-div" style="display:block;">
 
-<div id="logo-div"><img src="images/ecshop_logo.png" alt="68ECSHOP" /></div>
+<div id="logo-div"><img src="images/ecshop_logo.png" alt="68ECSHOP" width="150px"/></div>
 
 
 
