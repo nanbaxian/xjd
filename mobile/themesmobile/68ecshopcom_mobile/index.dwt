@@ -20,7 +20,6 @@
 <div id="page" class="showpage">
 <div>
 <!--网站头部-->
-<header id="header"> <!-- #BeginLibraryItem "/library/page_header.lbi" --> <!-- #EndLibraryItem --> </header>
 <!--banner--> 
 <!-- #BeginLibraryItem "/library/index_ad.lbi" --> <!-- #EndLibraryItem --> 
 <!--banner end-->
