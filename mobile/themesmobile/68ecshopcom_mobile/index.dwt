@@ -54,22 +54,6 @@
  <!-- #EndLibraryItem -->
 <!-- TemplateEndEditable --> </span> </dd>
   </dl>
-  <ul>
-  <li class="brom">
-  <!-- TemplateBeginEditable name="手机端首页广告2-1" -->
-<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
-{insert name=ads id=$ads_id num=$ads_num}
- <!-- #EndLibraryItem -->
-<!-- TemplateEndEditable -->
-  </li>
-    <li>
-  <!-- TemplateBeginEditable name="手机端首页广告2-2" -->
-<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
-{insert name=ads id=$ads_id num=$ads_num}
- <!-- #EndLibraryItem -->
-<!-- TemplateEndEditable -->
-  </li>
-  </ul>
 </div>
 <!--促销商品-->
 <!-- TemplateBeginEditable name="首页促销模块" -->
