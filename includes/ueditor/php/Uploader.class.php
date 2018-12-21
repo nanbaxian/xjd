@@ -350,7 +350,8 @@ class Uploader
      */
     private function  checkSize()
     {
-        return $this->fileSize <= ($this->config["maxSize"]);
+        return true;
+        // return $this->fileSize <= ($this->config["maxSize"]);
     }
 
     /**
