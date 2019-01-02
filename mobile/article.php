@@ -46,6 +46,7 @@ if (!$smarty->is_cached('article.dwt', $cache_id))
 
     if (empty($article))
     {
+        print("article is null");
         ecs_header("Location: ./\n");
         exit;
     }
@@ -144,7 +145,7 @@ function get_article_info($article_id)
 {
     /* 获得文章的信息 */
     $sql = "SELECT a.*, IFNULL(AVG(r.comment_rank), 0) AS comment_rank ".
-            "FROM " .$GLOBALS['ecs']->table('ecsmart_article'). " AS a ".
+            "FROM " .$GLOBALS['ecs']->table('article'). " AS a ".
             "LEFT JOIN " .$GLOBALS['ecs']->table('comment'). " AS r ON r.id_value = a.article_id AND comment_type = 1 ".
             "WHERE a.is_open = 1 AND a.article_id = '$article_id' GROUP BY a.article_id";
     $row = $GLOBALS['db']->getRow($sql);
